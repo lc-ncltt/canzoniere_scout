@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="it">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="color-scheme" content="light dark">
+<meta name="theme-color" content="#f6f1e7">
+<title>Canzoniere</title>
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="icon" href="icon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="style.css">
+<script>
+  /* Applica il tema salvato prima del primo disegno, per evitare il lampo bianco di notte. */
+  try { var t = localStorage.getItem('tema'); if (t) document.documentElement.setAttribute('data-tema', t); } catch (e) {}
+</script>
+</head>
+<body>
+<header class="barra">
+  <a class="logo" href="#/">Canzoniere</a>
+  <button id="btn-tema" type="button" aria-pressed="false" title="Modalità notte">
+    <span id="ico-tema" aria-hidden="true">☾</span><span class="sr">Modalità notte</span>
+  </button>
+</header>
+
+<main>
+  <section id="vista-elenco">
+    <form id="form-cerca" role="search">
+      <label for="cerca" class="sr">Cerca per numero o titolo</label>
+      <input id="cerca" type="search" inputmode="text" enterkeyhint="go" autocomplete="off"
+             placeholder="Numero del canto o titolo…">
+    </form>
+    <div id="filtri" class="chips" role="group" aria-label="Categorie"></div>
+    <p id="stato" role="status" aria-live="polite"></p>
+    <ul id="elenco" class="elenco"></ul>
+    <noscript><p>Questa pagina richiede JavaScript per mostrare i canti.</p></noscript>
+  </section>
+
+  <article id="vista-canto" hidden>
+    <nav class="nav-canto" aria-label="Navigazione canti">
+      <a href="#/" id="indietro">← Elenco</a>
+      <span class="spazio"></span>
+      <a id="prec" href="#/" aria-label="Canto precedente">‹ Prec</a>
+      <a id="succ" href="#/" aria-label="Canto successivo">Succ ›</a>
+    </nav>
+    <h1 id="c-titolo"></h1>
+    <p id="c-meta" class="meta"></p>
+
+    <div id="c-audio-box" class="blocco" hidden>
+      <audio id="c-audio" controls preload="none"></audio>
+      <p id="c-audio-err" class="errore" hidden>Audio non disponibile (sei offline?).</p>
+    </div>
+
+    <div class="azioni">
+      <a id="c-spartito" class="btn" target="_blank" rel="noopener" hidden>Spartito PDF</a>
+      <button id="btn-accordi" class="btn" type="button" aria-pressed="true">Accordi</button>
+      <button id="btn-meno" class="btn" type="button" aria-label="Riduci testo">A−</button>
+      <button id="btn-piu" class="btn" type="button" aria-label="Ingrandisci testo">A+</button>
+      <button id="btn-schermo" class="btn" type="button" aria-pressed="false" hidden>Schermo acceso</button>
+    </div>
+
+    <div id="c-testo" class="testo"></div>
+    <p id="c-note" class="meta"></p>
+  </article>
+</main>
+
+<script src="app.js"></script>
+</body>
+</html>

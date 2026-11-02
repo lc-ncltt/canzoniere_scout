@@ -1,0 +1,22 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Canzoniere di Clan - elenco canti",
+  "type": "array",
+  "minItems": 1,
+  "items": {
+    "type": "object",
+    "required": ["id", "titolo", "categoria", "pagina", "url_audio", "url_spartito", "testo_accordi"],
+    "additionalProperties": false,
+    "properties": {
+      "id": { "type": "integer", "minimum": 1, "description": "Numero progressivo del canto = ordine nel libro" },
+      "titolo": { "type": "string", "minLength": 1 },
+      "categoria": { "enum": ["Cammino", "Liturgici", "Bivacco", "Tradizione"] },
+      "pagina": { "type": ["integer", "null"], "minimum": 1, "description": "Pagina cartacea; aggiornata da scripts/sync_pages.py" },
+      "url_audio": { "type": ["string", "null"], "pattern": "^https://", "description": "Link diretto a un MP3" },
+      "url_spartito": { "type": ["string", "null"], "pattern": "^https://", "description": "Link diretto a un PDF" },
+      "testo_accordi": { "type": "string", "minLength": 1, "description": "ChordPro: [Am]parola, {soc}/{eoc} per il ritornello, {c: nota}" },
+      "autore": { "type": "string" },
+      "note": { "type": "string" }
+    }
+  }
+}

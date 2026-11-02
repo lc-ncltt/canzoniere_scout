@@ -1,0 +1,46 @@
+[
+  {
+    "id": 1,
+    "titolo": "Fra' Martino",
+    "categoria": "Bivacco",
+    "pagina": 1,
+    "url_audio": null,
+    "url_spartito": null,
+    "autore": "Tradizionale",
+    "note": "Canone a più voci. Esempio: sostituire.",
+    "testo_accordi": "{c: Canone a 2-4 voci}\n[C]Fra' Mar[G]tino cam[C]panaro,\n[C]dormi [G]tu? [C]Dormi [G]tu?\n[G]Suona le cam[C]pane, [G]suona le cam[C]pane,\n[C]din don [G]dan, [C]din don [G]dan.\n"
+  },
+  {
+    "id": 2,
+    "titolo": "Quel mazzolin di fiori",
+    "categoria": "Cammino",
+    "pagina": 2,
+    "url_audio": null,
+    "url_spartito": null,
+    "autore": "Tradizionale",
+    "note": "Esempio: sostituire.",
+    "testo_accordi": "[G]Quel mazzolin di [D]fiori\nche [D7]vien dalla mon[G]tagna,\n[G]bada che non si [D]bagni\nche [D7]lo voglio rega[G]lar.\n\n[G]Lo voglio regalare\nper[D7]ché l'è un bel maz[G]zetto,\n[G]lo voglio dare al mio mo[D]retto\n[D7]questa sera quando [G]vien.\n"
+  },
+  {
+    "id": 3,
+    "titolo": "Il Canto degli Italiani",
+    "categoria": "Tradizione",
+    "pagina": 3,
+    "url_audio": null,
+    "url_spartito": null,
+    "autore": "G. Mameli - M. Novaro (1847)",
+    "note": "Pubblico dominio. Esempio: sostituire.",
+    "testo_accordi": "[C]Fratelli d'Italia,\nl'Italia s'è [G]desta,\ndell'elmo di [C]Scipio\ns'è cinta la [G]testa.\nDov'è la Vit[C]toria?\nLe porga la [G]chioma,\nché schiava di [C]Roma\nIddio la cre[G]ò.\n\n{soc}\n[C]Stringiamci a coorte,\nsiam [G]pronti alla morte,\nsiam [C]pronti alla morte,\nl'Italia chia[G]mò. [C]Sì!\n{eoc}\n"
+  },
+  {
+    "id": 4,
+    "titolo": "Salve Regina",
+    "categoria": "Liturgici",
+    "pagina": 4,
+    "url_audio": null,
+    "url_spartito": null,
+    "autore": "Antifona mariana (gregoriano)",
+    "note": "Pubblico dominio. Esempio: sostituire.",
+    "testo_accordi": "[Am]Salve, Re[G]gina, mater miseri[Am]cordiae,\nvita, dul[F]cedo et spes no[E]stra, sal[Am]ve.\nAd te cla[G]mamus, ex[Am]sules fi[F]lii He[E]vae.\n"
+  }
+]

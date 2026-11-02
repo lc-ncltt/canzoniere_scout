@@ -1,0 +1,189 @@
+% Canzoniere di Clan - template. I segnaposto tra doppi angoli (maiuscoli)
+% sono sostituiti da scripts/generate_latex.py. Compilare con pdflatex (due passate) o latexmk.
+\documentclass[a5paper,landscape,10pt,twoside]{article}
+
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[italian]{babel}
+\usepackage{lmodern}
+\usepackage[a5paper,landscape,twoside,
+  left=15mm,right=15mm,top=12mm,bottom=12mm,bindingoffset=15mm,
+  includefoot,nohead,footskip=6mm]{geometry}
+\usepackage{multicol}
+\usepackage{graphicx}
+\usepackage{xcolor}
+\usepackage{url}
+\usepackage{microtype}
+
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0pt}
+\setlength{\columnsep}{8mm}
+\raggedbottom
+\sloppy
+\hyphenpenalty=1000
+
+\definecolor{accordo}{gray}{0.25}
+
+% Interlinea ampia: lascia spazio agli accordi sopra il testo.
+\makeatletter
+\renewcommand{\normalsize}{\@setfontsize\normalsize{10}{16}}
+
+% Stile pagina: solo numero in basso, sul lato esterno.
+\def\ps@canz{%
+  \def\@oddhead{}\def\@evenhead{}%
+  \def\@oddfoot{\hfill\small\thepage}%
+  \def\@evenfoot{\small\thepage\hfill}}
+
+% \cantotesta{id}{titolo}{categoria}{autore}: nuova pagina + etichetta per gli indici
+\newcommand{\cantotesta}[4]{%
+  \clearpage
+  \def\@currentlabel{#1}\label{canto:#1}%
+  \noindent\hangindent=14mm\hangafter=1
+  \hbox to 14mm{\fontsize{22}{24}\selectfont\bfseries #1\hss}%
+  {\fontsize{15}{18}\selectfont\bfseries #2\par}
+  {\small\scshape #3\ifx\relax#4\relax\else\ \textperiodcentered\ \textit{#4}\fi\par}
+  \vspace{1mm}\hrule height 0.4pt\vspace{3mm}}
+\makeatother
+\pagestyle{canz}
+
+% Riga di testo con accordi: l'accordo sta sopra la sillaba che lo segue.
+\newcommand{\ch}[2]{\leavevmode\vbox{\offinterlineskip
+  \hbox{\fontsize{7.5}{8}\selectfont\bfseries\color{accordo}#1\kern.3em}%
+  \hbox{#2}}}
+\newcommand{\rigo}[1]{{\hangindent=3mm\hangafter=1\noindent #1\par}}
+\newcommand{\strofa}{\par\vspace{2.4mm}}
+\newcommand{\commento}[1]{{\par\small\itshape\color{gray}#1\par\vspace{1mm}}}
+\newenvironment{ritornello}{\par\begingroup\itshape\leftskip=3mm\relax}{\par\endgroup}
+
+% Indici
+\newcommand{\titolosezione}[1]{\clearpage
+  {\noindent\fontsize{16}{18}\selectfont\bfseries #1\par}
+  \vspace{1mm}\hrule height 0.4pt\vspace{3mm}}
+\newcommand{\lettera}[1]{\par\vspace{1.5mm}{\bfseries\color{accordo}#1}\par\nopagebreak}
+\newcommand{\categoriaindice}[1]{\par\vspace{2mm}{\scshape\bfseries #1}\par\nopagebreak}
+\newcommand{\voce}[2]{\noindent\hangindent=2.4em\hangafter=1
+  \hbox to 2em{\hfil\bfseries #1}\hskip .4em #2\nobreak
+  \leaders\hbox to .7em{\hss.\hss}\hfill\nobreak
+  \hbox to 2em{\hfill\pageref{canto:#1}}\par}
+
+\begin{document}
+
+% ---- Frontespizio (numerazione romana, nessun numero stampato)
+\pagenumbering{roman}
+\thispagestyle{empty}
+\begin{center}
+  \vspace*{\fill}
+  {\fontsize{40}{44}\selectfont\bfseries Canzoniere\par}
+  \vspace{4mm}
+  {\Large Clan - Gruppo Scout\par}
+  \vspace{10mm}
+  {\large\itshape Per la tua Partenza: che questi canti ti accompagnino sempre.\par}
+  \vspace*{\fill}
+  {\small 2026\par}
+\end{center}
+
+
+% ---- Canti (la numerazione araba riparte da 1: pagina stampata = campo "pagina")
+\pagenumbering{arabic}
+\cantotesta{1}{Fra' Martino}{Bivacco}{Tradizionale}
+\begin{multicols}{2}
+\commento{Canone a 2-4 voci}
+\rigo{\ch{C}{Fra'} Mar\ch{G}{tino} cam\ch{C}{panaro,}}
+\rigo{\ch{C}{dormi} \ch{G}{tu?} \ch{C}{Dormi} \ch{G}{tu?}}
+\rigo{\ch{G}{Suona} le cam\ch{C}{pane,} \ch{G}{suona} le cam\ch{C}{pane,}}
+\rigo{\ch{C}{din} don \ch{G}{dan,} \ch{C}{din} don \ch{G}{dan.}}
+\end{multicols}
+
+\cantotesta{2}{Quel mazzolin di fiori}{Cammino}{Tradizionale}
+\begin{multicols}{2}
+\rigo{\ch{G}{Quel} mazzolin di \ch{D}{fiori}}
+\rigo{che \ch{D7}{vien} dalla mon\ch{G}{tagna,}}
+\rigo{\ch{G}{bada} che non si \ch{D}{bagni}}
+\rigo{che \ch{D7}{lo} voglio rega\ch{G}{lar.}}
+\strofa
+\rigo{\ch{G}{Lo} voglio regalare}
+\rigo{per\ch{D7}{ché} l'è un bel maz\ch{G}{zetto,}}
+\rigo{\ch{G}{lo} voglio dare al mio mo\ch{D}{retto}}
+\rigo{\ch{D7}{questa} sera quando \ch{G}{vien.}}
+\end{multicols}
+
+\cantotesta{3}{Il Canto degli Italiani}{Tradizione}{G. Mameli - M. Novaro (1847)}
+\begin{multicols}{2}
+\rigo{\ch{C}{Fratelli} d'Italia,}
+\rigo{l'Italia s'è \ch{G}{desta,}}
+\rigo{dell'elmo di \ch{C}{Scipio}}
+\rigo{s'è cinta la \ch{G}{testa.}}
+\rigo{Dov'è la Vit\ch{C}{toria?}}
+\rigo{Le porga la \ch{G}{chioma,}}
+\rigo{ché schiava di \ch{C}{Roma}}
+\rigo{Iddio la cre\ch{G}{ò.}}
+\strofa
+\begin{ritornello}
+\rigo{\ch{C}{Stringiamci} a coorte,}
+\rigo{siam \ch{G}{pronti} alla morte,}
+\rigo{siam \ch{C}{pronti} alla morte,}
+\rigo{l'Italia chia\ch{G}{mò.} \ch{C}{Sì!}}
+\end{ritornello}
+\end{multicols}
+
+\cantotesta{4}{Salve Regina}{Liturgici}{Antifona mariana (gregoriano)}
+\begin{multicols}{2}
+\rigo{\ch{Am}{Salve,} Re\ch{G}{gina,} mater miseri\ch{Am}{cordiae,}}
+\rigo{vita, dul\ch{F}{cedo} et spes no\ch{E}{stra,} sal\ch{Am}{ve.}}
+\rigo{Ad te cla\ch{G}{mamus,} ex\ch{Am}{sules} fi\ch{F}{lii} He\ch{E}{vae.}}
+\end{multicols}
+
+% ---- Indici
+\titolosezione{Indice alfabetico}
+\begingroup\small
+\begin{multicols}{2}
+\lettera{F}
+\voce{1}{Fra' Martino}
+\lettera{I}
+\voce{3}{Il Canto degli Italiani}
+\lettera{Q}
+\voce{2}{Quel mazzolin di fiori}
+\lettera{S}
+\voce{4}{Salve Regina}
+\end{multicols}
+\endgroup
+\titolosezione{Indice per categoria}
+\begingroup\small
+\begin{multicols}{2}
+\categoriaindice{Cammino}
+\voce{2}{Quel mazzolin di fiori}
+\categoriaindice{Liturgici}
+\voce{4}{Salve Regina}
+\categoriaindice{Bivacco}
+\voce{1}{Fra' Martino}
+\categoriaindice{Tradizione}
+\voce{3}{Il Canto degli Italiani}
+\end{multicols}
+\endgroup
+
+% ---- Ultima pagina: QR code verso la web app
+\clearpage
+\thispagestyle{empty}
+\noindent
+\begin{minipage}[c]{0.38\textwidth}
+  \centering
+  \includegraphics[width=44mm]{qr.pdf}
+\end{minipage}\hfill
+\begin{minipage}[c]{0.58\textwidth}
+  {\fontsize{16}{19}\selectfont\bfseries Ascolta i canti e scarica gli spartiti\par}
+  \vspace{3mm}
+  Inquadra il codice con la fotocamera del telefono: si apre il canzoniere
+  online, con l'audio di ogni canto, gli spartiti in PDF e la modalit\`a notte
+  per il bivacco.\par
+  \vspace{4mm}
+  {\small\textbf{In caso di problemi con il QR\ldots}\par
+  \begin{enumerate}\itemsep=0pt\topsep=1mm
+    \item apri il browser del telefono (Chrome, Safari\ldots);
+    \item scrivi nella barra degli indirizzi:\\
+          {\small\url{https://NOMEUTENTE.github.io/canzoniere/}}
+    \item cerca il canto per numero (quello stampato accanto al titolo);
+    \item per riaprirlo senza connessione, aggiungilo alla schermata Home.
+  \end{enumerate}}
+\end{minipage}
+
+\end{document}
