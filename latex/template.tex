@@ -26,7 +26,7 @@
 
 % Interlinea ampia: lascia spazio agli accordi sopra il testo.
 \makeatletter
-\renewcommand{\normalsize}{\@setfontsize\normalsize{10}{16}}
+\renewcommand{\normalsize}{\@setfontsize\normalsize{10}{17}}
 
 % Stile pagina: solo numero in basso, sul lato esterno.
 \def\ps@canz{%
@@ -48,7 +48,8 @@
 
 % Riga di testo con accordi: l'accordo sta sopra la sillaba che lo segue.
 \newcommand{\ch}[2]{\leavevmode\vbox{\offinterlineskip
-  \hbox{\fontsize{7.5}{8}\selectfont\bfseries\color{accordo}#1\kern.3em}%
+  \hbox{\fontsize{8}{9}\selectfont\bfseries\color{accordo}#1\kern.3em}%
+  \kern.45ex
   \hbox{#2}}}
 \newcommand{\rigo}[1]{{\hangindent=3mm\hangafter=1\noindent #1\par}}
 \newcommand{\strofa}{\par\vspace{2.4mm}}
