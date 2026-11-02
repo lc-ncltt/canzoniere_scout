@@ -1,10 +1,13 @@
 # Canzoniere di Clan
 
 30 copie stampate (A5 orizzontale, rilegatura a viti cieche) + una web app statica su GitHub Pages,
-raggiungibile da un unico QR code sull'ultima pagina. Tutto parte da **un solo file**: `data/canti.json`.
+raggiungibile da un unico QR code sull'ultima pagina. Si lavora su due cose: l'elenco (`data/elenco.csv`) e un file di testo per canto (`testi/*.cho`).
 
 ```
-data/canti.json          sorgente unico dei canti (schema: canti.schema.json)
+data/elenco.csv          elenco canti: titolo, sezione, branche, intensità (Excel/Fogli Google)
+testi/*.cho              testo + accordi di ogni canto (ChordPro)
+data/canti.json          GENERATO da build_canti.py (schema: canti.schema.json)
+latex/front/*.tex        pagine iniziali: dedica, come usare, fuoco di bivacco, cantare insieme
 data/meta.json           titolo, dedica, anno, URL della web app
 scripts/                 Python (solo libreria standard, tranne `segno` per il QR)
 latex/template.tex       impaginazione A5 landscape
@@ -17,7 +20,7 @@ build/                   (generato) .tex, .pdf, QR      _site/  (generato) sito 
 
 ```bash
 pip install segno
-python scripts/seed_canti.py            # una volta: crea canti.json e meta.json di esempio
+python scripts/build_canti.py           # elenco.csv + testi/*.cho -> data/canti.json (e report di cosa manca)
 python scripts/validate_canti.py        # convalida (aggiungi --check-urls per testare i link)
 python scripts/make_qr.py               # build/qr.pdf (+ svg, eps, png) con livello di correzione H
 python scripts/generate_latex.py        # build/canzoniere.tex
@@ -27,7 +30,22 @@ python scripts/build_site.py --serve    # anteprima web app su http://localhost:
 ```
 
 Con `latexmk`: `latexmk -pdf -outdir=build build/canzoniere.tex`.
-Per importare molti canti già scritti in ChordPro: `python scripts/import_chordpro.py cartella/`.
+
+### Importare l'elenco completo
+
+1. Apri `data/elenco.csv` in Excel/Fogli Google (separatore `;`) e incolla i titoli. Colonne:
+   `titolo;categoria;branche;intensita;autore;note;url_audio;url_spartito`.
+   `categoria` è una delle sezioni di `data/meta.json`; `branche` sono sigle separate da `/`
+   (`LC/EG/RS`, vuoto = per tutti); `intensita` va da 1 (raccolto) a 5 (esplosivo).
+   Se all'inizio hai solo i titoli: `python scripts/build_canti.py --default-sezione Tradizione`.
+2. `python scripts/build_canti.py --crea-testi` crea in `testi/` un file `.cho` vuoto per ogni canto
+   (nome = titolo in minuscolo con trattini). Incolla lì testo e accordi.
+3. Rilancia `build_canti.py`: ordina per sezione, poi intensità, poi titolo; assegna i numeri;
+   elenca i canti che non hanno ancora il testo (nel libro restano con "TESTO DA INSERIRE").
+
+Per i testi coperti da copyright usa fonti che puoi legittimamente copiare (i tuoi libri, canzonieri
+della tua associazione); online conviene cercare solo i **link** a audio e spartiti per le colonne
+`url_audio` e `url_spartito`.
 
 ### Formato di `testo_accordi` (ChordPro)
 

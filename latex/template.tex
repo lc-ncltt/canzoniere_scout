@@ -23,6 +23,10 @@
 \hyphenpenalty=1000
 
 \definecolor{accordo}{gray}{0.25}
+\definecolor{brLC}{HTML}{F2C230}
+\definecolor{brEG}{HTML}{3F9A47}
+\definecolor{brRS}{HTML}{C0392B}
+\definecolor{fiamma}{HTML}{D9822B}
 
 % Interlinea ampia: lascia spazio agli accordi sopra il testo.
 \makeatletter
@@ -35,13 +39,26 @@
   \def\@evenfoot{\small\thepage\hfill}}
 
 % \cantotesta{id}{titolo}{categoria}{autore}: nuova pagina + etichetta per gli indici
-\newcommand{\cantotesta}[4]{%
+% \fiamme{n}: intensita' 1-5 come cinque barrette piene/vuote
+\newcommand{\barra}{\textcolor{fiamma}{\rule{1.1mm}{2.6mm}}\,}
+\newcommand{\barraoff}{\textcolor{black!20}{\rule{1.1mm}{2.6mm}}\,}
+\newcommand{\fiamme}[1]{{\@tempcnta=\z@
+  \@whilenum\@tempcnta<5\do{\advance\@tempcnta\@ne
+    \ifnum\@tempcnta>#1\barraoff\else\barra\fi}}}
+% Tag di branca: solo un quadratino colorato (giallo LC, verde EG, rosso RS)
+\newcommand{\tagbranca}[1]{\textcolor{#1}{\rule{2.4mm}{2.4mm}}\,}
+\newcommand{\bLC}{\tagbranca{brLC}}
+\newcommand{\bEG}{\tagbranca{brEG}}
+\newcommand{\bRS}{\tagbranca{brRS}}
+
+% \cantotesta{id}{titolo}{categoria}{autore}{tag branche}{intensita'}
+\newcommand{\cantotesta}[6]{%
   \clearpage
   \def\@currentlabel{#1}\label{canto:#1}%
   \noindent\hangindent=14mm\hangafter=1
   \hbox to 14mm{\fontsize{22}{24}\selectfont\bfseries #1\hss}%
   {\fontsize{15}{18}\selectfont\bfseries #2\par}
-  {\small\scshape #3\ifx\relax#4\relax\else\ \textperiodcentered\ \textit{#4}\fi\par}
+  \noindent{\small\scshape #3\ifx\relax#4\relax\else\ \textperiodcentered\ \textit{#4}\fi}\hfill{#5\ #6}\par
   \vspace{1mm}\hrule height 0.4pt\vspace{3mm}}
 \makeatother
 \pagestyle{canz}
@@ -82,7 +99,7 @@
   \vspace*{\fill}
   {\small <<ANNO>>\par}
 \end{center}
-<<NOTA>>
+<<PAGINE_INIZIALI>>
 
 % ---- Canti (la numerazione araba riparte da 1: pagina stampata = campo "pagina")
 \pagenumbering{arabic}

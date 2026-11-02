@@ -5,18 +5,102 @@
   "minItems": 1,
   "items": {
     "type": "object",
-    "required": ["id", "titolo", "categoria", "pagina", "url_audio", "url_spartito", "testo_accordi"],
+    "required": [
+      "id",
+      "titolo",
+      "categoria",
+      "pagina",
+      "url_audio",
+      "url_spartito",
+      "testo_accordi"
+    ],
     "additionalProperties": false,
     "properties": {
-      "id": { "type": "integer", "minimum": 1, "description": "Numero progressivo del canto = ordine nel libro" },
-      "titolo": { "type": "string", "minLength": 1 },
-      "categoria": { "enum": ["Cammino", "Liturgici", "Bivacco", "Tradizione"] },
-      "pagina": { "type": ["integer", "null"], "minimum": 1, "description": "Pagina cartacea; aggiornata da scripts/sync_pages.py" },
-      "url_audio": { "type": ["string", "null"], "pattern": "^https://", "description": "Link diretto a un MP3" },
-      "url_spartito": { "type": ["string", "null"], "pattern": "^https://", "description": "Link diretto a un PDF" },
-      "testo_accordi": { "type": "string", "minLength": 1, "description": "ChordPro: [Am]parola, {soc}/{eoc} per il ritornello, {c: nota}" },
-      "autore": { "type": "string" },
-      "note": { "type": "string" }
+      "id": {
+        "type": "integer",
+        "minimum": 1,
+        "description": "Numero progressivo del canto = ordine nel libro"
+      },
+      "titolo": {
+        "type": "string",
+        "minLength": 1
+      },
+      "categoria": {
+        "type": "string",
+        "description": "Una delle sezioni definite in data/meta.json"
+      },
+      "pagina": {
+        "type": [
+          "integer",
+          "null"
+        ],
+        "minimum": 1,
+        "description": "Pagina cartacea; aggiornata da scripts/sync_pages.py"
+      },
+      "url_audio": {
+        "type": [
+          "string",
+          "null"
+        ],
+        "pattern": "^https://",
+        "description": "Link diretto a un MP3"
+      },
+      "url_spartito": {
+        "type": [
+          "string",
+          "null"
+        ],
+        "pattern": "^https://",
+        "description": "Link diretto a un PDF"
+      },
+      "testo_accordi": {
+        "type": "string",
+        "minLength": 1,
+        "description": "ChordPro: [Am]parola, {soc}/{eoc} per il ritornello, {c: nota}"
+      },
+      "autore": {
+        "type": "string"
+      },
+      "note": {
+        "type": "string"
+      },
+      "branche": {
+        "type": "array",
+        "items": {
+          "enum": [
+            "LC",
+            "EG",
+            "RS"
+          ]
+        },
+        "uniqueItems": true,
+        "description": "Giallo LC, verde EG, rosso RS"
+      },
+      "intensita": {
+        "type": [
+          "integer",
+          "null"
+        ],
+        "minimum": 1,
+        "maximum": 5,
+        "description": "Energia del canto al fuoco: 1 raccolto, 5 esplosivo"
+      },
+      "anno": {
+        "type": [
+          "integer",
+          "null"
+        ],
+        "minimum": 1000,
+        "maximum": 2100
+      },
+      "durata": {
+        "type": [
+          "string",
+          "null"
+        ],
+        "pattern": "^\\d{1,2}:[0-5]\\d$",
+        "description": "m:ss"
+      }
     }
   }
 }

@@ -1,7 +1,7 @@
 /* Service worker: rende testi e accordi disponibili offline (l'audio resta online).
    __BUILD__ viene sostituito da scripts/build_site.py: ogni modifica invalida la cache vecchia. */
 var CACHE = 'canzoniere-__BUILD__';
-var FILE = ['./', 'index.html', 'style.css', 'app.js', 'icon.svg', 'manifest.webmanifest', 'canti.json'];
+var FILE = ['./', 'index.html', 'style.css', 'app.js', 'manifest.webmanifest', 'canti.json'];
 
 self.addEventListener('install', function (e) {
   e.waitUntil(caches.open(CACHE).then(function (c) { return c.addAll(FILE); }).then(function () {

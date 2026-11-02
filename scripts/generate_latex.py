@@ -37,9 +37,26 @@ def riga_latex(segmenti):
     return r"\rigo{" + "".join(parti) + "}"
 
 
+def tag_branche(c):
+    return "".join("\\b" + b for b in c.get("branche", []))
+
+
+def fiamme(c):
+    return "\\fiamme{%d}" % c["intensita"] if c.get("intensita") else ""
+
+
+def pagine_iniziali(meta):
+    """Pagine scritte a mano in latex/front/*.tex, inserite in ordine alfabetico di nome file."""
+    pezzi = []
+    for f in sorted((ROOT / "latex" / "front").glob("*.tex")):
+        pezzi.append(f.read_text(encoding="utf-8").replace(
+            "<<SEZIONI>>", ", ".join(esc(s) for s in meta["sezioni"])))
+    return "\n\n".join(pezzi)
+
+
 def canto_latex(c):
     out = [rf"\cantotesta{{{c['id']}}}{{{esc(c['titolo'])}}}{{{esc(c['categoria'])}}}"
-           rf"{{{esc(c.get('autore', ''))}}}",
+           rf"{{{esc(c.get('autore', ''))}}}{{{tag_branche(c)}}}{{{fiamme(c)}}}",
            r"\begin{multicols}{2}"]
     in_ritornello = False
     ultima_vuota = True
@@ -122,14 +139,12 @@ def main():
         sys.exit("\n".join("ERRORE: " + e for e in errori) + "\nCorreggi data/canti.json e riprova.")
 
     meta = carica_meta(args.meta)
-    nota = esc(meta["nota"])
     sostituzioni = {
         "TITOLO": esc(meta["titolo"]),
         "SOTTOTITOLO": esc(meta["sottotitolo"]),
         "DEDICA": esc(meta["dedica"]),
         "ANNO": esc(meta["anno"]),
-        "NOTA": (r"\clearpage\thispagestyle{empty}\vspace*{\fill}" + "\n" + nota +
-                 "\n" + r"\vspace*{\fill}") if nota else "",
+        "PAGINE_INIZIALI": pagine_iniziali(meta),
         "CANTI": "\n\n".join(canto_latex(c) for c in canti),
         "INDICE_ALFABETICO": indice_alfabetico(canti),
         "INDICE_TEMATICO": indice_tematico(canti),

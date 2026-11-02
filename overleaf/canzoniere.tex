@@ -23,6 +23,10 @@
 \hyphenpenalty=1000
 
 \definecolor{accordo}{gray}{0.25}
+\definecolor{brLC}{HTML}{F2C230}
+\definecolor{brEG}{HTML}{3F9A47}
+\definecolor{brRS}{HTML}{C0392B}
+\definecolor{fiamma}{HTML}{D9822B}
 
 % Interlinea ampia: lascia spazio agli accordi sopra il testo.
 \makeatletter
@@ -35,13 +39,26 @@
   \def\@evenfoot{\small\thepage\hfill}}
 
 % \cantotesta{id}{titolo}{categoria}{autore}: nuova pagina + etichetta per gli indici
-\newcommand{\cantotesta}[4]{%
+% \fiamme{n}: intensita' 1-5 come cinque barrette piene/vuote
+\newcommand{\barra}{\textcolor{fiamma}{\rule{1.1mm}{2.6mm}}\,}
+\newcommand{\barraoff}{\textcolor{black!20}{\rule{1.1mm}{2.6mm}}\,}
+\newcommand{\fiamme}[1]{{\@tempcnta=\z@
+  \@whilenum\@tempcnta<5\do{\advance\@tempcnta\@ne
+    \ifnum\@tempcnta>#1\barraoff\else\barra\fi}}}
+% Tag di branca: solo un quadratino colorato (giallo LC, verde EG, rosso RS)
+\newcommand{\tagbranca}[1]{\textcolor{#1}{\rule{2.4mm}{2.4mm}}\,}
+\newcommand{\bLC}{\tagbranca{brLC}}
+\newcommand{\bEG}{\tagbranca{brEG}}
+\newcommand{\bRS}{\tagbranca{brRS}}
+
+% \cantotesta{id}{titolo}{categoria}{autore}{tag branche}{intensita'}
+\newcommand{\cantotesta}[6]{%
   \clearpage
   \def\@currentlabel{#1}\label{canto:#1}%
   \noindent\hangindent=14mm\hangafter=1
   \hbox to 14mm{\fontsize{22}{24}\selectfont\bfseries #1\hss}%
   {\fontsize{15}{18}\selectfont\bfseries #2\par}
-  {\small\scshape #3\ifx\relax#4\relax\else\ \textperiodcentered\ \textit{#4}\fi\par}
+  \noindent{\small\scshape #3\ifx\relax#4\relax\else\ \textperiodcentered\ \textit{#4}\fi}\hfill{#5\ #6}\par
   \vspace{1mm}\hrule height 0.4pt\vspace{3mm}}
 \makeatother
 \pagestyle{canz}
@@ -78,24 +95,140 @@
   \vspace{4mm}
   {\Large Clan - Gruppo Scout\par}
   \vspace{10mm}
-  {\large\itshape Per la tua Partenza: che questi canti ti accompagnino sempre.\par}
+  {\large\itshape Un regalo di Partenza, per i miei compagni di Clan.\par}
   \vspace*{\fill}
   {\small 2026\par}
 \end{center}
+% Pagina di dedica. BOZZA da personalizzare: sostituisci il testo e la firma.
+\clearpage
+\thispagestyle{empty}
+\vspace*{\fill}
+\begin{center}
+  \begin{minipage}{0.8\textwidth}
+    \centering\itshape\large
+    Ai miei compagni di Clan.\par
+    \vspace{5mm}
+    \normalsize
+    Ho camminato con voi per tanta strada, e quasi ogni passo l'abbiamo cantato.
+    Questo libro raccoglie le canzoni che ci hanno tenuti insieme: quelle gridate
+    in marcia, quelle sussurrate attorno al fuoco, quelle che non abbiamo mai
+    finito di imparare.\par
+    \vspace{3mm}
+    Portatelo con voi, lasciate che si consumi, e quando io non ci sar\`o
+    cantatene una anche per me.\par
+    \vspace{6mm}
+    Buona strada.\par
+    \vspace{3mm}
+    \upshape [Nome e totem]
+  \end{minipage}
+\end{center}
+\vspace*{\fill}
+
+
+\titolosezione{Come usare questo canzoniere}
+\begingroup\small
+\begin{multicols}{2}
+\textbf{Struttura.} I canti sono numerati e raggruppati in sezioni, nell'ordine:
+Liturgici, Scout, Bans, Cammino, Bivacco, Tradizione. Ogni canto ha la sua pagina: il numero grande accanto al titolo
+è quello da cercare, sia qui sia nel sito. In fondo trovi l'indice alfabetico
+e l'indice per sezione.
+
+\medskip
+\textbf{Accordi.} Sono scritti sopra la sillaba in cui cambiano. Il testo in
+\textit{corsivo} è il ritornello.
+
+\medskip
+\textbf{Online.} Sull'ultima pagina c'è un QR code: porta al sito con l'audio di
+ogni canto, gli spartiti in PDF e la modalità notte per il bivacco.
+
+\columnbreak
+\textbf{Branche.} A destra del titolo, le branche per cui il canto nasce o è
+più adatto:
+
+\smallskip
+\bLC\ lupetti e coccinelle \quad \bEG\ esploratori e guide \quad \bRS\ rover e scolte
+
+\medskip
+\textbf{Intensità.} Quanta energia chiede il canto, da 1 a 5:
+
+\smallskip
+\fiamme{1}\ raccolto, quasi sussurrato\\
+\fiamme{3}\ corale, a voce piena\\
+\fiamme{5}\ esplosivo, con gesti e balli
+
+\medskip
+Un canto senza tag è per tutti.
+\end{multicols}
+\endgroup
+
+
+\titolosezione{Il fuoco di bivacco}
+\begingroup\small
+Un buon fuoco ha un andamento a onda: sale, tocca il punto più alto e poi scende fino al silenzio.
+Scegliere i canti seguendo l'intensità (da \fiamme{1} a \fiamme{5}) aiuta a non bruciare tutto subito.
+
+\medskip
+\begin{tabular}{@{}l@{\hspace{4mm}}p{0.72\textwidth}@{}}
+\textbf{Apertura} & \fiamme{3}\ Si accende il fuoco, ci si riunisce. Canti noti, facili da attaccare, che fanno sentire tutti dentro.\\[1.5mm]
+\textbf{Salita} & \fiamme{4}\ Bans, canoni e canti con gesti: si scioglie il gruppo e si prende ritmo.\\[1.5mm]
+\textbf{Picco} & \fiamme{5}\ Il momento più acceso, breve. Canti gridati, balli, voci che si sovrappongono.\\[1.5mm]
+\textbf{Discesa} & \fiamme{3}\ Si abbassa piano la voce e il ritmo; si torna a cantare insieme, non uno contro l'altro.\\[1.5mm]
+\textbf{Raccoglimento} & \fiamme{2}\ Canti lenti, di strada e di ricordo. Il fuoco è basso, si canta quasi sottovoce.\\[1.5mm]
+\textbf{Chiusura} & \fiamme{1}\ Un canto semplice o una preghiera, poi silenzio. Non si applaude: si lascia che resti.
+\end{tabular}
+
+\medskip
+\textit{Regola d'oro:} chi guida legge il fuoco, non la scaletta. Se il gruppo è stanco, si scende prima.
+\endgroup
+
+
+\titolosezione{Cantare insieme}
+\begingroup\small
+\begin{multicols}{2}
+\textbf{1. Il tono.} Chi attacca sceglie una nota che stia comoda a tutti: meglio un po' bassa che
+troppo alta. Se la prima strofa è faticosa, si riparte da capo, più in basso.
+
+\smallskip
+\textbf{2. Un solo attacco.} Si dà il tempo con un respiro o con la mano e si parte insieme.
+Cantare a ritmi diversi è il modo più rapido per spegnere un canto.
+
+\smallskip
+\textbf{3. Ascoltare.} Si canta in modo da sentire il vicino. Se non lo senti più, stai coprendo
+la sua voce.
+
+\smallskip
+\textbf{4. Il respiro.} Si respira alla fine delle frasi, non a metà parola. Chi respira in
+momenti diversi tiene su il canto senza buchi.
+
+\columnbreak
+\textbf{5. Canoni e voci.} Nei canoni ogni gruppo tiene la propria parte e non segue quello
+accanto. Si comincia a due voci, poi si aggiungono le altre.
+
+\smallskip
+\textbf{6. Bans.} Si insegnano un pezzo alla volta: prima i gesti, poi le parole, poi tutto
+insieme. Chi guida sta davanti e li fa per primo.
+
+\smallskip
+\textbf{7. Chitarra.} Sta sotto le voci, non sopra. Un giro semplice e regolare vale più di uno
+elaborato; con il capotasto si abbassa il tono senza cambiare accordi.
+
+\smallskip
+\textbf{8. Senza strumenti.} Un canto deve reggere anche a cappella: se si perde l'intonazione,
+ci si ferma, si ritrova la nota e si riparte.
+\end{multicols}
+\endgroup
 
 
 % ---- Canti (la numerazione araba riparte da 1: pagina stampata = campo "pagina")
 \pagenumbering{arabic}
-\cantotesta{1}{Fra' Martino}{Bivacco}{Tradizionale}
+\cantotesta{1}{Salve Regina}{Liturgici}{Antifona mariana (gregoriano)}{\bRS}{\fiamme{1}}
 \begin{multicols}{2}
-\commento{Canone a 2-4 voci}
-\rigo{\ch{C}{Fra'} Mar\ch{G}{tino} cam\ch{C}{panaro,}}
-\rigo{\ch{C}{dormi} \ch{G}{tu?} \ch{C}{Dormi} \ch{G}{tu?}}
-\rigo{\ch{G}{Suona} le cam\ch{C}{pane,} \ch{G}{suona} le cam\ch{C}{pane,}}
-\rigo{\ch{C}{din} don \ch{G}{dan,} \ch{C}{din} don \ch{G}{dan.}}
+\rigo{\ch{Am}{Salve,} Re\ch{G}{gina,} mater miseri\ch{Am}{cordiae,}}
+\rigo{vita, dul\ch{F}{cedo} et spes no\ch{E}{stra,} sal\ch{Am}{ve.}}
+\rigo{Ad te cla\ch{G}{mamus,} ex\ch{Am}{sules} fi\ch{F}{lii} He\ch{E}{vae.}}
 \end{multicols}
 
-\cantotesta{2}{Quel mazzolin di fiori}{Cammino}{Tradizionale}
+\cantotesta{2}{Quel mazzolin di fiori}{Cammino}{Tradizionale}{\bRS}{\fiamme{3}}
 \begin{multicols}{2}
 \rigo{\ch{G}{Quel} mazzolin di \ch{D}{fiori}}
 \rigo{che \ch{D7}{vien} dalla mon\ch{G}{tagna,}}
@@ -108,7 +241,16 @@
 \rigo{\ch{D7}{questa} sera quando \ch{G}{vien.}}
 \end{multicols}
 
-\cantotesta{3}{Il Canto degli Italiani}{Tradizione}{G. Mameli - M. Novaro (1847)}
+\cantotesta{3}{Fra' Martino}{Bivacco}{Tradizionale}{\bEG}{\fiamme{2}}
+\begin{multicols}{2}
+\commento{Canone a 2-4 voci}
+\rigo{\ch{C}{Fra'} Mar\ch{G}{tino} cam\ch{C}{panaro,}}
+\rigo{\ch{C}{dormi} \ch{G}{tu?} \ch{C}{Dormi} \ch{G}{tu?}}
+\rigo{\ch{G}{Suona} le cam\ch{C}{pane,} \ch{G}{suona} le cam\ch{C}{pane,}}
+\rigo{\ch{C}{din} don \ch{G}{dan,} \ch{C}{din} don \ch{G}{dan.}}
+\end{multicols}
+
+\cantotesta{4}{Il Canto degli Italiani}{Tradizione}{G. Mameli - M. Novaro (1847)}{}{}
 \begin{multicols}{2}
 \rigo{\ch{C}{Fratelli} d'Italia,}
 \rigo{l'Italia s'è \ch{G}{desta,}}
@@ -127,38 +269,31 @@
 \end{ritornello}
 \end{multicols}
 
-\cantotesta{4}{Salve Regina}{Liturgici}{Antifona mariana (gregoriano)}
-\begin{multicols}{2}
-\rigo{\ch{Am}{Salve,} Re\ch{G}{gina,} mater miseri\ch{Am}{cordiae,}}
-\rigo{vita, dul\ch{F}{cedo} et spes no\ch{E}{stra,} sal\ch{Am}{ve.}}
-\rigo{Ad te cla\ch{G}{mamus,} ex\ch{Am}{sules} fi\ch{F}{lii} He\ch{E}{vae.}}
-\end{multicols}
-
 % ---- Indici
 \titolosezione{Indice alfabetico}
 \begingroup\small
 \begin{multicols}{2}
 \lettera{F}
-\voce{1}{Fra' Martino}
+\voce{3}{Fra' Martino}
 \lettera{I}
-\voce{3}{Il Canto degli Italiani}
+\voce{4}{Il Canto degli Italiani}
 \lettera{Q}
 \voce{2}{Quel mazzolin di fiori}
 \lettera{S}
-\voce{4}{Salve Regina}
+\voce{1}{Salve Regina}
 \end{multicols}
 \endgroup
 \titolosezione{Indice per categoria}
 \begingroup\small
 \begin{multicols}{2}
+\categoriaindice{Liturgici}
+\voce{1}{Salve Regina}
 \categoriaindice{Cammino}
 \voce{2}{Quel mazzolin di fiori}
-\categoriaindice{Liturgici}
-\voce{4}{Salve Regina}
 \categoriaindice{Bivacco}
-\voce{1}{Fra' Martino}
+\voce{3}{Fra' Martino}
 \categoriaindice{Tradizione}
-\voce{3}{Il Canto degli Italiani}
+\voce{4}{Il Canto degli Italiani}
 \end{multicols}
 \endgroup
 

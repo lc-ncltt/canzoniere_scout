@@ -5,10 +5,8 @@
 
   var canti = [];
   var perId = {};
-  var categoriaAttiva = null;
   var corrente = null;
   var accordiVisibili = true;
-  var wakeLock = null;
 
   function $(id) { return document.getElementById(id); }
   function el(tag, classe, testo) {
@@ -17,9 +15,6 @@
     if (testo !== undefined) e.textContent = testo;
     return e;
   }
-  function normalizza(s) {
-    return s.normalize('NFD').replace(/[̀-ͯ]/g, '').toLowerCase();
-  }
   function salva(chiave, valore) { try { localStorage.setItem(chiave, valore); } catch (e) {} }
   function leggi(chiave) { try { return localStorage.getItem(chiave); } catch (e) { return null; } }
 
@@ -27,65 +22,40 @@
   function temaAttuale() {
     var t = document.documentElement.getAttribute('data-tema');
     if (t) return t;
-    return window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches ? 'notte' : 'giorno';
+    return window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches ? 'scuro' : 'chiaro';
   }
   function applicaTema(t) {
     document.documentElement.setAttribute('data-tema', t);
-    var notte = t === 'notte';
-    $('btn-tema').setAttribute('aria-pressed', String(notte));
-    $('ico-tema').textContent = notte ? '☀' : '☾';
-    var meta = document.querySelector('meta[name="theme-color"]');
-    if (meta) meta.setAttribute('content', notte ? '#0e0b08' : '#f6f1e7');
+    $('tema').textContent = t === 'scuro' ? 'Chiaro' : 'Scuro';
+    $('tema').setAttribute('aria-pressed', String(t === 'scuro'));
   }
 
-  /* ---------- Elenco e ricerca ---------- */
-  function categorie() {
-    var viste = [];
-    canti.forEach(function (c) { if (viste.indexOf(c.categoria) < 0) viste.push(c.categoria); });
-    return viste;
-  }
-
-  function disegnaFiltri() {
-    var box = $('filtri');
-    box.textContent = '';
-    categorie().forEach(function (cat) {
-      var b = el('button', 'chip', cat);
-      b.type = 'button';
-      b.setAttribute('aria-pressed', String(cat === categoriaAttiva));
-      b.addEventListener('click', function () {
-        categoriaAttiva = categoriaAttiva === cat ? null : cat;
-        disegnaFiltri();
-        disegnaElenco();
-      });
-      box.appendChild(b);
-    });
-  }
-
-  function risultati() {
-    var q = normalizza($('cerca').value.trim());
-    return canti.filter(function (c) {
-      if (categoriaAttiva && c.categoria !== categoriaAttiva) return false;
-      if (!q) return true;
-      if (/^\d+$/.test(q)) return String(c.id).indexOf(q) === 0;
-      return normalizza(c.titolo).indexOf(q) >= 0;
-    });
-  }
-
+  /* ---------- Home ---------- */
   function disegnaElenco() {
-    var lista = risultati();
     var ul = $('elenco');
     ul.textContent = '';
-    lista.forEach(function (c) {
+    canti.forEach(function (c) {
       var li = el('li');
       var a = el('a');
       a.href = '#/' + c.id;
-      a.appendChild(el('span', 'num', String(c.id)));
+      a.appendChild(el('span', 'n', String(c.id)));
       a.appendChild(el('span', 'tit', c.titolo));
-      if (c.pagina) a.appendChild(el('span', 'pag', 'p. ' + c.pagina));
+      if ((c.branche || []).length) a.appendChild(quadratini(c));
       li.appendChild(a);
       ul.appendChild(li);
     });
-    $('stato').textContent = lista.length ? '' : 'Nessun canto trovato.';
+  }
+
+  function anteprima() {
+    var q = $('codice').value.trim();
+    var p = $('anteprima');
+    p.textContent = '';
+    if (!q) return;
+    var c = perId[q];
+    if (!c) { p.textContent = 'Nessun canto con questo codice.'; return; }
+    var a = el('a', '', c.id + ' · ' + c.titolo);
+    a.href = '#/' + c.id;
+    p.appendChild(a);
   }
 
   /* ---------- Testo ChordPro ---------- */
@@ -97,13 +67,10 @@
     var parti = riga.split(/\[([^\]]*)\]/); // testo, accordo, testo, accordo, ...
     var pezzi = []; // {accordo, testo} oppure {spazio:true}
     var i;
-    if (parti[0]) pushTesto(null, parti[0]);
-    for (i = 1; i < parti.length; i += 2) pushTesto(parti[i].trim(), parti[i + 1]);
 
     function pushTesto(accordo, testo) {
-      var token = testo.split(/(\s+)/);
       var usato = false;
-      token.forEach(function (t) {
+      testo.split(/(\s+)/).forEach(function (t) {
         if (t === '') return;
         if (/^\s+$/.test(t)) {
           if (accordo && !usato) { pezzi.push({ accordo: accordo, testo: '' }); usato = true; }
@@ -115,6 +82,9 @@
       });
       if (accordo && !usato) pezzi.push({ accordo: accordo, testo: '' });
     }
+
+    if (parti[0]) pushTesto(null, parti[0]);
+    for (i = 1; i < parti.length; i += 2) pushTesto(parti[i].trim(), parti[i + 1]);
 
     var haAccordi = conAccordi && pezzi.some(function (p) { return p.accordo; });
     var div = el('div', 'riga' + (haAccordi ? ' con-accordi' : ''));
@@ -131,7 +101,7 @@
   }
 
   function disegnaTesto(testo) {
-    var box = $('c-testo');
+    var box = $('testo');
     box.textContent = '';
     var strofa = null;
     var ritornello = false;
@@ -157,35 +127,62 @@
     });
   }
 
-  /* ---------- Vista canto ---------- */
+  /* ---------- Pagina del canto ---------- */
+  function quadratini(c) {
+    var box = el('span', 'quadratini');
+    (c.branche || []).forEach(function (b) { box.appendChild(el('span', 'q ' + b)); });
+    return box;
+  }
+
+  function disegnaInfo(c) {
+    var dl = $('info');
+    dl.textContent = '';
+    function riga(nome, valore, id) {
+      var dt = el('dt', '', nome);
+      var dd = el('dd', '', valore);
+      if (id) dd.id = id;
+      dl.appendChild(dt);
+      dl.appendChild(dd);
+    }
+    if (c.autore) riga('Autore', c.autore);
+    if (c.anno) riga('Anno', String(c.anno));
+    if (c.url_audio) riga('Durata', c.durata || '—', 'info-durata');
+    riga('Sezione', c.categoria);
+    if (c.branche && c.branche.length) {
+      riga('Branca', '');
+      dl.lastChild.appendChild(quadratini(c));
+    }
+    if (c.intensita) riga('Intensità', c.intensita + ' su 5');
+    if (c.pagina) riga('Pagina', String(c.pagina));
+    if (c.note) riga('Note', c.note);
+  }
+
   function mostraCanto(c) {
     corrente = c;
-    $('vista-elenco').hidden = true;
-    $('vista-canto').hidden = false;
+    $('home').hidden = true;
+    $('canto').hidden = false;
     document.title = c.id + '. ' + c.titolo + ' - Canzoniere';
-    $('c-titolo').textContent = c.id + '. ' + c.titolo;
-    $('c-meta').textContent = [c.categoria, c.autore, c.pagina ? 'pagina ' + c.pagina : null]
-      .filter(Boolean).join(' · ');
-    $('c-note').textContent = '';
+    $('c-num').textContent = c.id;
+    $('c-titolo').textContent = c.titolo;
+    disegnaInfo(c);
 
-    var audio = $('c-audio');
+    var audio = $('audio');
     audio.pause();
-    $('c-audio-err').hidden = true;
+    $('audio-err').hidden = true;
     if (c.url_audio) {
       audio.src = c.url_audio;
-      $('c-audio-box').hidden = false;
+      $('audio-box').hidden = false;
     } else {
       audio.removeAttribute('src');
-      $('c-audio-box').hidden = true;
+      $('audio-box').hidden = true;
     }
 
-    var sp = $('c-spartito');
-    if (c.url_spartito) { sp.href = c.url_spartito; sp.hidden = false; } else { sp.hidden = true; }
+    var sp = $('spartito');
+    if (c.url_spartito) { sp.href = c.url_spartito; $('spartito-box').hidden = false; }
+    else { $('spartito-box').hidden = true; }
 
-    var prec = perId[c.id - 1], succ = perId[c.id + 1];
-    vaiA($('prec'), prec);
-    vaiA($('succ'), succ);
-
+    vaiA($('prec'), perId[c.id - 1]);
+    vaiA($('succ'), perId[c.id + 1]);
     disegnaTesto(c.testo_accordi);
     window.scrollTo(0, 0);
   }
@@ -196,21 +193,23 @@
     a.tabIndex = canto ? 0 : -1;
   }
 
-  function mostraElenco() {
+  function mostraHome() {
     corrente = null;
-    $('c-audio').pause();
-    $('vista-canto').hidden = true;
-    $('vista-elenco').hidden = false;
+    $('audio').pause();
+    $('canto').hidden = true;
+    $('home').hidden = false;
     document.title = 'Canzoniere';
+    $('codice').value = '';
+    anteprima();
   }
 
   function route() {
     var m = /^#\/(\d+)$/.exec(location.hash);
     var c = m && perId[m[1]];
-    if (c) mostraCanto(c); else mostraElenco();
+    if (c) mostraCanto(c); else mostraHome();
   }
 
-  /* ---------- Controlli del canto ---------- */
+  /* ---------- Avvio ---------- */
   function dimensioneTesto(delta) {
     var cur = parseFloat(leggi('fs')) || 1.1;
     var nuova = Math.min(2, Math.max(0.85, cur + delta));
@@ -218,63 +217,47 @@
     salva('fs', String(nuova));
   }
 
-  function schermoAcceso(attiva) {
-    if (!attiva) {
-      if (wakeLock) { wakeLock.release(); wakeLock = null; }
-      return Promise.resolve();
-    }
-    return navigator.wakeLock.request('screen').then(function (l) {
-      wakeLock = l;
-      l.addEventListener('release', function () {
-        wakeLock = null;
-        $('btn-schermo').setAttribute('aria-pressed', 'false');
-      });
-    });
-  }
-
   function init() {
     applicaTema(temaAttuale());
-    $('btn-tema').addEventListener('click', function () {
-      var t = temaAttuale() === 'notte' ? 'giorno' : 'notte';
+    $('tema').addEventListener('click', function () {
+      var t = temaAttuale() === 'scuro' ? 'chiaro' : 'scuro';
       applicaTema(t);
       salva('tema', t);
     });
 
     var fs = parseFloat(leggi('fs'));
     if (fs) document.documentElement.style.setProperty('--fs', fs + 'rem');
-    $('btn-meno').addEventListener('click', function () { dimensioneTesto(-0.1); });
-    $('btn-piu').addEventListener('click', function () { dimensioneTesto(0.1); });
+    $('b-meno').addEventListener('click', function () { dimensioneTesto(-0.1); });
+    $('b-piu').addEventListener('click', function () { dimensioneTesto(0.1); });
 
     accordiVisibili = leggi('accordi') !== '0';
-    $('btn-accordi').setAttribute('aria-pressed', String(accordiVisibili));
-    $('btn-accordi').addEventListener('click', function () {
+    $('b-accordi').setAttribute('aria-pressed', String(accordiVisibili));
+    $('b-accordi').addEventListener('click', function () {
       accordiVisibili = !accordiVisibili;
-      $('btn-accordi').setAttribute('aria-pressed', String(accordiVisibili));
+      $('b-accordi').setAttribute('aria-pressed', String(accordiVisibili));
       salva('accordi', accordiVisibili ? '1' : '0');
       if (corrente) disegnaTesto(corrente.testo_accordi);
     });
 
-    if ('wakeLock' in navigator) {
-      var b = $('btn-schermo');
-      b.hidden = false;
-      b.addEventListener('click', function () {
-        var attiva = b.getAttribute('aria-pressed') !== 'true';
-        schermoAcceso(attiva).then(function () {
-          b.setAttribute('aria-pressed', String(attiva));
-        }, function () {});
-      });
-    }
+    $('audio').addEventListener('error', function () { $('audio-err').hidden = false; });
+    // Se la durata non è nel JSON, la si legge dal file audio appena ne arrivano i metadati.
+    $('audio').addEventListener('loadedmetadata', function () {
+      var d = $('info-durata');
+      var s = this.duration;
+      if (d && corrente && !corrente.durata && isFinite(s)) {
+        var sec = Math.round(s);
+        d.textContent = Math.floor(sec / 60) + ':' + ('0' + (sec % 60)).slice(-2);
+      }
+    });
 
-    $('c-audio').addEventListener('error', function () { $('c-audio-err').hidden = false; });
-
-    $('cerca').addEventListener('input', disegnaElenco);
-    $('form-cerca').addEventListener('submit', function (ev) {
+    $('codice').addEventListener('input', function () {
+      this.value = this.value.replace(/\D/g, '');
+      anteprima();
+    });
+    $('form').addEventListener('submit', function (ev) {
       ev.preventDefault();
-      var lista = risultati();
-      var q = $('cerca').value.trim();
-      if (/^\d+$/.test(q) && perId[q]) location.hash = '#/' + q;
-      else if (lista.length === 1) location.hash = '#/' + lista[0].id;
-      $('cerca').blur();
+      var q = $('codice').value.trim();
+      if (perId[q]) location.hash = '#/' + q; else anteprima();
     });
     window.addEventListener('hashchange', route);
   }
@@ -289,12 +272,11 @@
       .then(function (dati) {
         canti = dati.slice().sort(function (a, b) { return a.id - b.id; });
         canti.forEach(function (c) { perId[c.id] = c; });
-        disegnaFiltri();
         disegnaElenco();
         route();
       })
       .catch(function () {
-        $('stato').textContent = 'Impossibile caricare i canti. Controlla la connessione e ricarica la pagina.';
+        $('anteprima').textContent = 'Impossibile caricare i canti. Controlla la connessione e ricarica.';
       });
 
     if ('serviceWorker' in navigator) {

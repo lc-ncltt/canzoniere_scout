@@ -7,9 +7,10 @@ ROOT = Path(__file__).resolve().parent.parent
 CANTI_PATH = ROOT / "data" / "canti.json"
 META_PATH = ROOT / "data" / "meta.json"
 
-# Ordine di questa lista = ordine dell'indice tematico. Per aggiungere una
-# categoria basta aggiungerla qui (la web app la legge dinamicamente dal JSON).
-CATEGORIE = ["Cammino", "Liturgici", "Bivacco", "Tradizione"]
+# Sigle delle branche (colori: giallo, verde, rosso). Le sezioni del libro
+# si definiscono in data/meta.json, campo "sezioni" (l'ordine e' quello del libro).
+BRANCHE = {"LC": "Lupetti/Coccinelle", "EG": "Esploratori/Guide", "RS": "Rover/Scolte"}
+SEGNAPOSTO_TESTO = "{c: TESTO DA INSERIRE}"
 
 OBBLIGATORI = {
     "id": int,
@@ -20,7 +21,8 @@ OBBLIGATORI = {
     "url_spartito": (str, type(None)),
     "testo_accordi": str,
 }
-OPZIONALI = {"autore": str, "note": str}
+OPZIONALI = {"autore": str, "note": str, "branche": list, "intensita": (int, type(None)),
+             "anno": (int, type(None)), "durata": (str, type(None))}
 
 _NOTE = r"(?:[A-G]|Do|Re|Mi|Fa|Sol|La|Si)"
 _ACCORDO_OK = re.compile(rf"^(?:{_NOTE}[#b]?[A-Za-z0-9#b+\-()/.]*|N\.?C\.?)$")
@@ -46,11 +48,14 @@ def carica_meta(percorso=META_PATH):
         "dedica": "",
         "anno": "",
         "url": "",
-        "nota": "",
+        "sezioni": ["Liturgici", "Scout", "Bans", "Cammino", "Bivacco", "Tradizione"],
     }
     if Path(percorso).exists():
         meta.update(carica_json(percorso))
     return meta
+
+
+CATEGORIE = carica_meta()["sezioni"]
 
 
 # --------------------------------------------------------------- ChordPro
@@ -156,6 +161,20 @@ def valida(canti):
                 f"(ammesse: {', '.join(CATEGORIE)}; si estende in scripts/common.py)"
             )
 
+        for b in c.get("branche") or []:
+            if b not in BRANCHE:
+                errori.append(f"{et}: branca '{b}' non valida (ammesse: {', '.join(BRANCHE)})")
+        inten = c.get("intensita")
+        if isinstance(inten, int) and not isinstance(inten, bool) and not 1 <= inten <= 5:
+            errori.append(f"{et}: intensita deve essere tra 1 e 5")
+
+        anno = c.get("anno")
+        if isinstance(anno, int) and not 1000 <= anno <= 2100:
+            errori.append(f"{et}: anno non plausibile ({anno})")
+        durata = c.get("durata")
+        if isinstance(durata, str) and not re.fullmatch(r"\d{1,2}:[0-5]\d", durata):
+            errori.append(f"{et}: durata '{durata}' deve essere nel formato m:ss (es. 3:25)")
+
         pagina = c.get("pagina")
         if isinstance(pagina, int) and not isinstance(pagina, bool):
             if pagina < 1:
@@ -175,6 +194,8 @@ def valida(canti):
         if isinstance(testo, str):
             if not testo.strip():
                 errori.append(f"{et}: testo_accordi vuoto")
+            elif testo.lstrip().startswith(SEGNAPOSTO_TESTO):
+                avvisi.append(f"{et} ({c.get('titolo')}): testo ancora da inserire")
             for n, riga in enumerate(testo.splitlines(), 1):
                 if riga.count("[") != riga.count("]") or re.search(r"\[[^\]]*\[", riga):
                     errori.append(f"{et}, riga {n}: parentesi [ ] non bilanciate")
