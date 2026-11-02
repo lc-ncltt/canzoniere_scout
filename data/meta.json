@@ -4,5 +4,22 @@
   "dedica": "Un regalo di Partenza, per i miei compagni di Clan.",
   "anno": "2026",
   "url": "https://lc-ncltt.github.io/canzoniere_scout/",
-  "sezioni": ["Liturgici", "Scout", "Bans", "Cammino", "Bivacco", "Tradizione"]
+  "sezioni": [
+    "Liturgici",
+    "Scout",
+    "Bans",
+    "Cammino",
+    "Bivacco",
+    "Tradizione"
+  ],
+  "sottosezioni": {
+    "Liturgici": [
+      "Preghiere a tavola"
+    ],
+    "Scout": [
+      "Promessa",
+      "Partenza",
+      "Inni"
+    ]
+  }
 }

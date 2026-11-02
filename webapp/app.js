@@ -147,7 +147,7 @@
     if (c.autore) riga('Autore', c.autore);
     if (c.anno) riga('Anno', String(c.anno));
     if (c.url_audio) riga('Durata', c.durata || '—', 'info-durata');
-    riga('Sezione', c.categoria);
+    riga('Sezione', c.categoria + (c.sottosezione ? ' · ' + c.sottosezione : ''));
     if (c.branche && c.branche.length) {
       riga('Branca', '');
       dl.lastChild.appendChild(quadratini(c));
@@ -178,8 +178,9 @@
     }
 
     var sp = $('spartito');
-    if (c.url_spartito) { sp.href = c.url_spartito; $('spartito-box').hidden = false; }
-    else { $('spartito-box').hidden = true; }
+    sp.href = 'pdf/' + c.id + '.pdf';
+    sp.setAttribute('download', c.titolo.replace(/[^\wÀ-ſ]+/g, '-') + '.pdf');
+    $('spartito-box').hidden = false;
 
     vaiA($('prec'), perId[c.id - 1]);
     vaiA($('succ'), perId[c.id + 1]);

@@ -84,6 +84,8 @@
   \leaders\hbox to .7em{\hss.\hss}\hfill\nobreak
   \hbox to 2em{\hfill\pageref{canto:#1}}\par}
 
+\newcommand{\sottocategoriaindice}[1]{\par\vspace{.8mm}{\small\itshape #1}\par\nopagebreak}
+
 \begin{document}
 
 % ---- Frontespizio (numerazione romana, nessun numero stampato)
@@ -221,36 +223,7 @@ ci si ferma, si ritrova la nota e si riparte.
 
 % ---- Canti (la numerazione araba riparte da 1: pagina stampata = campo "pagina")
 \pagenumbering{arabic}
-\cantotesta{1}{Salve Regina}{Liturgici}{Antifona mariana (gregoriano)}{\bRS}{\fiamme{1}}
-\begin{multicols}{2}
-\rigo{\ch{Am}{Salve,} Re\ch{G}{gina,} mater miseri\ch{Am}{cordiae,}}
-\rigo{vita, dul\ch{F}{cedo} et spes no\ch{E}{stra,} sal\ch{Am}{ve.}}
-\rigo{Ad te cla\ch{G}{mamus,} ex\ch{Am}{sules} fi\ch{F}{lii} He\ch{E}{vae.}}
-\end{multicols}
-
-\cantotesta{2}{Quel mazzolin di fiori}{Cammino}{Tradizionale}{\bRS}{\fiamme{3}}
-\begin{multicols}{2}
-\rigo{\ch{G}{Quel} mazzolin di \ch{D}{fiori}}
-\rigo{che \ch{D7}{vien} dalla mon\ch{G}{tagna,}}
-\rigo{\ch{G}{bada} che non si \ch{D}{bagni}}
-\rigo{che \ch{D7}{lo} voglio rega\ch{G}{lar.}}
-\strofa
-\rigo{\ch{G}{Lo} voglio regalare}
-\rigo{per\ch{D7}{ché} l'è un bel maz\ch{G}{zetto,}}
-\rigo{\ch{G}{lo} voglio dare al mio mo\ch{D}{retto}}
-\rigo{\ch{D7}{questa} sera quando \ch{G}{vien.}}
-\end{multicols}
-
-\cantotesta{3}{Fra' Martino}{Bivacco}{Tradizionale}{\bEG}{\fiamme{2}}
-\begin{multicols}{2}
-\commento{Canone a 2-4 voci}
-\rigo{\ch{C}{Fra'} Mar\ch{G}{tino} cam\ch{C}{panaro,}}
-\rigo{\ch{C}{dormi} \ch{G}{tu?} \ch{C}{Dormi} \ch{G}{tu?}}
-\rigo{\ch{G}{Suona} le cam\ch{C}{pane,} \ch{G}{suona} le cam\ch{C}{pane,}}
-\rigo{\ch{C}{din} don \ch{G}{dan,} \ch{C}{din} don \ch{G}{dan.}}
-\end{multicols}
-
-\cantotesta{4}{Il Canto degli Italiani}{Tradizione}{G. Mameli - M. Novaro (1847)}{}{}
+\cantotesta{1}{Inno Italia}{Scout · Inni}{G. Mameli - M. Novaro}{}{}
 \begin{multicols}{2}
 \rigo{\ch{C}{Fratelli} d'Italia,}
 \rigo{l'Italia s'è \ch{G}{desta,}}
@@ -273,27 +246,16 @@ ci si ferma, si ritrova la nota e si riparte.
 \titolosezione{Indice alfabetico}
 \begingroup\small
 \begin{multicols}{2}
-\lettera{F}
-\voce{3}{Fra' Martino}
 \lettera{I}
-\voce{4}{Il Canto degli Italiani}
-\lettera{Q}
-\voce{2}{Quel mazzolin di fiori}
-\lettera{S}
-\voce{1}{Salve Regina}
+\voce{1}{Inno Italia}
 \end{multicols}
 \endgroup
 \titolosezione{Indice per categoria}
 \begingroup\small
 \begin{multicols}{2}
-\categoriaindice{Liturgici}
-\voce{1}{Salve Regina}
-\categoriaindice{Cammino}
-\voce{2}{Quel mazzolin di fiori}
-\categoriaindice{Bivacco}
-\voce{3}{Fra' Martino}
-\categoriaindice{Tradizione}
-\voce{4}{Il Canto degli Italiani}
+\categoriaindice{Scout}
+\sottocategoriaindice{Inni}
+\voce{1}{Inno Italia}
 \end{multicols}
 \endgroup
 

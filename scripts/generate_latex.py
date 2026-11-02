@@ -10,7 +10,7 @@ import sys
 import unicodedata
 from pathlib import Path
 
-from common import (CANTI_PATH, CATEGORIE, META_PATH, ROOT, carica_json,
+from common import (CANTI_PATH, CATEGORIE, META_PATH, ROOT, SOTTOSEZIONI, carica_json,
                     carica_meta, parse_chordpro, valida)
 
 ESCAPE = {
@@ -37,6 +37,10 @@ def riga_latex(segmenti):
     return r"\rigo{" + "".join(parti) + "}"
 
 
+def etichetta(c):
+    return c["categoria"] + (" · " + c["sottosezione"] if c.get("sottosezione") else "")
+
+
 def tag_branche(c):
     return "".join("\\b" + b for b in c.get("branche", []))
 
@@ -55,7 +59,7 @@ def pagine_iniziali(meta):
 
 
 def canto_latex(c):
-    out = [rf"\cantotesta{{{c['id']}}}{{{esc(c['titolo'])}}}{{{esc(c['categoria'])}}}"
+    out = [rf"\cantotesta{{{c['id']}}}{{{esc(c['titolo'])}}}{{{esc(etichetta(c))}}}"
            rf"{{{esc(c.get('autore', ''))}}}{{{tag_branche(c)}}}{{{fiamme(c)}}}",
            r"\begin{multicols}{2}"]
     in_ritornello = False
@@ -117,7 +121,14 @@ def indice_tematico(canti):
         if not gruppo:
             continue
         righe.append(rf"\categoriaindice{{{esc(cat)}}}")
-        righe += [voce(c) for c in sorted(gruppo, key=lambda c: chiave_ordinamento(c["titolo"]))]
+        subs = SOTTOSEZIONI.get(cat, [])
+        for sub in subs + [""]:
+            voci_sub = [c for c in gruppo if c.get("sottosezione", "") == sub]
+            if not voci_sub:
+                continue
+            if sub:
+                righe.append(rf"\sottocategoriaindice{{{esc(sub)}}}")
+            righe += [voce(c) for c in sorted(voci_sub, key=lambda c: chiave_ordinamento(c["titolo"]))]
     righe += [r"\end{multicols}", r"\endgroup"]
     return "\n".join(righe)
 

@@ -23,6 +23,7 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - uses: actions/configure-pages@v5
+      - run: pip install reportlab
       # Convalida data/canti.json e assembla _site/ = webapp/ + canti.json.
       # Se il JSON non è valido il job fallisce e il sito online resta quello precedente.
       - run: python3 scripts/build_site.py --out _site

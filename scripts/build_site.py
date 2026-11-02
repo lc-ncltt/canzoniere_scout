@@ -9,6 +9,7 @@ import functools
 import hashlib
 import http.server
 import shutil
+import subprocess
 import sys
 from pathlib import Path
 
@@ -33,6 +34,9 @@ def main():
     shutil.copytree(ROOT / "webapp", out)
     shutil.copy(CANTI_PATH, out / "canti.json")
     (out / ".nojekyll").touch()
+    # Spartiti PDF (testo + accordi) generati dai .cho: pdf/<id>.pdf
+    subprocess.run([sys.executable, str(Path(__file__).with_name("genera_pdf.py")), "--out", str(out / "pdf")],
+                   check=True)
 
     # Versione della cache offline: cambia a ogni modifica di contenuti o codice.
     h = hashlib.sha256()

@@ -2,10 +2,11 @@
 """Costruisce data/canti.json da data/elenco.csv + testi/*.cho.
 
   data/elenco.csv   una riga per canto (si modifica con Excel/Fogli Google, separatore ;)
-                    colonne: titolo;categoria;branche;intensita;autore;anno;durata;note;url_audio;url_spartito
+                    colonne: titolo;categoria;sottosezione;branche;intensita;autore;anno;durata;note;url_audio;url_spartito
                     branche = sigle separate da / (LC/EG/RS), intensita = 1..5 (opzionale)
   testi/<slug>.cho  testo con accordi in ChordPro; lo slug e' il titolo in minuscolo con i trattini
-                    (es. "Fra' Martino" -> fra-martino.cho). Se manca, resta un segnaposto.
+                    (es. "Fra' Martino" -> fra-martino.cho). I canti senza file (o con file vuoto)
+                    restano nell'elenco ma NON entrano in libro e web app finche' non hanno il testo.
 
 Ordine nel libro: sezione (come in meta.json), poi intensita crescente, poi titolo.
 Gli id si assegnano di conseguenza; le pagine si rileggono con sync_pages.py dopo la compilazione.
@@ -16,10 +17,10 @@ import re
 import sys
 import unicodedata
 
-from common import (CANTI_PATH, CATEGORIE, ROOT, SEGNAPOSTO_TESTO, salva_json,
-                    valida)
+from common import (CANTI_PATH, CATEGORIE, ROOT, SEGNAPOSTO_TESTO, SOTTOSEZIONI,
+                    salva_json, valida)
 
-COLONNE = ["titolo", "categoria", "branche", "intensita", "autore", "anno", "durata", "note",
+COLONNE = ["titolo", "categoria", "sottosezione", "branche", "intensita", "autore", "anno", "durata", "note",
            "url_audio", "url_spartito"]
 
 
@@ -53,6 +54,8 @@ def main():
     ap.add_argument("--default-sezione", help="sezione per le righe senza categoria (poi da riclassificare)")
     ap.add_argument("--crea-testi", action="store_true",
                     help="crea in testi/ un file .cho vuoto per ogni canto che non ne ha")
+    ap.add_argument("--includi-senza-testo", action="store_true",
+                    help="include anche i canti senza testo (nel libro restano pagine con segnaposto)")
     args = ap.parse_args()
 
     from pathlib import Path
@@ -62,10 +65,15 @@ def main():
         sys.exit("elenco.csv: serve almeno la colonna 'titolo'")
 
     canti = []
+    da_classificare = []
+    da_rivedere = []
     for r in righe:
         categoria = r.get("categoria") or args.default_sezione
-        if not categoria:
-            sys.exit(f"'{r['titolo']}': categoria mancante (usa --default-sezione per un import iniziale)")
+        if not categoria:  # non ancora classificato: resta in elenco, fuori dal libro
+            da_classificare.append(r["titolo"])
+            if (cartella / f"{slug(r['titolo'])}.cho").exists():
+                sys.exit(f"'{r['titolo']}' ha un testo ma nessuna categoria in elenco.csv: classificalo")
+            continue
         canto = {
             "titolo": r["titolo"],
             "categoria": categoria,
@@ -73,6 +81,8 @@ def main():
             "url_audio": r.get("url_audio") or None,
             "url_spartito": r.get("url_spartito") or None,
         }
+        if r.get("sottosezione"):
+            canto["sottosezione"] = r["sottosezione"]
         branche = [b.strip().upper() for b in re.split(r"[/,; ]+", r.get("branche", "")) if b.strip()]
         if branche:
             canto["branche"] = branche
@@ -100,9 +110,20 @@ def main():
                 file_testo.write_text("", encoding="utf-8")
         canti.append(canto)
 
+    senza_testo = [c for c in canti if c["testo_accordi"].startswith(SEGNAPOSTO_TESTO)]
+    if not args.includi_senza_testo:
+        canti = [c for c in canti if c not in senza_testo]
+    if not canti:
+        sys.exit("Nessun canto ha ancora un file testi/<titolo>.cho con del testo")
+
     ordine = {s: i for i, s in enumerate(CATEGORIE)}
-    canti.sort(key=lambda c: (ordine.get(c["categoria"], len(ordine)), c.get("intensita") or 0,
-                              normalizza(c["titolo"])))
+
+    def posizione_sub(c):  # senza sottosezione per ultimi
+        subs = SOTTOSEZIONI.get(c["categoria"], [])
+        return subs.index(c["sottosezione"]) if c.get("sottosezione") in subs else len(subs)
+
+    canti.sort(key=lambda c: (ordine.get(c["categoria"], len(ordine)), posizione_sub(c),
+                              c.get("intensita") or 0, normalizza(c["titolo"])))
     for i, c in enumerate(canti, 1):
         c["id"] = i
     canti = [{"id": c["id"], **{k: v for k, v in c.items() if k != "id"}} for c in canti]
@@ -112,15 +133,19 @@ def main():
         sys.exit("\n".join("ERRORE: " + e for e in errori))
     salva_json(args.out, canti)
 
-    mancanti = [c["titolo"] for c in canti if c["testo_accordi"].startswith(SEGNAPOSTO_TESTO)]
-    print(f"{len(canti)} canti scritti in {args.out}")
-    print(f"  testo mancante: {len(mancanti)}   audio mancante: {sum(not c['url_audio'] for c in canti)}"
+    totali = {}
+    for c in senza_testo:
+        totali[c["categoria"]] = totali.get(c["categoria"], 0) + 1
+    print(f"{len(canti)} canti scritti in {args.out} (di {len(righe)} in elenco)")
+    if senza_testo:
+        stato = "inclusi con segnaposto" if args.includi_senza_testo else "esclusi finché manca testi/<titolo>.cho"
+        print(f"  senza testo ({stato}): " + ", ".join(f"{k} {v}" for k, v in totali.items()))
+    if da_rivedere:
+        print(f"  bozze scaricate DA RIVEDERE: {len(da_rivedere)} (cancella la riga '# DA RIVEDERE' nel .cho dopo il controllo)")
+    if da_classificare:
+        print(f"  da classificare (categoria vuota in elenco.csv): {len(da_classificare)}")
+    print(f"  audio mancante: {sum(not c['url_audio'] for c in canti)}"
           f"   spartito mancante: {sum(not c['url_spartito'] for c in canti)}")
-    for t in mancanti[:15]:
-        print("   - senza testo:", t)
-    if len(mancanti) > 15:
-        print(f"   ... e altri {len(mancanti) - 15}")
-
 
 if __name__ == "__main__":
     main()

@@ -40,8 +40,22 @@ Con `latexmk`: `latexmk -pdf -outdir=build build/canzoniere.tex`.
    Se all'inizio hai solo i titoli: `python scripts/build_canti.py --default-sezione Tradizione`.
 2. `python scripts/build_canti.py --crea-testi` crea in `testi/` un file `.cho` vuoto per ogni canto
    (nome = titolo in minuscolo con trattini). Incolla lì testo e accordi.
-3. Rilancia `build_canti.py`: ordina per sezione, poi intensità, poi titolo; assegna i numeri;
-   elenca i canti che non hanno ancora il testo (nel libro restano con "TESTO DA INSERIRE").
+3. Rilancia `build_canti.py`: ordina per sezione, poi intensità, poi titolo; assegna i numeri.
+   **Un canto entra in libro e web app solo quando ha un file `testi/<titolo>.cho` con del testo**:
+   gli altri restano nell'elenco (la lista di cose da fare) e il report ne indica il numero per sezione.
+   I numeri cambiano finché si aggiungono canti: vanno considerati definitivi solo a elenco chiuso.
+   `--includi-senza-testo` li include con un segnaposto.
+
+### Scaricare testi da internet (bozze)
+
+1. Compila `data/fonti.csv` (`titolo;url`): per ogni canto l'indirizzo della pagina con testo e accordi.
+2. `python scripts/importa_testi.py --max 30` scarica le pagine, converte gli accordi (anche quelli scritti
+   sopra il testo) in ChordPro e crea `testi/<titolo>.cho` con in testa `# DA RIVEDERE`.
+   Rispetta robots.txt, aspetta 3 s tra le richieste e si ferma al primo 403/429.
+   Se la pagina non ha un blocco `<pre>`, serve `pip install trafilatura`.
+3. Controlla ogni bozza (accordi spostati, strofe mancanti, pubblicità), poi cancella la riga `# DA RIVEDERE`.
+   `build_canti.py` ti dice quante bozze restano da rivedere. Le righe `#` non finiscono mai nel libro né nel sito.
+4. Per un testo incollato a mano con gli accordi sopra: `python scripts/accordi.py incolla.txt > testi/titolo.cho`.
 
 Per i testi coperti da copyright usa fonti che puoi legittimamente copiare (i tuoi libri, canzonieri
 della tua associazione); online conviene cercare solo i **link** a audio e spartiti per le colonne
@@ -92,11 +106,15 @@ Per `sync_pages.py` scarica da Overleaf (*Menu → Download → Source* o *Logs 
 - **Pagine pari.** Con la rilegatura a viti conviene un numero totale di pagine pari; controlla il PDF.
 - **Prova prima di stampare 30 copie:** stampa una copia sola e forala.
 
+## Spartiti PDF
+
+Ogni canto con testo ha un PDF generato da `scripts/genera_pdf.py` (A4, nero su bianco, accordi sopra il testo, ritornello in corsivo, 1 o 2 colonne). `build_site.py` li crea in `_site/pdf/<id>.pdf` e la web app li offre con "Scarica PDF". Serve `pip install reportlab`. Un vero rigo musicale non si ricava dagli accordi: se in futuro vuoi le note, vanno fornite a parte.
+
 ## Web app
 
 - Cerca per numero (`12`) o per titolo; filtri per categoria; link diretti `#/12`.
 - `<audio preload="none">`: nessun byte di audio viene scaricato finché non premi play.
-- Spartito PDF in nuova scheda, accordi attivabili, dimensione testo, schermo sempre acceso, modo notte
+- Scarica PDF dello spartito (testo + accordi), accordi attivabili, dimensione testo, schermo sempre acceso, modo notte
   (segue il telefono, e si può forzare col pulsante).
 - Un service worker salva testi e accordi: dopo la prima visita funzionano anche senza campo.
   L'audio e i PDF restano online.

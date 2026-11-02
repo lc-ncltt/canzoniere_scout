@@ -22,7 +22,7 @@ OBBLIGATORI = {
     "testo_accordi": str,
 }
 OPZIONALI = {"autore": str, "note": str, "branche": list, "intensita": (int, type(None)),
-             "anno": (int, type(None)), "durata": (str, type(None))}
+             "anno": (int, type(None)), "durata": (str, type(None)), "sottosezione": str}
 
 _NOTE = r"(?:[A-G]|Do|Re|Mi|Fa|Sol|La|Si)"
 _ACCORDO_OK = re.compile(rf"^(?:{_NOTE}[#b]?[A-Za-z0-9#b+\-()/.]*|N\.?C\.?)$")
@@ -55,7 +55,9 @@ def carica_meta(percorso=META_PATH):
     return meta
 
 
-CATEGORIE = carica_meta()["sezioni"]
+_META = carica_meta()
+CATEGORIE = _META["sezioni"]
+SOTTOSEZIONI = _META.get("sottosezioni", {})  # {"Scout": ["Promessa", ...]}
 
 
 # --------------------------------------------------------------- ChordPro
@@ -160,6 +162,10 @@ def valida(canti):
                 f"{et}: categoria '{c['categoria']}' non ammessa "
                 f"(ammesse: {', '.join(CATEGORIE)}; si estende in scripts/common.py)"
             )
+
+        sub = c.get("sottosezione")
+        if isinstance(sub, str) and sub not in SOTTOSEZIONI.get(c.get("categoria"), []):
+            errori.append(f"{et}: sottosezione '{sub}' non definita per '{c.get('categoria')}' in meta.json")
 
         for b in c.get("branche") or []:
             if b not in BRANCHE:
