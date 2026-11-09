@@ -8,7 +8,8 @@
                     (es. "Fra' Martino" -> fra-martino.cho). I canti senza file (o con file vuoto)
                     restano nell'elenco ma NON entrano in libro e web app finche' non hanno il testo.
 
-Ordine nel libro: sezione (come in meta.json), poi intensita crescente, poi titolo.
+Ordine nel libro: sezione (come in meta.json), sottosezione, poi l'ordinamento della sezione
+(meta.json "ordinamento": elenco | branca | titolo | fuoco; default intensita crescente, poi titolo).
 Gli id si assegnano di conseguenza; le pagine si rileggono con sync_pages.py dopo la compilazione.
 """
 import argparse
@@ -17,7 +18,7 @@ import re
 import sys
 import unicodedata
 
-from common import (CANTI_PATH, CATEGORIE, ROOT, SEGNAPOSTO_TESTO, SOTTOSEZIONI,
+from common import (_META, CANTI_PATH, CATEGORIE, ROOT, SEGNAPOSTO_TESTO, SOTTOSEZIONI,
                     salva_json, valida)
 
 COLONNE = ["titolo", "categoria", "sottosezione", "branche", "intensita", "autore", "anno", "durata", "note",
@@ -67,7 +68,7 @@ def main():
     canti = []
     da_classificare = []
     da_rivedere = []
-    for r in righe:
+    for n_riga, r in enumerate(righe):
         categoria = r.get("categoria") or args.default_sezione
         if not categoria:  # non ancora classificato: resta in elenco, fuori dal libro
             da_classificare.append(r["titolo"])
@@ -80,6 +81,7 @@ def main():
             "pagina": None,  # la riempie sync_pages.py dopo la compilazione
             "url_audio": r.get("url_audio") or None,
             "url_spartito": r.get("url_spartito") or None,
+            "_riga": n_riga,
         }
         if r.get("sottosezione"):
             canto["sottosezione"] = r["sottosezione"]
@@ -117,13 +119,38 @@ def main():
         sys.exit("Nessun canto ha ancora un file testi/<titolo>.cho con del testo")
 
     ordine = {s: i for i, s in enumerate(CATEGORIE)}
+    senza_sub = _META.get("posizione_senza_sottosezione", {})
+    ordinamento = _META.get("ordinamento", {})
 
-    def posizione_sub(c):  # senza sottosezione per ultimi
+    def posizione_sub(c):  # senza sottosezione: alla posizione indicata in meta.json, altrimenti per ultimi
         subs = SOTTOSEZIONI.get(c["categoria"], [])
-        return subs.index(c["sottosezione"]) if c.get("sottosezione") in subs else len(subs)
+        if c.get("sottosezione") in subs:
+            return subs.index(c["sottosezione"]) * 2 + 1
+        return senza_sub.get(c["categoria"], len(subs)) * 2
 
-    canti.sort(key=lambda c: (ordine.get(c["categoria"], len(ordine)), posizione_sub(c),
-                              c.get("intensita") or 0, normalizza(c["titolo"])))
+    # fuoco di bivacco: crescendo 2 -> 5, poi i calmi (1) prima della chiusura; senza intensita in fondo
+    CURVA_FUOCO = {2: 0, 3: 1, 4: 2, 5: 3, 1: 4}
+
+    def chiave_interna(c):
+        modo = ordinamento.get(c["categoria"], "intensita")
+        if modo == "elenco":  # ordine delle righe in elenco.csv
+            return (c["_riga"],)
+        if modo == "branca":  # LC -> EG -> RS -> per tutti
+            prima = (c.get("branche") or [""])[0]
+            return ({"LC": 0, "EG": 1, "RS": 2}.get(prima, 3), normalizza(c["titolo"]))
+        if modo == "titolo":
+            return (normalizza(c["titolo"]),)
+        if modo == "fuoco":
+            return (CURVA_FUOCO.get(c.get("intensita"), 5), normalizza(c["titolo"]))
+        return (c.get("intensita") or 0, normalizza(c["titolo"]))
+
+    for c in canti:
+        if (ordinamento.get(c["categoria"]) == "fuoco" and not c.get("intensita")
+                and c.get("sottosezione") != "Bans"):
+            print(f"AVVISO: '{c['titolo']}' (fuoco di bivacco) senza intensita: va in fondo")
+    canti.sort(key=lambda c: (ordine.get(c["categoria"], len(ordine)), posizione_sub(c), chiave_interna(c)))
+    for c in canti:
+        c.pop("_riga", None)
     for i, c in enumerate(canti, 1):
         c["id"] = i
     canti = [{"id": c["id"], **{k: v for k, v in c.items() if k != "id"}} for c in canti]

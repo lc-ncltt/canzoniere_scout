@@ -5,21 +5,28 @@
   "anno": "2026",
   "url": "https://lc-ncltt.github.io/canzoniere_scout/",
   "sezioni": [
-    "Liturgici",
-    "Scout",
-    "Bans",
-    "Cammino",
-    "Bivacco",
-    "Tradizione"
+    "Canti associativi",
+    "Canti cerimoniali",
+    "Canti di lupettismo",
+    "Fuoco di bivacco",
+    "Canti liturgici"
   ],
   "sottosezioni": {
-    "Liturgici": [
-      "Preghiere a tavola"
+    "Fuoco di bivacco": [
+      "Bans",
+      "Chiusura"
     ],
-    "Scout": [
-      "Promessa",
-      "Partenza",
-      "Inni"
+    "Canti liturgici": [
+      "Preghiere a tavola"
     ]
+  },
+  "posizione_senza_sottosezione": {
+    "Fuoco di bivacco": 1
+  },
+  "ordinamento": {
+    "Canti associativi": "elenco",
+    "Canti cerimoniali": "branca",
+    "Canti di lupettismo": "titolo",
+    "Fuoco di bivacco": "fuoco"
   }
 }
