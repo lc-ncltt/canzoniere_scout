@@ -9,7 +9,7 @@
                     restano nell'elenco ma NON entrano in libro e web app finche' non hanno il testo.
 
 Ordine nel libro: sezione (come in meta.json), sottosezione, poi l'ordinamento della sezione
-(meta.json "ordinamento": elenco | branca | titolo | fuoco; default intensita crescente, poi titolo).
+(meta.json "ordinamento": elenco | branca | titolo; default intensita crescente, poi titolo).
 Gli id si assegnano di conseguenza; le pagine si rileggono con sync_pages.py dopo la compilazione.
 """
 import argparse
@@ -128,11 +128,10 @@ def main():
             return subs.index(c["sottosezione"]) * 2 + 1
         return senza_sub.get(c["categoria"], len(subs)) * 2
 
-    # fuoco di bivacco: crescendo 2 -> 5, poi i calmi (1) prima della chiusura; senza intensita in fondo
-    CURVA_FUOCO = {2: 0, 3: 1, 4: 2, 5: 3, 1: 4}
-
     def chiave_interna(c):
-        modo = ordinamento.get(c["categoria"], "intensita")
+        # "Sezione/Sottosezione" in meta.json ha la precedenza su "Sezione"
+        modo = (ordinamento.get(f"{c['categoria']}/{c.get('sottosezione', '')}")
+                or ordinamento.get(c["categoria"], "intensita"))
         if modo == "elenco":  # ordine delle righe in elenco.csv
             return (c["_riga"],)
         if modo == "branca":  # LC -> EG -> RS -> per tutti
@@ -140,14 +139,12 @@ def main():
             return ({"LC": 0, "EG": 1, "RS": 2}.get(prima, 3), normalizza(c["titolo"]))
         if modo == "titolo":
             return (normalizza(c["titolo"]),)
-        if modo == "fuoco":
-            return (CURVA_FUOCO.get(c.get("intensita"), 5), normalizza(c["titolo"]))
         return (c.get("intensita") or 0, normalizza(c["titolo"]))
 
+    obbligatoria = set(_META.get("sottosezione_obbligatoria", []))
     for c in canti:
-        if (ordinamento.get(c["categoria"]) == "fuoco" and not c.get("intensita")
-                and c.get("sottosezione") != "Bans"):
-            print(f"AVVISO: '{c['titolo']}' (fuoco di bivacco) senza intensita: va in fondo")
+        if c["categoria"] in obbligatoria and not c.get("sottosezione"):
+            print(f"AVVISO: '{c['titolo']}' ({c['categoria']}) senza sottosezione/fase: va in fondo")
     canti.sort(key=lambda c: (ordine.get(c["categoria"], len(ordine)), posizione_sub(c), chiave_interna(c)))
     for c in canti:
         c.pop("_riga", None)

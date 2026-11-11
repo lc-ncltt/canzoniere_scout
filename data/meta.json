@@ -9,24 +9,43 @@
     "Canti cerimoniali",
     "Canti di lupettismo",
     "Fuoco di bivacco",
-    "Canti liturgici"
+    "Canti alpini",
+    "Canti liturgici",
+    "Canti del risveglio"
   ],
   "sottosezioni": {
     "Fuoco di bivacco": [
+      "Apertura",
       "Bans",
-      "Chiusura"
+      "Crescendo",
+      "Picco",
+      "Calando",
+      "Chiusura",
+      "Ultimi"
     ],
     "Canti liturgici": [
+      "Ingresso",
+      "Alleluia",
+      "Offertorio",
+      "Santo",
+      "Comunione",
+      "Finale",
+      "Mariani",
+      "Preghiere scout",
       "Preghiere a tavola"
     ]
   },
-  "posizione_senza_sottosezione": {
-    "Fuoco di bivacco": 1
-  },
+  "sottosezione_obbligatoria": [
+    "Fuoco di bivacco"
+  ],
   "ordinamento": {
     "Canti associativi": "elenco",
     "Canti cerimoniali": "branca",
     "Canti di lupettismo": "titolo",
-    "Fuoco di bivacco": "fuoco"
+    "Fuoco di bivacco": "titolo",
+    "Fuoco di bivacco/Apertura": "elenco",
+    "Fuoco di bivacco/Ultimi": "elenco",
+    "Canti del risveglio": "titolo",
+    "Canti alpini": "titolo"
   }
 }
