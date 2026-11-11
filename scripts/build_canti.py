@@ -34,6 +34,10 @@ def slug(titolo):
     return re.sub(r"[^a-z0-9]+", "-", normalizza(titolo)).strip("-")
 
 
+def ha_testo(percorso):  # file assente o vuoto = canto ancora senza testo
+    return percorso.exists() and bool(percorso.read_text(encoding="utf-8").strip())
+
+
 def leggi_csv(percorso):
     grezzo = percorso.read_bytes()
     try:
@@ -72,7 +76,7 @@ def main():
         categoria = r.get("categoria") or args.default_sezione
         if not categoria:  # non ancora classificato: resta in elenco, fuori dal libro
             da_classificare.append(r["titolo"])
-            if (cartella / f"{slug(r['titolo'])}.cho").exists():
+            if ha_testo(cartella / f"{slug(r['titolo'])}.cho"):
                 sys.exit(f"'{r['titolo']}' ha un testo ma nessuna categoria in elenco.csv: classificalo")
             continue
         canto = {
@@ -103,7 +107,7 @@ def main():
                 canto[campo] = r[campo]
 
         file_testo = cartella / f"{slug(r['titolo'])}.cho"
-        if file_testo.exists():
+        if ha_testo(file_testo):
             canto["testo_accordi"] = file_testo.read_text(encoding="utf-8").strip() + "\n"
         else:
             canto["testo_accordi"] = SEGNAPOSTO_TESTO + "\n"
