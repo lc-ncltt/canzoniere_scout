@@ -1,0 +1,36 @@
+# fonte: testo e accordi forniti dall'utente
+# DA RIVEDERE: accordi non allineati alle sillabe (messi in sequenza a inizio riga); nel testo ricevuto "Si" e "Do" attaccati a "infinita"/"Benedetto" interpretati come Sim e Dom (stessi accordi minori delle altre righe)
+# Nota originale: nell'ultima riga del ritornello "Re" diventa Sib sul cambio di tono
+# Il ritornello (Rit.) è riscritto dopo ogni strofa; l'ultimo "Rit. Cambio tono" è una tonalità più alta (Mib)
+
+[Re][Fa#m7][Mim7][La4][La]Accogli i nostri doni, Dio dell'universo,
+[Sim][Fa#m7][Sol][La4][La]in questo misterioso incontro col tuo Figlio.
+[Sim][Fa#m][Sol][Re]Ti offriamo il pane che Tu ci dai:
+[Sim][Mim7][Sol][La][Re][La]trasformalo in Te, Signor.
+
+{soc}
+[Re][Mim][La4][La]Benedetto nei secoli il Signore
+[Sol][La][Fa#m][Sim]infinita sorgente della vita.
+[Mim7][La6][Re][Re/Do#][Sim]Benedetto nei secoli
+[Sol][La][Re][Sol][Re]Benedetto nei secoli.
+{eoc}
+
+[Re][Fa#m7][Mim7][La4][La]Accogli i nostri doni, Dio dell'universo,
+[Sim][Fa#m7][Sol][La4][La]in questo misterioso incontro col tuo Figlio.
+[Sim][Fa#m][Sol][Re]Ti offriamo il vino che Tu ci dai:
+[Sim][Mim7][Sol][La][Re][La]trasformalo in Te, Signor.
+
+{soc}
+[Re][Mim][La4][La]Benedetto nei secoli il Signore
+[Sol][La][Fa#m][Sim]infinita sorgente della vita.
+[Mim7][La6][Re][Re/Do#][Sim]Benedetto nei secoli
+[Sol][La][Re][Sol][Re]Benedetto nei secoli.
+{eoc}
+
+# Rit. Cambio tono
+{soc}
+[Mib][Fam][Sib4][Sib]Benedetto nei secoli il Signore
+[Lab][Sib][Solm][Dom]infinita sorgente della vita.
+[Fam7][Sib6][Mib][Mib/Re][Dom]Benedetto nei secoli
+[Lab][Sib][Lab][Mib]Benedetto nei secoli.
+{eoc}
