@@ -2646,6 +2646,17 @@
   },
   {
     "id": 218,
+    "titolo": "E prima di mangiar",
+    "categoria": "Canti liturgici",
+    "pagina": null,
+    "url_audio": null,
+    "url_spartito": null,
+    "sottosezione": "Preghiere a tavola",
+    "autore": "tradizionale",
+    "testo_accordi": "# MANCANO GLI ACCORDI\n# fonte: testo fornito dall'utente\n\nPer i sentieri da non smarrir\nper il presente e l'avvenir\nper questo pan che noi mangiam\nper questi amici Ti lodiam!\nE prima di mangiar cantiamo tutti in cor\ngloria gloria gloria gloria gloria al Signor!\n"
+  },
+  {
+    "id": 219,
     "titolo": "Grazie",
     "categoria": "Canti liturgici",
     "pagina": null,
@@ -2656,7 +2667,7 @@
     "testo_accordi": "# fonte: canzoniere TUTTOSCOUT 2003, 0033.html - titolo nella fonte: Grazie\n# MANCANO GLI ACCORDI\n# DA RIVEDERE: controlla testo e accordi, poi cancella questa riga\nGrazie, signore per il tuo amore testimoniato da una croce.\nGrazie per il sole che ci riscalda e ci fa vivere.\nGrazie per l’amore di papà e mamma che richiama il tuo amore.\nGrazie per la maestà delle montagne, che richiamano la tua grandezza.\nGrazie per i piccoli fiori del prato che mi richiamano la tua fedeltà\nGrazie per questo passero che vola nel cielo che mi richiamala libertà\nGrazie per lo Spirito che mi illumina ogni giorno.\nGrazie per gli amici che camminano con me.\nGrazie per la Chiesa, madre di tutti i viventi.\nGrazie per ogni uomo di buona volontà che cammina nelle tue vie.\n\n> Indice\n"
   },
   {
-    "id": 219,
+    "id": 220,
     "titolo": "Per questo pan",
     "categoria": "Canti liturgici",
     "pagina": null,
@@ -2667,7 +2678,7 @@
     "testo_accordi": "# fonte: canzoniere TUTTOSCOUT 2003, 0151.html - titolo nella fonte: Per questo pan\n# MANCANO GLI ACCORDI\n# DA RIVEDERE: controlla testo e accordi, poi cancella questa riga\nPer questo pan, per ogni don,\nnoi ti lodiam Signor\nPour ce repas, pour toute joie\nnous Te louons, Seigneur!\nFür Hilf und Kraft, für taglich Brot\nwir danken Dir, mein Gott!\nFor bread strength, for ev'ry gift\nwe sing praise you Lord!\n\n> Indice\n"
   },
   {
-    "id": 220,
+    "id": 221,
     "titolo": "Al chiaror del mattin",
     "categoria": "Canti del risveglio",
     "pagina": null,
