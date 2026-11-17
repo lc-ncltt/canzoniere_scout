@@ -58,14 +58,12 @@
 \newcommand{\bEG}{\tagbranca{brEG}}
 \newcommand{\bRS}{\tagbranca{brRS}}
 
-% I canti scorrono di seguito su due colonne. \cantotesta{id}{titolo}{autore}{tag branche}{altezza}:
-% se nella colonna non resta l'altezza stimata del canto si passa alla colonna successiva: i canti
-% corti non si spezzano. Quelli oltre \sogliaspezza di colonna possono continuare nella colonna dopo
-% (basta che ci stia 1/3 di colonna).
-\newcommand{\sogliaspezza}{.6}
+% I canti scorrono di seguito su due colonne. \cantotesta{id}{titolo}{autore}{tag branche}{spazio minimo}:
+% il canto inizia dove capita; se nella colonna non resta lo spazio minimo (titolo + qualche riga,
+% calcolato da generate_latex.py) passa alla colonna successiva, per non lasciare il titolo da solo.
 \newcommand{\cantotesta}[5]{%
   \par\addvspace{4.5mm}%
-  \ifdim #5>\sogliaspezza\textheight \needspace{.33\textheight}\else\needspace{#5}\fi
+  \needspace{#5}%
   \def\@currentlabel{#1}\label{canto:#1}%
   \noindent\hangindent=12.5mm\hangafter=1
   \hbox to 12.5mm{\fontsize{17}{19}\selectfont\bfseries #1\hss}%
@@ -103,7 +101,9 @@
 \newcommand{\rigo}[1]{{\hangindent=3mm\hangafter=1\noindent #1\par}}
 \newcommand{\strofa}{\par\vspace{2.4mm}}
 \newcommand{\commento}[1]{{\par\small\itshape\color{gray}#1\par\vspace{1mm}}}
-\newenvironment{ritornello}{\par\begingroup\itshape\leftskip=3mm\relax}{\par\endgroup}
+\newenvironment{ritornello}{\par\begingroup\bfseries\leftskip=3mm\relax}{\par\endgroup}
+% Ritornello ripetuto: solo "Rit." in grassetto (generate_latex.py lo mette al posto del testo ripetuto)
+\newcommand{\rit}{{\par\leftskip=3mm\noindent\bfseries Rit.\par}}
 
 % Indici
 \newcommand{\titolosezione}[1]{\clearpage\gdef\sezionecorrente{#1}%

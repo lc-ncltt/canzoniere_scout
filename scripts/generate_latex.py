@@ -84,14 +84,83 @@ def senza_accordi(elementi):
     return out
 
 
+_RIT = re.compile(r"^\s*rit(?:ornello)?\.?\s*:?\s*", re.I)
+
+
+def _chiave(blocco):
+    testo = " ".join("".join(t for _, t in e[1]) for e in blocco if e[0] == "riga")
+    return re.sub(r"[^a-z0-9]+", " ", _RIT.sub("", testo).lower()).strip()
+
+
+def ritornelli(elementi):
+    """Solo per la stampa: il ritornello va in grassetto la prima volta, le ripetizioni diventano "Rit.".
+    E' ritornello una strofa marcata {soc}/{eoc}, una che inizia con "Rit.", oppure (se il canto non ne
+    marca nessuna) una strofa ripetuta identica. Anche "{c: Rit.}" e una riga "Rit." da sola diventano "Rit."."""
+    blocchi, cur = [], []
+    for el in elementi:
+        if el[0] == "vuota":
+            if cur:
+                blocchi.append(cur)
+            cur = []
+        else:
+            cur.append(el)
+    if cur:
+        blocchi.append(cur)
+
+    def nota_rit(e):
+        return e[0] == "commento" and _RIT.fullmatch(e[1] + " ")
+
+    def marcato(b):
+        prima = next((e for e in b if e[0] == "riga"), None)
+        return any(e[0] == "riga" and e[2] for e in b) or (prima is not None and (
+            (_RIT.match("".join(t for _, t in prima[1])) and _chiave([prima])) or nota_rit(b[0])))
+
+    chiavi = [_chiave(b) for b in blocchi]
+    nessun_marcato = not any(marcato(b) for b in blocchi)
+    ripetute = {k for k in chiavi if k and chiavi.count(k) > 1}
+    visti, out = [], []
+    for b, k in zip(blocchi, chiavi):
+        solo_rit = all(e[0] == "commento" and _RIT.fullmatch(e[1] + " ") for e in b) or (
+            len(b) == 1 and b[0][0] == "riga" and not _chiave(b) and _RIT.match("".join(t for _, t in b[0][1])))
+        troncato = (len(b) == 1 and b[0][0] == "riga" and k and re.search(r"(\.\.\.|…)\s*$", "".join(t for _, t in b[0][1]))
+                    and any(v.startswith(k) and v != k for v in visti))
+        if solo_rit or troncato or (k and k in visti):
+            out.append([("rit",)])
+            continue
+        if k and (marcato(b) or (nessun_marcato and k in ripetute)):
+            nuovo = []
+            for e in b:
+                if nota_rit(e):  # "{c: Rit.}" sopra il testo del ritornello: basta il grassetto
+                    continue
+                if e[0] == "riga":
+                    segs = list(e[1])
+                    if not nuovo and segs:  # toglie "Rit." davanti alla prima riga: lo dice il grassetto
+                        a, t = segs[0]
+                        segs[0] = (a, _RIT.sub("", t, count=1))
+                    e = ("riga", segs, True)
+                nuovo.append(e)
+            b = nuovo
+            visti.append(k)
+        out.append(b)
+    risultato = []
+    for i, b in enumerate(out):
+        if i:
+            risultato.append(("vuota",))
+        risultato += b
+    return risultato
+
+
 def canto_latex(c):
     elementi = parse_chordpro(c["testo_accordi"])
     if not ACCORDI:
         elementi = senza_accordi(elementi)
+    elementi = ritornelli(elementi)
     con_accordi = any(a for el in elementi if el[0] == "riga" for a, _ in el[1])
+    # basta che ci stiano titolo e 3 righe: il canto puo' iniziare a meta' colonna e continuare nella successiva
+    altezza = min(altezza_stimata(elementi, con_accordi), 85)
     out = [r"\begingroup" + ("" if con_accordi else r"\senzaaccordi"),
            rf"\cantotesta{{{c['id']}}}{{{esc(c['titolo'])}}}{{{esc(c.get('autore', ''))}}}"
-           rf"{{{tag_branche(c)}}}{{{altezza_stimata(elementi, con_accordi):.0f}pt}}"]
+           rf"{{{tag_branche(c)}}}{{{altezza:.0f}pt}}"]
     in_ritornello = False
     ultima_vuota = True
     for el in elementi:
@@ -101,6 +170,12 @@ def canto_latex(c):
             ultima_vuota = True
             continue
         ultima_vuota = False
+        if el[0] in ("commento", "rit") and in_ritornello:
+            out.append(r"\end{ritornello}")
+            in_ritornello = False
+        if el[0] == "rit":
+            out.append(r"\rit")
+            continue
         if el[0] == "commento":
             out.append(rf"\commento{{{esc(el[1])}}}")
             continue
