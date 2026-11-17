@@ -2555,6 +2555,16 @@
   },
   {
     "id": 210,
+    "titolo": "Voi siete di Dio",
+    "categoria": "Canti liturgici",
+    "pagina": null,
+    "url_audio": null,
+    "url_spartito": null,
+    "sottosezione": "Finale",
+    "testo_accordi": "# fonte: testo e accordi forniti dall'utente\n# DA RIVEDERE: accordi non allineati alle sillabe (messi in sequenza a inizio riga); nel testo ricevuto alcuni accordi erano attaccati alla parola dopo (\"MIle nebulose\", \"MIi grattacieli\", \"REle\", \"SIil grano\", \"SIquando\"): letti come Mim / Rem / Sim più la parola, come negli altri accordi di quel punto; intro e nota \"DO(9)\" scritti Do9\n# Il canto si ripete una seconda volta un tono sopra (Fa, Re); righe di soli accordi = intro/modulazione\n\n[Sol][Re][Do9][Mim7][Do9][Re]\n\n[Sol][Re][Sol]Tutte le stelle della notte,\n[Sol][Re][Mim]le nebulose, le comete,\n[Sol][Re][Sol]il sole su una ragnatela,\n[Do][Sol][Re][Do]è tutto vostro e voi siete di Dio.\n\n[Mi][Si][Mi]Tutte le rose della vita,\n[Mi][Si][Do#m]il grano, i prati, i fili d'erba,\n[Mi][Si][Mi]il mare, i fiumi, le montagne,\n[La][Mi][Si][Mi]è tutto vostro e voi siete di Dio.\n\n[Sol][Re][Sol]Tutte le musiche e le danze,\n[Sol][Re][Mim]i grattacieli, le astronavi,\n[Sol][Re][Sol]i quadri, i libri, le culture,\n[Do][Sol][Re][Sol]è tutto vostro e voi siete di Dio.\n\n[Mi][Si][Mi]Tutte le volte che perdono,\n[Mi][Si][Do#m]quando sorrido e quando piango,\n[Mi][Si][Mi]quando mi accorgo di chi sono,\n[La][Do#m][Si][La]è tutto vostro e voi siete di Dio,\n[La][Mi][Si][Mi]è tutto nostro e noi siamo di Dio.\n\n[Fa][Do][Sib9][Rem7][Sib9][Do]\n\n[Fa][Do][Fa]Tutte le stelle della notte,\n[Fa][Do][Rem]le nebulose, le comete,\n[Fa][Do][Fa]il sole su una ragnatela,\n[Sib][Fa][Do][Sib]è tutto vostro e voi siete di Dio.\n\n[Re][La][Re]Tutte le rose della vita,\n[Re][La][Sim]il grano, i prati, i fili d'erba,\n[Re][La][Re]il mare, i fiumi, le montagne,\n[Sol][Re][La][Re]è tutto vostro e voi siete di Dio.\n\n[Fa][Do][Fa]Tutte le musiche e le danze,\n[Fa][Do][Rem]i grattacieli, le astronavi,\n[Fa][Do][Fa]i quadri, i libri, le culture,\n[Sib][Fa][Do][Fa]è tutto vostro e voi siete di Dio.\n\n[Re][La][Re]Tutte le volte che perdono,\n[Re][La][Sim]quando sorrido e quando piango,\n[Re][La][Re]quando mi accorgo di chi sono,\n[Sol][Sim][La][Sol]è tutto vostro e voi siete di Dio,\n[Sol][Re][La][Re]è tutto nostro e noi siamo di Dio.\n"
+  },
+  {
+    "id": 211,
     "titolo": "Come Maria",
     "categoria": "Canti liturgici",
     "pagina": null,
@@ -2564,7 +2574,7 @@
     "testo_accordi": "# fonte: canzoniere TUTTOSCOUT 2003, 0667.html - titolo nella fonte: Come Maria\n# MANCANO GLI ACCORDI\n# DA RIVEDERE: controlla testo e accordi, poi cancella questa riga\nVogliamo vivere, Signore,\noffrendo a Te la nostra vita;\ncon questo pane e questo vino accetta quello che noi siamo.\nVogliamo vivere, Signore,\nabbandonati alla tua voce,\nstaccati dalle cose vano,\nfissati nella vita vera.\n\nVogliamo vivere come Maria,\nl'irragiungibile,\nla Madre amata,\nche vince il mondo con l'Amore\ne offrire sempre la Tua vita\nche viene dal Cielo.\n\nAccetta dalle nostre mani\ncome un offerta a Te gradita,\ni desideri di ogni cuore\nle ansie della nostra vita.\nVogliamo vivere, Signore,\naccesi dalle tue parole,\nper ricordare ad ogni uomo\nla fiamma viva del tuo Amore.\n\nVogliamo vivere come Maria,\nl'irragiungibile,\nla madre amata\nche vince il mondo con l'Amore\ne offrire sempre la Tua vita\nche viene dal Cielo.\ne offrire sempre la Tua vita\nche viene da Cielo.\n\n> Indice\n"
   },
   {
-    "id": 211,
+    "id": 212,
     "titolo": "Madonna degli scout",
     "categoria": "Canti liturgici",
     "pagina": null,
@@ -2575,7 +2585,7 @@
     "testo_accordi": "# fonte: canzoniere TUTTOSCOUT 2003, 0060.html - titolo nella fonte: Madonna degli Scouts\n# MANCANO GLI ACCORDI\n# DA RIVEDERE: controlla testo e accordi, poi cancella questa riga\nMadonna degli scouts, ascolta! T'invochiam:\nconcedi un forte cuore a noi, che ora partiam.\nLa strada è tanto lunga, il freddo già ci assal:\nrespingi tu, Regina, lo spirito del mal.\n\nE il ritmo dei passi ci accompagnerà:\nlà, verso gli orizzonti lontani si va.\n\nE lungo quella strada non ci lasciare tu:\nnel volto di chi soffre saprem trovar Gesù.\nAllor ci fermeremo le piaghe a medicar\ne il pianto di chi è solo sapremo consolar.\n\nE il ritmo dei passi ci accompagnerà...\n\n> Indice\n"
   },
   {
-    "id": 212,
+    "id": 213,
     "titolo": "Mamma del cielo",
     "categoria": "Canti liturgici",
     "pagina": null,
@@ -2588,7 +2598,7 @@
     "testo_accordi": "# fonte: canzoniere TUTTOSCOUT 2003, 0111.html - titolo nella fonte: Mamma del cielo\n# MANCANO GLI ACCORDI\n# DA RIVEDERE: controlla testo e accordi, poi cancella questa riga\nMamma del Cielo, Vergine Santa\na te d’intorno il branco canta\nFa’ che ci amiamo come fratelli\nmentre la pista noi percorriam.\n\nMamma del Cielo, rendici tu\ncortesi e buoni come Gesù.\n\nFa che io ami ogni vicino\ncome se fosse Gesù bambino.\nDel mio meglio fare prometto\nper diventare un Tuo lupetto\n\nAl cuor divino stringimi tu\ncome stringevi a te Gesù.\n\n> Indice\n"
   },
   {
-    "id": 213,
+    "id": 214,
     "titolo": "Preghiera del lupetto",
     "categoria": "Canti liturgici",
     "pagina": null,
@@ -2601,7 +2611,7 @@
     "testo_accordi": "# fonte: canzoniere TUTTOSCOUT 2003, 0067.html - titolo nella fonte: Preghiera del Lupetto\n# MANCANO GLI ACCORDI\n# DA RIVEDERE: controlla testo e accordi, poi cancella questa riga\nBuon Gesù\nio ti amo con tutto il mio cuore,\nperché mai troverò migliore amico di Te.\nPer farti piacere io voglio,\ncon l’aiuto di Maria nostra mamma del cielo,\nfare del mio meglio,\ncome Tu facevi ogni giorno a Nazareth.\nInsegnami dunque ad ascoltare non me stesso\nma la voce,\nquella dei miei genitori,\ndei miei superiori,\ndei miei capi. Così sia.\n\n> Indice\n"
   },
   {
-    "id": 214,
+    "id": 215,
     "titolo": "Preghiera della sera",
     "categoria": "Canti liturgici",
     "pagina": null,
@@ -2614,7 +2624,7 @@
     "testo_accordi": "# fonte: canzoniere TUTTOSCOUT 2003, 0149.html - titolo nella fonte: Preghiera della sera\n# MANCANO GLI ACCORDI\n# DA RIVEDERE: controlla testo e accordi, poi cancella questa riga\nAl cader della giornata\nnoi leviamo i cuori a Te,\nTu l'avevi a noi donata\nbene spesa fu per Te.\n\nTe nel bosco, nel ruscello\nTe nel monte Te nel mar,\nTe nel cuore del fratello,\nTe nel mio cercai d'amar.\n\nLa strofa segreta\n\n\"...e se un bel dì l'ASCI risorgerà tutti compatti ci troverà!\" La guerra era finita da pochi mesi e il sogno della canzone delle Aquile randagie si avverava. Man mano che le città venivano liberate, immediatamente si ricostituivano ad opera dei vecchi Capi le prime unità e tornavano a sventolare fiamme e guidoni della risorta ASCI.\nCosì, per il S. Giorgio del 1946 il commissariato regionale lombardo fu in grado di organizzare ad Affori un grandioso raduno che attirò in un'atmosfera di entusiasmo e di fraternità molti Gruppi di altre regioni e persino dalla Svizzera. Fraterno amico, da tanti anni, dell'indimenticabile Baden e di Arnaldo Basini, fui invitato anch'io col Riparto che avevo fondato a Parma nel '45; e sebbene le condizioni dei trasporti fossero ancora molto precarie e difficili, accettai con gioia. Lo stile scout esigeva (non so se l'usanza sopravviva ancora) che chi si reca in visita a un campo porti sempre con sé qualcosa di utile da offrire: sia pure un semplice ramo per il fuoco.\n\nCosì pensai di portare al campo dei fratelli milanesi, insieme con le mie quattro squadriglie, qualcosa che durasse più di un po' di legna: portai in dono le parole che avevo scritto poche settimane prima, da cantare sulla melodia della nota canzone friulana: \"Ai preat la biele stele\". In una notte di veglia forzata, infatti, mi erano venute spontanee e rapide, una dopo l'altra, le tre strofe di quella \"Preghiera della sera\" che quasi tutti gli scout, almeno parzialmente, cantano al fuoco di bivacco. Dico 'almeno parzialmente' poiché quasi tutte le raccolte di canti scout oggi non riportano la seconda, che è la più bella delle tre strofe di cui è composta la canzone \"Al cader della giornata\", che Baden gradì moltissimo e che volle inserita subito nel canzoniere \"Canti di mezzanotte\". La volete riportare sul vostro quaderno di caccia questa povera strofa derelitta?... Eccovela:\n\nSe non sempre la mia mente in Te pura si affissò;\nse talora stoltamente da Te lungi si attardò...\n\nio Signor, ne son dolente: Te ne chiedo, o Dio, mercé!\nel mio meglio lietamente, io farò doman per Te.\n\nPoi vengono i cieli che sembran prati e il bivacco delle stelle; ma adesso capite, se non la conoscevate ancora, perché questa strofa, a me che la scrissi per voi, sembri più bella delle altre. Voi che ne pensate?\n\nd. Tar (Aquila Azzurra)\nda «scout-proposta educativa»\n\nSe non sempre la mia mente\nin Te pura s'affissò;\nse talora stoltamente\nda Te lungi s'attardò,\nmio Signore ne son dolente\nTe ne chieggo, o Dio, mercè!\nDel mio meglio lietamente\nio farò doman per Te.\n\nI tuoi cieli sembran prati\ne le stelle tanti fior...\n\nSon bivacchi dei beati\nstretti in cerchio al lor Signor.\n\nQuante stelle quante stelle\ndimmi Tu la mia qual'è'?\nNon ambisco la più bella\nbasta sia vicino a Te!..\n\n> Indice\n"
   },
   {
-    "id": 215,
+    "id": 216,
     "titolo": "Grazie",
     "categoria": "Canti liturgici",
     "pagina": null,
@@ -2625,7 +2635,7 @@
     "testo_accordi": "# fonte: canzoniere TUTTOSCOUT 2003, 0033.html - titolo nella fonte: Grazie\n# MANCANO GLI ACCORDI\n# DA RIVEDERE: controlla testo e accordi, poi cancella questa riga\nGrazie, signore per il tuo amore testimoniato da una croce.\nGrazie per il sole che ci riscalda e ci fa vivere.\nGrazie per l’amore di papà e mamma che richiama il tuo amore.\nGrazie per la maestà delle montagne, che richiamano la tua grandezza.\nGrazie per i piccoli fiori del prato che mi richiamano la tua fedeltà\nGrazie per questo passero che vola nel cielo che mi richiamala libertà\nGrazie per lo Spirito che mi illumina ogni giorno.\nGrazie per gli amici che camminano con me.\nGrazie per la Chiesa, madre di tutti i viventi.\nGrazie per ogni uomo di buona volontà che cammina nelle tue vie.\n\n> Indice\n"
   },
   {
-    "id": 216,
+    "id": 217,
     "titolo": "Per questo pan",
     "categoria": "Canti liturgici",
     "pagina": null,
@@ -2636,7 +2646,7 @@
     "testo_accordi": "# fonte: canzoniere TUTTOSCOUT 2003, 0151.html - titolo nella fonte: Per questo pan\n# MANCANO GLI ACCORDI\n# DA RIVEDERE: controlla testo e accordi, poi cancella questa riga\nPer questo pan, per ogni don,\nnoi ti lodiam Signor\nPour ce repas, pour toute joie\nnous Te louons, Seigneur!\nFür Hilf und Kraft, für taglich Brot\nwir danken Dir, mein Gott!\nFor bread strength, for ev'ry gift\nwe sing praise you Lord!\n\n> Indice\n"
   },
   {
-    "id": 217,
+    "id": 218,
     "titolo": "Al chiaror del mattin",
     "categoria": "Canti del risveglio",
     "pagina": null,
