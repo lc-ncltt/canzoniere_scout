@@ -68,8 +68,26 @@ def altezza_stimata(elementi, con_accordi):
     return 45 + righe * interlinea + strofe * 7
 
 
+ACCORDI = False  # il libro stampato e' senza accordi (restano nella web app); --accordi per includerli
+
+
+def senza_accordi(elementi):
+    """Toglie gli accordi; le righe di soli accordi (intro, giri) spariscono."""
+    out = []
+    for el in elementi:
+        if el[0] == "riga":
+            testo = "".join(t for _, t in el[1])
+            if not testo.strip():
+                continue
+            el = ("riga", [(None, testo)], el[2])
+        out.append(el)
+    return out
+
+
 def canto_latex(c):
     elementi = parse_chordpro(c["testo_accordi"])
+    if not ACCORDI:
+        elementi = senza_accordi(elementi)
     con_accordi = any(a for el in elementi if el[0] == "riga" for a, _ in el[1])
     out = [r"\begingroup" + ("" if con_accordi else r"\senzaaccordi"),
            rf"\cantotesta{{{c['id']}}}{{{esc(c['titolo'])}}}{{{esc(c.get('autore', ''))}}}"
@@ -105,7 +123,9 @@ def slug(testo):
     return re.sub(r"[^a-z0-9]+", "-", s).strip("-")
 
 
-def canti_latex(canti):
+def canti_latex(canti, accordi=False):
+    global ACCORDI
+    ACCORDI = accordi
     """Per ogni sezione: pagina divisoria (con latex/sezioni/<slug>.tex se esiste), poi i canti
     di seguito su due colonne, con un titoletto a ogni cambio di sottosezione (fase / momento)."""
     out = []
@@ -177,6 +197,7 @@ def main():
     ap.add_argument("--template", default=str(ROOT / "latex" / "template.tex"))
     ap.add_argument("--out", default=str(ROOT / "overleaf" / "canzoniere.tex"))
     ap.add_argument("--qr", default="qr.pdf", help="file del QR, relativo alla cartella del .tex")
+    ap.add_argument("--accordi", action="store_true", help="stampa anche gli accordi (di norma solo online)")
     args = ap.parse_args()
 
     canti = sorted(carica_json(args.canti), key=lambda c: c["id"])
@@ -193,7 +214,7 @@ def main():
         "DEDICA": esc(meta["dedica"]),
         "ANNO": esc(meta["anno"]),
         "PAGINE_INIZIALI": pagine_iniziali(meta),
-        "CANTI": canti_latex(canti),
+        "CANTI": canti_latex(canti, args.accordi),
         "INDICE_ALFABETICO": indice_alfabetico(canti),
         "INDICE_TEMATICO": indice_tematico(canti),
         "QR_FILE": args.qr,

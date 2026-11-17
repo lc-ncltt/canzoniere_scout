@@ -1,18 +1,18 @@
 % Canzoniere di Clan - template. I segnaposto tra doppi angoli (maiuscoli)
 % sono sostituiti da scripts/generate_latex.py. Compilare con pdflatex (due passate) o latexmk.
-\documentclass[a5paper,landscape,10pt,twoside]{article}
+\documentclass[10pt,twoside]{article}
 
 \usepackage{iftex}
 \ifPDFTeX
   \usepackage[utf8]{inputenc}
   \usepackage[T1]{fontenc}
-  \usepackage{lmodern}
-\else % XeLaTeX/LuaLaTeX (es. Tectonic in locale): stesso carattere
-  \usepackage{fontspec} % carattere predefinito: Latin Modern
 \fi
+\usepackage{libertinus} % Libertinus: funziona sia con pdfLaTeX (Overleaf) sia con XeLaTeX (Tectonic)
 \usepackage[italian]{babel}
-\usepackage[a5paper,landscape,twoside,
-  left=15mm,right=15mm,top=12mm,bottom=12mm,bindingoffset=15mm,
+% Pagina 210 x 148 mm (A5 orizzontale). Margine interno 30 mm: lato dei rivetti (alterna destra/sinistra
+% sulle pagine pari/dispari, per la stampa fronte-retro).
+\usepackage[paperwidth=210mm,paperheight=148mm,twoside,
+  inner=30mm,outer=15mm,top=12mm,bottom=12mm,
   includefoot,nohead,footskip=6mm]{geometry}
 \usepackage{multicol}
 \usepackage{graphicx}
@@ -71,7 +71,7 @@
   \hbox to 12.5mm{\fontsize{17}{19}\selectfont\bfseries #1\hss}%
   {\fontsize{13}{15.5}\selectfont\bfseries #2\par}\nopagebreak
   \noindent{\small\itshape #3}\hfill{#4}\par\nopagebreak
-  \vspace{.6mm}\hrule height 0.4pt\vspace{2mm}\nopagebreak}
+  \vspace{1.5mm}\nopagebreak}
 % Canto senza accordi: interlinea normale (quella ampia serve solo a far stare gli accordi sopra il testo)
 \newcommand{\senzaaccordi}{\fontsize{10}{12.6}\selectfont}
 
@@ -136,6 +136,7 @@
 <<PAGINE_INIZIALI>>
 
 % ---- Canti (la numerazione araba riparte da 1: pagina stampata = campo "pagina")
+\cleardoublepage % pagina 1 su un recto: il margine dei rivetti resta sul lato giusto
 \pagenumbering{arabic}
 <<CANTI>>
 
@@ -155,7 +156,7 @@
   {\fontsize{16}{19}\selectfont\bfseries Il canzoniere sul telefono\par}
   \vspace{3mm}
   Inquadra il codice con la fotocamera del telefono: si apre il canzoniere
-  online, con gli spartiti in PDF (dove disponibili) e la modalit\`a notte
+  online, con gli accordi di ogni canto, gli spartiti in PDF (dove disponibili) e la modalit\`a notte
   per il bivacco.\par
   \vspace{4mm}
   {\small\textbf{In caso di problemi con il QR\ldots}\par
