@@ -1,8 +1,8 @@
 #!/usr/bin/env python3
 """Genera build/canzoniere.tex da data/canti.json + latex/template.tex.
 
-Ogni canto inizia su una pagina nuova (due colonne): la pagina stampata di
-ogni canto e' quindi prevedibile e si legge dal file .aux con sync_pages.py.
+Ogni sezione ha una pagina divisoria; i canti scorrono di seguito su due colonne
+(i corti non si spezzano). La pagina stampata di ogni canto si legge dal .aux con sync_pages.py.
 """
 import argparse
 import re
@@ -37,16 +37,8 @@ def riga_latex(segmenti):
     return r"\rigo{" + "".join(parti) + "}"
 
 
-def etichetta(c):
-    return c["categoria"] + (" · " + c["sottosezione"] if c.get("sottosezione") else "")
-
-
 def tag_branche(c):
     return "".join("\\b" + b for b in c.get("branche", []))
-
-
-def fiamme(c):
-    return "\\fiamme{%d}" % c["intensita"] if c.get("intensita") else ""
 
 
 def pagine_iniziali(meta):
@@ -58,13 +50,33 @@ def pagine_iniziali(meta):
     return "\n\n".join(pezzi)
 
 
+CARATTERI_PER_RIGA = 46  # circa, in una colonna di A5 orizzontale a corpo 10
+
+
+def altezza_stimata(elementi, con_accordi):
+    """Altezza del canto in pt (titolo compreso), per non spezzare i canti corti tra due colonne."""
+    interlinea = 17 if con_accordi else 12.6
+    righe = strofe = 0
+    for el in elementi:
+        if el[0] == "riga":
+            testo = "".join(t for _, t in el[1])
+            righe += max(1, -(-len(testo) // CARATTERI_PER_RIGA))
+        elif el[0] == "commento":
+            righe += 1
+        elif el[0] == "vuota":
+            strofe += 1
+    return 45 + righe * interlinea + strofe * 7
+
+
 def canto_latex(c):
-    out = [rf"\cantotesta{{{c['id']}}}{{{esc(c['titolo'])}}}{{{esc(etichetta(c))}}}"
-           rf"{{{esc(c.get('autore', ''))}}}{{{tag_branche(c)}}}{{{fiamme(c)}}}",
-           r"\begin{multicols}{2}"]
+    elementi = parse_chordpro(c["testo_accordi"])
+    con_accordi = any(a for el in elementi if el[0] == "riga" for a, _ in el[1])
+    out = [r"\begingroup" + ("" if con_accordi else r"\senzaaccordi"),
+           rf"\cantotesta{{{c['id']}}}{{{esc(c['titolo'])}}}{{{esc(c.get('autore', ''))}}}"
+           rf"{{{tag_branche(c)}}}{{{altezza_stimata(elementi, con_accordi):.0f}pt}}"]
     in_ritornello = False
     ultima_vuota = True
-    for el in parse_chordpro(c["testo_accordi"]):
+    for el in elementi:
         if el[0] == "vuota":
             if not ultima_vuota:
                 out.append(r"\strofa")
@@ -83,8 +95,33 @@ def canto_latex(c):
         out.append(riga_latex(segmenti))
     if in_ritornello:
         out.append(r"\end{ritornello}")
-    out.append(r"\end{multicols}")
+    out.append(r"\par\endgroup")
     return "\n".join(out)
+
+
+def slug(testo):
+    s = unicodedata.normalize("NFKD", testo)
+    s = "".join(ch for ch in s if not unicodedata.combining(ch)).lower()
+    return re.sub(r"[^a-z0-9]+", "-", s).strip("-")
+
+
+def canti_latex(canti):
+    """Per ogni sezione: pagina divisoria (con latex/sezioni/<slug>.tex se esiste), poi i canti
+    di seguito su due colonne, con un titoletto a ogni cambio di sottosezione (fase / momento)."""
+    out = []
+    for cat in dict.fromkeys(c["categoria"] for c in canti):
+        intro = ROOT / "latex" / "sezioni" / f"{slug(cat)}.tex"
+        testo_intro = intro.read_text(encoding="utf-8").strip() if intro.exists() else ""
+        out += [rf"\sezione{{{esc(cat)}}}{{{testo_intro}}}", r"\begin{multicols}{2}\raggedcolumns"]
+        sub_prec = None
+        for c in (c for c in canti if c["categoria"] == cat):
+            sub = c.get("sottosezione")
+            if sub and sub != sub_prec:
+                out.append(rf"\sottosezione{{{esc(sub)}}}")
+            sub_prec = sub
+            out.append(canto_latex(c))
+        out.append(r"\end{multicols}")
+    return "\n\n".join(out)
 
 
 def chiave_ordinamento(titolo):
@@ -156,7 +193,7 @@ def main():
         "DEDICA": esc(meta["dedica"]),
         "ANNO": esc(meta["anno"]),
         "PAGINE_INIZIALI": pagine_iniziali(meta),
-        "CANTI": "\n\n".join(canto_latex(c) for c in canti),
+        "CANTI": canti_latex(canti),
         "INDICE_ALFABETICO": indice_alfabetico(canti),
         "INDICE_TEMATICO": indice_tematico(canti),
         "QR_FILE": args.qr,

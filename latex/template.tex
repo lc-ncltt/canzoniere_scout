@@ -2,10 +2,15 @@
 % sono sostituiti da scripts/generate_latex.py. Compilare con pdflatex (due passate) o latexmk.
 \documentclass[a5paper,landscape,10pt,twoside]{article}
 
-\usepackage[utf8]{inputenc}
-\usepackage[T1]{fontenc}
+\usepackage{iftex}
+\ifPDFTeX
+  \usepackage[utf8]{inputenc}
+  \usepackage[T1]{fontenc}
+  \usepackage{lmodern}
+\else % XeLaTeX/LuaLaTeX (es. Tectonic in locale): stesso carattere
+  \usepackage{fontspec} % carattere predefinito: Latin Modern
+\fi
 \usepackage[italian]{babel}
-\usepackage{lmodern}
 \usepackage[a5paper,landscape,twoside,
   left=15mm,right=15mm,top=12mm,bottom=12mm,bindingoffset=15mm,
   includefoot,nohead,footskip=6mm]{geometry}
@@ -14,6 +19,7 @@
 \usepackage{xcolor}
 \usepackage{url}
 \usepackage{microtype}
+\usepackage{needspace}
 
 \setlength{\parindent}{0pt}
 \setlength{\parskip}{0pt}
@@ -32,11 +38,12 @@
 \makeatletter
 \renewcommand{\normalsize}{\@setfontsize\normalsize{10}{17}}
 
-% Stile pagina: solo numero in basso, sul lato esterno.
+% Stile pagina: numero in basso sul lato esterno, nome della sezione sul lato interno.
+\def\sezionecorrente{}
 \def\ps@canz{%
   \def\@oddhead{}\def\@evenhead{}%
-  \def\@oddfoot{\hfill\small\thepage}%
-  \def\@evenfoot{\small\thepage\hfill}}
+  \def\@oddfoot{{\footnotesize\scshape\color{gray}\sezionecorrente}\hfill\small\thepage}%
+  \def\@evenfoot{\small\thepage\hfill{\footnotesize\scshape\color{gray}\sezionecorrente}}}
 
 % \cantotesta{id}{titolo}{categoria}{autore}: nuova pagina + etichetta per gli indici
 % \fiamme{n}: intensita' 1-5 come cinque barrette piene/vuote
@@ -51,15 +58,40 @@
 \newcommand{\bEG}{\tagbranca{brEG}}
 \newcommand{\bRS}{\tagbranca{brRS}}
 
-% \cantotesta{id}{titolo}{categoria}{autore}{tag branche}{intensita'}
-\newcommand{\cantotesta}[6]{%
-  \clearpage
+% I canti scorrono di seguito su due colonne. \cantotesta{id}{titolo}{autore}{tag branche}{altezza}:
+% se nella colonna non resta l'altezza stimata del canto si passa alla colonna successiva: i canti
+% corti non si spezzano. Quelli oltre \sogliaspezza di colonna possono continuare nella colonna dopo
+% (basta che ci stia 1/3 di colonna).
+\newcommand{\sogliaspezza}{.6}
+\newcommand{\cantotesta}[5]{%
+  \par\addvspace{4.5mm}%
+  \ifdim #5>\sogliaspezza\textheight \needspace{.33\textheight}\else\needspace{#5}\fi
   \def\@currentlabel{#1}\label{canto:#1}%
-  \noindent\hangindent=14mm\hangafter=1
-  \hbox to 14mm{\fontsize{22}{24}\selectfont\bfseries #1\hss}%
-  {\fontsize{15}{18}\selectfont\bfseries #2\par}
-  \noindent{\small\scshape #3\ifx\relax#4\relax\else\ \textperiodcentered\ \textit{#4}\fi}\hfill{#5\ #6}\par
-  \vspace{1mm}\hrule height 0.4pt\vspace{3mm}}
+  \noindent\hangindent=12.5mm\hangafter=1
+  \hbox to 12.5mm{\fontsize{17}{19}\selectfont\bfseries #1\hss}%
+  {\fontsize{13}{15.5}\selectfont\bfseries #2\par}\nopagebreak
+  \noindent{\small\itshape #3}\hfill{#4}\par\nopagebreak
+  \vspace{.6mm}\hrule height 0.4pt\vspace{2mm}\nopagebreak}
+% Canto senza accordi: interlinea normale (quella ampia serve solo a far stare gli accordi sopra il testo)
+\newcommand{\senzaaccordi}{\fontsize{10}{12.6}\selectfont}
+
+% Pagina divisoria di sezione: titolo grande + testo facoltativo (latex/sezioni/<sezione>.tex)
+\newcommand{\sezione}[2]{%
+  \clearpage\gdef\sezionecorrente{#1}%
+  \thispagestyle{empty}
+  \vspace*{\fill}
+  \begin{center}
+    {\fontsize{30}{34}\selectfont\bfseries #1\par}
+    \vspace{3mm}\rule{40mm}{0.6pt}\par
+  \end{center}
+  \vspace{6mm}{\small #2\par}
+  \vspace*{\fill}
+  \clearpage}
+% Titoletto di fase del fuoco / momento della messa, dentro la colonna
+\newcommand{\sottosezione}[1]{%
+  \par\addvspace{5mm}\needspace{.25\textheight}%
+  {\centering\color{fiamma}\rule[.6ex]{8mm}{.6pt}\ \textcolor{black}{\scshape\bfseries #1}\ \rule[.6ex]{8mm}{.6pt}\par}
+  \nopagebreak\vspace{1mm}}
 \makeatother
 \pagestyle{canz}
 
@@ -74,7 +106,7 @@
 \newenvironment{ritornello}{\par\begingroup\itshape\leftskip=3mm\relax}{\par\endgroup}
 
 % Indici
-\newcommand{\titolosezione}[1]{\clearpage
+\newcommand{\titolosezione}[1]{\clearpage\gdef\sezionecorrente{#1}%
   {\noindent\fontsize{16}{18}\selectfont\bfseries #1\par}
   \vspace{1mm}\hrule height 0.4pt\vspace{3mm}}
 \newcommand{\lettera}[1]{\par\vspace{1.5mm}{\bfseries\color{accordo}#1}\par\nopagebreak}
@@ -120,10 +152,10 @@
   \includegraphics[width=44mm]{<<QR_FILE>>}
 \end{minipage}\hfill
 \begin{minipage}[c]{0.58\textwidth}
-  {\fontsize{16}{19}\selectfont\bfseries Ascolta i canti e scarica gli spartiti\par}
+  {\fontsize{16}{19}\selectfont\bfseries Il canzoniere sul telefono\par}
   \vspace{3mm}
   Inquadra il codice con la fotocamera del telefono: si apre il canzoniere
-  online, con l'audio di ogni canto, gli spartiti in PDF e la modalit\`a notte
+  online, con gli spartiti in PDF (dove disponibili) e la modalit\`a notte
   per il bivacco.\par
   \vspace{4mm}
   {\small\textbf{In caso di problemi con il QR\ldots}\par

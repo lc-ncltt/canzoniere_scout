@@ -185,9 +185,9 @@ def valida(canti):
         if isinstance(pagina, int) and not isinstance(pagina, bool):
             if pagina < 1:
                 errori.append(f"{et}: pagina deve essere >= 1")
-            elif pagina_prec is not None and pagina <= pagina_prec:
+            elif pagina_prec is not None and pagina < pagina_prec:
                 avvisi.append(
-                    f"{et}: pagina {pagina} non successiva a quella del canto "
+                    f"{et}: pagina {pagina} precedente a quella del canto "
                     "precedente (eseguire sync_pages.py dopo la compilazione)"
                 )
             if pagina >= 1:
