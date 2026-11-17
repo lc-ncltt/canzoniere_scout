@@ -84,7 +84,8 @@ def senza_accordi(elementi):
     return out
 
 
-_RIT = re.compile(r"^\s*rit(?:ornello)?\.?\s*:?\s*", re.I)
+# "Rit." / "Rit:" / "RIT" / "Ritornello" come parola a se': NON "Ritorna", "Ritornero'"...
+_RIT = re.compile(r"^\s*rit(?:ornello)?\b\.?\s*:?\s*", re.I)
 
 
 def _chiave(blocco):
