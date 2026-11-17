@@ -117,6 +117,10 @@
         else if (nome === 'c' || nome === 'comment' || nome === 'ci' || nome === 'comment_italic') {
           box.appendChild(el('p', 'commento', m[2] || ''));
         }
+        else if (nome === 'a_fronte') {  // testo a fronte: sul telefono la seconda parte va sotto la prima
+          box.appendChild(el('p', 'commento a-fronte', m[2] || '—'));
+          strofa = null;
+        }
         return;
       }
       if (!strofa) {

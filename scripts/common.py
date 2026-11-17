@@ -73,6 +73,18 @@ def segmenti_riga(riga):
     return segmenti
 
 
+_A_FRONTE = re.compile(r"(?im)^[ \t]*\{\s*a_fronte\s*(?::\s*(.*?))?\s*\}[ \t]*$")
+
+
+def dividi_a_fronte(testo):
+    """Testo a fronte: la riga "{a_fronte}" o "{a_fronte: Traduzione italiana}" divide il canto in due parti
+    (prima = colonna sinistra, dopo = colonna destra). Restituisce (sinistra, destra, etichetta) o None."""
+    m = _A_FRONTE.search(testo)
+    if not m:
+        return None
+    return testo[:m.start()], testo[m.end():], (m.group(1) or "").strip()
+
+
 def parse_chordpro(testo):
     """Restituisce una lista di elementi:
     ('riga', segmenti, in_ritornello) | ('vuota',) | ('commento', testo)."""

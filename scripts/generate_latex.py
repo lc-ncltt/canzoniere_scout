@@ -11,7 +11,7 @@ import unicodedata
 from pathlib import Path
 
 from common import (CANTI_PATH, CATEGORIE, META_PATH, ROOT, SOTTOSEZIONI, carica_json,
-                    carica_meta, parse_chordpro, valida)
+                    carica_meta, dividi_a_fronte, parse_chordpro, valida)
 
 ESCAPE = {
     "\\": r"\textbackslash{}", "&": r"\&", "%": r"\%", "$": r"\$", "#": r"\#",
@@ -151,17 +151,35 @@ def ritornelli(elementi):
     return risultato
 
 
-def canto_latex(c):
-    elementi = parse_chordpro(c["testo_accordi"])
+def elementi_stampa(testo):
+    elementi = parse_chordpro(testo)
     if not ACCORDI:
         elementi = senza_accordi(elementi)
-    elementi = ritornelli(elementi)
-    con_accordi = any(a for el in elementi if el[0] == "riga" for a, _ in el[1])
-    # basta che ci stiano titolo e 3 righe: il canto puo' iniziare a meta' colonna e continuare nella successiva
-    altezza = min(altezza_stimata(elementi, con_accordi), 85)
+    return ritornelli(elementi)
+
+
+def canto_latex(c):
+    fronte = dividi_a_fronte(c["testo_accordi"])
+    parti = [elementi_stampa(t) for t in (fronte[:2] if fronte else (c["testo_accordi"],))]
+    con_accordi = any(a for p in parti for el in p if el[0] == "riga" for a, _ in el[1])
+    if fronte:  # tutta la larghezza, non spezzabile: serve lo spazio della colonna piu' lunga
+        altezza = max(altezza_stimata(p, con_accordi) for p in parti)
+    else:  # basta che ci stiano titolo e 3 righe: il canto puo' iniziare a meta' colonna e continuare dopo
+        altezza = min(altezza_stimata(parti[0], con_accordi), 85)
     out = [r"\begingroup" + ("" if con_accordi else r"\senzaaccordi"),
            rf"\cantotesta{{{c['id']}}}{{{esc(c['titolo'])}}}{{{esc(c.get('autore', ''))}}}"
            rf"{{{tag_branche(c)}}}{{{altezza:.0f}pt}}"]
+    if fronte:
+        sx, dx = ("\n".join(corpo_latex(p)) for p in parti)
+        out.append(rf"\afronte{{{sx}}}{{{esc(fronte[2])}}}{{{dx}}}")
+    else:
+        out += corpo_latex(parti[0])
+    out.append(r"\par\endgroup")
+    return "\n".join(out)
+
+
+def corpo_latex(elementi):
+    out = []
     in_ritornello = False
     ultima_vuota = True
     for el in elementi:
@@ -189,8 +207,7 @@ def canto_latex(c):
         out.append(riga_latex(segmenti))
     if in_ritornello:
         out.append(r"\end{ritornello}")
-    out.append(r"\par\endgroup")
-    return "\n".join(out)
+    return out
 
 
 def slug(testo):
@@ -215,7 +232,10 @@ def canti_latex(canti, accordi=False):
             if sub and sub != sub_prec:
                 out.append(rf"\sottosezione{{{esc(sub)}}}")
             sub_prec = sub
-            out.append(canto_latex(c))
+            if dividi_a_fronte(c["testo_accordi"]):  # testo a fronte: esce dalle due colonne
+                out += [r"\end{multicols}", canto_latex(c), r"\begin{multicols}{2}\raggedcolumns"]
+            else:
+                out.append(canto_latex(c))
         out.append(r"\end{multicols}")
     return "\n\n".join(out)
 

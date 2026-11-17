@@ -1,5 +1,5 @@
 # fonte: testo e accordi forniti dall'utente
-# DA RIVEDERE: accordi non allineati alle sillabe (messi in sequenza a inizio riga); nel testo ricevuto l'ultimo accordo di alcune righe era attaccato alla parola successiva ("MISpighe", "LA- SI- MIbevanda"): letto come "Mi" senza il trattino, come scritto
+
 # Gli accordi "(no3)" = senza terza, come nel testo ricevuto; gli intermezzi senza testo sono righe di soli accordi
 
 [Sol][Re][Mi]Spighe d'oro al vento,
@@ -24,9 +24,6 @@
 [Mim][Re][Do]e fede nel futuro
 [Lam][Re][Mim][Re]la voglia di cambiare
 [Lam][Sim][Mi]e di ricominciare
-
-[Sol][Re] / [Mim] / [Mim][Re] / [Do] / [Lam][Re] /
-[Mim][Re] / [Do][La] / [Si4][Si]
 
 [Sol][Re][Mi]Dio della speranza
 [Mim][Re][Do]Sorgente di ogni dono

@@ -107,6 +107,12 @@
 \newcommand{\strofa}{\par\vspace{2.4mm}}
 \newcommand{\commento}[1]{{\par\small\itshape\color{gray}#1\par\vspace{1mm}}}
 \newenvironment{ritornello}{\par\begingroup\bfseries\leftskip=3mm\relax}{\par\endgroup}
+% Testo a fronte: \afronte{colonna sinistra}{etichetta destra}{colonna destra}, su tutta la larghezza
+\newcommand{\afronte}[3]{\par\noindent
+  \begin{minipage}[t]{.47\linewidth}#1\end{minipage}\hfill
+  \begin{minipage}[t]{.47\linewidth}%
+    \if\relax\detokenize{#2}\relax\else{\small\itshape\color{gray}#2\par}\vspace{1mm}\fi
+    #3\end{minipage}\par}
 % Ritornello ripetuto: solo "Rit." in grassetto (generate_latex.py lo mette al posto del testo ripetuto)
 \newcommand{\rit}{{\par\leftskip=3mm\noindent\bfseries Rit.\par}}
 
