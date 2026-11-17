@@ -50,12 +50,12 @@ def pagine_iniziali(meta):
     return "\n\n".join(pezzi)
 
 
-CARATTERI_PER_RIGA = 46  # circa, in una colonna di A5 orizzontale a corpo 10
+CARATTERI_PER_RIGA = 40  # circa, in una colonna di A5 orizzontale a corpo 11
 
 
 def altezza_stimata(elementi, con_accordi):
     """Altezza del canto in pt (titolo compreso), per non spezzare i canti corti tra due colonne."""
-    interlinea = 17 if con_accordi else 12.6
+    interlinea = 18 if con_accordi else 13.6
     righe = strofe = 0
     for el in elementi:
         if el[0] == "riga":
@@ -65,7 +65,7 @@ def altezza_stimata(elementi, con_accordi):
             righe += 1
         elif el[0] == "vuota":
             strofe += 1
-    return 45 + righe * interlinea + strofe * 7
+    return 30 + righe * interlinea + strofe * 7
 
 
 ACCORDI = False  # il libro stampato e' senza accordi (restano nella web app); --accordi per includerli

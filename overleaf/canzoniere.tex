@@ -36,7 +36,7 @@
 
 % Interlinea ampia: lascia spazio agli accordi sopra il testo.
 \makeatletter
-\renewcommand{\normalsize}{\@setfontsize\normalsize{10}{17}}
+\renewcommand{\normalsize}{\@setfontsize\normalsize{11}{18}}
 
 % Stile pagina: numero in basso sul lato esterno, nome della sezione sul lato interno.
 \def\sezionecorrente{}
@@ -65,13 +65,15 @@
   \par\addvspace{4.5mm}%
   \needspace{#5}%
   \def\@currentlabel{#1}\label{canto:#1}%
-  \noindent\hangindent=12.5mm\hangafter=1
-  \hbox to 12.5mm{\fontsize{17}{19}\selectfont\bfseries #1\hss}%
-  {\fontsize{13}{15.5}\selectfont\bfseries #2\par}\nopagebreak
-  \noindent{\small\itshape #3}\hfill{#4}\par\nopagebreak
-  \vspace{1.5mm}\nopagebreak}
+  % numero - quadratino/i di branca - titolo, tutto a 12 pt grassetto; il titolo lungo va a capo allineato
+  {\fontsize{12}{14.5}\selectfont\bfseries
+   \setbox\z@\hbox{#1\enspace\if\relax\detokenize{#4}\relax\else#4\enspace\fi}%
+   \noindent\hangindent=\wd\z@\hangafter=1 \box\z@ #2\par}\nopagebreak
+  \if\relax\detokenize{#3}\relax\else
+    {\noindent\small\itshape #3\par}\nopagebreak\fi
+  \vspace{1.2mm}\nopagebreak}
 % Canto senza accordi: interlinea normale (quella ampia serve solo a far stare gli accordi sopra il testo)
-\newcommand{\senzaaccordi}{\fontsize{10}{12.6}\selectfont}
+\newcommand{\senzaaccordi}{\fontsize{11}{13.6}\selectfont}
 
 % Pagina divisoria di sezione: titolo grande + testo facoltativo (latex/sezioni/<sezione>.tex)
 \newcommand{\sezione}[2]{%
@@ -1144,7 +1146,7 @@ ci si ferma, si ritrova la nota e si riparte.
 \par\endgroup
 
 \begingroup\senzaaccordi
-\cantotesta{36}{Siam nella vasta giungla}{}{\bLC}{85pt}
+\cantotesta{36}{Siam nella vasta giungla}{}{\bLC}{84pt}
 \rigo{Siam nella vasta giungla}
 \rigo{siam sulla pista di Akela}
 \rigo{lieti cantando, sempre cantando}
@@ -1347,7 +1349,7 @@ I canti sono raccolti per fase, nell'ordine in cui si cantano.
 \par\endgroup
 
 \begingroup\senzaaccordi
-\cantotesta{43}{Salite o fiamme}{}{\bEG}{70pt}
+\cantotesta{43}{Salite o fiamme}{}{\bEG}{57pt}
 \rigo{Salite o fiamme in questa sera,}
 \rigo{portate in cielo la nostra preghiera.}
 \par\endgroup
@@ -1390,7 +1392,7 @@ I canti sono raccolti per fase, nell'ordine in cui si cantano.
 \par\endgroup
 
 \begingroup\senzaaccordi
-\cantotesta{45}{Arturo e Gertrude}{}{\bEG}{70pt}
+\cantotesta{45}{Arturo e Gertrude}{}{\bEG}{84pt}
 \rigo{C'è un buco nel secchio Arturo, Arturo (bis)}
 \rigo{E stroppa chel buso Gertrude, Gertrude (bis)}
 \par\endgroup
@@ -1688,7 +1690,7 @@ I canti sono raccolti per fase, nell'ordine in cui si cantano.
 \par\endgroup
 
 \begingroup\senzaaccordi
-\cantotesta{64}{San Michele}{}{\bEG}{85pt}
+\cantotesta{64}{San Michele}{}{\bEG}{84pt}
 \rigo{San Michele aveva un gallo}
 \rigo{bianco, rosso, verde e giallo.}
 \rigo{E per farlo crescere bene}
@@ -1923,7 +1925,7 @@ I canti sono raccolti per fase, nell'ordine in cui si cantano.
 \par\endgroup
 
 \begingroup\senzaaccordi
-\cantotesta{73}{Masafacia'}{}{\bEG}{85pt}
+\cantotesta{73}{Masafacia'}{}{\bEG}{84pt}
 \rigo{Masafacia, masafacia}
 \rigo{can che l'abbaia, can che l'abbaia}
 \rigo{ultimo grido, ultimo grido}
@@ -1931,7 +1933,7 @@ I canti sono raccolti per fase, nell'ordine in cui si cantano.
 \par\endgroup
 
 \begingroup\senzaaccordi
-\cantotesta{74}{Milan brucia}{}{\bEG}{85pt}
+\cantotesta{74}{Milan brucia}{}{\bEG}{84pt}
 \rigo{Milan brucia, Milan brucia}
 \rigo{guarda guarda (bis)}
 \rigo{al fuoco, al fuoco}
@@ -1961,7 +1963,7 @@ I canti sono raccolti per fase, nell'ordine in cui si cantano.
 \par\endgroup
 
 \begingroup\senzaaccordi
-\cantotesta{76}{Tinchete Ritinchete}{}{\bLC}{83pt}
+\cantotesta{76}{Tinchete Ritinchete}{}{\bLC}{71pt}
 \rigo{Tinchete ritenchete, tinchete ritinchete}
 \rigo{avete lavoro per lo stagnaro}
 \rigo{pentole e coperchioli da riparare}
@@ -4524,7 +4526,7 @@ I canti sono raccolti per fase, nell'ordine in cui si cantano.
 \sottosezione{Ingresso}
 
 \begingroup\senzaaccordi
-\cantotesta{153}{Acqua siamo noi}{}{}{45pt}
+\cantotesta{153}{Acqua siamo noi}{}{}{30pt}
 \par\endgroup
 
 \begingroup\senzaaccordi
@@ -6247,7 +6249,7 @@ I canti sono raccolti per fase, nell'ordine in cui si cantano.
 \par\endgroup
 
 \begingroup\senzaaccordi
-\cantotesta{208}{Popoli tutti}{}{}{70pt}
+\cantotesta{208}{Popoli tutti}{}{}{57pt}
 \rigo{Popoli tutti lodate il Signore, amen,}
 \rigo{cantiamo amici, gloria al Signore, amen.}
 \par\endgroup
