@@ -20,6 +20,7 @@
 \usepackage{url}
 \usepackage{microtype}
 \usepackage{needspace}
+\usepackage[normalem]{ulem} % sottolineatura dei titoli (normalem: \emph resta corsivo)
 
 \setlength{\parindent}{0pt}
 \setlength{\parskip}{0pt}
@@ -65,10 +66,11 @@
   \par\addvspace{4.5mm}%
   \needspace{#5}%
   \def\@currentlabel{#1}\label{canto:#1}%
-  % numero - quadratino/i di branca - titolo, tutto a 12 pt grassetto; il titolo lungo va a capo allineato
-  {\fontsize{12}{14.5}\selectfont\bfseries
+  % numero - quadratino/i di branca - titolo, a 14 pt grassetto; solo il titolo sottolineato
+  % (\uline puo' andare a capo: il titolo lungo continua allineato sotto il titolo)
+  {\fontsize{14}{17}\selectfont\bfseries
    \setbox\z@\hbox{#1\enspace\if\relax\detokenize{#4}\relax\else#4\enspace\fi}%
-   \noindent\hangindent=\wd\z@\hangafter=1 \box\z@ #2\par}\nopagebreak
+   \noindent\hangindent=\wd\z@\hangafter=1 \rightskip=0pt plus 4em\relax \box\z@ \uline{#2}\par}\nopagebreak
   \if\relax\detokenize{#3}\relax\else
     {\noindent\small\itshape #3\par}\nopagebreak\fi
   \vspace{1.2mm}\nopagebreak}
@@ -100,7 +102,8 @@
   \hbox{\fontsize{8}{9}\selectfont\bfseries\color{accordo}#1\kern.3em}%
   \kern.45ex
   \hbox{#2}}}
-\newcommand{\rigo}[1]{{\hangindent=3mm\hangafter=1\noindent #1\par}}
+% Riga del canto: se e' troppo lunga va a capo rientrata, allineata a sinistra (niente spazi allargati)
+\newcommand{\rigo}[1]{{\hangindent=3mm\hangafter=1\rightskip=0pt plus 4em\relax\noindent #1\par}}
 \newcommand{\strofa}{\par\vspace{2.4mm}}
 \newcommand{\commento}[1]{{\par\small\itshape\color{gray}#1\par\vspace{1mm}}}
 \newenvironment{ritornello}{\par\begingroup\bfseries\leftskip=3mm\relax}{\par\endgroup}
