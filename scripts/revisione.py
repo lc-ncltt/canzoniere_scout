@@ -2,6 +2,7 @@
 """Revisione dei testi, un canto alla volta, nel browser (solo in locale).
 
     python scripts/revisione.py            apre http://127.0.0.1:8765
+    python scripts/revisione.py --nuovi titoli.txt   aggiunge in fondo i canti da caricare (un titolo per riga)
 
 A sinistra il testo (ChordPro) da correggere, a destra l'anteprima come nel libro stampato
 (senza accordi, ritornello in grassetto, ripetizioni in "Rit."). Salva direttamente in testi/<slug>.cho.
@@ -119,7 +120,20 @@ def elenco():
         out.append({"id": c["id"], "titolo": c["titolo"], "slug": s, "stato": st,
                     "sezione": c["categoria"] + (" · " + c["sottosezione"] if c.get("sottosezione") else ""),
                     "branche": c.get("branche", []), "autore": c.get("autore", "")})
+    # canti da caricare (--nuovi file.txt, un titolo per riga): in fondo, con "+" al posto del numero
+    gia = {c["slug"] for c in out}
+    for t in NUOVI:
+        s = slug(t)
+        if s in gia:
+            continue
+        f = TESTI / f"{s}.cho"
+        testo = f.read_text(encoding="utf-8") if f.exists() else ""
+        out.append({"id": "+", "titolo": t, "slug": s, "stato": "rivisto" if s in stato else "da caricare",
+                    "sezione": "nuovo: va aggiunto a elenco.csv", "branche": [], "autore": ""})
     return out
+
+
+NUOVI = []
 
 
 class Gestore(BaseHTTPRequestHandler):
@@ -156,7 +170,7 @@ class Gestore(BaseHTTPRequestHandler):
             return self._json({"html": anteprima(testo, bool(dati.get("accordi"))), "avvisi": avvisi(testo)})
         if self.path == "/api/salva":
             s = dati.get("slug", "")
-            if not _SLUG_OK.match(s) or not (TESTI / f"{s}.cho").exists():
+            if not _SLUG_OK.match(s) or not ((TESTI / f"{s}.cho").exists() or s in {slug(t) for t in NUOVI}):
                 return self._json({"errore": "canto sconosciuto"}, 400)
             testo = dati.get("testo", "").replace("\r\n", "\n")
             stato = carica_stato()
@@ -242,6 +256,9 @@ window.addEventListener("beforeunload",e=>{if(modificato()){e.preventDefault();e
 
 
 def main():
+    if "--nuovi" in sys.argv:
+        f = Path(sys.argv[sys.argv.index("--nuovi") + 1])
+        NUOVI.extend(r.strip() for r in f.read_text(encoding="utf-8-sig").splitlines() if r.strip())
     server = ThreadingHTTPServer(("127.0.0.1", PORTA), Gestore)
     url = f"http://127.0.0.1:{PORTA}/"
     print(f"Revisione aperta su {url}  (Ctrl+C per chiudere)")
