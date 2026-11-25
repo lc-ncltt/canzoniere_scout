@@ -61,7 +61,7 @@
     "branche": [
       "LC"
     ],
-    "testo_accordi": "# fonte: canzoniere TUTTOSCOUT 2003, 0139.html - titolo nella fonte: Addio Lupetto\n# MANCANO GLI ACCORDI\n\nFormiamo un grande cerchio\ncon le mani nelle man;\nfratelli c'è un lupetto\nche oggi il branco lascerà.\n\nRit. Ma noi vogliamo dirgli ancor\nche un dì ci rivedrem.\nArrivederci, fratellin,\npresto ti seguirem.\n\nTu pure come Mowgli\nlasci il branco e vai lontan,\ntu pure come Mowgli\nsarai uomo nel doman.\n\nRit. Ma noi vogliamo dirgli ancor\nche un dì ci rivedrem.\nArrivederci, fratellin,\npresto ti seguirem.\n\nRicordati del branco\nnoi di te fieri sarem\nnessun ti scorderà,\nfratello e un dì ti seguirem.\n"
+    "testo_accordi": "# fonte: canzoniere TUTTOSCOUT 2003, 0139.html - titolo nella fonte: Addio Lupetto\n# MANCANO GLI ACCORDI\n\nFormiamo un grande cerchio\ncon le mani nelle man;\nfratelli c'è un lupetto\nche oggi il branco lascerà.\n\nRit. Ma noi vogliamo dirgli ancor\nche un dì ci rivedrem.\nArrivederci, fratellin,\npresto ti seguirem.\n\nTu pure come Mowgli\nlasci il branco e vai lontan,\ntu pure come Mowgli\nsarai uomo nel doman.\n\nRit. Ma noi vogliamo dirgli ancor\nche un dì ci rivedrem.\nArrivederci, fratellin,\npresto ti seguirem.\n\nRicordati del branco\nnoi di te fieri sarem\nnessun ti scorderà,\nfratello e un dì ti seguirem.\n\nrit.\n"
   },
   {
     "id": 7,
@@ -77,9 +77,21 @@
   },
   {
     "id": 8,
-    "titolo": "Canto della promessa",
+    "titolo": "Canto dell'addio",
     "categoria": "Canti cerimoniali",
     "pagina": 14,
+    "url_audio": null,
+    "url_spartito": null,
+    "branche": [
+      "EG"
+    ],
+    "testo_accordi": "E' l'ora dell'addio, fratelli, è l'ora di partir,\nil canto si fa triste, è ver, partire è un po' morir.\n\nrit. Ma noi ci rivedremo ancor, ci rivedremo un dì.\nArrivederci allor, fratelli, arrivederci, sì.\n\nFormiamo una catena con le mani nelle man,\nuniamoci l'un l'altro prima di partir lontan.\n\nMa noi ci rivedremo ancor, ...\n\nIddio che tutto vede e sa ci voglia benedir,\nse un giorno ci ha riuniti qui, ci voglia un dì riunir.\n\nMa noi ci rivedremo ancor, ...\n"
+  },
+  {
+    "id": 9,
+    "titolo": "Canto della promessa",
+    "categoria": "Canti cerimoniali",
+    "pagina": 15,
     "url_audio": null,
     "url_spartito": "https://www.canzonierescout.it/PROMES.pdf",
     "branche": [
@@ -90,10 +102,10 @@
     "testo_accordi": "# fonte: canzoniere TUTTOSCOUT 2003, 0010.html - titolo nella fonte: Canto della Promessa\n\n[Re]Dinanzi a voi m'impegno sul mio onor   [La]\ne vog[Re]lio esserne degno per te o [La]Signor         [Re]\n\n{c: Rit.}\nLa g[Sol]iusta e retta vi[Re]a, mostrami[La7] Tu             [Re7]\n[Sol]e la promessa m[Re]ia acco[La7]gli o Gesù.         [Re]\n\nFedele al tuo volere sempre sarò,\ndi Patria il mio dovere adempirò.\n\n{c: Rit.}\n\nApostolo tuo sono per tuo amor,\nagli altri di me dono vo’ fare ognor.\n\n{c: Rit.}\n\nLeale alla mia Legge sempre sarò,\nse la tua man mi regge io manterrò!\n\n{c: Rit.}\n"
   },
   {
-    "id": 9,
+    "id": 10,
     "titolo": "Estote parati",
     "categoria": "Canti cerimoniali",
-    "pagina": 15,
+    "pagina": 16,
     "url_audio": null,
     "url_spartito": null,
     "branche": [
@@ -102,7 +114,7 @@
     "testo_accordi": "# fonte: testo e accordi forniti dall'utente\n\n# Intro: Re La Mi La La7\n\n[Re][La][Mi][La]L’avventura è una sfida nata dentro di te\n[Re][La][Mi][La]tu la senti spuntare, controllare non puoi\n[Fa#m][Do#m][Re][La]senti solo la voglia di mollar tutto e partir\n[Fa#m][Do#m][Re][Mi]poi le grida di amici che chiamano te.\n\n{soc}\n[Fa#m][Do#m][Re][Mi]Estote Parati un grido s’alzerà\n[Fa#m][Do#m][Re][Mi]e mille voci a far da eco ad una voce fioca ormai\n[Fa#m][Do#m][Re][Mi]e allora dai, vieni con noi, è un’avventura in mare aperto\n[Fa#m][Do#m][Re][Mi]e viaggerai insieme a noi nella natura controvento.\n{eoc}\n\nDa mille paesi siamo giunti fino a qui,\nanche se quegli amici mi dicevano di\nnon dar retta a quella gente che s’inventa fantasie,\nlascia tutti vieni via, io ti venderò la mia.\n\n{soc}\n[Fa#m][Do#m][Re][Mi]Estote Parati un grido s’alzerà\n[Fa#m][Do#m][Re][Mi]e mille voci a far da eco ad una voce fioca ormai\n[Fa#m][Do#m][Re][Mi]e allora dai, vieni con noi, è un’avventura in mare aperto\n[Fa#m][Do#m][Re][Mi]e viaggerai insieme a noi nella natura controvento.\n{eoc}\n\nTutti insieme intorno al fuoco abbiam scoperto l’amicizia,\nla pioggia sferza il viso ma non scalfisce la tua forza,\nno non devi dare retta a chi deride l’avventura\nlo scoutismo è la scoperta di una vita più matura.\n\n{soc}\n[Fa#m][Do#m][Re][Mi]Estote Parati un grido s’alzerà\n[Fa#m][Do#m][Re][Mi]e mille voci a far da eco ad una voce fioca ormai\n[Fa#m][Do#m][Re][Mi]e allora dai, vieni con noi, è un’avventura in mare aperto\n[Fa#m][Do#m][Re][Mi]e viaggerai insieme a noi nella natura controvento.\n{eoc}\n\nQuesto sole che dà luce e scalda il volo dei gabbiani\nti dice non dormire, oggi hai il mondo nelle mani\nnon lasciarti trascinare dalle facili correnti\nguida tu la tua canoa fra gli scogli dei torrenti.\n\n{soc}\n[Fa#m][Do#m][Re][Mi]Estote Parati un grido s’alzerà\n[Fa#m][Do#m][Re][Mi]e mille voci a far da eco ad una voce fioca ormai\n[Fa#m][Do#m][Re][Mi]e allora dai, vieni con noi, è un’avventura in mare aperto\n[Fa#m][Do#m][Re][Mi]e viaggerai insieme a noi nella natura controvento.\n{eoc}\n"
   },
   {
-    "id": 10,
+    "id": 11,
     "titolo": "Un mondo, una promessa",
     "categoria": "Canti cerimoniali",
     "pagina": 16,
@@ -114,10 +126,10 @@
     "testo_accordi": "# fonte: testo e accordi forniti dall'utente\n\n# Giro armonica: Re / Sol / Re / Sol / Re La / Re (2 volte), La di passaggio\n\nEd [Re]io son qui che [Sol]aspetto e anche [Sim]tu sei insieme [La]a [La4]me\n100 [Re]lune, 100 [Sol]soli, luce a [Sim]tutto quel che [La][La4]c'è\n\"Guarda [Sol]avanti e [Re]sorridi\", sulle [Fa#]tracce di [Sim]B.P.\nL'avventura [Sol]ha avuto [Re]inizio, prima [Mi]volta su a [La4]Brownsea\nUn [Sol]orizzonte [Re]nuovo, chi se [La]lo immaginava [Sim]che\nQuesto [Sol]tempo costruito [Re]insieme, di [Mi]noia non [La]ce n'è... e di [Sol]noia [La7]non ce [Re]n'è\n\n{soc}\n[Sol]Un [Re]grande [Sol][Re]cerchio che [La]abbraccia un mondo [Sim]intero\nPronti [Sol]a fare il nostro [Re]meglio, a [La]servire per [Re][Re7]davvero\n[Sol]Un [Re]grande [Sol][Re]cerchio e [Fa#]quest'alba da [Sim]scoprire\nEcco il [Sol]sole sorge [Re]ancora, è [Mi]ora di [La]partire\n[Sol]Un [Re]grande [Sol][Re]cerchio con la [Fa#]legge che è la [Sim]stessa\nLa mia [Sol]storia nel [Re]futuro, un [Mi]mondo una [La]promessa... un [Sol]mondo [La]una [Re]promessa\n{eoc}\n\nE la gente che si incontra nella pista e nel sentiero\nquando in route, che è la mia strada, si percorre il mondo intero\nbuon cammino verso il sole per la stessa direzione\nmai uguale nel tracciato, tante vie tante persone\ncon un passo dopo l'altro, una bussola che non mi inganni\nsiamo in tanti a camminare, ho percorso 100 anni... ho percorso 100 anni\n\n{soc}\n[Sol]Un [Re]grande [Sol][Re]cerchio che [La]abbraccia un mondo [Sim]intero\nPronti [Sol]a fare il nostro [Re]meglio, a [La]servire per [Re][Re7]davvero\n[Sol]Un [Re]grande [Sol][Re]cerchio e [Fa#]quest'alba da [Sim]scoprire\nEcco il [Sol]sole sorge [Re]ancora, è [Mi]ora di [La]partire\n[Sol]Un [Re]grande [Sol][Re]cerchio con la [Fa#]legge che è la [Sim]stessa\nLa mia [Sol]storia nel [Re]futuro, un [Mi]mondo una [La]promessa... un [Sol]mondo [La]una [Re]promessa\n{eoc}\n\nQuesta pace che respiri già alla luce dell'aurora\nCostruita con le azioni, anche adesso, proprio ora,\nla mia mano con la tua, oggi insieme come ieri\nnell'impegno di ogni giorno, fanno veri i tuoi pensieri\nquesta voglia che ci unisce, che da forza alle nostre ali,\nnoi diversi, noi lontani, noi fratelli, noi uguali... noi fratelli, noi uguali\n\n{soc}\n[Sol]Un [Re]grande [Sol][Re]cerchio che [La]abbraccia un mondo [Sim]intero\nPronti [Sol]a fare il nostro [Re]meglio, a [La]servire per [Re][Re7]davvero\n[Sol]Un [Re]grande [Sol][Re]cerchio e [Fa#]quest'alba da [Sim]scoprire\nEcco il [Sol]sole sorge [Re]ancora, è [Mi]ora di [La]partire\n[Sol]Un [Re]grande [Sol][Re]cerchio con la [Fa#]legge che è la [Sim]stessa\nLa mia [Sol]storia nel [Re]futuro, un [Mi]mondo una [La]promessa... un [Sol]mondo [La]una [Re]promessa\n{eoc}\n\nrit.[Sol]un mondo [Re]una [Sol]promessa... un [La]mondo [Re]una promessa...\n"
   },
   {
-    "id": 11,
+    "id": 12,
     "titolo": "Canto delle Scolte d'Assisi",
     "categoria": "Canti cerimoniali",
-    "pagina": 16,
+    "pagina": 18,
     "url_audio": null,
     "url_spartito": null,
     "branche": [
@@ -126,10 +138,10 @@
     "testo_accordi": "# fonte: canzoniere TUTTOSCOUT 2003, 0165.html - titolo nella fonte: Inno delle scolte di Assisi\n# MANCANO GLI ACCORDI\n\nSquilla!\nSquilla la tromba che già il giorno finì\ngià del coprifuoco la canzone salì\nSu, scolte, alle torri guardie armate ola'\nattente in silenzio vigilate.\n\nO nostri santi che in cielo esultate\nVergini sante gloriose e beate\nnoi v'invochiamo.\n\nQuesta città con il vostro amore\nguardate contro il nemico che l'anima\ntiene contro la morte che subito viene\nin ogni cuor sia pace e bene\nsia tregua ad ogni dolor. Pace.\n\nSquilla squilla la tromba che già il giorno finì\ngià del coprifuoco la canzone salì.\n\nSu, scolte, alle torri guardie armate ola'\nattente in silenzio vigilate.\n\nAttente, scolte, vigilate.\n"
   },
   {
-    "id": 12,
+    "id": 13,
     "titolo": "Se incontrerò",
     "categoria": "Canti cerimoniali",
-    "pagina": 17,
+    "pagina": 18,
     "url_audio": null,
     "url_spartito": null,
     "branche": [
@@ -138,7 +150,7 @@
     "testo_accordi": "# fonte: testo e accordi forniti dall'utente\n\n[Do]Se incontrerò [Sol]chi [Do]con me ha speranza\n[Sol]nel domani che splenda il sole,\n[Do]se incontrerò [Sol]chi [Do]con me ci crede\n[Fa]io gli stringerò [Sol][Do]la mano.\n\n[Do]Ma [Rem]se incontrerò [Sol7]chi stanco più [Do]non vuole continuare,\n[Do]io [Rem]mi  [Do]fermerò per dirgli [Fa]andiamo io ti [Sol]aiuterò.\n\nSe incontrerò chi la stessa legge ha scelto di libertà e di amore\ngli narrerò le avventure liete che mi hanno portato qui.\nMa se non saprà la gioia di cantare e di servire,\nio mi fermerò per dargli un poco di felicità.\n\nSe incontrerò chi si sente solo sarà facile dirgli vieni,\nsiamo già in tanti che insieme credono nella fraternità.\n"
   },
   {
-    "id": 13,
+    "id": 14,
     "titolo": "Servire",
     "categoria": "Canti cerimoniali",
     "pagina": 18,
@@ -150,10 +162,10 @@
     "testo_accordi": "# fonte: canzoniere TUTTOSCOUT 2003, 0558.html - titolo nella fonte: Servire\n# MANCANO GLI ACCORDI\n\nRit: Servire è parola che parla col cuore\n     servire è parola lucente d'affetto\n     servire è un concetto fraterno d'amore\n     che unisce, stupisce, che parla da se\n\nLa strada fraterna è cosparsa d'amore\nl'amore è paziente, è benigno l'amore\nse dessi tutti i miei averi di cuore\ne non dessi me stesso a che serve l'amore\n\n{c: Rit.}\n\nL'amore non invidia, non riesce a vantare\nnon gonfia, non manca rispetto di dare\nnon cerca interesse, l'amore non si adira\nma cerca ed aspira soltanto a servire.\n\n{c: Rit.}\n\nSe ami la feste, il bosco, il ruscello\nse cerchi l'amore che cerca un fanciullo\nsel male, sai, il conto non devi tenere\nma devi soltanto pensare a servire.\n\n{c: Rit.}\n\nFratello, fratello, servire è parola\npronunciata una volta è ricordata per sempre\nsui campi, nei boschi da rover e da anziani\nin mezzo alla folla da oggi al domani.\n\nrit.\n"
   },
   {
-    "id": 14,
+    "id": 15,
     "titolo": "A caccia andiamo",
     "categoria": "Canti di lupettismo",
-    "pagina": 21,
+    "pagina": 23,
     "url_audio": null,
     "url_spartito": "https://www.canzonierescout.it/005.pdf",
     "branche": [
@@ -162,10 +174,10 @@
     "testo_accordi": "# fonte: canzoniere TUTTOSCOUT 2003, 0657.html - titolo nella fonte: A caccia andiamo\n# MANCANO GLI ACCORDI\n\nO lupi a caccia andiamo,\ncorriamo e pronti siam\nsorriso lieto abbiamo\n\"del nostro meglio\" urliam\ne meglio urliam.\n\n{soc}\nSì, bisognerà, bisognerà che vada.\nSì, bisognerà, bisognerà partir.\nSì, bisognerà, bisognerà che vada.\nSì, bisognerà, bisognerà partir.\n{eoc}\n\nIn mezzo alla natura\nfratelli noi sarem.\nLupetti all'aria pura\nfelici correrem e correrem.\n\nSì, bisognerà...\n\nRientrati nella tana\nricorderemo, sì,\nla caccia ormai lontana,\ncantando ognor così, ognor così.\n\nSì, bisognerà...\n"
   },
   {
-    "id": 15,
+    "id": 16,
     "titolo": "Antica traccia",
     "categoria": "Canti di lupettismo",
-    "pagina": 21,
+    "pagina": 23,
     "url_audio": null,
     "url_spartito": null,
     "branche": [
@@ -174,10 +186,10 @@
     "testo_accordi": "# fonte: testo fornito dall'utente\n# MANCANO GLI ACCORDI\n# (bis) = riga cantata 2 volte (nel testo originale era segnata con **)\nOh fratel mio gentile racconta tu (bis)\ncome Santo Francesco volle seguire Gesù.\nNé feste, balli e canti, né guerreggiar (bis)\nné ricchezze il suo cuor sapevano più\naccontentar.\nMa povertà e preghiera volle per sé; (bis)\nper portare l’amor divenne l’araldo del re!\n\nO fratel mio gentile, chi l’ascoltò (bis)\nchi ascoltò il suo messaggio lieto\nche il mondo incantò?\nLebbrosi e mendicanti, ricchi signor, (bis)\ncittadini, viandanti e giovani puri di cuor.\nIl lupo gli ubbidiva e l’usignol (bis)\ncon lui laudavan Dio\ne il creato cantava il Signor.\n\nO fratel mio gentile, se vuoi puoi tu (bis)\ncome Santo Francesco puoi seguire Gesù!\n"
   },
   {
-    "id": 16,
+    "id": 17,
     "titolo": "Attorno alla rupe",
     "categoria": "Canti di lupettismo",
-    "pagina": 22,
+    "pagina": 24,
     "url_audio": null,
     "url_spartito": "https://www.canzonierescout.it/62.pdf",
     "branche": [
@@ -186,10 +198,10 @@
     "testo_accordi": "# fonte: canzoniere TUTTOSCOUT 2003, 0005.html - titolo nella fonte: Attorno alla Rupe\n# MANCANO GLI ACCORDI\n\nAttorno alla rupe orsù lupi andiam\nd'Akela e Baloo or le voci ascoltiam\ndel branco la forza in ciascun lupo sta\ndel lupo la forza del branco sarà.\n\nRit.: uulla ullalala uullalala\ndel lupo la forza nel branco sarà (2v.)\n\nOr quando si sente un richiamo lontan\nrisponde un vicino più forte ulular\na quel che la legge fedel seguirà\na lui buona caccia si ripeterà\n\nRit.: uulla ullalala uullalala\na lui buona caccia si ripeterà\n\nIl debole cucciolo via via crescerà\ne forte ed ardito col clan caccerà\nfinché sulla rupe un dì porterà\nla pelle striata del vile Shere Khan.\n\nRit.: uulla ullalala uullalala\nla pelle striata del vile Shere Khan (2v.)\n"
   },
   {
-    "id": 17,
+    "id": 18,
     "titolo": "Branco di Akela",
     "categoria": "Canti di lupettismo",
-    "pagina": 22,
+    "pagina": 24,
     "url_audio": null,
     "url_spartito": null,
     "branche": [
@@ -198,10 +210,10 @@
     "testo_accordi": "# fonte: canzoniere TUTTOSCOUT 2003, 0273.html - titolo nella fonte: Il branco di Akela\n# MANCANO GLI ACCORDI\n\nAkela aveva un branco felice e fier,\nsestiglie rossi e fulvi, pezzati e ner,\nfurbi i rossi in verità, con la loro abilità\nnel seguir la traccia di Akela!\n\nRidenti anche i pezzati felici ognor\nperché sestiglia in gamba è quella lor.\nEcco adesso venir giù dalla caccia di Baloo\nvincitori i neri pien di virtù.\n\nAudaci e agili sono i fulvi ancor\ni primi della corsa e allegri in cor.\nLa miglior quale sarà che per prima arriverà\na conquistare la preda di Akela.\n"
   },
   {
-    "id": 18,
+    "id": 19,
     "titolo": "Buon lupetto",
     "categoria": "Canti di lupettismo",
-    "pagina": 22,
+    "pagina": 24,
     "url_audio": null,
     "url_spartito": "https://www.canzonierescout.it/lupetto.pdf",
     "branche": [
@@ -210,10 +222,10 @@
     "testo_accordi": "# fonte: canzonierescout.it (Buon lupetto, spartito)\n# MANCANO GLI ACCORDI\nBuon lupetto esser voglio.\n(x3)\nCanterò, giocherò, servirò.\n\nBuon lupetto esser voglio.\nCanterò, giocherò, servirò.\nBuon lupetto esser voglio.\nCanterò, giocherò, servirò.\n\nPenso alle due stelle,\npenso, penso come saran belle,\ncome saran belle.\nPenso alle due stelle,\npenso, penso come saran belle\nsul mio cuor.\n\nOh presto sì, patapim patapom,\nio le avrò, patapim patapom,\nsopra il mio cuore,\nsopra il mio cuore.\n\nOh presto sì, patapim patapom,\nio le avrò, patapim patapom,\nsopra il mio cuore,\nsì, sì le avrò. Sì le avrò!\n"
   },
   {
-    "id": 19,
+    "id": 20,
     "titolo": "Buona caccia",
     "categoria": "Canti di lupettismo",
-    "pagina": 23,
+    "pagina": 25,
     "url_audio": null,
     "url_spartito": null,
     "branche": [
@@ -222,10 +234,10 @@
     "testo_accordi": "# fonte: canzoniere TUTTOSCOUT 2003, 0008.html - titolo nella fonte: Buona Caccia\n# MANCANO GLI ACCORDI\n\nPartiamo col branco in caccia buona caccia, buona caccia;\npartiamo col branco in caccia buona caccia fratellin.\n\nCuor leale, lingua cortese fanno strada nella giungla;\ncuor leale, lingua cortese nella giunglastrada fan.\n\nSiamo d'uno stesso sangue fratellino tu ed io;\nsiamo d'uno stesso sangue fratellino io e te.\n\nE' le legge della giungla vecchia e vera come il cielo\nsenza legge non c'è vero non c'è lupo che vivra'.\n\nGrande è il bosco e tenebroso ed il lupo è piccolino;\nBaloo, l'orso coraggioso, viene a caccia insieme a te.\n"
   },
   {
-    "id": 20,
+    "id": 21,
     "titolo": "Caccia al sambhur",
     "categoria": "Canti di lupettismo",
-    "pagina": 23,
+    "pagina": 25,
     "url_audio": null,
     "url_spartito": "https://www.canzonierescout.it/045.pdf",
     "branche": [
@@ -234,10 +246,10 @@
     "testo_accordi": "# fonte: canzonierescout.it (spartito); sostituisce la bozza TUTTOSCOUT 2003 senza accordi\n\n[Re]Nella valletta chiara s'aggirano [La7]i lupi,\n[Re]annusano le tracce [La7]del sambur [Re]veloce,\nseguono Akela a caccia tra [La7]aspri dirupi,\ne da [La7]lontano l'eco [Re]ripete la voce:\n\n\"E salta, lupo, [La7]salta [Re]salta\ne salta [La7]sulla preda.\nShere Kan che non ti veda,\n[Re]che te la vuol levar!\nE salta, lupo, [La7]salta [Re]salta\ne salta [La7]sulla preda.\nShere Kan che non ti veda,\n[Re]che te la vuol levar\".\n"
   },
   {
-    "id": 21,
+    "id": 22,
     "titolo": "Canto del risveglio",
     "categoria": "Canti di lupettismo",
-    "pagina": 24,
+    "pagina": 26,
     "url_audio": null,
     "url_spartito": null,
     "branche": [
@@ -246,10 +258,10 @@
     "testo_accordi": "# fonte: canzoniere TUTTOSCOUT 2003, 0110.html - titolo nella fonte: Lupo salta su\n# MANCANO GLI ACCORDI\n\n[Mib]Lupo salta su che già l’ora è [Sib]suonata!     [Mib]\nLupo salta su, cominciato è i[Sib]l dì.    [Mib]\n\nTra poco al ruscelletto fr[Dom]a le[Sib] rocce corre[Mib]remo\ne lieti all’acqua [Dom]fresca tutti[Sib] insiem ci la[Mib]veremo.\n\n[Mib]Lupo salta su che già l’ora è [Sib]suonata!     [Mib]\nLupo salta su, cominciato è i[Sib]l dì.    [Mib]\n\nLa giungla già ci attende presto in caccia partiremo,\nla pista in mezzo al bosco pronti e svelti seguiremo.\n\n[Mib]Lupo salta su che già l’ora è [Sib]suonata!     [Mib]\nLupo salta su, cominciato è i[Sib]l dì.    [Mib]\n"
   },
   {
-    "id": 22,
+    "id": 23,
     "titolo": "Canto della sera",
     "categoria": "Canti di lupettismo",
-    "pagina": 24,
+    "pagina": 26,
     "url_audio": null,
     "url_spartito": null,
     "branche": [
@@ -258,10 +270,10 @@
     "testo_accordi": "# fonte: canzoniere TUTTOSCOUT 2003, 0173.html - titolo nella fonte: Canto della sera\n# MANCANO GLI ACCORDI\n\nOr scende la sera e noi siamo quaggiù\ntutto il Branco è in preghiera\ne Ti invoca, o Gesù.\n\nDall'alto del cielo proteggici Tu\ned il nostro branco benedici, o Gesù.\n\nQuel che oggi abbiam fatto e le nostre B.A.\necco a Te presentiamo con tutta lealtà.\nProteggici a casa la mamma e il papà\nfa' che noi meritiamo la loro bontà.\nSilente è la giungla nel giorno che muor\nsu tutti discenda la gioia e l'amor.\n\nDall'alto del cielo proteggici Tu\ned il nostro branco benedici o Gesù.\n"
   },
   {
-    "id": 23,
+    "id": 24,
     "titolo": "Danza dei cani rossi",
     "categoria": "Canti di lupettismo",
-    "pagina": 24,
+    "pagina": 26,
     "url_audio": null,
     "url_spartito": null,
     "branche": [
@@ -270,10 +282,10 @@
     "testo_accordi": "# fonte: canzoniere TUTTOSCOUT 2003, 0182.html - titolo nella fonte: Danza dei cani rossi\n# MANCANO GLI ACCORDI\n\nRah, rah, rah! il cane rosso è qua.\nArriva giù, non lascia più la traccia di Wontolla.\n\nRah, rah, rah! Il cane rosso è qua.\nLa rabbia sì lo inferocì, Wontolla lo annunciò.\n\nOr Bagheera, Kaa e Baloo alla lotta pronti son;\nal comando di Akela coi suoi lupi Mowgli vien.\n\nRah, rah, rah! Il cane rosso è qua.\nDi peso fu portato giù dall'acqua del Waingunga.\n\nRah, rah, rah! Il cane rosso è qua.\nE quando là approderà il branco pronto è già.\n\nTutti i lupi di Seeonee stan lottando con ardor\ned il Dhole invasor alla fin sconfiggeran.\n"
   },
   {
-    "id": 24,
+    "id": 25,
     "titolo": "Danza del fiore rosso",
     "categoria": "Canti di lupettismo",
-    "pagina": 24,
+    "pagina": 26,
     "url_audio": null,
     "url_spartito": null,
     "branche": [
@@ -282,10 +294,10 @@
     "testo_accordi": "# fonte: canzoniere TUTTOSCOUT 2003, 0192.html - titolo nella fonte: Danza del fiore rosso\n# MANCANO GLI ACCORDI\n\nC'era un tempo un tigre perfida e sleal\nnella giungla faceva tanto tanto mal\nma poi Mowgli il fiore rosso\nalla rupe ci portò\ned il pelo ai suoi nemici\ncon un ramo bruciacchiò.\nFiore rosso avvampa ancor\ntutto il branco ne ha terror.\n\nMowgli prese pel mento\nil muso di Shere-Khan\nmentre il fior sbocciava\nnella salda man;\ntigre zoppa della giungla\nla tua pelle brucerò\nsulla rupe del Consiglio\nse non fuggi stenderò.\nFiore rosso avvampa ancor\nanche Shere-Khan ne ha terror.\n"
   },
   {
-    "id": 25,
+    "id": 26,
     "titolo": "Danza della tregua dell'acqua",
     "categoria": "Canti di lupettismo",
-    "pagina": 25,
+    "pagina": 27,
     "url_audio": null,
     "url_spartito": null,
     "branche": [
@@ -294,10 +306,10 @@
     "testo_accordi": "# fonte: canzoniere TUTTOSCOUT 2003, 0210.html - titolo nella fonte: Danza della tregua dell'acqua\n# MANCANO GLI ACCORDI\n\nLupo la parola d'Hathi ascolterà\nquando nella giungla tregua annunzierà.\n\nRit. Tra la la la la ra la la la\ntra la la la la ra la la la\ntra la la la la ra la la la\ntra la la la la ra la la la.\n\nTigre col cerbiatto all'acqua insieme andrà\nse nella Waingunga la roccia si vedrà.\n\nAcqua fresca e viva Baloo berrà con te...\nma sulla sorgente una macchia scura c'é.\n\nGridano d'orrore Bagheera, Kaa, Baloo:\nvia da questa fonte, non ci tornare più!\n\nE Shere-khan che arriva... d'umano sangue ha\nzanne rosse orrende, ed ora a bere va.\n"
   },
   {
-    "id": 26,
+    "id": 27,
     "titolo": "Fratelli alla candida luna",
     "categoria": "Canti di lupettismo",
-    "pagina": 26,
+    "pagina": 28,
     "url_audio": null,
     "url_spartito": "https://www.canzonierescout.it/52.pdf",
     "branche": [
@@ -306,10 +318,10 @@
     "testo_accordi": "# fonte: canzoniere TUTTOSCOUT 2003, 0108.html - titolo nella fonte: Fratelli alla candida luna\n# MANCANO GLI ACCORDI\n\nRIT: Fratelli alla candida luna cantiamo la nostra canzone più bella:\ntra faggi ed abeti, che gioia veniamo la nostra canzone a cantar.\n\n\"Una via sola è vera\" ci disse il lupo anziano\ne dietro a lui noi siamo la traccia a seguitar.\nCostanti alla ricerca, gioiosi nel cammino,\nerriam fino al mattino seguendo il lupo anzian.\n\nrit\n\nLa via è troppo scoscesa la traccia già si perde.\nSolo non si disperde chi segue il lupo anzian.\nLupetto non lasciare oh, non lasciare il branco\nil pelo è ancora bianco seguiamo il lupo anzian.\n\nrit\n"
   },
   {
-    "id": 27,
+    "id": 28,
     "titolo": "Gli allegri folletti",
     "categoria": "Canti di lupettismo",
-    "pagina": 26,
+    "pagina": 28,
     "url_audio": null,
     "url_spartito": "https://www.canzonierescout.it/folletti.pdf",
     "branche": [
@@ -318,10 +330,10 @@
     "testo_accordi": "# fonte: canzoniere (Gli allegri folletti, testo e spartito)\n# MANCANO GLI ACCORDI\nDietro il muro d'un vecchio convento,\nogni sera, al calare del sole,\nin un prato di rose e viole\ncento folletti convegno si dan.\nVengon qui d'ogni parte del mondo\nd'ogni razza e color essi son;\ne facendo un gran girotondo\nlieti cantano questa canzon:\n\n{soc}\nSiamo gli allegri, vispi folletti;\nmille dispetti spesso facciam:\nspargiamo il pepe sopra il guanciale,\nversiamo il sale dentro il caffè;\nmettiam gli spilli sulle poltrone\ne dal balcone l'acqua spruzziam.\nMa se qualcuno ci chiede aiuto,\nin un minuto noi accorriam!\nMa se qualcuno ci chiede aiuto,\nin un minuto noi accorriam!\n{eoc}\n\nUn folletto si stacca dal gruppo\ne bisbiglia ad ogni bambino:\nHai pensato, o mio fratellino,\nche anche tu il folletto puoi far?\nPer portare un po' d'allegria\nnon ci vuole, in fondo, gran che,\nse anche tu vuoi destar simpatia,\ncanta, allora, insieme con me:\n\nSiamo gli allegri...\n"
   },
   {
-    "id": 28,
+    "id": 29,
     "titolo": "Il canto del cuculo",
     "categoria": "Canti di lupettismo",
-    "pagina": 26,
+    "pagina": 28,
     "url_audio": null,
     "url_spartito": "https://www.canzonierescout.it/019.pdf",
     "branche": [
@@ -330,10 +342,10 @@
     "testo_accordi": "# fonte: canzoniere TUTTOSCOUT 2003, 0196.html - titolo nella fonte: Il canto del cuculo\n# MANCANO GLI ACCORDI\n\nSentiam nella foresta il cuculo cantar\nai piedi d'una quercia lo stiamo ad ascoltar.\n\nCucu cucu...\n\nLa notte è tenebrosa non c'è chiaror lunar\nsentiam nel fitto bosco i lupi ulular.\n\nAhu, ahu...\n"
   },
   {
-    "id": 29,
+    "id": 30,
     "titolo": "Il lupo ferito",
     "categoria": "Canti di lupettismo",
-    "pagina": 27,
+    "pagina": 29,
     "url_audio": null,
     "url_spartito": "https://www.canzonierescout.it/ferito.pdf",
     "branche": [
@@ -342,10 +354,10 @@
     "testo_accordi": "# fonte: canzoniere TUTTOSCOUT 2003, 0278.html - titolo nella fonte: Il lupetto ferito\n\n# MANCANO GLI ACCORDI\n\nBagheera che vide narrò\nd'un lupo dal giovane ardir\nche il branco alla caccia lasciò\ne volle l'istinto seguir.\n\nRit. Lupo, lupo \ntorna nel branco a cacciar con noi.\nVieni, vieni.\nVieni il grand'urlo a lanciar.\n\nLa legge che insegna il dover\nla legge che Akela ululò\nla legge che un branco fa fier\nil lupo randagio scordò.\n\nrit.\n\nMa quando dall'ombra sbucò\nil toro selvaggio e guerrier\ninvano quel lupo saltò\nferito ululò sul sentier.\n\nrit.\n\nE il lupo l'errore capì\ntornò più veloce nel pian\ne corse alla rupe e finì\nfra le zampe di un lupo anzian.\n\nrit.\n"
   },
   {
-    "id": 30,
+    "id": 31,
     "titolo": "Il risveglio della giungla",
     "categoria": "Canti di lupettismo",
-    "pagina": 28,
+    "pagina": 30,
     "url_audio": null,
     "url_spartito": "https://www.canzonierescout.it/g07.pdf",
     "branche": [
@@ -354,10 +366,10 @@
     "testo_accordi": "# fonte: canzoniere TUTTOSCOUT 2003, 0280.html - titolo nella fonte: Il risveglio della giungla\n# MANCANO GLI ACCORDI\n\nLa luna è bianca e scuro è l'orizzonte\ngià tutto tace, sol canta la fonte.\n\nLassù nel cielo bruno tutto solo\ngià Mang, il pipistrello, intreccia il volo.\n\nLa giungla si ridesta piano piano\ned echeggia di lontano già il richiamo:\nBuona caccia, Buona caccia.\n\na tutti quelli che rispettano la Legge;\nBuona caccia, Buona caccia, Buona caccia!\n"
   },
   {
-    "id": 31,
+    "id": 32,
     "titolo": "L'ultimo canto di Akela",
     "categoria": "Canti di lupettismo",
-    "pagina": 28,
+    "pagina": 30,
     "url_audio": null,
     "url_spartito": "https://www.canzonierescout.it/118.pdf",
     "branche": [
@@ -366,10 +378,10 @@
     "testo_accordi": "# fonte: canzoniere TUTTOSCOUT 2003, 0283.html - titolo nella fonte: L'ultimo canto di Akela\n# MANCANO GLI ACCORDI\n\nIl lupo Wontolla non caccerà più\nAkela da un pezzo è disteso laggiù\ne s'ode d'intorno stormire di fronde\nsommessa sussurra la giungla un sospir.\n\nRit. E muoio contento fratello a sentir\nche sei qui vicino a vedermi morir.\n\nE Mowgli il ranocchio lo venne a cercar\ntra i lupi caduti l'udì rantolar\nalzata la testa e le spalle di lì\na Mowgli in ginocchio diceva così.\n\nrit.\n\nGià l'ultimo colpo il mio dente vibrò\ntra poco la giungla lasciare dovrò.\nMa muoio contento, fratello, a sentir\nche sei qui vicino a vedermi morir!\n\nrit.\n"
   },
   {
-    "id": 32,
+    "id": 33,
     "titolo": "La cassa misteriosa",
     "categoria": "Canti di lupettismo",
-    "pagina": 28,
+    "pagina": 30,
     "url_audio": null,
     "url_spartito": "https://www.canzonierescout.it/cassa.pdf",
     "branche": [
@@ -378,10 +390,10 @@
     "testo_accordi": "# fonte: canzonierescout.it (La cassa misteriosa, spartito)\n\n\n\nUn [Do]giorno un mio lupetto passeggiava lungo il mar\n[Fa]quand'ecco a un tratto [Do]scorse là una [Sol7]cassa galleggiar.\nE giù [Do]si tuffò e presala su a [Fa]riva la portò,\n[Sol7]ma apertala [Do]vide la ... [Sol7]proprio dinnanzi a sé,\n[Do]ma apertala vide la ... [Sol7]proprio dinnanzi a [Do]sé.\n\nOrbene imbarazzato su che fare e che non far\npensò: qui un buon consiglio forse Akela potrà dar\ne in collo, perciò, se la carico e in Tana la portò,\nma appena io vidi la ... via, gli gridai di qui,\nma appena io vidi la ... via, gli gridai di qui.\n\nPazienza disse e con la cassa prese a camminar\ncercando un qualche amico a cui poterla regalar,\nma invano cercò e astuzie tentò che sempre a lui restò\nla cassa con tutta la ... oh che disperazion!\nLa cassa con tutta la ... oh che disperazion!\n\nVia via che lui cresceva da Lupetto a Esplorator\nla cassa inseparabile restava, oh che dolor,\nma un giorno morì e al cielo salì contento di lasciar\nin terra la cassa e la ... senza più afflizion\nin terra la cassa e la ... senza più afflizion.\n\nMa quando al Gran Portone sbigottito si fermò\ns'accorse che volata era la cassa fin lassù\nallor s'infuriò, in cuor borbottò, ma alfin dove' capir\nche anche la cassa e la ... in cielo volevano andar\nche anche la cassa e la ... in cielo volevano andar.\n\nMoral di questa storia è che andando lungo il mar\nse mai vedrete a un tratto là una cassa galleggiar\nnon ditevi: su, tuffiamoci giù, vediamo cosa c'è\nperché quella perfida ... mai più vi lascerà,\nperché quella perfida ... mai più vi lascerà.\n"
   },
   {
-    "id": 33,
+    "id": 34,
     "titolo": "Nella giungla misteriosa",
     "categoria": "Canti di lupettismo",
-    "pagina": 30,
+    "pagina": 32,
     "url_audio": null,
     "url_spartito": "https://www.canzonierescout.it/misteriosa.pdf",
     "branche": [
@@ -390,10 +402,10 @@
     "testo_accordi": "# fonte: canzonierescout.it (Nella Giungla misteriosa, spartito)\n\n[Rem]Nella giungla misteriosa,\nsotto un [Solm]albero di [Rem]cocco\nun leone [La]se ne [Rem]andava\nannusando [Solm]lo scirocco.\n[La]occo, [Rem]occo.\n\nAnnusava il venticello\nper veder se il vicino\nsulla sponda del ruscello\nfosse nato un rosmarino.\nino, ino.\n\nQuella pianta prelibata\nla delizia delle fiere\nun bel giorno fu trovata\nnella pancia del barbiere\nere, ere.\n\nIl barbiere era venuto\nper tosare i Tumba Tumba,\nma il sentiero avea perduto\nnel mistero della Giungla.\nungla, ungla.\n"
   },
   {
-    "id": 34,
+    "id": 35,
     "titolo": "Salta o lupo",
     "categoria": "Canti di lupettismo",
-    "pagina": 30,
+    "pagina": 32,
     "url_audio": null,
     "url_spartito": "https://www.canzonierescout.it/salta.pdf",
     "branche": [
@@ -402,10 +414,10 @@
     "testo_accordi": "# fonte: canzoniere TUTTOSCOUT 2003, 0292.html - titolo nella fonte: Salta o lupo\n# MANCANO GLI ACCORDI\n\nIl sentiero di caccia è aperto innanzi a te\nascolta l'urlo, s'ode da lontan.\nIl favor della giungla ti accompagnerà\nsarà il tuo passo forte ardito e fier.\n\nRit. Salta o lupo se tu vuoi ogni preda\nsarà presto ai piedi tuoi\ngiuste tracce seguirai\ne i segreti della giungla scoprirai.\n\nSe un buon lupo presto tu vuoi diventar\nle Massime e la Legge non scordare,\nla parola di Akela sia vicino a te\nosserva sempre i detti di Baloo.\n\nrit.\n\nOcchio aperto alle stelle dritto sa guardar\nBagheera a caccia ti può consigliar.\nDel tuo branco la forza in te stesso sta\ne la sua forza il branco a te darà.\n\nrit.\n\nQuando il branco alla rupe si radunerà\ndi nuove imprese ancor potrem parlar.\nQuella Legge che uniti sempre manterrà\nil nostro vanto e il tuo onor sarà.\n\nrit.\n"
   },
   {
-    "id": 35,
+    "id": 36,
     "titolo": "Siam nella vasta giungla",
     "categoria": "Canti di lupettismo",
-    "pagina": 31,
+    "pagina": 33,
     "url_audio": null,
     "url_spartito": "https://www.canzonierescout.it/vasta.pdf",
     "branche": [
@@ -414,10 +426,10 @@
     "testo_accordi": "# fonte: canzoniere TUTTOSCOUT 2003, 0294.html - titolo nella fonte: Siam nella vasta giungla\n# MANCANO GLI ACCORDI\n\nSiam nella vasta giungla,\nsiam sulla pista di Akela.\nLieti cantando, sempre cantando.\nLupi siam.\n"
   },
   {
-    "id": 36,
+    "id": 37,
     "titolo": "Ula, ula, ula",
     "categoria": "Canti di lupettismo",
-    "pagina": 31,
+    "pagina": 33,
     "url_audio": null,
     "url_spartito": "https://www.canzonierescout.it/110.pdf",
     "branche": [
@@ -426,10 +438,10 @@
     "testo_accordi": "# fonte: testo e accordi forniti dall'utente (strofa 1); strofa 2 dalla bozza TUTTOSCOUT 2003, 0081.html\n\n[Do]Ula, ula, ula,\n[Fa]è sera e [Do]stanchi siam.\n[Do]Ula, ula, ula,\n[Re7]doman [Sol]lieti sarem.\n[Do]Ula, ula, ula,\n[Fa]tra [Do]poco dormirem,\n[Fa]per [Do]tutta la notte\n[Sol]noi [Do]ci riposerem.\n\nUla, ula, ula,\nil branco dorme già.\nUla, ula, ula,\nla giungla tacerà.\nUla, ula ula,\nGesù benedirà\nquesta nostra tana\ne ci sorriderà...\n"
   },
   {
-    "id": 37,
+    "id": 38,
     "titolo": "Un bravo lupo",
     "categoria": "Canti di lupettismo",
-    "pagina": 32,
+    "pagina": 34,
     "url_audio": null,
     "url_spartito": "https://www.canzonierescout.it/112.pdf",
     "branche": [
@@ -438,10 +450,10 @@
     "testo_accordi": "# fonte: canzoniere TUTTOSCOUT 2003, 0082.html - titolo nella fonte: Un Bravo Lupo\n# MANCANO GLI ACCORDI\n\nRit.Un bravo lupo io voglio diventar\ne la promessa per sempre rispettar\ngentile e più cortese con tutti io sarò\nla Buona Azion, sempre farò.\n\nrit.\n\nAkela oh Akela oh, Te lo prometto,\npiù in gamba io sarò.\n\nrit.\n\nCaro Baloo, caro Baloo\nio la legge osserverò di più. ( 2 volte )\n\nrit.\n\nBagheera oh, Bagheera oh\nte lo prometto, in caccia io verrò. ( 2 volte )\n\nrit.\n\nMio caro Kaa, mio caro Kaa\nte lo prometto, farò tante B.A. ( 2 volte )\n\nrit.\n"
   },
   {
-    "id": 38,
+    "id": 39,
     "titolo": "Zampe agili e silenti",
     "categoria": "Canti di lupettismo",
-    "pagina": 32,
+    "pagina": 34,
     "url_audio": null,
     "url_spartito": null,
     "branche": [
@@ -450,22 +462,22 @@
     "testo_accordi": "# fonte: canzoniere TUTTOSCOUT 2003, 0295.html - titolo nella fonte: Zampe agili e silenti\n# MANCANO GLI ACCORDI\n\nZampe agili e silenti,\nzanne aguzze e rilucenti,\nacuto l'occhio scorge nell'oscurità,\norecchie tese odono il vento che va.\n\nD'un lupo sono i segni\nd'un forte cacciator.\n"
   },
   {
-    "id": 39,
+    "id": 40,
     "titolo": "Zanna bianca",
     "categoria": "Canti di lupettismo",
-    "pagina": 33,
+    "pagina": 35,
     "url_audio": null,
     "url_spartito": "https://www.canzonierescout.it/zanna.pdf",
     "branche": [
       "LC"
     ],
-    "testo_accordi": "# fonte: testo fornito dall'utente; accordi letti dallo spartito di canzonierescout.it\n\nUn bel [Re]giorno nella Giungla\nZanna [La7]Bianca a caccia andò,\nma [Re]arrivato giù al ruscello\nsulle [La7]zampe si fermò.\n\nrit.[Re]Guarda un poco, [La7]guarda un po',\nguarda un poco, [Re]guarda un po',\npoveretto a quel che vide\ntutto il [La7]pel gli si [Re]drizzò.\n\nLà riflessa dentro l’acqua\nla sua immagine trovò\ne nel folto della Giungla\ncol fiatone ritornò.\n\nrit. Guarda un poco, ...\ne il Bandar-log da un rame\nlo guardò e si sbellicò.\n\nL’altro giorno in un cespuglio\ncon il riccio s’incontrò\ne per farne un bel boccone\necco che gli capitò.\n\nrit.Guarda un poco, ...\ncon il naso pien di spilli\nnella tana ritornò.\n\nMa cacciando con Bagheera\ne ascoltando il buon Baloo,\ncose brutte come queste\nnon gli accaddero mai più.\n\nrit.Proprio più, proprio più,\nproprio più, proprio più,\ncose brutte come queste\nnon gli [La7]accaddero mai [Re]più.\n"
+    "testo_accordi": "# fonte: testo fornito dall'utente; accordi letti dallo spartito di canzonierescout.it\n\nUn bel [Re]giorno nella Giungla\nZanna [La7]Bianca a caccia andò,\nma [Re]arrivato giù al ruscello\nsulle [La7]zampe si fermò.\n\nrit.[Re]Guarda un poco, [La7]guarda un po',\nguarda un poco, [Re]guarda un po',\npoveretto a quel che vide\ntutto il [La7]pel gli si [Re]drizzò.\n\nLà riflessa dentro l’acqua\nla sua immagine trovò\ne nel folto della Giungla\ncol fiatone ritornò.\n\nrit. Guarda un poco, ...\ne il Bandar-log da un ramo\nlo guardò e si sbellicò.\n\nL’altro giorno in un cespuglio\ncon il riccio s’incontrò\ne per farne un bel boccone\necco che gli capitò.\n\nrit.Guarda un poco, ...\ncon il naso pien di spilli\nnella tana ritornò.\n\nMa cacciando con Bagheera\ne ascoltando il buon Baloo,\ncose brutte come queste\nnon gli accaddero mai più.\n\nrit.Proprio più, proprio più,\nproprio più, proprio più,\ncose brutte come queste\nnon gli [La7]accaddero mai [Re]più.\n"
   },
   {
-    "id": 40,
+    "id": 41,
     "titolo": "Andiamo al falò",
     "categoria": "Fuoco di bivacco",
-    "pagina": 37,
+    "pagina": 39,
     "url_audio": null,
     "url_spartito": "https://www.canzonierescout.it/altair.pdf",
     "sottosezione": "Apertura",
@@ -475,10 +487,10 @@
     "testo_accordi": "# fonte: canzoniere (Andiamo al falò, testo e spartito)\n# MANCANO GLI ACCORDI\nLa fiamma è ammainata\ne chiuse son le tende\nfinita è la giornata\ne in ciel la luna ascende.\n\n{soc}\nAlò, alò, andiamo al falò.\nAlò, alò, andiamo al falò.\nTralla lalla la la la\ntralla lalla la la la.\nAlò, alò, andiamo al falò.\nAlò, alò, andiamo al falò.\n{eoc}\n\nNel cielo costellato\nAltair è già salita\nil fuoco è preparato\nla fiamma già c'invita.\n\nAlò, alò, andiamo...\n\nI boschi misteriosi\nripeton echeggianti\ngli accenti melodiosi\ndei nostri lieti canti.\n\nAlò, alò, andiamo...\n\nSeduti qui sul monte\nal caldo della fiamma\nsentiam sfiorar la fronte\ndal bacio della mamma.\n\nrit.\n"
   },
   {
-    "id": 41,
+    "id": 42,
     "titolo": "La leggenda del fuoco",
     "categoria": "Fuoco di bivacco",
-    "pagina": 38,
+    "pagina": 40,
     "url_audio": null,
     "url_spartito": "https://www.canzonierescout.it/36.pdf",
     "sottosezione": "Apertura",
@@ -488,10 +500,10 @@
     "testo_accordi": "# fonte: canzoniere TUTTOSCOUT 2003, 0050.html - titolo nella fonte: La Leggenda del Fuoco\n\n[Do]Splende il fuoco nel cerchio dell’esplorato[Sol]r   [Do]\nascoltate la voce della f[Sol]iamma d’or. [Do]\n\n{c: Rit.}\nSali al c[Sol]iel fiamma leggera  [Do]\ndel gran fuoc[Fa]o caldo e buon     [Sol]\nsotto i pini alla brughie[Do]ra\nsali in a[Fa]lto sali ancor [Sol]\nsali in alto sali anc[Do]or,\nfuoco dell’es[Fa]plorator.  [Sol]\n\nEro un principe un giorno perfido e sleal\ne spargevo d’intorno il terrore e il mal.\n\n{c: Rit.}\n\nD’un gran mago l’incanto tosto mi punì\ne nei tronchi del bosco mi rinchiuse un dì.\n\n{c: Rit.}\n\nDa quel giorno nei tronchi prigioniero son\ne costretto a soffrire freddo e solleon.\n\n{c: Rit.}\n\nNell’ardor della fiamma mi consumo qui\ne col ceppo che arde brucio anch’io ogni dì.\n\n{c: Rit.}\n\nDal tremendo supplizio convertito son\ne per l’uomo divento fuoco caldo e buon.\n\n{c: Rit.}\n"
   },
   {
-    "id": 42,
+    "id": 43,
     "titolo": "Salite o fiamme",
     "categoria": "Fuoco di bivacco",
-    "pagina": 38,
+    "pagina": 40,
     "url_audio": null,
     "url_spartito": null,
     "sottosezione": "Apertura",
@@ -501,10 +513,10 @@
     "testo_accordi": "# fonte: testo fornito dall'utente\n# MANCANO GLI ACCORDI\n# Canone\nSalite o fiamme in questa sera,\nportate in cielo la nostra preghiera.\n"
   },
   {
-    "id": 43,
+    "id": 44,
     "titolo": "Alla fiera dell'est",
     "categoria": "Fuoco di bivacco",
-    "pagina": 39,
+    "pagina": 41,
     "url_audio": null,
     "url_spartito": null,
     "sottosezione": "Bans",
@@ -516,10 +528,10 @@
     "testo_accordi": "# fonte: canzoniere TUTTOSCOUT 2003, 0003.html - titolo nella fonte: Alla Fiera dell'Est\n\n[Mim]Alla[Sol] fiera dell'est,\np[Re]er [Sol]due soldi\nu[Re]n t[Sol]opolino\nm[Si7]io p[Mim]adre comprò.\n\nE[Re] ve[Sol]nne il gatto\nc[Re]he [Sol]si mangiò il topo\nche al mercato\nmio padre comprò.\n\nE venne il cane\nche morse il gatto...\n\nE venne il bastone\nche picchiò il cane...\n\nE venne il fuoco\nche bruciò il bastone...\n\nE venne l'acqua\nche spense il fuoco...\n\nE venne il toro\nche bevve l'acqua...\n\nE venne il macellaio\nche uccise il toro...\n\nE l'angelo della morte...\n\nE infine il Signore....\n"
   },
   {
-    "id": 44,
+    "id": 45,
     "titolo": "Arturo e Gertrude",
     "categoria": "Fuoco di bivacco",
-    "pagina": 39,
+    "pagina": 41,
     "url_audio": null,
     "url_spartito": null,
     "sottosezione": "Bans",
@@ -529,10 +541,10 @@
     "testo_accordi": "# fonte: testo fornito dall'utente\n# MANCANO GLI ACCORDI\n# (bis) = riga cantata 2 volte (nel testo originale: X2)\nC'è un buco nel secchio Arturo, Arturo! (bis)\n\nE stroppa chel buso Gertrude, Gertrude! (bis)\n\nAd libitum.\n"
   },
   {
-    "id": 45,
+    "id": 46,
     "titolo": "Banana cocco baobab",
     "categoria": "Fuoco di bivacco",
-    "pagina": 40,
+    "pagina": 42,
     "url_audio": null,
     "url_spartito": null,
     "sottosezione": "Bans",
@@ -542,10 +554,10 @@
     "testo_accordi": "# fonte: testo fornito dall'utente\n# MANCANO GLI ACCORDI\nEro stanco di essere un uomo della città,\nin questa gabbia di cemento a vivere come si fa?\nQuanti problemi inutili, troppe preoccupazioni,\nè meglio star sugli alberi, mettersi a penzoloni e fare...\n\n{soc}\nUh uh ah ah, uh uh ah ah (x3)\nbanana cocco baobab.\nBanana banana banana banana\nbanana banana banana banana\nbanana banana banana banana\nbanana cocco baobab.\n{eoc}\n\nAndare con le liane invece che col tram\nal posto del vestito una pelliccia di Pierre-Tarzan.\nE poi stare sugli alberi a tirare le banane\nin testa ai coccodrilli, ai bufali e ai caproni e fare...\n\nrit.\n"
   },
   {
-    "id": 46,
+    "id": 47,
     "titolo": "Bella però sta macchina",
     "categoria": "Fuoco di bivacco",
-    "pagina": 40,
+    "pagina": 42,
     "url_audio": null,
     "url_spartito": null,
     "sottosezione": "Bans",
@@ -555,10 +567,10 @@
     "testo_accordi": "# fonte: testo fornito dall'utente\n# MANCANO GLI ACCORDI\nBella però sta macchina\ncon guida cibernetica,\nschiaccia il pulsante, gira il volante,\ne si muove una lancetta,\ne si accende una lucetta,\ne si sente un campanello,\ndin don, din don!\n\nBella però sta macchina...\n"
   },
   {
-    "id": 47,
+    "id": 48,
     "titolo": "Bramaputra",
     "categoria": "Fuoco di bivacco",
-    "pagina": 40,
+    "pagina": 42,
     "url_audio": null,
     "url_spartito": null,
     "sottosezione": "Bans",
@@ -568,10 +580,10 @@
     "testo_accordi": "Bramaputra, bueon, bueon!\nHimalaya, bueon, bueon!\n\nCin ciun, cin ciun cian,\ncin ciun, cin ciun cian,\nehilà maruska, maruska moira,\ncin ciun, cin ciun cian,\nnaki beki, naki beki,\ncin ciun, cin ciun cian,\ncin ciun, cin ciun cian.\n"
   },
   {
-    "id": 48,
+    "id": 49,
     "titolo": "Canone di Guttenberg",
     "categoria": "Fuoco di bivacco",
-    "pagina": 40,
+    "pagina": 42,
     "url_audio": null,
     "url_spartito": null,
     "sottosezione": "Bans",
@@ -581,10 +593,10 @@
     "testo_accordi": "Bum trikke trakke\nBum bum trikke trà!\n\nNero nero nero\nUso l'inchiostro nero nero nero\nCi stampo un libro intero!\n\nButta la penna d'oca non servirà\nSù, corri alla pressa\nE metti il rullo a girar!\n\nCosì ti stampo un bigliettin\nTu porta il cartoncin\nChe bella meraviglia sarà!\n"
   },
   {
-    "id": 49,
+    "id": 50,
     "titolo": "Colla dei francobolli",
     "categoria": "Fuoco di bivacco",
-    "pagina": 41,
+    "pagina": 43,
     "url_audio": null,
     "url_spartito": null,
     "sottosezione": "Bans",
@@ -594,10 +606,10 @@
     "testo_accordi": "# fonte: testo fornito dall'utente\n# MANCANO GLI ACCORDI\nChissà perché la colla dei francobolli,\nla fanno amara al gusto del mar.\nAvanti, chi inventa la colla alla menta,\nla colla al limone,oppure al lampone?\n"
   },
   {
-    "id": 50,
+    "id": 51,
     "titolo": "El meon xe bon",
     "categoria": "Fuoco di bivacco",
-    "pagina": 41,
+    "pagina": 43,
     "url_audio": null,
     "url_spartito": null,
     "sottosezione": "Bans",
@@ -607,10 +619,10 @@
     "testo_accordi": "El meon xe bon,\nel meon xe aranson,\ne noialtri col meon,\ngavemo fato na canson.\n\nAd libitum.\n"
   },
   {
-    "id": 51,
+    "id": 52,
     "titolo": "Fli flai",
     "categoria": "Fuoco di bivacco",
-    "pagina": 41,
+    "pagina": 43,
     "url_audio": null,
     "url_spartito": null,
     "sottosezione": "Bans",
@@ -620,10 +632,10 @@
     "testo_accordi": "# fonte: testo fornito dall'utente\n# MANCANO GLI ACCORDI\n# A = chi guida, T = tutti (botta e risposta)\nA: Fli\nT: Fli\nA: Fli flai\nT: Fli flai\nA: Fli flai flo\nT: Fli flai flo\nA: Cummala cummala cummala de vista\nT: Cummala cummala cummala de vista\nA: Oh no, no, no de vista\nT: Oh no, no, no de vista\nA: Minni esta, minni esta, minni esta oh!\nT: Minni esta, minni esta, minni esta oh!\n"
   },
   {
-    "id": 52,
+    "id": 53,
     "titolo": "Il duca di Barnabò",
     "categoria": "Fuoco di bivacco",
-    "pagina": 41,
+    "pagina": 43,
     "url_audio": null,
     "url_spartito": null,
     "sottosezione": "Bans",
@@ -633,10 +645,10 @@
     "testo_accordi": "# fonte: canzoniere TUTTOSCOUT 2003, 0561.html - titolo nella fonte: Il conte di Barnabò\n\n# MANCANO GLI ACCORDI\n\nIl conte di Barnabò,\naveva una compagnia,\nche andava su e giù,\noppure a mezza via.\n\nSaliti ch'eran su,\ndiscesi ch'eran giù,\nchi stava mezza via,\nnon stava ne su e ne giù.\n"
   },
   {
-    "id": 53,
+    "id": 54,
     "titolo": "Il ranocchio ciclista",
     "categoria": "Fuoco di bivacco",
-    "pagina": 42,
+    "pagina": 44,
     "url_audio": null,
     "url_spartito": "https://www.canzonierescout.it/ranocchio.pdf",
     "sottosezione": "Bans",
@@ -646,10 +658,10 @@
     "testo_accordi": "# fonte: testo fornito dall'utente (immagine)\n# MANCANO GLI ACCORDI\nUn bel giorno un ranocchietto\nche viveva nel pantan,\nsi stancò di quel laghetto,\nvolle andare via lontan.\nInforcò la bicicletta\nda perfetto corridor:\nverso il bosco in tutta fretta\ns'avviò con grande ardor.\n\nrit.Oh com'è bello andar\nverso quel bosco in fior.\nOh com'è bello andar\nverso quel bosco in fior.\n\nPedalava con passione\nil ranocchio corridor,\nquando a un tratto, dannazione,\nfece un grosso ruzzolon.\nChe disastro! Che macello!\nLa sua bici fracassò,\nperciò sotto un alberello\ntutto pesto si fermò.\n\nrit.Povero ranocchion,\ndopo quel cascaton.\nPovero ranocchion,\ndopo quel cascaton.\n\nCol passare delle ore\ntutto buio diventò\ne il ranocchio dal terrore\na tremare incominciò.\nE correndo a più-non-posso,\nnello stagno ritornò.\nLe altre rane di quel fosso\ngli cantarono così:\n\nrit.“Chi te l’ha fatto far,\nchi te l’ha fatto far,\nchi te l’ha fatto far,\nchi te l’ha fatto far”.\n"
   },
   {
-    "id": 54,
+    "id": 55,
     "titolo": "Il tortellino",
     "categoria": "Fuoco di bivacco",
-    "pagina": 42,
+    "pagina": 44,
     "url_audio": null,
     "url_spartito": null,
     "sottosezione": "Bans",
@@ -659,10 +671,10 @@
     "testo_accordi": "# fonte: testo fornito dall'utente\n# MANCANO GLI ACCORDI\nIo, sono un tortellino,\nmi muovo un po' di qua,\nmi muovo un po' di là.\nTutto ben condito,\ncon un poco di sale,\ncon un poco di pepe,\nmi vuoi mangiare tu?\n"
   },
   {
-    "id": 55,
+    "id": 56,
     "titolo": "Jack è in cucina",
     "categoria": "Fuoco di bivacco",
-    "pagina": 43,
+    "pagina": 45,
     "url_audio": null,
     "url_spartito": null,
     "sottosezione": "Bans",
@@ -672,10 +684,10 @@
     "testo_accordi": "# fonte: canzoniere TUTTOSCOUT 2003, 0550.html - titolo nella fonte: Jack va in cucina\n# MANCANO GLI ACCORDI\n\nJack in cucina con Tina,\nJack in cucina con Tom,\nJack in cucina con Tina\ne suona il suo vecchio banjo!\nbom, bom, bom,\nfli flai fli flai flo (3 volte)\ne suona il suo vecchio banjo!\n"
   },
   {
-    "id": 56,
+    "id": 57,
     "titolo": "Jona nella balena",
     "categoria": "Fuoco di bivacco",
-    "pagina": 43,
+    "pagina": 45,
     "url_audio": null,
     "url_spartito": null,
     "sottosezione": "Bans",
@@ -685,10 +697,10 @@
     "testo_accordi": "# fonte: testo fornito dall'utente\n# MANCANO GLI ACCORDI\nGiona nella balena\nfelice fu, felice fu,\nperché in prigion,\nperché in prigion,\nperché s'egli era in pena\npotea mangiar, potea mangiar,\ndello storion, dello storion,\nma al terzo dì, pirimpimpì,\nquel gran bestion, porompompò,\nlo rigettò, porompompò,\nsenza pietà!\n"
   },
   {
-    "id": 57,
+    "id": 58,
     "titolo": "Jump down",
     "categoria": "Fuoco di bivacco",
-    "pagina": 43,
+    "pagina": 45,
     "url_audio": null,
     "url_spartito": null,
     "sottosezione": "Bans",
@@ -698,10 +710,10 @@
     "testo_accordi": "# fonte: testo fornito dall'utente\n# MANCANO GLI ACCORDI\nJump down, turn around, pick a bale of cotton\nJump down, turn around, pick a bale a day\nJump down, turn around, pick a bale of cotton\nJump down, turn around, pick a bale a day\n\nOh Lordy, pick a bale of cotton\nOh Lordy, pick a bale a day\nOh Lordy, pick a bale of cotton\nOh Lordy, pick a bale a day\n\nPick a, pick a, pick a, pick a, pick a bale of cotton\nPick a, pick a, pick a, pick a, pick a bale a day\nPick a, pick a, pick a, pick a, pick a bale of cotton\nPick a, pick a, pick a, pick a, pick a bale a day\n"
   },
   {
-    "id": 58,
+    "id": 59,
     "titolo": "L'albero piantato",
     "categoria": "Fuoco di bivacco",
-    "pagina": 44,
+    "pagina": 46,
     "url_audio": null,
     "url_spartito": null,
     "sottosezione": "Bans",
@@ -711,10 +723,10 @@
     "testo_accordi": "# fonte: testo fornito dall'utente\n# MANCANO GLI ACCORDI\n# (bis) = riga cantata 2 volte (nel testo originale: x2)\nC'è un albero piantato in mezzo al prato (bis)\ne sopra l'albero indovina cosa c'è?\nci sono i rami, i rami sopra l'albero\n\nC'è un albero...\ne sopra i rami indovina cosa c'è?\nci sono le foglie, le foglie sopra i rami, i rami sopra l'albero\n\ne sopra le foglie indovina cosa c'è?\nc'è un nido, un nido fra le foglie, le foglie sopra i rami, i rami sopra l'albero\n\ne dentro il nido indovina cosa c'è?\nc'è un uovo, un uovo dentro il nido, un nido fra le foglie, le foglie sopra i rami, i rami sopra l'albero\n\ne dentro l’uovo indovina cosa c'è?\nc'è un pulcino, un pulcino dentro l’uovo, un uovo dentro il nido, un nido fra le foglie, le foglie sopra i rami, i rami sopra l'albero\n\ne dentro il pulcino indovina cosa c'è?\nc'è un cuore, un cuore nel pulcino, un pulcino dentro l’uovo, un uovo dentro il nido, un nido fra le foglie, le foglie sopra i rami, i rami sopra l'albero\n\ne dentro il cuore sapete cosa c'è?\nc'è un mondo, un mondo dentro il cuore, un cuore nel pulcino, un pulcino dentro il nido, un nido fra le foglie, le foglie sopra i rami, i rami sopra l'albero\n\ne nel mondo indovina cosa c'è?\nC'è un albero piantato in mezzo al prato (bis)\n"
   },
   {
-    "id": 59,
+    "id": 60,
     "titolo": "La battaglia di Magenta",
     "categoria": "Fuoco di bivacco",
-    "pagina": 44,
+    "pagina": 46,
     "url_audio": null,
     "url_spartito": null,
     "sottosezione": "Bans",
@@ -724,10 +736,10 @@
     "testo_accordi": "# fonte: canzoniere TUTTOSCOUT 2003, 0208.html - titolo nella fonte: La battaglia di Magenta\n# MANCANO GLI ACCORDI\n\nEra una sera Battaglia di Magenta\no che piacere caricare i cavalieri\ncavalieri, caricate, con una mano...\n\nCavalieri carica!\n"
   },
   {
-    "id": 60,
+    "id": 61,
     "titolo": "La bella polenta",
     "categoria": "Fuoco di bivacco",
-    "pagina": 44,
+    "pagina": 46,
     "url_audio": null,
     "url_spartito": null,
     "sottosezione": "Bans",
@@ -737,10 +749,10 @@
     "testo_accordi": "# fonte: testo fornito dall'utente\n# MANCANO GLI ACCORDI\nCome sea pianta la bella polenta,\nla bella polenta sea pianta cussì.\n\nOh, oh, oh, la bella polenta cussì.\n\nCome sea innaffia..\nCome chea cresse...\nCome sea taja...\nCome sea sbatte...\nCome sea masena...\nCome sea cusina...\nCome sea magna...\nCome sea...\n"
   },
   {
-    "id": 61,
+    "id": 62,
     "titolo": "La danza del serpente",
     "categoria": "Fuoco di bivacco",
-    "pagina": 45,
+    "pagina": 47,
     "url_audio": null,
     "url_spartito": "https://www.canzonierescout.it/129.pdf",
     "sottosezione": "Bans",
@@ -750,10 +762,10 @@
     "testo_accordi": "Questa è la danza del serpente,\nche vien giù dal monte,\nper ritrovare la sua coda\nche ha perduto un dì.\nMa dimmi un po', sei proprio tu\nquel pezzettin del mio codin?\nSì!\n"
   },
   {
-    "id": 62,
+    "id": 63,
     "titolo": "La macchina del capo",
     "categoria": "Fuoco di bivacco",
-    "pagina": 45,
+    "pagina": 47,
     "url_audio": null,
     "url_spartito": "https://www.canzonierescout.it/capo.pdf",
     "sottosezione": "Bans",
@@ -763,10 +775,10 @@
     "testo_accordi": "# fonte: canzoniere TUTTOSCOUT 2003, 0211.html - titolo nella fonte: La macchina del tempo\n\n# MANCANO GLI ACCORDI\n\nLa macchina del capo ha un buco nella gomma (3 volte),\nripariamola col chewing-gum.\n\n(si ripete sostituendo ogni volta con i rumori)\n"
   },
   {
-    "id": 63,
+    "id": 64,
     "titolo": "Napuletana mia",
     "categoria": "Fuoco di bivacco",
-    "pagina": 45,
+    "pagina": 47,
     "url_audio": null,
     "url_spartito": null,
     "sottosezione": "Bans",
@@ -776,10 +788,10 @@
     "testo_accordi": "# fonte: testo fornito dall'utente\n# MANCANO GLI ACCORDI\nNapuletana mia, napuletana.\nQuant' si bella assaje ma nun 'o saje\n\nLa voce di Persona1,\nla voce di Persona1,\nla voce di Persona1\nda Persona1 vogliam sentir\n\nPersona1: Vegetale1!\n\nAd libitum.\n"
   },
   {
-    "id": 64,
+    "id": 65,
     "titolo": "Onci onci",
     "categoria": "Fuoco di bivacco",
-    "pagina": 46,
+    "pagina": 48,
     "url_audio": null,
     "url_spartito": null,
     "sottosezione": "Bans",
@@ -789,10 +801,10 @@
     "testo_accordi": "# fonte: testo fornito dall'utente\n# MANCANO GLI ACCORDI\nNoi siamo gli onci onci,\nveniamo giù dai monti,\nse vuoi ballar con noi,\ntu devi far così:\n\nOnci onci onci, fai un saltino ino ino,\nnon far cadere ere ere il tuo vicino,\nvai verso destra estra estra,\nmuovi la testa esta esta,\nvai a sinistra istra istra,\nalza la vista ista ista,\nfai un sorrisetto etto etto,\nmuovi il culetto etto etto,\nfai l’aeroplano...\ndammi la mano...\n"
   },
   {
-    "id": 65,
+    "id": 66,
     "titolo": "One banana",
     "categoria": "Fuoco di bivacco",
-    "pagina": 46,
+    "pagina": 48,
     "url_audio": null,
     "url_spartito": null,
     "sottosezione": "Bans",
@@ -802,10 +814,10 @@
     "testo_accordi": "# fonte: testo fornito dall'utente\n# MANCANO GLI ACCORDI\nOne banana, two banana, three banana, four...\nFive banana, six banana, seven and anymore.\n\nAd libitum.\n"
   },
   {
-    "id": 66,
+    "id": 67,
     "titolo": "Quattro pirati",
     "categoria": "Fuoco di bivacco",
-    "pagina": 46,
+    "pagina": 48,
     "url_audio": null,
     "url_spartito": null,
     "sottosezione": "Bans",
@@ -815,10 +827,10 @@
     "testo_accordi": "# fonte: testo fornito dall'utente\n# MANCANO GLI ACCORDI\nQuattro pirati del mar dei Sargassi,\nhanno una zattera fatta di assi,\nvanno remando, dicono loro,\nalla ricerca di un grande tesoro.\n\nPerò uno è alto, uno è basso, uno è zoppo\ned il quarto ha la benda sull'occhio,\nvanno remando, dicono loro,\nalla ricerca di un grande tesoro.\n"
   },
   {
-    "id": 67,
+    "id": 68,
     "titolo": "San Michele",
     "categoria": "Fuoco di bivacco",
-    "pagina": 46,
+    "pagina": 48,
     "url_audio": null,
     "url_spartito": null,
     "sottosezione": "Bans",
@@ -828,10 +840,10 @@
     "testo_accordi": "# fonte: testo fornito dall'utente\n# MANCANO GLI ACCORDI\nSan Michele aveva un gallo\nbianco, rosso, verde e giallo.\nE per farlo crescere bene\ngli dava latte e miele.\n"
   },
   {
-    "id": 68,
+    "id": 69,
     "titolo": "Siamo andati alla caccia del leon",
     "categoria": "Fuoco di bivacco",
-    "pagina": 46,
+    "pagina": 48,
     "url_audio": null,
     "url_spartito": null,
     "sottosezione": "Bans",
@@ -841,10 +853,10 @@
     "testo_accordi": "# fonte: canzoniere TUTTOSCOUT 2003, 0590.html - titolo nella fonte: Alla caccia del leon\n\n[Sol]Sono andato alla cacci[Do]a del leon...[Sol] pem, pem.\nSono andato alla caccia del leon... pem, p[Re]em.\nSono andato [Sol]alla caccia[Sol7] (3 volte)[Do] de[Lam]l le[Sol]on..[Re] pe[Sol]m, pem.\n\nrit.[Sol]Singing ja ja yu[Do]ppi yu[Sol]ppi [Re]ja (2 volte)\nSinging ja j[Sol]a yu[Sol7]ppi ja j[Do]a yupp[Lam]i ja ja y[Sol]uppi yuppi [Re]ja      [Sol]\n\nTaglia l'ancora la nave per partir... tu, tu.\n\nSulla riva son gli amici a salutar... bye, bye.\n\nSiamo ormai nella foresta equatorial... brr, brr.\n\nUn leone sta dormendo non lontan ... ron, ron.\n\nSe ci vede ci divora in un boccon... gnam, gnam.\n\nCari amici non facciamolo svegliar... pss, pss.\n"
   },
   {
-    "id": 69,
+    "id": 70,
     "titolo": "Sul lago Tanganika",
     "categoria": "Fuoco di bivacco",
-    "pagina": 47,
+    "pagina": 49,
     "url_audio": null,
     "url_spartito": null,
     "sottosezione": "Bans",
@@ -854,10 +866,10 @@
     "testo_accordi": "Sul lago Tanganica-ca ci sono i piranha-nha\nPiranha che si lagna\nsi lagna sempre di più!\n\nrit. E ciumba ciumba ciumba uah. ...\nE ghiri ghiri ghiri ghiri ganga, woshi woshi wooh!\n\nSul lago Tanganica-ca ci sono i caimani-ni\nCaimani molto strani\ncaimani a testa ingiù!\n\nE ciumba ciumba ciumba uah. ...\n\nSul lago Tanganica-ca ci sono le piroghe-ghe\nPiroghe ma che toghe\ne voga sempre di più!\n\nE ciumba ciumba ciumba uah. ...\n\nSul lago Tanganica-ca ci sono gli elefanti-ti\nelefanti assai pesanti\nche mangian sempre più!\n\nE ciumba ciumba ciumba uah. ...\n\nSul lago Tanganica-ca ci sono i gorilla-la\ngorilla quanto STRILLA\nche non ne posso più!\n\nE ciumba ciumba ciumba uah. ...\n"
   },
   {
-    "id": 70,
+    "id": 71,
     "titolo": "Tango",
     "categoria": "Fuoco di bivacco",
-    "pagina": 48,
+    "pagina": 50,
     "url_audio": null,
     "url_spartito": null,
     "sottosezione": "Bans",
@@ -867,10 +879,10 @@
     "testo_accordi": "Tango!\nZimbalibali bali eh!\n\nTango!\nUndi endi unda ah!\n\nUh alé!\nMaliba malue...\n"
   },
   {
-    "id": 71,
+    "id": 72,
     "titolo": "Un ciodo de fero vecio",
     "categoria": "Fuoco di bivacco",
-    "pagina": 48,
+    "pagina": 50,
     "url_audio": null,
     "url_spartito": null,
     "sottosezione": "Bans",
@@ -880,10 +892,10 @@
     "testo_accordi": "# fonte: testo fornito dall'utente\n# MANCANO GLI ACCORDI\nUn ciodo de fero vecio\ndela mecanica dela mecanica.\n\nUn ciodo de fero vecio\ndela mecanica de precision.\n\nOhi bela mechimecomeca\nmechimecomeca, mechimecò. (2 volte)\n"
   },
   {
-    "id": 72,
+    "id": 73,
     "titolo": "Un elefante",
     "categoria": "Fuoco di bivacco",
-    "pagina": 48,
+    "pagina": 50,
     "url_audio": null,
     "url_spartito": null,
     "sottosezione": "Bans",
@@ -893,10 +905,10 @@
     "testo_accordi": "# fonte: canzoniere TUTTOSCOUT 2003, 0501.html - titolo nella fonte: L'elefante\n\n# MANCANO GLI ACCORDI\n\nUn elefante si dondolava\nsopra il filo di una ragnatela\ne ritenendo la cosa interessante\nandò a chiamare un altro elefante.\n\nDue elefanti si dondolavano...\nTre elefanti...\n"
   },
   {
-    "id": 73,
+    "id": 74,
     "titolo": "Uomini della filibusta",
     "categoria": "Fuoco di bivacco",
-    "pagina": 48,
+    "pagina": 50,
     "url_audio": null,
     "url_spartito": null,
     "sottosezione": "Bans",
@@ -906,10 +918,10 @@
     "testo_accordi": "# fonte: testo fornito dall'utente\n# MANCANO GLI ACCORDI\nCapitano urla: \"Uomini della filibusta, Parados?\"\nSoldati: \"Parados!\"\nCapitano: \"Al puente?\"\nSoldati: \"Al puente!\"\nCapitano: \"Fuego!\"\nSoldati: \"BOOM!\"\nCapitano: \"Fuego!\"\nSoldati: \"BOOM!\"\nCapitano: \"Fuego!\"\nSoldati: \"BOOM! BOOM! BOOM!\"\n"
   },
   {
-    "id": 74,
+    "id": 75,
     "titolo": "Al passo del guidon",
     "categoria": "Fuoco di bivacco",
-    "pagina": 49,
+    "pagina": 51,
     "url_audio": null,
     "url_spartito": null,
     "sottosezione": "Crescendo",
@@ -919,10 +931,10 @@
     "testo_accordi": "# fonte: testo e accordi forniti dall'utente\n\n[Re]Al passo del Guidon,\n[La]fratello scout, t'attende l'avventura\n[Mim]tra [La]il verde delle macchie e sotto il sol.\n[Re]Al passo del Guidon,\n[La]avanti ad esplorar la natura.\n[Mim]un [La]nido, un'erba, un fior t'aspetta ed è\n[Re][La]tutto per te!\n\n{soc}\n[Re][La][Re]Apri gli occhi fratello scout\n[La]tutto il mondo che è intorno a te\n[Sim]è una [Mim]cosa [La]meravigliosa\n[Re]Apri [La][Re]gli occhi fratello scout\n[La]tutto il mondo che è intorno a te\n[Sim]è una [Mim]cosa [La]meravigliosa da scoprir.\n{eoc}\n\nAl lato del sentier\nla pista ancor fratel, non è battuta,\nla bussola ti guida senza error...\nAl lato del sentier\nil mondo è tutta terra sconosciuta;\nma certo c'è un amico che di là\nti aspetterà.\n\n{soc}\n[Re][La][Re]Apri gli occhi fratello scout\n[La]tutto il mondo che è intorno a te\n[Sim]è una [Mim]cosa [La]meravigliosa\n[Re]Apri [La][Re]gli occhi fratello scout\n[La]tutto il mondo che è intorno a te\n[Sim]è una [Mim]cosa [La]meravigliosa da scoprir.\n{eoc}\n\nAl fuoco del falò\nla gioia dei fratelli è la più pura;\nfa un'unica gran tenda il vasto ciel...\nAl fuoco del falò\nsi sente ancor più limpida e sicura\nla Voce che ci vuol esplorator.\n\n{soc}\n[Re][La][Re]Apri gli occhi fratello scout\n[La]tutto il mondo che è intorno a te\n[Sim]è una [Mim]cosa [La]meravigliosa\n[Re]Apri [La][Re]gli occhi fratello scout\n[La]tutto il mondo che è intorno a te\n[Sim]è una [Mim]cosa [La]meravigliosa da scoprir.\n{eoc}\n"
   },
   {
-    "id": 75,
+    "id": 76,
     "titolo": "Aluette",
     "categoria": "Fuoco di bivacco",
-    "pagina": 50,
+    "pagina": 52,
     "url_audio": null,
     "url_spartito": null,
     "sottosezione": "Crescendo",
@@ -932,10 +944,10 @@
     "testo_accordi": "Alouette, gentille alouette,\nAlouette, je te plumerai.\n\nJe te plumerai la tête,\nJe te plumerai la tête,\nEt la tête, et la tête.\n\nAlouette, gentille alouette,\nAlouette, je te plumerai.\n\nJe te plumerai le bec,\nJe te plumerai le bec,\nEt le bec, et la tête.\n\nAlouette, gentille alouette,\nAlouette, je te plumerai.\n\nJe te plumerai les yeux,\nJe te plumerai les yeux,\nEt les yeux, et le bec, et la tête.\n\nAlouette, gentille alouette,\nAlouette, je te plumerai.\n\nJe te plumerai le cou,\nJe te plumerai le cou,\nEt le cou, et les yeux,\net le bec, et la tête.\n\nAlouette, gentille alouette,\nAlouette, je te plumerai.\n\nJe te plumerai la queue,\nJe te plumerai la queue,\nEt la queue, et le cou,\nEt les yeux, et le bec,\nEt la tête\n\nAlouette, gentille alouette,\nAlouette, je te plumerai.\n\nJe te plumerai les pattes,\nJe te plumerai les pattes.\nEt les pattes, et la queue,\nEt le cou, et les yeux,\nEt le bec, et la tête.\n\nAlouette, gentille alouette,\nAlouette, je te plumerai.\n"
   },
   {
-    "id": 76,
+    "id": 77,
     "titolo": "Cuciniere di squadriglia",
     "categoria": "Fuoco di bivacco",
-    "pagina": 50,
+    "pagina": 52,
     "url_audio": null,
     "url_spartito": null,
     "sottosezione": "Crescendo",
@@ -945,10 +957,10 @@
     "testo_accordi": "[DO]                                  [SOL]\nSe sono un cuciniere davver senza rival\n                                       [DO]\ned ho per la cucina un gusto assai special\n                                     [FA]\nlo devo a mia cugina, che seppemi educar\n                [DO]         [SOL]   [DO] \na fare i raviolini senza mai sbagliar.\n\n    [DO]\nrit.Minestron, minestron, quant'è buon, quant'è buon.\n                                  [SOL]\n   Sono io il cuciniere di squadriglia.\n   [DO]\n   E il ragù, e il ragù, fallo tu, fallo tu:\n                                 [SOL]\n   mescolando viene fuori una poltiglia.\n        [DO]                       [SOL]   [DO]\n   Mescolando, rimestando, finché il fuoco va.\n        [DO]                       [SOL]   [DO]\n   Mescolando, rimestando, finché il fuoco va.\n\nOltre che cuciniere sono anche pionier\ne devo combinare insieme i due mestier,\ncosì col mio risotto oltre la colazion\nio posso cementare insieme anche i matton.\n\nMinestron, minestron...\n\nZenobia, ch'è una guida, un giorno al campo andò,\nfu messa di cucina (perché poi non lo so)\ne alla fine del pasto, collasso general,\nil campo fu concluso col \"cerchio\" all'ospedal.\n\nMinestron, minestron...\n"
   },
   {
-    "id": 77,
+    "id": 78,
     "titolo": "El pescador da Ciosa",
     "categoria": "Fuoco di bivacco",
-    "pagina": 51,
+    "pagina": 53,
     "url_audio": null,
     "url_spartito": null,
     "sottosezione": "Crescendo",
@@ -958,10 +970,10 @@
     "testo_accordi": "# fonte: testo trascritto da libro (p. 175) e rivisto dall'utente\n# MANCANO GLI ACCORDI\nEl pescator de Ciosa\nfrisendo el pesse…\nghe xe cascà 'na iossa… soe braghesse!\nE me nona co a scoresa a fa un\nsubioon… che se sente fino… a\nMaeamoco!\n\nE me morosa vien\nda Villafranca\nla g'ha 'na tetta nera\ne una bianca.\n\nE me morosa vien\nda Carbonera\nla g'ha 'na tetta bianca\ne una nera.\n\nE me morosa vien\nda Castelfranco\nla g'ha do tette piene\nde vin bianco.\n\nE me morosa g'à\nun difetto solo\nla g'à na tetta\nsensa bichignolo.\n\nE me morosa vien\nda Santa Bona\nco' solo cento franchi\na te dà la m…\n\nE me morosa vien..\n"
   },
   {
-    "id": 78,
+    "id": 79,
     "titolo": "Fare well",
     "categoria": "Fuoco di bivacco",
-    "pagina": 52,
+    "pagina": 54,
     "url_audio": null,
     "url_spartito": "https://www.canzonierescout.it/056.pdf",
     "sottosezione": "Crescendo",
@@ -971,10 +983,10 @@
     "testo_accordi": "# fonte: testo e accordi forniti dall'utente\n\n[Re]Là sul fondo val un coniglio sta\nSinging Polly Wolly Doodle all the [La]day\nche ben presto in ciel se ne vuol volar\nSinging [La7]Polly Wolly Doodle all the [Re]day\n\n{soc}\nFarewell, farewell, farewell, my fairy fay\nI'm off to Louisiana for to see my Sousy Anna\nSinging Polly Wolly Doodle all the day\n{eoc}\n\nQuando in alto è già sulla nube là\nSinging Polly Wolly Doodle all the day\nl'apparecchio allor prende a dondolar\nSinging Polly Wolly Doodle all the day\n\nFarewell, farewell...\n\nIl coniglio allor tutto pien d'ardor\nSinging Polly Wolly Doodle all the day\nprende l'ombrellon e con emozion\nSinging Polly Wolly Doodle all the day\n\nFarewell, farewell...\n\nQuasi a terra è già quando vede là\nSinging Polly Wolly Doodle all the day\nScritto sul cartel \"Non si può sostar\"\nSinging Polly Wolly Doodle all the day\n\nFarewell, farewell...\n\nQuando a terra ahimè ha già messo il piè\nSinging Polly Wolly Doodle all the day\nun sever guardian vuol la coda in man\nSinging Polly Wolly Doodle all the day\n\nFarewell, farewell...\n\nCosì sta in prigion per la presunzion\nSinging Polly Wolly Doodle all the day\nper voler volar sta senza mangiar\nSinging Polly Wolly Doodle all the day\n\nFarewell, farewell...\n\nA grasshopper sittin' on a railroad track\nSinging Polly Wolly Doodle all the day\nand pickin' his teeth with a carpet tack\nSinging Polly Wolly Doodle all the day\n\nFarewell, farewell...\n"
   },
   {
-    "id": 79,
+    "id": 80,
     "titolo": "La fameja dei Gobon",
     "categoria": "Fuoco di bivacco",
-    "pagina": 52,
+    "pagina": 54,
     "url_audio": null,
     "url_spartito": null,
     "sottosezione": "Crescendo",
@@ -984,10 +996,10 @@
     "testo_accordi": "El gobo Gedeone\nla Rosina chiede in sposa:\nco la gobba bianca e rosa (x2).\nEl gobo Gedeone\nchiede in sposa la Rosina:\nco la gobba moesina\nla fameja dei gobon.\n\nRit. Gobo so pare, goba so mare\ngoba la fja de so sorela\ngera goba anca quela\ngera goba anca quela.\nGobo so pare, goba so mare\ngoba la fja de so sorela\ngera goba anca quela\nla fameja dei gobon.\n\nEl di del matrimonio\nceran pure i sonadori,\nco la goba anca lori,\nco la goba anca lori...\n\nrit.\n\nE celebra le nozze\nel canonico Don Piero,\nco la goba fata a pero,\nco la goba fata a pero...\n\nRit.\n\nE dopo nove mesi\nle nato un bel bambino,\nanca lu col so gobino,\nanca lu col so gobino...\n\nrit.\n\nE quando che fu morto\nci fecero la cassa\ncon el buso par la gobassa,\ncon el buso par la gobassa.\nE dopo cento anni\nvenner fuori i vermicelli\nco la goba pure quelli\nla fameja dei gobon.\n\nrit.\n"
   },
   {
-    "id": 80,
+    "id": 81,
     "titolo": "Masafacia'",
     "categoria": "Fuoco di bivacco",
-    "pagina": 54,
+    "pagina": 56,
     "url_audio": null,
     "url_spartito": null,
     "sottosezione": "Crescendo",
@@ -997,10 +1009,10 @@
     "testo_accordi": "# fonte: testo fornito dall'utente\n# MANCANO GLI ACCORDI\nMasafacia, masafacia\ncan che l'abbaia, can che l'abbaia\nultimo grido, ultimo grido\ngingibagi, gingibagi.\n"
   },
   {
-    "id": 81,
+    "id": 82,
     "titolo": "Mi am pias côl Giôanin",
     "categoria": "Fuoco di bivacco",
-    "pagina": 54,
+    "pagina": 56,
     "url_audio": null,
     "url_spartito": null,
     "sottosezione": "Crescendo",
@@ -1010,10 +1022,10 @@
     "testo_accordi": "Mi am pias côl Giôanin\ncôl ch'a piantai j ravanin\nal ciar d'la luna.\n\nE la luna l'e spôntà\nravanin l'è già piantà\nMi veuj marieme.\n\nMi veuj pieme ‘l Giacô Trôs\ncôl ch’a l'era 'l me morôs\nquand ch'i era cita.\n\nGiacô Trôs va nen per mi,\nMama mia pijlô ti\nsarai côntenta.\n\nVeui marieme l'an chi ven\nse i bigat a van ben.\nMi veuj marieme.\n\nL'an chi ven l'è 'n an bisest\ntutte le tote han la pest.\nMi veuj marieme.\n\nLa Rosina a l'à il môrôs\na l'è vecc, e l'è tignôs\na l'à la rogna.\n\nLé la dis a l'à 'n bel lett\nquater töle e 'n cavalett\npel matrimocolo.\n\nLe la dis a l’à l'anel\nma l'è quel de sö fradel!\nMa dag la baia!\n"
   },
   {
-    "id": 82,
+    "id": 83,
     "titolo": "Milan brucia",
     "categoria": "Fuoco di bivacco",
-    "pagina": 54,
+    "pagina": 56,
     "url_audio": null,
     "url_spartito": null,
     "sottosezione": "Crescendo",
@@ -1023,10 +1035,10 @@
     "testo_accordi": "# fonte: testo fornito dall'utente\n# MANCANO GLI ACCORDI\n# (bis) = cantato 2 volte (nel testo originale: x2)\nMilan brucia, Milan brucia\nguarda guarda (bis)\nal fuoco, al fuoco\nma l'acqua non c'è!\n"
   },
   {
-    "id": 83,
+    "id": 84,
     "titolo": "Sul colle",
     "categoria": "Fuoco di bivacco",
-    "pagina": 54,
+    "pagina": 56,
     "url_audio": null,
     "url_spartito": null,
     "sottosezione": "Crescendo",
@@ -1036,10 +1048,10 @@
     "testo_accordi": "Rit.Sul colle scorre il ruscello ancor\nNel bosco canta il cucù\nÈ sorto il sole esplorator:\nnon indugiare più, non indugiar\nè sorto il sole esplorator,\nnon indugiare più\n\nRitorna al tuo lavoro\nChe tanta gioia ti dà\nDiffondi intorno a te così\nletizia e gran bontà\n\nSul colle...\n\nLa Buona Azione non tralasciar:\nsii sempre pronto a servir\nricorda sempre: nel tuo lavor\nlealtà devi seguir\n\nSul colle...\n\nNel cielo a notte ritornerai\nLe stelle splendenti ancor\nSaranno tutte le tue B.A.\nnel cielo del Signor\n\nSul colle...\n"
   },
   {
-    "id": 84,
+    "id": 85,
     "titolo": "Tinchete Ritinchete",
     "categoria": "Fuoco di bivacco",
-    "pagina": 55,
+    "pagina": 57,
     "url_audio": null,
     "url_spartito": null,
     "sottosezione": "Crescendo",
@@ -1049,10 +1061,10 @@
     "testo_accordi": "# fonte: testo fornito dall'utente\n# MANCANO GLI ACCORDI\nTinchete ritenchete, tinchete ritinchete.\nAvete lavoro per lo stagnaro,\npentole e coperchioli da riparare.\n"
   },
   {
-    "id": 85,
+    "id": 86,
     "titolo": "Bevi bevi",
     "categoria": "Fuoco di bivacco",
-    "pagina": 56,
+    "pagina": 58,
     "url_audio": null,
     "url_spartito": null,
     "sottosezione": "Picco",
@@ -1062,10 +1074,10 @@
     "testo_accordi": "# fonte: testo fornito dall'utente\n# MANCANO GLI ACCORDI\n# Il ritornello è riscritto dopo ogni strofa\n\nSe ti viene il mal di pancia, non far uso di laudano;\nbevi, bevi del Cinzano - ed il mal ti passerà!\n\n{soc}\nPer gli uomini dabbene - come noi\ngeneroso il vin si versi - fallo pieno:\nl'acqua è fatta pei perversi,\ne il diluvio il dimostrò!\n{eoc}\n\nSe ti viene il mal di denti, non far uso di calmanti,\nbevi, bevi del vin Chianti - ed il mal ti passerà!\n\n{soc}\nPer gli uomini dabbene - come noi\ngeneroso il vin si versi - fallo pieno:\nl'acqua è fatta pei perversi,\ne il diluvio il dimostrò!\n{eoc}\n\nSe ti viene il mal di gola, non far uso di clorato,\nbevi, bevi del moscato - ed il mal ti passerà.\n\n{soc}\nPer gli uomini dabbene - come noi\ngeneroso il vin si versi - fallo pieno:\nl'acqua è fatta pei perversi,\ne il diluvio il dimostrò!\n{eoc}\n\nSe ti viene il mal di cuore, non far uso di strofanto,\nbevi, bevi, del vin santo - ed il mal ti passerà.\n\n{soc}\nPer gli uomini dabbene - come noi\ngeneroso il vin si versi - fallo pieno:\nl'acqua è fatta pei perversi,\ne il diluvio il dimostrò!\n{eoc}\n\nSe ti viene il mal di calli, non usare il cicarelli,\nbevi, bevi il vino dei castelli - ed il mal ti passerà.\n\n{soc}\nPer gli uomini dabbene - come noi\ngeneroso il vin si versi - fallo pieno:\nl'acqua è fatta pei perversi,\ne il diluvio il dimostrò!\n{eoc}\n\nSe ti vien l'insolazione, non far uso di rinfresco,\nbevi, bevi il Barbaresco - ed il mal ti passerà.\n\n{soc}\nPer gli uomini dabbene - come noi\ngeneroso il vin si versi - fallo pieno:\nl'acqua è fatta pei perversi,\ne il diluvio il dimostrò!\n{eoc}\n\nSe ti viene il mal d'amore, non far uso di stricnina,\ncorri subito in cantina - ed il mal ti passerà.\n\n{soc}\nPer gli uomini dabbene - come noi\ngeneroso il vin si versi - fallo pieno:\nl'acqua è fatta pei perversi,\ne il diluvio il dimostrò!\n{eoc}\n"
   },
   {
-    "id": 86,
+    "id": 87,
     "titolo": "Canzone dell'amicizia",
     "categoria": "Fuoco di bivacco",
-    "pagina": 56,
+    "pagina": 58,
     "url_audio": null,
     "url_spartito": null,
     "sottosezione": "Picco",
@@ -1075,10 +1087,10 @@
     "testo_accordi": "# fonte: canzoniere TUTTOSCOUT 2003, 0011.html - titolo nella fonte: Canto dell' Amicizia\n\n\n[Do]In [Sol]un mondo di maschere, d[Lam]ove [Mim]sembra impossibile\nr[Fa]ius[Do]cire a sconfiggere t[Re]utt[Sol]o ciò che annienta l'uomo.\nIl potere, la falsità, la ricchezza, l'avidità,\nsono mostri da abbattere, noi però non siamo soli.\n\nrit. C[Do]ant[Sol]a con noi, batti le mani,\na[Lam]lzal[Mim]e in[Fa] al[Sol]to, muovile al ritmo del canto.\nS[Do]tri[Sol]ngi la mano del tuo vicino\ne[Lam] sco[Mim]prir[Fa]ai [Sol]che [Do]è meno duro il cammino così.\n\nCi hai promesso il tuo spirito, lo sentiamo in mezzo a noi\ne perciò possiam credere che ogni cosa può cambiare.\nNon possiamo più assistere impotenti ed attoniti\nperché siam responsabili della vita intorno a noi.\n\n{c: Rit.}\n"
   },
   {
-    "id": 87,
+    "id": 88,
     "titolo": "Caramba",
     "categoria": "Fuoco di bivacco",
-    "pagina": 57,
+    "pagina": 59,
     "url_audio": null,
     "url_spartito": "https://www.canzonierescout.it/074.pdf",
     "sottosezione": "Picco",
@@ -1088,10 +1100,10 @@
     "testo_accordi": "# fonte: canzoniere TUTTOSCOUT 2003, 0188.html - titolo nella fonte: Caramba\n# MANCANO GLI ACCORDI\n\nE lassù sul monte Nero,\nc'è una piccola caverna\nci son dodici briganti,\nal chiaror d'una lanterna.\n\nRit. Caramba beviamo del whisky\ncaramba beviamo del gin.\nE tu non dar retta al cuore\nche tutto passa e và.\n\nMentre tutti son festanti\nuno solo resta muto:\nha il bicchiere ancora pieno,\ncome mai non ha bevuto?\n\nrit. \n\nMa non può dimenticare\nil brigante la sua bella\ni suoi occhi luminosi,\nla sua bocca tanto bella.\n\nrit.\n\nMentre stava spigolando\nin un campo di frumento,\nè passato un aeroplano\nche compì un mitragliamento.\n\nrit.\n\nOr la bella par che dorma\ncon le spighe ancora in mano,\npar che pensi al suo brigante,\nche guidava l'aeroplano!\n\nrit.\n"
   },
   {
-    "id": 88,
+    "id": 89,
     "titolo": "Drizza la tenda",
     "categoria": "Fuoco di bivacco",
-    "pagina": 58,
+    "pagina": 60,
     "url_audio": null,
     "url_spartito": null,
     "sottosezione": "Picco",
@@ -1101,10 +1113,10 @@
     "testo_accordi": "# fonte: testo e accordi forniti dall'utente\n\n[Re]Drizza la tenda, [La]pianta il tuo guidone,\n[Re]questo è il posto che fa per [La]te;\nla [Re]gialla fiamma\nsale [La]verso il sole.\n[Re]Ed il suo giglio ha il color [La]del ciel.\n\n[Re7]Esploratore, [Sol]canta il tuo cuore\nla [La]tua [Re]felicità.\n\nEd alla notte sai che c’e una stella\nsu cui punta il tuo giglio d’or;\norienta il passo,\nla strada giusta è quella,\ned ora corri esplorator.\n\nE' questo il canto\ndel primo campo della “Stella Polar”.\n"
   },
   {
-    "id": 89,
+    "id": 90,
     "titolo": "El tram de Opcina",
     "categoria": "Fuoco di bivacco",
-    "pagina": 58,
+    "pagina": 60,
     "url_audio": null,
     "url_spartito": null,
     "sottosezione": "Picco",
@@ -1114,10 +1126,10 @@
     "testo_accordi": "# fonte: testo fornito dall'utente\n# MANCANO GLI ACCORDI\nE anche el tram de Opcina xe nato disgrazià\nVignindo zo de Scorcola 'na casa el ga ribaltà.\nBona de Dio che jera giorno de lavor,\ne drento no ghe jera che el povero frenador!\n\n{soc}\nE come la bora che vien e che va,\ni dixe che 'l mondo se ga ribaltà!\nE come la bora che vien e che va,\ni dixe che 'l mondo se ga ribaltà!\n{eoc}\n\n\nE anche el tram de Servola xe nato desgrazià.\nCorendo in Galeria in piazza el xe sbrissà.\nDrento ghe jera diverso personal\nche se ga ribaltado e se ga fato mal!\n\nrit.\n\nCol \"due\" se va a Servola, col \"quatro\" in Arsenal,\ncol \"sie\" se va a Barcola, col \"cinque\" in Ospedal\ncol \"uno\" in Zimitero, col \"sette\" alla Stazion,\ncol \"nove\" in Manicomio, col \"diese\" in Canon!\n\nrit.\n\nE anche 'ste putele tute mate pa' l'anèl,\nle zerca de compagnarse a 'n zovine bel putel;\nma co le 'riva a casa e tira so 'l capel,\ne pare, mare e fia copa i zimisi col martel!\n\nrit.\n\nL'Italia ga pan bianco, la Francia ga bon vin,\nTrieste ga putele, tute piene de morbin,\ncarbon gha l'Inghiltera, la Rusia gha cavial\ne l'Austria gha i capussi che no se pol magnar!\n\nrit.\n"
   },
   {
-    "id": 90,
+    "id": 91,
     "titolo": "I do gobeti",
     "categoria": "Fuoco di bivacco",
-    "pagina": 59,
+    "pagina": 61,
     "url_audio": null,
     "url_spartito": null,
     "sottosezione": "Picco",
@@ -1127,10 +1139,10 @@
     "testo_accordi": "# fonte: testo fornito dall'utente\n# MANCANO GLI ACCORDI\nUna sera, una sera di notte\ndo gobetti si davan le bòtte\ndo gobetti si davan le bòtte\nse sté zitti ve digo 'l perché.\n\n{soc}\nGobi, gobi... gobon!\n{eoc}\n\nDo gobetti di mezza statura\nsi parlavan di cose amorose,\nma i gaveva 'na matta paura\nche i passanti li stesse a sentir.\n\nrit.\n\nUno gera 'l famoso Mattia,\nl'altro gera el \"fabrica inchiostro\",\nche 'mbriago de sgnapa, ('sto mostro)\ninsultava l'amico fedel.\n\nrit.\n\nA ragion del vero 'l gha dito,\nma va' là, ma va' là ti xe gobo!\nE quell'altro el ga dato risposta:\nse son gobo ti no te si dritto,\ndrio la schena ti ga 'n botesèl\n\nrit.\n\nI s'ha dito parole da ciodi,\ni s'ha dato carèghe sul muso,\npo' i xe 'ndà a finire in quel buso\n'ndò i se beve 'n bicer de quel bon.\n\nrit.\n"
   },
   {
-    "id": 91,
+    "id": 92,
     "titolo": "Il mio galletto",
     "categoria": "Fuoco di bivacco",
-    "pagina": 60,
+    "pagina": 62,
     "url_audio": null,
     "url_spartito": null,
     "sottosezione": "Picco",
@@ -1141,10 +1153,10 @@
     "testo_accordi": "# fonte: testo fornito dall'utente\n# MANCANO GLI ACCORDI\nEl mio galletto gà un grosso becco\nE le galline ghe portan rispetto\nGalletto quì, galletto là\nEl mio galletto l'è mai a ca'\n\n{soc}\nMuoio, muoio\nMuoio per te, mio galletto\nMuoio, muoio\nMuoio, per te morirò\nNo no no no...\n{eoc}\n\nEl mio galletto gà una gran prua\nE le galline le porta a ca' sua\nGalletto quì, galletto là\nE le galline non son mai a ca'\n\nrit.\n\nEl mio galletto varda le gambe\nAlle galline qu'en senza mutande\nGalletto quì, galletto là\nEl mio galletto l'è mai a ca'\n\nrit.\n\nEl mio galletto gà una gran cresta\nAlle galline lui ghe fa' la festa\nGalletto quì, galletto là\nEl mio galletto l'è quasi stufà\n\nrit.\n"
   },
   {
-    "id": 92,
+    "id": 93,
     "titolo": "John Brown",
     "categoria": "Fuoco di bivacco",
-    "pagina": 60,
+    "pagina": 62,
     "url_audio": null,
     "url_spartito": "https://www.canzonierescout.it/111.pdf",
     "sottosezione": "Picco",
@@ -1155,10 +1167,10 @@
     "testo_accordi": "# fonte: canzoniere TUTTOSCOUT 2003, 0229.html - titolo nella fonte: John Brown\n# MANCANO GLI ACCORDI\n\nJohn Brown giace nella tomba là nel pian\ndopo una lunga lotta contro l'oppressor;\nJohn Brown giace nella tomba là nel pian,\nma l'anima vive ancor.\n\nRit. Glory, glory hallelujah\nglory, glory hallelujah,\nglory, glory hallelujah\nma l'anima vive ancor.\n\nCon diciannove suoi compagni di valor,\ndall'Est all'Ovest la Virginia conquistò;\ncon diciannove suoi compagni di valor,\nma l'anima vive ancor.\n\nrit.\n\nPoi l'hanno ucciso come fosse un traditor\nma il traditor fu quell'uomo che l'impiccò;\npoi l'hanno ucciso come fosse un traditor,\nma l'anma vive ancor.\n\nrit.\n\nJohn Brown è morto ma lo schiavo è in libertà,\ntutti fratelli, bianchi e neri siamo già.\nJohn Brown è morto, ma lo schiavo è in libertà,\nma l'anima vive ancor.\n\nrit.\n\nOh, non temere colui che il corpo ucciderà\nse la tua anima rapir non ti potrà;\nOh, non temere colui che il corpo ucciderà\nse l'anima vive ancor.\n\nrit.\n\nStelle dei cieli non piangete su John Brown,\nstelle dei cieli sorridete con John Brown;\nstelle dei cieli non piangete su John Brown,\nla sua anima vive ancor.\n\nrit.\n"
   },
   {
-    "id": 93,
+    "id": 94,
     "titolo": "L'uomo di Cromagnon",
     "categoria": "Fuoco di bivacco",
-    "pagina": 62,
+    "pagina": 64,
     "url_audio": null,
     "url_spartito": "https://www.canzonierescout.it/091.pdf",
     "sottosezione": "Picco",
@@ -1168,10 +1180,10 @@
     "testo_accordi": "# fonte: canzoniere TUTTOSCOUT 2003, 0207.html - titolo nella fonte: L'uomo di Cromagnon\n# MANCANO GLI ACCORDI\n\nEra l'alba della preistoria\nmille e mille anni fa,\nappariva senza gloria\nun essere simile all'orangutan;\naveva il corpo coperto di peli\nl'ascia da guerra ed il baston...\ne voleva conquistar la terra\nera l'uomo di Cromagnon.\n\nRit. L'uomo di CRO\nl'uomo di MA\nl'uomo di GNON...\nl'uomo di Crodemagnon, blom blom,\nl'uomo di Crodemagnon\nl'era proprio un bestion,\nl'era proprio un bestion (2 volte).\n\nScavalcando i secoli e i mesi\nchè la storia la sappiam:\nlasciamo perdere gli Esquimesi\ngli antichi Assiri e gli Egizian:\nnon parliam delle armi da guerra:\nla spingarda ed il cannon:\nchi vuol mai conquistare la terra\nè ancor l'uomo di Cromagnon.\n\nrit.\n"
   },
   {
-    "id": 94,
+    "id": 95,
     "titolo": "La bella la va al fosso",
     "categoria": "Fuoco di bivacco",
-    "pagina": 63,
+    "pagina": 65,
     "url_audio": null,
     "url_spartito": null,
     "sottosezione": "Picco",
@@ -1182,10 +1194,10 @@
     "testo_accordi": "La bella la va al fosso\nravanei, remolazz, barbabietol e spinazz\ntre palanche al mazz,\nla bella la va al fosso,\nal fosso a resentà.\n\nIntant che la resenta\nravanei, remolazz, barbabietol e spinazz\ntre palanche al mazz,\nIntant che la resenta\na gh'è cascaa l'anell.\n\nLa svalza gli occhi al cielo\nravanei, remolazz, barbabietol e spinazz\ntre palanche al mazz,\nla svalza gli occhi al cielo\nla vide il ciel seren.\n\nLa sbassa gli occhi all'onda\nravanei, remolazz, barbabietol e spinazz\ntre palanche al mazz,\nla sbassa gli occhi all'onda,\nla vide un pescator.\n\nOh pescator che peschi,\nravanei, remolazz, barbabietol e spinazz\ntre palanche al mazz,\noh pescator che peschi,\nripescami l'anel!\n\nE quan' l'avrai pescato\nravanei, remolazz, barbabietol e spinazz\ntre palanche al mazz,\ne quan' l'avrai pescato\nun regalo ti farò.\n\nAndrem lassù sui monti\nravanei, remolazz, barbabietol e spinazz\ntre palanche al mazz,\nandrem lassù sui monti,\nsui monti a far l'amor.\n"
   },
   {
-    "id": 95,
+    "id": 96,
     "titolo": "La bomba imbriaga",
     "categoria": "Fuoco di bivacco",
-    "pagina": 64,
+    "pagina": 66,
     "url_audio": null,
     "url_spartito": null,
     "sottosezione": "Picco",
@@ -1196,10 +1208,10 @@
     "testo_accordi": "# fonte: testo fornito dall'utente\n# MANCANO GLI ACCORDI\nQuarantatre giorni ca semo in trincea\nMagnar pane smarso, dormire par tera.\nNissùn se ricorda, nissùni che scrive,\nnissùn che tien nota chi more e chi vive….\n\n{soc}\nOssst/regheta\nChissà che ‘ne riva\nDoman pi domani\n‘na botta de vin'\nOssst/regheta\nCiapemo ‘na bala\nCoi morti e coi vivi\nStrucà li vizin.\n{eoc}\n\nSilenzio sul fronte. Qualcun ne prepara\nUn bel funerale, con banda e con bara…\nSilenzio, ecco il fis-cio: l'ariva, la viene\nDoman sarà festa: vestive par bene…\n\n{soc}\nOssst/regheta\nChissà che ‘ne riva\nDoman pi domani\n‘na botta de vin'\nOssst/regheta\nCiapemo ‘na bala\nCoi morti e coi vivi\nStrucà li vizin.\n{eoc}\n\nSe snànara un merlo nel ziel de cobalto\nUn boto, una sberla, s-giantizi su in alto.\nSe mai sarà ver che ghe xe il padreterno,\n‘sta raza de bechi va drita a l'inferno.\n\nOssst/regheta\nSe fusse ‘na bota\nSe fusse ‘na bota\nRipiena de vin.\nOssst/regheta\nMa l'era una bomba,\nma l'era una bomba\ns-ciopà lì vizin.\nBombà.\n"
   },
   {
-    "id": 96,
+    "id": 97,
     "titolo": "La damigiana",
     "categoria": "Fuoco di bivacco",
-    "pagina": 64,
+    "pagina": 66,
     "url_audio": null,
     "url_spartito": null,
     "sottosezione": "Picco",
@@ -1210,10 +1222,10 @@
     "testo_accordi": "# fonte: testo fornito dall'utente\n# MANCANO GLI ACCORDI\nPer combattere la nebbia in Valpadana\nL'unico rimedio sai qual è? La damigiana!\nCon Albano e Sangiovese,\nMalvasia a più riprese,\nPoi Barbera e Gambellara,\nSai, la vita... è meno amara.\n\nrit. Per combattere il maltempo in Valpadana\nTu sfogati con la tua damigiana,\nE poi vedrai che tutto ti andrà bene,\nSenza bisogno di antinebbia e di catene.\n\nPer combatter la calura in Valpadana\nL'unico rimedio sai qual è? La damigiana!\nCon Trebbiano e Moscatello,\nBotticino e Rosatello,\nPoi Lambrusco di Sorbara,\nSai, la vita... è meno amara.\n\nrit. Quando arriva il Ferragosto in Valpadana\nRinfrescati con la tua damigiana,\nE poi vedrai che tutto ti andrà bene,\nSaran lontani gli antinebbia e le catene.\n\nPerché vada tutto bene in Valpadana\nL'unico rimedio sai qual è? La damigiana!\nCon Albano e Sangiovese,\nMalvasia a più riprese,\nPoi Barbera e Gambellara,\nSai, la vita... è meno amara.\n\nrit Per risolvere i problemi in Valpadana\nTu sfogati con la tua damigiana,\nE poi vedrai che tutto ti andrà bene,\nSenza bisogno di antinebbia e di catene.\n\nrit.E poi vedrai che tutto ti andrà bene,\nSaran lontani gli antinebbia e le catene.\n"
   },
   {
-    "id": 97,
+    "id": 98,
     "titolo": "La Gigia l'è malada",
     "categoria": "Fuoco di bivacco",
-    "pagina": 66,
+    "pagina": 68,
     "url_audio": null,
     "url_spartito": null,
     "sottosezione": "Picco",
@@ -1224,23 +1236,23 @@
     "testo_accordi": "# fonte: testo fornito dall'utente\n# MANCANO GLI ACCORDI\nLa Gigia l’è malada,\nOhimè ohimè ohimè ohimè!\nLa Gigia l’è malada,\nOhimè ohimè ohimè ohimè!\n\nSe l’è malada, ciamée ciamée 'l dottore,\nciamée ‘l dottore che la guarirà.\nSe l’è malada, ciamée ciamée 'l dottore,\nciamée ‘l dottore che la guarirà.\n\nDottore l'entra in camera,\nOhimè ohimè ohimè ohimè!\nDottore l'entra in camera,\nOhimè ohimè ohimè ohimè!\n\nE l'entra in camera, ghe palpa palpa il polso:\nla bella Gigia l'è malà d'amor.\nE l'entra in camera, ghe palpa palpa il polso:\nla bella Gigia l'è malà d'amor.\n\nO Gigia, o bella Gigia.\nOhimè ohimè ohimè ohimè!\nO Gigia, bella Gigia.\nOhimè ohimè ohimè ohimè!\n\nMa dimmi pure la verità:\nchi l'è 'l papà di questo bel bambin?\nMa dimmi pure la verità:\nchi l'è 'l papà di questo bel bambin?\n"
   },
   {
-    "id": 98,
+    "id": 99,
     "titolo": "Lazy boy",
     "categoria": "Fuoco di bivacco",
-    "pagina": 66,
+    "pagina": 68,
     "url_audio": null,
     "url_spartito": null,
     "sottosezione": "Picco",
     "branche": [
       "EG"
     ],
-    "testo_accordi": "# fonte: canzoniere TUTTOSCOUT 2003, 0414.html - titolo nella fonte: Lazy Boy\n\nLazy Boy\n\nC[Lam]'è una stella bianca, c[Do]he splende su nel ciel,\ng[Lam]uardando solitaria i[Do] pascoli del Far West,\nè[Rem] la [Mim]gran stella d[Fa]el [Mim]vecchio Texas,\nl[Rem]a st[Mim]ella[Lam] del cow boy.\n\nNell'Ottantasette, brillando su Fort Joy,\nvide venire al mondo il piccolo Lazy Boy.\nE qui comincia la lunga storiadel pallido cow-boy.\n \nRIT: DO LA-\nUn dì la mamma gli disse vai!\nm[Do]a r[Sol]esta[Lam] un bravo cow boy,\nu[Do]n d[Lam]ì la tromba ti chiamerà,\nGa[Do]bri[Sol]ele [Lam]la suonerà.\n\nLazy vuol dire pigro, ma il nostro Lazy Boy,\nnon era affatto pigro lontano da fort Joy.\nMa un brutto giorno conobbe Jessie,\nconobbe la sua colt.\n\nrit.\n\nCominciò a sparare ai sassi della via,\npoi preferì i cavalli e infine la ferrovia,\nai passeggieri, bucò sombreri,\nrubò pepite d'or.\n\nrit.\n\nTutti gli sceriffi, cercavan Lazy Boy,\nla taglia era grossa, piaceva al sergente Roy,\nma ad una spanna, trovò la canna\ndel pallido cow boy.\n\nrit.\n\nStava per sparare il nostro Lazy Boy,\nma udì da una missione, un coro di Little Boy:\n\"Oh lode, oh glory, oh alleluia\ne il colpo non partì.\n\nrit.\n\nC'è una stella bianca, che splende su nel ciel,\nguardando solitaria i pascoli del Far West\ne qui finisce la lunga storia\ndel pallido cow boy.\n\nrit.\n"
+    "testo_accordi": "# fonte: canzoniere TUTTOSCOUT 2003, 0414.html - titolo nella fonte: Lazy Boy\n\nC[Lam]'è una stella bianca, c[Do]he splende su nel ciel,\ng[Lam]uardando solitaria i[Do] pascoli del Far West,\nè[Rem] la [Mim]gran stella d[Fa]el [Mim]vecchio Texas,\nl[Rem]a st[Mim]ella[Lam] del cow boy.\n\nNell'Ottantasette, brillando su Fort Joy,\nvide venire al mondo il piccolo Lazy Boy.\nE qui comincia la lunga storiadel pallido cow-boy.\n \nRIT. [DO LA-]Un dì la mamma gli disse vai!\nm[Do]a r[Sol]esta[Lam] un bravo cow boy,\nu[Do]n d[Lam]ì la tromba ti chiamerà,\nGa[Do]bri[Sol]ele [Lam]la suonerà.\n\nLazy vuol dire pigro, ma il nostro Lazy Boy,\nnon era affatto pigro lontano da fort Joy.\nMa un brutto giorno conobbe Jessie,\nconobbe la sua colt.\n\nrit.\n\nCominciò a sparare ai sassi della via,\npoi preferì i cavalli e infine la ferrovia,\nai passeggieri, bucò sombreri,\nrubò pepite d'or.\n\nrit.\n\nTutti gli sceriffi, cercavan Lazy Boy,\nla taglia era grossa, piaceva al sergente Roy,\nma ad una spanna, trovò la canna\ndel pallido cow boy.\n\nrit.\n\nStava per sparare il nostro Lazy Boy,\nma udì da una missione, un coro di Little Boy:\n\"Oh lode, oh glory, oh alleluia\ne il colpo non partì.\n\nrit.\n\nC'è una stella bianca, che splende su nel ciel,\nguardando solitaria i pascoli del Far West\ne qui finisce la lunga storia\ndel pallido cow boy.\n\nrit.\n"
   },
   {
-    "id": 99,
+    "id": 100,
     "titolo": "Me compare Giacometo",
     "categoria": "Fuoco di bivacco",
-    "pagina": 67,
+    "pagina": 69,
     "url_audio": null,
     "url_spartito": null,
     "sottosezione": "Picco",
@@ -1251,10 +1263,10 @@
     "testo_accordi": "# fonte: canzoniere TUTTOSCOUT 2003, 0430.html - titolo nella fonte: Me compare Giacometo\n# MANCANO GLI ACCORDI\n\nMe compare Giacometo\nel gh'aveva un bel galeto,\nquando canta el verxhe 'l beco\nch'el fa propio innamorar.\n\nUn bel giorno la padrona\nper far festa agli invitati,\nla g'ha tira il collo al gallo\ne lo mette a cusinar.\n\nLe galline tutte matte\nper la perdita del gallo,\nle g'ha rotto anca 'l punaro\nda la rabbia che le g'ha.\n"
   },
   {
-    "id": 100,
+    "id": 101,
     "titolo": "Non si va in cielo",
     "categoria": "Fuoco di bivacco",
-    "pagina": 68,
+    "pagina": 70,
     "url_audio": null,
     "url_spartito": null,
     "sottosezione": "Picco",
@@ -1264,10 +1276,10 @@
     "testo_accordi": "# fonte: canzoniere TUTTOSCOUT 2003, 0614.html - titolo nella fonte: Non si va in cielo\n\n[Sol]Non si va in cielo in Pinin[Re]farina\nperché in cielo non c'è la benzin[Sol]a...\nNon si va in ciel[Do]o in Pininfarina\nperché in cie[Sol]lo non c'è la benzin[Re]a..[Sol].   [Do]   [Sol]\n\nNon si va in cielo in aeroplano\nperché in cielo si va più piano.\n\nNon si va in cielo in bicicletta\nperché in cielo si va un po’ più in fretta.\n\nNon si va in cielo in pattina a rotelle\nperché in cielo ci son solo le stelle.\n\nNon si va in cielo con la vestaglia\nperché in cielo si lavora a maglia.\n\nNon si va in cielo in minigonna\nperché in cielo ci sta la Madonna.\n\nNon si va in cielo con il portafoglio\nperché in cielo non c’è imbroglio.\n\nNon si va in cielo con i cardinali\nperché in cielo sono tutti uguali.\n\nSe tu vai in cielo prima di me\nfai un buchino e tirami sù.\n\nSe tu vai all’inferno prima di me\ntappa tutti i buchi che io non caschi giù.\n"
   },
   {
-    "id": 101,
+    "id": 102,
     "titolo": "Oleanna",
     "categoria": "Fuoco di bivacco",
-    "pagina": 68,
+    "pagina": 70,
     "url_audio": null,
     "url_spartito": "https://www.canzonierescout.it/oleanna.pdf",
     "sottosezione": "Picco",
@@ -1278,10 +1290,10 @@
     "testo_accordi": "# fonte: canzoniere TUTTOSCOUT 2003, 0063.html - titolo nella fonte: Oleanna\n\n[Re]Ole-Oleanna vecchia[Sol] terra del Far-W[Re]est\nf[Sol]ra le terre[Re] la più strana tutt[La]a ti vorrei per me.[Re]\n\n{c: Rit.}\nO[Re]le-Oleanna, Ole-Ole[Sol]anna-na,        [Re]\nO[Sol]le-Ole, Ole[Re]-Ole, Ole-O[La]leanna-na.[Re]\n\nSheeee...nengo il caballero\nquando ad Oleanna fu\nmise in piedi un grattacielo\ncon le fondamenta in su.\n\n{c: Rit.}\n\nLe mucche campagnole\ntutte migrano in città\nvi frequentano le scuole\ndove imparano a ballar.\n\n{c: Rit.}\n\nSe vino tu vuoi bere\nche ti faccia inebriar\ndalle pompe di un pompiere\nnon ce l’hai che da succhiar.\n\n{c: Rit.}\n"
   },
   {
-    "id": 102,
+    "id": 103,
     "titolo": "Si va",
     "categoria": "Fuoco di bivacco",
-    "pagina": 69,
+    "pagina": 71,
     "url_audio": null,
     "url_spartito": null,
     "sottosezione": "Picco",
@@ -1291,10 +1303,10 @@
     "testo_accordi": "# fonte: testo fornito dall'utente\n# MANCANO GLI ACCORDI\n# Il ritornello è riscritto dopo ogni strofa\n\nQuando la neve scende giù lieve non esitar si deve,\nprendi il tuo zaino e lesto va, dove ti porterà.\n\n{soc}\nSi va, sulla montagna\ndove la neve il volto ci abbronzerà.\nL'ardor, che ci accompagna,\nsarà la fiamma, che ci riscalderà.\nSalir, sempre salir,\nfinché ogni valle canterà così: sì, sì!\nSciator, ripete il vento,\ne ardimento il tuo motto sarà!\n{eoc}\n\nSignorinella, pallida e snella, getta la tua gonnella\nla tua pelliccia di vison, mettiti i pantalon!\n\n{soc}\nSi va, sulla montagna\ndove la neve il volto ci abbronzerà.\nL'ardor, che ci accompagna,\nsarà la fiamma, che ci riscalderà.\nSalir, sempre salir,\nfinché ogni valle canterà così: sì, sì!\nSciator, ripete il vento,\ne ardimento il tuo motto sarà!\n{eoc}\n\nVecchio “scarpone” d'ogni emozione, vinci la tentazione,\nnon riabbracciar più la mimi, solo i tuoi vecchi sci!\n\n{soc}\nSi va, sulla montagna\ndove la neve il volto ci abbronzerà.\nL'ardor, che ci accompagna,\nsarà la fiamma, che ci riscalderà.\nSalir, sempre salir,\nfinché ogni valle canterà così: sì, sì!\nSciator, ripete il vento,\ne ardimento il tuo motto sarà!\n{eoc}\n"
   },
   {
-    "id": 103,
+    "id": 104,
     "titolo": "Sul cappello un bel fior",
     "categoria": "Fuoco di bivacco",
-    "pagina": 70,
+    "pagina": 72,
     "url_audio": null,
     "url_spartito": "https://www.canzonierescout.it/Sulcap.pdf",
     "sottosezione": "Picco",
@@ -1304,10 +1316,10 @@
     "testo_accordi": "# fonte: canzoniere TUTTOSCOUT 2003, 0155.html - titolo nella fonte: Sul cappello un bel fiore\n# MANCANO GLI ACCORDI\n\nRit. Sul cappello un bel fior\nsulle labbra una canzon\nun cuor gioioso e sincero\nquesto solo ci vuol\nper un bravo Esplorator\nper girare il mondo intero.\n\nVoi che passare ci vedete\nsotto la pioggia o del sol al raggio\nqualche volta penserete\nche ci vuole un bel coraggio.\n\nPer andare sempre così\npur se ripida è la via:\nvoi V.P. non ci capite\nperché certo non avete...\n\nRit. Sul cappello un bel fior\nsulle labbra una canzon\nun cuor gioioso e sincero\nquesto solo ci vuol\nper un bravo Esplorator\nper girare il mondo intero.\n\nOh potessimo nei boschi\nogni nostro dì passare\nlieti poi sotto le tende\nalla sera riposare.\n\nDalle vette delle Alpi\nalle sponde del gran mare\ncon il nostro lieto canto\nnoi diremo a tutto il mondo...\n\nrit.\n"
   },
   {
-    "id": 104,
+    "id": 105,
     "titolo": "Vinassa, vinassa",
     "categoria": "Fuoco di bivacco",
-    "pagina": 71,
+    "pagina": 73,
     "url_audio": null,
     "url_spartito": "https://www.canzonierescout.it/009.pdf",
     "sottosezione": "Picco",
@@ -1318,10 +1330,10 @@
     "testo_accordi": "# fonte: testo fornito dall'utente\n# MANCANO GLI ACCORDI\nLà nella valle, c'è un'osteria\nè l'allegria, è l'allegria\nlà nella valle, c'è un'osteria\nè l'allegria di noi alpin!\n\nE se son pallida né miei colori\nno' vo' dotori, no' vo' dotori\ne se son pallida come 'na strassa\nvinassa, vinassa e fiaschi de vin!\n\nLà sul Cervino c'è una colonna\nè la Madonna, è la Madonna\nlà sul Cervino c'è una colonna\nè la Madonna di noi alpin!\n\nLà nella valle c'è un filo d'erba\nl'è la riserva, l'è la riserva.\nLà nella valle c'è un filo d'erba\nl'è la riserva di noi alpin.\n\nLà nella valle c'è la Rosina\nl'è la rovina, l'è la rovina.\nLà nella valle c'è la Rosina\nl'è la rovina di noi alpin.\n\nLà nella valle c'è un buco nero\nl'è il cimitero, l'è il cimitero\nLà nella valle c'è un buco nero\nl'è il cimitero di noi alpin.\n\nLà su quel monte c'è una lanterna\nrequiem aeternam, requiem aeternam,\nLà su quel monte c'è una lanterna\nrequiem aeternam per noi alpin.\n"
   },
   {
-    "id": 105,
+    "id": 106,
     "titolo": "Ah io vorrei tornare",
     "categoria": "Fuoco di bivacco",
-    "pagina": 72,
+    "pagina": 74,
     "url_audio": null,
     "url_spartito": "https://www.canzonierescout.it/Iovorre.pdf",
     "sottosezione": "Calando",
@@ -1331,10 +1343,10 @@
     "testo_accordi": "# fonte: canzoniere TUTTOSCOUT 2003, 0482.html - titolo nella fonte: Ah, io vorrei tornare\n\nA[Sol]h, i[Do]o v[Lam]orrei tornare anche solo per un dì\nL[Re]ass[Sol]ù nella valle alpina.\nLassù tra gli alti abeti ed i rododendri in fior\nDistendermi a terra e sognar.\n\nRit. P[Sol]orta[Do]mi [Sol]tu lassù, o Signor\nD[Re]ove meglio ti veda…\nP[Sol]orta[Do]mi [Lam]tra il verde dei tuoi pascoli, lassù\nP[Re]er [Sol]non farmi scender mai più (2 volte)\n\nLà, sotto il pino antico noi lasciammo nel partir\nLa croce del nostro altare\nMa sotto il pino antico con la croce là restò\nUn poco del nostro cuor.\n\nPortami tu ...\n\nE quando quest'inverno qui la neve scenderà\nBianca sarà la valle\nMa sotto il pino antico un bel giglio fiorirà\nIl giglio dell'esplorator.\n\nPortami tu ...\n"
   },
   {
-    "id": 106,
+    "id": 107,
     "titolo": "Blowin' in the wind",
     "categoria": "Fuoco di bivacco",
-    "pagina": 73,
+    "pagina": 75,
     "url_audio": null,
     "url_spartito": null,
     "sottosezione": "Calando",
@@ -1344,10 +1356,10 @@
     "testo_accordi": "[D]\n[D]How many [G]roads must a [D]man walk down\nBefore you [G]call him a [D]man?\nYes, 'n' [D]how many [G]seas must a [D]white dove sail\nBefore she [G]sleeps in the [A]sand?\nYes, 'n' [D]how many [G]times must the [D]cannon balls fly\nBefore they're [G]forever [D]banned?\n\nThe [G]answer, my [A]friend, is [D]blowin' in the [Bm]wind,\nThe [G]answer is [A]blowin' in the [D]wind.\n\n[G] [A] [D] [Bm] [G] [A] [D]\n[D]How many [G]years can a [D]mountain exist\nBefore it's [G]washed to the [D]sea?\nYes, 'n' [D]how many [G]years can some [D]people exist\nBefore they're [G]allowed to be [A]free?\nYes, 'n' [D]how many [G]times can a [D]man turn his head,\nPretending he [G]just doesn't [D]see?\n\nThe [G]answer, my [A]friend, is [D]blowin' in the [Bm]wind,\nThe [G]answer is [A]blowin' in the [D]wind.\n\n[G] [A] [D] [Bm] [G] [A] [D]\n[D]How many [G]times must a [D]man look up\nBefore he can [G]see the [D]sky?\nYes, 'n' [D]how many [G]ears must [D]one man have\nBefore he can [G]hear people [A]cry?\nYes, 'n' [D]how many [G]deaths will it [D]take till he knows\nThat too many [G]people have [D]died?\n\nThe [G]answer, my [A]friend, is [D]blowin' in the [Bm]wind,\nThe [G]answer is [A]blowin' in the [D]wind.\n\n[G] [A] [D] [Bm] [G] [A] [D]\n"
   },
   {
-    "id": 107,
+    "id": 108,
     "titolo": "Bocca di rosa",
     "categoria": "Fuoco di bivacco",
-    "pagina": 74,
+    "pagina": 76,
     "url_audio": null,
     "url_spartito": null,
     "sottosezione": "Calando",
@@ -1359,10 +1371,10 @@
     "testo_accordi": "# fonte: testo e accordi forniti dall'utente\n\nLa [Lam]chiamavano Bocca di Rosa, \nmetteva [Mi]l'amore, metteva [Lam]l'amore\nla [Lam]chiamavano Bocca di Rosa, \nmetteva [Mi]l'amore sopra ogni [Lam]cosa.\n\nAppena [Lam]scese alla stazione \ndel [Mi]paesino di [Lam]sant'Ilario\ntutti si [Lam]accorsero con uno sguardo \nche non si [Mi]trattava di un [Lam]missionario.\n\nC'è chi [La7]l'amore lo fa per [Rem]noia, \nchi se lo [Sol7]sceglie per [Do]professione,\nBocca di [Rem]Rosa né l'uno né [Lam]l'altro, \nlei lo [Mi]faceva per [Lam]passione.\n\nMa la passione spesso conduce\na soddisfare le proprie voglie,\nsenza indagare se il concupito\nha il cuore libero, oppure ha moglie.\n\nE fu così che da un giorno all'altro\nBocca di Rosa si tirò addosso,\nl'ira funesta delle cagnette\na cui aveva sottratto l'osso.\n\nMa le comari d'un paesino\nnon brillano certo d'iniziativa,\nle contromisure fino a quel punto\nsi limitavano all'invettiva.\n\nSi sa che la gente dà buoni consigli\nsentendosi come Gesù nel tempio,\nsi sa che la gente dà buoni consigli\nse non può più dare cattivo esempio.\n\nCosì una vecchia mai stata moglie\nsenza mai figli, senza più voglie,\nsi prese la briga e di certo il gusto\ndi dare a tutte il consiglio giusto.\n\nE rivolgendosi alle cornute\nle apostrofò con parole argute:\n\"Il furto d'amore sarà punito\"\ndisse \"dall'ordine costituito\".\n\nE quelle andarono dal commissario\ne dissero senza parafrasare:\n\"Quella schifosa ha già troppi clienti\npiù di un consorzio alimentare\".\n\nEd arrivarono quattro gendarmi\ncon i pennacchi, con i pennacchi,\ned arrivarono quattro gendarmi\ncon i pennacchi e con le armi.\n\nSpesso gli sbirri e i carabinieri\nal proprio dovere vengono meno,\nma non quando sono in alta uniforme\ne l'accompagnarono al primo treno.\n\nAlla stazione c'erano tutti\ndal commissario al sagrestano,\nalla stazione c'erano tutti\ncon gli occhi rossi e il cappello in mano.\n\nA salutare chi per un poco\nsenza pretese, senza pretese,\na salutare chi per un poco\nportò l'amore nel paese.\n\nC'era un cartello giallo\ncon una scritta nera, diceva:\n\"Addio Bocca di Rosa\nCon te se ne parte la primavera\".\n\nMa una notizia un po' originale\nnon ha bisogno di alcun giornale,\ncome una freccia dall'arco scocca\nvola veloce di bocca in bocca.\n\nE alla stazione successiva\nmolta più gente di quando partiva,\nchi manda un bacio, chi getta un fiore\nchi si prenota per due ore.\n\nPersino il parroco che non disprezza\nfra un miserere e un'estrema unzione,\nil bene effimero della bellezza\nla vuole accanto in processione.\n\nE con la Vergine in prima fila\ne Bocca di Rosa poco lontano,\nsi porta a spasso per il paese\nl'amore sacro e l'amor profano.\n"
   },
   {
-    "id": 108,
+    "id": 109,
     "titolo": "Canto del ricordo",
     "categoria": "Fuoco di bivacco",
-    "pagina": 76,
+    "pagina": 78,
     "url_audio": null,
     "url_spartito": "https://www.canzonierescout.it/ricordo.pdf",
     "sottosezione": "Calando",
@@ -1372,10 +1384,10 @@
     "testo_accordi": "# fonte: canzoniere TUTTOSCOUT 2003, 0171.html - titolo nella fonte: Canto del ricordo\n# MANCANO GLI ACCORDI\n\nQuando tramonta il Sol B.P., tu torni fra noi\nquando riflette la fiamma le ombre di noi che cantiamo in cor.\n\nrit. Tu torni B.P., tu torni fra noi\nci guardi non visto da un angolo d'ombra cantando con noi.\n\nE tu rivedi a sera i fuochi dei militar\nRivedi i fuochi, le tende, i cavalli, le veglie, i deserti, il mar.\n\nrit. Tu torni B.P., tu torni a cantar\nconfuso nel vento si perde il tuo canto nel nostro che va.\n\nQuando tramonta il sol B.P., tu torni fra noi\nQuando riflette la fiamma le ombre di noi che cantiamo in cor.\n\nrit. Tu torni B.P., tu torni fra noi\nritorni ogni sera cantando sull'eco dei canti di allor.\n"
   },
   {
-    "id": 109,
+    "id": 110,
     "titolo": "Canto delle Aquile Randagie (La luna delle vette)",
     "categoria": "Fuoco di bivacco",
-    "pagina": 76,
+    "pagina": 78,
     "url_audio": null,
     "url_spartito": null,
     "sottosezione": "Calando",
@@ -1385,10 +1397,10 @@
     "testo_accordi": "# fonte: testo e accordi forniti dall'utente\n\n[Mi][Si][Do#m]La luna che risplende inonda di luce\n[Mi][Si][Mi]le vette che scintillano lassù\n[Mi][Si][Do#m]La nenia che cantiamo sull’ali del sogno\n[Mi][Si][Mi]lontano porta i cuori e fa sognar\n[Mi][Sol#][Do#m][Fa#m][Si][Mi]Sognar lontani dì l’antica libertà\n[Fa#m][Si][Mi][Fa#m][Si][Mi]del tempo che già fu del tempo che sarà.\n\nLontano ci risponde lo scroscio del fiume\nche scorre tra le rocce con fragor\nSotto un manto di stelle la fiamma s’innalza\nguizzando verso il ciel finché muor\nMa mai non può morir non morirà mai più\nla fiamma che ravviva la nostra gioventù\n\nMa non morirà mai più.\n"
   },
   {
-    "id": 110,
+    "id": 111,
     "titolo": "Canto di Montegemoli",
     "categoria": "Fuoco di bivacco",
-    "pagina": 76,
+    "pagina": 78,
     "url_audio": null,
     "url_spartito": null,
     "sottosezione": "Calando",
@@ -1398,10 +1410,10 @@
     "testo_accordi": "# fonte: testo e accordi forniti dall'utente\n\n[Sol]È segnata la mia strada\n[Re]da chi prima la passò\n[Sol]cercherò in ogni contrada\n[Re]ed [Sol]il messaggio scoprirò.\n\n{soc}\n[Sol]A chi mi accoglierà\n[Re]la [Sol]pace porterò\n[Sol]a chi mi ascolterà\n[Re]di [Sol]Lui io parlerò\n[Sol]la gioia che ho con me\n[Re]la [Sol]voglio far sentir\n[Sol]a tutti e a quello che\n[Re]con [Sol]me vorrà venir.\n{eoc}\n\nPer servire ho camminato\nso il messaggio dell’amor\ncoi fratelli che ho trovato\nsarà lieve anche il dolor.\n\n{soc}\n[Sol]A chi mi accoglierà\n[Re]la [Sol]pace porterò\n[Sol]a chi mi ascolterà\n[Re]di [Sol]Lui io parlerò\n[Sol]la gioia che ho con me\n[Re]la [Sol]voglio far sentir\n[Sol]a tutti e a quello che\n[Re]con [Sol]me vorrà venir.\n{eoc}\n"
   },
   {
-    "id": 111,
+    "id": 112,
     "titolo": "Canto Eurojam 94",
     "categoria": "Fuoco di bivacco",
-    "pagina": 77,
+    "pagina": 79,
     "url_audio": null,
     "url_spartito": null,
     "sottosezione": "Calando",
@@ -1413,10 +1425,10 @@
     "testo_accordi": "# fonte: testo fornito dall'utente\n# MANCANO GLI ACCORDI\nCanta sonoro il fringuello\nLa luna fa crescere i mari\nUmile scorre il ruscello\nSvettano picchi solitari\n\nMa il mio posto dov’è\nIn questa immensa armonia del creato\nSolo ascoltando te\nio capirò perché sono nato\n\nCerco il tuo volto signore\nÈ il volto d’ogni fratello\nSolo così nell’amore\nlascerò il mondo più bello\n\nE anche il fuoco sarà\nLa nostra lode la nostra preghiera\nResta con noi Signore\nPerché si fa sera\n\nResta con noi Signore\nPerché si fa sera\n"
   },
   {
-    "id": 112,
+    "id": 113,
     "titolo": "Carnet di marcia",
     "categoria": "Fuoco di bivacco",
-    "pagina": 78,
+    "pagina": 80,
     "url_audio": null,
     "url_spartito": null,
     "sottosezione": "Calando",
@@ -1426,10 +1438,10 @@
     "testo_accordi": "# fonte: canzoniere TUTTOSCOUT 2003, 0013.html - titolo nella fonte: Carnet di Marcia\n# MANCANO GLI ACCORDI\n\nGuardo nei campi brulli le stoppie aride\ne nel canneto osservo levarsi un vol.\nMi chiedo che fanno queste cose intorno\nè un sogno o un inganno questa vita accanto a me?\n\nrit. Sei tu Signor che ti nascondi:\ncercano Te.\n\nLa mia tendina chiara spicca tra gli alberi\nnella radura erbosa mi scaldo il thè.\nTrattiene il respiro ogni cosa intorno\nil fuoco che miro raccoglie tutto in sè.\n\nrit. Sei tu Signor che mi circondi:\nche vuoi da me?\n\nMarcio con zaino in spalla per valli insolite\ndivido il pane e l'acqua con il fratel.\nLa gente che vedo mi ridà il saluto\nle cose in cui credo son concrete accanto a me.\n\nrit. Sei tu Signor che mi rispondi?\neccomi a Te.\n"
   },
   {
-    "id": 113,
+    "id": 114,
     "titolo": "Col cappellone",
     "categoria": "Fuoco di bivacco",
-    "pagina": 79,
+    "pagina": 81,
     "url_audio": null,
     "url_spartito": null,
     "sottosezione": "Calando",
@@ -1439,10 +1451,10 @@
     "testo_accordi": "# fonte: testo fornito dall'utente\n# MANCANO GLI ACCORDI\nCol cappellone e un giglio d'or\nsempre restiamo esplorator.\nSe l'Asci sciolta non morirem\ncon voce franca cantiamo assiem.\n\n{soc}\nL'esploratore tenace resterà\ne la promessa sua non tradirà,\nma forte ognor, fedele ancor\nall'ideale che non muor.\n{eoc}\nL'Asci un bel giorno il cuore ci rapì\ne tanta gioia ci portò così\nche se un bel dì l'Asci risorgerà,\ntutti compatti ci troverà.\nE se un bel dì l'Asci risorgerà,\ntutti compatti ci troverà.\n\nSu per i monti lieti saliam\ne in faccia al sole l'urlo lanciam.\nDall'alte cime si leverà\nil nostro canto che ancor dirà:\n\nL'esploratore tenace resterà...\n\nQuando quell'ora udrem suonar\ne l'Asci ancora potrà marciar,\ngigliate fiamme, vecchi guidon\nsventoleranno tra le canzon.\n\nL'esploratore tenace resterà...\n"
   },
   {
-    "id": 114,
+    "id": 115,
     "titolo": "E mi la dona bionda",
     "categoria": "Fuoco di bivacco",
-    "pagina": 80,
+    "pagina": 82,
     "url_audio": null,
     "url_spartito": null,
     "sottosezione": "Calando",
@@ -1454,10 +1466,10 @@
     "testo_accordi": "# fonte: testo fornito dall'utente\n# MANCANO GLI ACCORDI\nE mi la donna bionda la vôri no,\nE mi la donna bionda la vôri no:\nTutti i omem ghe fan la ronda\nTutti...\nE mi la donna bionda la vôri no.\n\nE mi la donna nera la vôri no,\nE mi...\nDonna nera non è sincera\nDonna ...\nE mi...\n\nE mi la donna mora la vôri no,\nE mi...\nDonna mora l'è traditora\nDonna...\nE mi...\n\nE mi la donna rossa la vôri no,\nE mi...\nSe te tuca te dà la scossa\nSe te...\nE mi ...\n\nE mi la donna granda la vôri no,\nE mi ...\nLa camina, la par'na stanga,\nLa cam...\nE mi...\n\nE mi la donna riccia la vôri no,\nE mi...\nSuta ai ricci la g'à i capricci\nSuta...\nE mi...\n\nE mi la donna picula la vôri no,\nE mi...\nLa camina, la par'na chichera,\nLa cam...\nE mi...\n\nE mi la donna grassa la vôri no,\nE mi...\nTutta quanta la te sconquassa\nTutta...\nE mi...\n\nE mi la donna seca la vôri no,\nE mi...\nE la pesa comè 'na bisteca\nE la pesa...\nE mi...\n\nE mi la donna bella la vôri sì,\nE mi...\nLa ga i oci che par'na stella\nLa gh'ha i oci che par'na stella\nE mi...\n"
   },
   {
-    "id": 115,
+    "id": 116,
     "titolo": "Faria faria oh",
     "categoria": "Fuoco di bivacco",
-    "pagina": 81,
+    "pagina": 83,
     "url_audio": null,
     "url_spartito": "https://www.canzonierescout.it/Faria.pdf",
     "sottosezione": "Calando",
@@ -1468,10 +1480,10 @@
     "testo_accordi": "# fonte: canzoniere TUTTOSCOUT 2003, 0189.html - titolo nella fonte: Faria, faria oh!\n# MANCANO GLI ACCORDI\n\nPer il mondo ha camminato, faria, faria oh!\nMonti e mari ha già varcato faria, faria oh!\nMa gli è dolce continuar\nrischi e incognite a sfidar\nfaria, faria, faria, faria, faria, faria oh!\nNon gli pesa il borsellino, faria, faria oh!\nMa è signor del suo destino faria, faria oh!\nSempre lieto e pien d'ardor canta e va l'esplorator.\n\nFaria, faria, faria, faria, faria, faria oh!\nCol fagotto e col bastone, faria, faria oh!\nParte senza colazione, faria, faria oh!\nLunga strada far dovrà molti amici troverà.\n\nFaria, faria, faria, faria, faria, faria oh!\nParte e sogna cose belle, faria, faria oh!\nAlbe, fiori, prati e stelle, faria, faria oh!\nQuando Iddio lo chiamerà sorridendo tornerà\nFaria, faria, faria, faria, faria, faria oh!\n"
   },
   {
-    "id": 116,
+    "id": 117,
     "titolo": "Fiume rosso",
     "categoria": "Fuoco di bivacco",
-    "pagina": 81,
+    "pagina": 83,
     "url_audio": null,
     "url_spartito": null,
     "sottosezione": "Calando",
@@ -1481,10 +1493,10 @@
     "testo_accordi": "# fonte: canzonierescout.it (Fiume rosso, testo e spartito)\n\n# Dopo l'ultima strofa: Coda\n\nIl [Re]sole tramonta a Ovest,\nil [Fa#m]gabbiano [La]discende [Sol]al [Re]fiume,\nIl tordo ritorna al suo [Fa#m]nido,\nper un [La]cowboy è [Sol]l'ora di [Re]sognar.\n\nFiume rosso là nel [Sol]canyon,\necco [Re]dove voglio an[Sol]dar.\n\nrit.[Re]Tornerò [Sol]dal mio amore,\nwith [Re]my rifle, [Sol]my pony and [Re]me.\n\nNon ruberò più cavalli,\nquando il sol scenderà.\n\nrit.\n\nUn uccello là sul salce,\ncanta una melodia.\n\nrit.\n"
   },
   {
-    "id": 117,
+    "id": 118,
     "titolo": "Guardati intorno scout",
     "categoria": "Fuoco di bivacco",
-    "pagina": 82,
+    "pagina": 84,
     "url_audio": null,
     "url_spartito": "https://www.canzonierescout.it/Buncac.pdf",
     "sottosezione": "Calando",
@@ -1494,10 +1506,10 @@
     "testo_accordi": "# fonte: testo fornito dall'utente; accordi (Fa, Do7, Sib) letti dallo spartito\n\nGuardati [Fa]intorno, scout\nil bosco si [Do7]ridesta\nsalta di ramo in ramo\nlo scoiattolo in [Fa]festa\ne par che ti ripeta:\n\n{soc}\n[Sib]Sei sulla giusta [Fa]traccia,\n[Sib]prosegui il tuo cammino.\n[Fa]Fratello, [Do7]buona [Fa]caccia.\n{eoc}\n\nIl sol splende radioso\nlà nell'azzurro cielo,\nsi libra in alto un'aquila\nnell'aria senza velo.\nAnch'essa par che dica:\n\n{soc}\nsei sulla giusta traccia,\nprosegui il tuo cammino.\nFratello, buona caccia.\n{eoc}\n\nQuando tramonta il sole\ne discende la notte\nescono dalle tane\na caccia i lupi a frotte.\nE anch'essi ti salutano:\n\n{soc}\nsei sulla giusta traccia,\nprosegui il tuo cammino.\nFratello, buona caccia.\n{eoc}\n"
   },
   {
-    "id": 118,
+    "id": 119,
     "titolo": "Il pescatore",
     "categoria": "Fuoco di bivacco",
-    "pagina": 82,
+    "pagina": 84,
     "url_audio": null,
     "url_spartito": null,
     "sottosezione": "Calando",
@@ -1509,10 +1521,10 @@
     "testo_accordi": "# fonte: testo e accordi forniti dall'utente\n\nAll'ombra [Do]dell'ultimo [Sol][Do]sole\nsi era assopito [Fa]un [Do]pescatore\ne aveva un [Fa]solco [Sol]lungo il [Do]viso\n[Fa]come una [Do]specie [Sol]di [Do]sorriso. [Fa][Do][Sol]\n\n[Do][Fa][Do][Sol]\n\nVenne alla [Do]spiaggia [Sol]un [Do]assassino\ndue occhi [Fa]grandi da [Do]bambino\ndue occhi [Fa]enormi [Sol]di [Do]paura\n[Fa]eran gli [Do]specchi di [Sol][Do]un'avventura.\n\n{soc}\nLa La La [Fa]La La La La [Do]La\nLa La La [Sol]La La La La [Do]La\nLa La La [Fa]La La [Sol]La La [Lam]La\n[Fa]La La La [Do]La La [Sol]La La [Lam]La\n{eoc}\n\n# Strumentale:\n# [Lam]\n# [Do][Fa][Do][Sol] (x4)\n\nE chiese al [Do]vecchio, [Sol]\"Dammi il [Do]pane\nho poco [Fa]tempo e troppa [Do]fame\"\ne chiese al [Fa]vecchio, [Sol]\"Dammi il [Do]vino\n[Fa]ho sete e [Do]sono un [Sol][Do]assassino\". [Fa][Do][Sol]\n\n[Do][Fa][Do][Sol]\n\nGli occhi [Do]dischiuse il [Sol]vecchio al [Do]giorno\nnon si guardò [Fa]neppure [Do]intorno\nma versò il [Fa]vino e [Sol]spezzò il [Do]pane\n[Fa]per chi [Do]diceva ho [Sol]sete e ho [Do]fame.\n\n{soc}\nLa La La [Fa]La La La La [Do]La\nLa La La [Sol]La La La La [Do]La\nLa La La [Fa]La La [Sol]La La [Lam]La\n[Fa]La La La [Do]La La [Sol]La La [Lam]La\n{eoc}\n\n# Strumentale:\n# [Lam]\n# [Do][Fa][Do][Sol] (x4)\n\nE fu il [Do]calore [Sol]di un [Do]momento\npoi via di [Fa]nuovo verso il [Do]vento\npoi via di [Fa]nuovo [Sol]verso il [Do]sole\n[Fa]dietro alle [Do]spalle un [Sol][Do]pescatore. [Fa][Do][Sol]\n\n[Do][Fa][Do][Sol]\n\nDietro alle [Do]spalle [Sol]un [Do]pescatore\ne la [Fa]memoria è già [Do]dolore\nè già il [Fa]rimpianto [Sol]di un [Do]aprile\n[Fa]giocato [Do]all'ombra di [Sol]un [Do]cortile.\n\n{soc}\nLa La La [Fa]La La La La [Do]La\nLa La La [Sol]La La La La [Do]La\nLa La La [Fa]La La [Sol]La La [Lam]La\n[Fa]La La La [Do]La La [Sol]La La [Lam]La\n{eoc}\n\n# Strumentale:\n# [Lam]\n# [Do][Fa][Do][Sol] (x4)\n\nVennero in [Do]sella [Sol]due [Do]gendarmi\nvennero in [Fa]sella con le [Do]armi\nchiesero al [Fa]vecchio [Sol]se lì [Do]vicino\n[Fa]fosse [Do]passato un [Sol][Do]assassino. [Fa][Do][Sol]\n\n[Do][Fa][Do][Sol]\n\nMa all'ombra [Do]dell'ultimo [Sol][Do]sole\nsi era assopito [Fa]il [Do]pescatore\ne aveva un [Fa]solco [Sol]lungo il [Do]viso\n[Fa]come una [Do]specie [Sol]di [Do]sorriso.\ne aveva un [Fa]solco [Sol]lungo il [Do]viso\n[Fa]come una [Do]specie [Sol]di [Do]sorriso.\n\n{soc}\nLa La La [Fa]La La La La [Do]La\nLa La La [Sol]La La La La [Do]La\nLa La La [Fa]La La [Sol]La La [Lam]La\n[Fa]La La La [Do]La La [Sol]La La [Lam]La\n{eoc}\n\n# Strumentale:\n# [Lam]\n# [Do][Fa][Do][Sol] (x2)\n# [Fa][Do]\n[La] [La] [La] [La] [La] [La] [La] [La]\n# [Sol][Do]\n[La] [La] [La] [La] [La] [La] [La] [La]\n# [Fa][Sol][Lam]\n[La] [La] [La] [La] [La] [La] [La] [La]\n# [Fa][Do][Sol][Do]\n[La] [La] [La] [La] [La] [La] [La] [La]\n"
   },
   {
-    "id": 119,
+    "id": 120,
     "titolo": "Joska la rossa",
     "categoria": "Fuoco di bivacco",
-    "pagina": 84,
+    "pagina": 86,
     "url_audio": null,
     "url_spartito": null,
     "sottosezione": "Calando",
@@ -1523,10 +1535,10 @@
     "testo_accordi": "# fonte: testo fornito dall'utente\n# MANCANO GLI ACCORDI\n# Le sigle (Jo) e (So) a inizio verso sono come nel testo ricevuto\nEl muro bianco, drio de la to casa\nTi te saltavi come un oseleto.\n\n(Jo) Joska la rossa, pèle de bombasa\nTute le sere prima de 'nà in leto.\n\nTe stavi lì, co le to scarpe rote\nTe ne vardavi drio da j' oci mori\nE te balavi alegra tuta note\nE i baldi alpini te cantava i cori, oh.\n\n{soc}\nJoska, Joska, Joska\nSalta la mura!\nFin che la dura, oh\nJoska, Joska, Joska\nSalta la mura!\nBalla con mi! Oh\nJoska, Joska, Joska\nSalta la mura!\nFin che la dura, oh\nJoska, Joska, Joska\nSalta la mura!\nBalla con mi!\n{eoc}\n\nTi te portavi el sole ogni matina\nE de j 'Alpini te geri la morosa.\n\n(So) Sorela, mama, boca canterina\nOci del sol, meravigliosa rosa.\n\nChe tanto e tanto nù, ca te zerchémo\nJoska la rossa, amor, rosa spanja\nMa dove sito andà? Ma dove andemo?\nSemo ramenghi, o morti, e così sia, oh.\n\nrit.\n\nBusa con crose, sarà sta i putèi?\nLa par 'na bara e invece xe 'na cuna.\n\nE dentro dorme tuti i to fradei\nFermi, impalà, co i oci ne la luna, oh.\n\n{soc}\n...\n\nJoska, Joska, Joska\nSalta la mura!\nFermate là!\nFermate là!\n{eoc}\n"
   },
   {
-    "id": 120,
+    "id": 121,
     "titolo": "Kamaludu",
     "categoria": "Fuoco di bivacco",
-    "pagina": 84,
+    "pagina": 86,
     "url_audio": null,
     "url_spartito": "https://www.canzonierescout.it/092b.pdf",
     "sottosezione": "Calando",
@@ -1536,10 +1548,10 @@
     "testo_accordi": "# fonte: canzoniere TUTTOSCOUT 2003, 0339.html - titolo nella fonte: Kamaludu\n# MANCANO GLI ACCORDI\n\nKamaludu, kamaludu,\nludu kamaludu, uandaisi.\n\nKamaludu, kamaludu uandaisi.\n\nBehbel ina, behbel ina,\nina behbel ina, uandaisi.\n\nBehbel ina, behbel ina uandaisi.\n\nMatulefa, matulefa,\nefa matulefa, uandaisi\nmatulefa, matulefa uandaisi.\n"
   },
   {
-    "id": 121,
+    "id": 122,
     "titolo": "La ceseta de Transaqua",
     "categoria": "Fuoco di bivacco",
-    "pagina": 85,
+    "pagina": 87,
     "url_audio": null,
     "url_spartito": null,
     "sottosezione": "Calando",
@@ -1549,10 +1561,10 @@
     "testo_accordi": "# fonte: testo fornito dall'utente\n# MANCANO GLI ACCORDI\nAs tu vist la ceseta\nde Transacqua, de Transacqua\ncol Cimon de la Pala sóra i copi? Oh!\nTe g'ha i oci ciari\ncome l'aqua, come l'aqua,\ne i 'cavei tuti rizi e senza sgropi, oh!\n\nMi g'ho vist la ceseta\nde Transacqua, de Transacqua,\nma 'l Cimon de la Pala no ghe xera, oh!\nSóra i copi lustri\nde tant'aqua, de tant'aqua,\nse sgropava 'na nuvolona nera, oh!\n\nNella cesa cjanta\nmessa il prete, messa il prete,\nsul Cimon de la Pala fis'cia 'l vento, oh!\nCosa importa se g'ho\nle scarpe rote, scarpe rote?\nMi te vardo e me sento il cor contento, oh!\n\nCosa importa se g'ho\nle scarpe rote, scarpe rote?\nMi te vardo e me sento il cor contento, oh!\n"
   },
   {
-    "id": 122,
+    "id": 123,
     "titolo": "La guadalupa",
     "categoria": "Fuoco di bivacco",
-    "pagina": 86,
+    "pagina": 88,
     "url_audio": null,
     "url_spartito": "https://www.canzonierescout.it/033.pdf",
     "sottosezione": "Calando",
@@ -1562,10 +1574,10 @@
     "testo_accordi": "# fonte: testo e accordi forniti dall'utente\n\nCoro 1: zim bum, zim bum bum, zim bum, zim bum bum (ad libitum)\n\n[Do][Sol][Fa][Do]Ho lasciato da sol, sopra una scialuppa\n[Do][Sol][Fa][Do]il paese del sol della Guadalupa.\n\n{soc}\n[Do][Sol][Fa][Sol][Do]Ah! Piango ancor la mia capanna e la savana\n[Do][Sol][Fa][Sol][Do]ed il paese dove sogno di tornar.\n{eoc}\n\nSe volevo mangiar, c’eran le banane;\nse volevo dormir, c’erano le palme.\n\n{soc}\n[Do][Sol][Fa][Sol][Do]Ah! Piango ancor la mia capanna e la savana\n[Do][Sol][Fa][Sol][Do]ed il paese dove sogno di tornar.\n{eoc}\n\nSempre triste quaggiù sogno le savane;\nil bel sol e l’amor e tante banane.\n\n{soc}\n[Do][Sol][Fa][Sol][Do]Ah! Piango ancor la mia capanna e la savana\n[Do][Sol][Fa][Sol][Do]ed il paese dove sogno di tornar.\n{eoc}\n\nSi diffonde il “tam tam” lungo la pianura,\nmentre il sole tramonta nella radura.\n\n{soc}\n[Do][Sol][Fa][Sol][Do]Ah! Piango ancor la mia capanna e la savana\n[Do][Sol][Fa][Sol][Do]ed il paese dove sogno di tornar.\n{eoc}\n"
   },
   {
-    "id": 123,
+    "id": 124,
     "titolo": "La guerra di Piero",
     "categoria": "Fuoco di bivacco",
-    "pagina": 86,
+    "pagina": 88,
     "url_audio": null,
     "url_spartito": null,
     "sottosezione": "Calando",
@@ -1577,10 +1589,10 @@
     "testo_accordi": "# fonte: testo e accordi forniti dall'utente\n\n[Mi]Dormi sepolto in un [Lam]campo di grano,\nnon e' la [Sol]rosa, non e' il [Do]tulipano\nche ti fan [Mi]veglia dall'ombra dei [Lam]fossi\nma sono [Rem]mille [Mi]papaveri [Lam]rossi.\n\nLungo le [Mi]sponde del mio [Lam]torrente\nvoglio che [Rem]scendano i lucci [Lam]argentati,\nnon più i [Sol]cadaveri dei [Do]soldati\nportati in [Mi]braccio dalla [Lam]corrente.\n\nCosì [Mi]dicevi ed era [Lam]d'Inverno e come [Rem]gli altri,\nverso [Lam]l'inferno te ne vai [Sol]triste\ncome chi [Do]deve ed il vento ti [Mi]sputa in faccia [Lam]la neve.\nFermati [Mi]Piero, fermati [Lam]adesso,\n\nlascia che il [Sol]vento ti passi un po' [Do]addosso,\ndei morti in [Mi]battaglia ti porti la [Lam]voce,\nchi diede la [Rem]vita ebbe in [Mi]cambio [Lam]una croce.\nMa tu non lo [Mi]udisti ed il tempo [Lam]passava\n\ncon le [Rem]stagioni a passo di [Lam]giava\ned [Sol]arrivasti a passar la [Do]frontiera\nin un bel [Mi]giorno di [Lam]Primavera.\nE mentre [Mi]marciavi con l'anima in [Lam]spalle\n\nvedesti un [Rem]uomo in fondo alla [Lam]valle\nche aveva il tuo [Sol]stesso identico [Do]umore\nma la [Mi]divisa di un altro [Lam]colore.\nSparagli [Mi]Piero, sparagli [Lam]ora e dopo [Sol]un colpo sparagli [Do]ancora,\n\nfino a che [Mi]tu non lo vedrai [Lam]esangue\ncadere in [Rem]terra a [Mi]coprire il [Lam]suo sangue.\nE se gli [Mi]sparo in fronte o nel [Lam]cuore\nsoltanto il [Rem]tempo avrà per [Lam]morire,\n\nma il tempo a [Sol]me resterà per [Do]vedere,\nvedere gli [Mi]occhi d'un uomo che [Lam]muore.\nE mentre gli [Mi]usi questa [Lam]premura quello [Rem]si volta,\nti vede, ha [Lam]paura ed [Sol]imbracciata [Do]l'artiglieria\n\nnon ti [Mi]ricambia la [Lam]cortesia.\nCadesti a [Mi]terra, senza un [Lam]lamento\ne ti [Rem]accorgesti in un [Sol]solo [Do]momento\nche il tempo [Mi]non ti sarebbe [Lam]bastato\n\na chieder [Rem]perdono per [Mi]ogni [Lam]peccato.\nCadesti a [Mi]terra, senza un [Lam]lamento\ne ti [Rem]accorgesti in un [Sol]solo [Do]momento\nche la tua [Mi]vita finiva quel [Lam]giorno\n\ne non ci [Rem]sarebbe [Mi]stato [Lam]ritorno.\nNinetta [Mi]mia, crepare di [Lam]Maggio\nci vuole [Rem]tanto, troppo [Lam]coraggio.\nNinetta [Sol]bella dritto [Do]all'Inferno\n\navrei [Mi]preferito andarci in [Lam]Inverno.\nE mentre il [Mi]grano ti stava a [Lam]sentire\ndentro le [Rem]mani stringevi il [Lam]fucile,\ndentro la [Sol]bocca stringevi [Do]parole\n\ntroppo [Mi]gelate per sciogliersi al [Lam]sole.\nDormi [Mi]sepolto in un campo di [Lam]grano,\nnon e' la [Sol]rosa, non e' il [Do]tulipano\nche ti fan [Mi]veglia dall'ombra dei [Lam]fossi\n\nma sono [Rem]mille [Mi]papaveri [Lam]rossi.\n"
   },
   {
-    "id": 124,
+    "id": 125,
     "titolo": "La montanara",
     "categoria": "Fuoco di bivacco",
-    "pagina": 88,
+    "pagina": 90,
     "url_audio": null,
     "url_spartito": null,
     "sottosezione": "Calando",
@@ -1591,10 +1603,10 @@
     "testo_accordi": "# fonte: testo fornito dall'utente\n# MANCANO GLI ACCORDI\nLa su per le montagne,\nfra boschi e valli d'or,\ntra l'aspre rupi echeggia\nun cantico d'amor.\nLa su per le montagne\nfra boschi e valli d'or,\nTra l'aspre rupi echeggia\nun cantico d'amor.\n\n{soc}\n“La montanara, ohè!”\nsi sente cantare,\ncantiam la montanara\ne chi non la sa?\nLa montanara ohe\nsi sente cantare.\nCantiam la montanara\ne chi non la sa.\n{eoc}\n\nLà su sui monti\ndai rivi d'argento\nuna capanna cosparsa di fior.\nEra la piccola\ndolce dimora\ndi Soreghina,\nla figlia del Sol,\nla figlia del Sol!\n"
   },
   {
-    "id": 125,
+    "id": 126,
     "titolo": "La mula de Parenzo",
     "categoria": "Fuoco di bivacco",
-    "pagina": 88,
+    "pagina": 90,
     "url_audio": null,
     "url_spartito": null,
     "sottosezione": "Calando",
@@ -1604,10 +1616,10 @@
     "testo_accordi": "# fonte: canzoniere TUTTOSCOUT 2003, 0403.html - titolo nella fonte: La mula de Parenzo\n# MANCANO GLI ACCORDI\n\nLa mula de Parenzo\nL'ha messo su bottega\nE tutto la vendeva\nFora che 'l baccalà\n\nrit. E perchè non m'ami più...\n\nLa me morosa vecia\nLa tengo di riserva\nMa quando spunta l'erba\nLa mando a pascolar\n\nrit.\n\nLa mando a pascolare\nInsieme alle caprette\nL'amor con le servette\nNon lo farò mai più.\n\nrit.\n\nTutti mi dicono bionda\nMa io bionda non sono\nPorto i capelli neri\nsinceri nell'amor.\n\nrit.\n\nSe il mare fosse toccio\nE i monti di polenta\nOhi, mamma che tociade\nPoenta e baccalà.\n\nrit.\n"
   },
   {
-    "id": 126,
+    "id": 127,
     "titolo": "Pim pam",
     "categoria": "Fuoco di bivacco",
-    "pagina": 89,
+    "pagina": 91,
     "url_audio": null,
     "url_spartito": null,
     "sottosezione": "Calando",
@@ -1617,10 +1629,10 @@
     "testo_accordi": "# fonte: canzoniere TUTTOSCOUT 2003, 0066.html - titolo nella fonte: Pim Pam\n# MANCANO GLI ACCORDI\n\nNella casa sulla montagna\nun camino grande grande sta,\nnel camino grande grande grande\nun gran fuoco fuoco fuoco va.\n\nRIT: Perciò pim pam, le scarpe pim pam,\ndi notte fan sul sentiero di pietre grosse,\npim pam, le scarpe pim pam,\ndi notte fan sul sentiero così.\n\nNella casa sulla montagna\nun signore grande grande sta,\nnella casa verde viola e bianca\ntante sedie rosse e gialle ha.\n\nRIT:...\n\nNella casa sulla montagna\nuna sedia a tutti tutti da,\ne ciascuno toglierà le scarpe\ntutti insieme poi si danzerà.\n"
   },
   {
-    "id": 127,
+    "id": 128,
     "titolo": "Sul pajon",
     "categoria": "Fuoco di bivacco",
-    "pagina": 90,
+    "pagina": 92,
     "url_audio": null,
     "url_spartito": null,
     "sottosezione": "Calando",
@@ -1630,10 +1642,10 @@
     "testo_accordi": "# fonte: testo fornito dall'utente\n# MANCANO GLI ACCORDI\nIl battaglione Aosta\nsul pajon\nè sempre sulle cime,\nsul pajon\nma quando scende a valle\nsul pajon\nattente ragazzine!\n\n{soc}\nSul pajon de la caserma\nrequiem aeternam e così sia,\nva' a ramengo ti,\nto pare, ta mare e ta zia\ne la naja e compagnia,\nsul pajon, sul pajon!\n{eoc}\n\nIl parroco di Aosta\nsul pajon\nl'ha detto predicando:\nsul pajon\n«Attente ragazzine\nsul pajon\nche il \"Quarto\" sta arrivando.»\n\nSul pajon...\n\nMa una delle più belle\nsul pajon\nha detto piano piano:\nsul pajon\n«Se il \"Quarto\" sta arrivando\nsul pajon\nè quello che vogliamo!»\n\nSul pajon...\n"
   },
   {
-    "id": 128,
+    "id": 129,
     "titolo": "Terra della betulla",
     "categoria": "Fuoco di bivacco",
-    "pagina": 90,
+    "pagina": 92,
     "url_audio": null,
     "url_spartito": null,
     "sottosezione": "Calando",
@@ -1643,10 +1655,10 @@
     "testo_accordi": "# fonte: canzoniere TUTTOSCOUT 2003, 0078.html - titolo nella fonte: Terra di Betulla\n\n[Rem]Terra di betull[Fa]a casa [Rem]del castoro,    [Fa]\nl[Sib]à dove errando [Fa]va il lupo [Solm]ancora.      [Rem]\n\nrit. V[Sib]oglio tornare a[Fa]ncor al mio bel[Solm] lago blu[Sib].               [Rem]\nB[Rem]umbadiaidi, bumbadia[Lam]idi, bumbadiaidi bum[Solm]                 [Rem]\nB[Rem]umbadiaidi, bumbadia[Lam]idi, bumbadiaidi bum[Solm].                [Rem]\n\nLa mia canoa mi porta via lontano,\nsulle lucenti vie del grande fiume.\n\nrit.\n\nIl mio cuor nostalgico là nelle basse terre,\nvuol ritornare a voi, monti del Nord.\n\nrit.\n"
   },
   {
-    "id": 129,
+    "id": 130,
     "titolo": "Vecchio scarpone",
     "categoria": "Fuoco di bivacco",
-    "pagina": 91,
+    "pagina": 93,
     "url_audio": null,
     "url_spartito": null,
     "sottosezione": "Calando",
@@ -1656,10 +1668,10 @@
     "testo_accordi": "Lassù in un ripostiglio polveroso,\nTra mille cose che non servon più,\nHo visto un poco logoro e deluso\nUn caro amico della gioventù.\nQualche filo d'erba\nCol fango disseccato\nTra i chiodi ancor pareva conservar.\nEra uno scarpone militar.\n\nVecchio scarpone\nQuanto tempo è passato\nQuante illusioni\nFai rivivere tu\nQuante canzoni\nSul tuo passo ho cantato\nChe non scordo più\n\nSopra le dune\nDel deserto infinito\nLungo le sponde\nAccarezzate dal mar\nPer giorni e notti\nInsieme a te ho camminato\nSenza riposar\n\nLassù tra le bianche cime\nDi nevi eterne immacolate al sol\nCogliemmo le stelle alpine\nPer farne dono ad un lontano amor\nVecchio scarpone\nCome un tempo lontano\nIn mezzo al fango\nCon la pioggia o col sol\nForse sapresti\nSe volesse il destino\nCamminare ancor.\n\nVecchio scarpone\nQuanto tempo è passato\nQuante illusioni\nFai rivivere tu\nQuante canzoni\nSul tuo passo ho cantato\nChe non scordo più\n\nLassù tra le bianche cime\nDi nevi eterne immacolate al sol\nCogliemmo le stelle alpine\nPer farne dono ad un lontano amor\n\nVecchio scarpone\nCome un tempo lontano\nIn mezzo al fango\nCon la pioggia o col sol\nForse sapresti\nSe volesse il destino\nCamminare ancor.\n\nVecchio scarpone\nFai rivivere tu\nLa mia gioventù.\n"
   },
   {
-    "id": 130,
+    "id": 131,
     "titolo": "Vento della sera",
     "categoria": "Fuoco di bivacco",
-    "pagina": 92,
+    "pagina": 94,
     "url_audio": null,
     "url_spartito": "https://www.canzonierescout.it/108.pdf",
     "sottosezione": "Calando",
@@ -1669,10 +1681,10 @@
     "testo_accordi": "Rit. Vento della sera tiepida e leggera\nin quest’atmosfera di serenità\ntutti attorno al fuoco riposiamo un poco\ne cantiamo assieme le vecchie canzon.\n \n\nCantiamo anche per voi fratelli lontan\nun giorno voi partendo ci deste la man\nQui attorno vi vediamo voi siete ancora qui\ninsieme a voi cantiamo come cantammo un di\n \n\nRit. Vento della sera ...\n \n\nUn giorno voi partiste lasciandoci qua\nil fuoco si spegneva nell’oscurità.\nSentite noi v’amiamo come v’amammo un di\ntornate vi preghiamo noi v’aspettiamo qui\n \n\nRit. Vento della sera...\n"
   },
   {
-    "id": 131,
+    "id": 132,
     "titolo": "Vento sottile",
     "categoria": "Fuoco di bivacco",
-    "pagina": 92,
+    "pagina": 94,
     "url_audio": null,
     "url_spartito": null,
     "sottosezione": "Calando",
@@ -1682,10 +1694,10 @@
     "testo_accordi": "# fonte: testo fornito dall'utente\n# Accordi: Rem - Lam alternati (non posizionati sulle sillabe)\nVento sottile, vento del mattino\nVento che scuoti la cima del mio pino\nVento che danzi, che balli la gioia tu ci porti\nVento sottile\nOh-oh-oh-oh\nOh-oh-oh-oh\nLa la la la la la la la la lalalala lala\nVento sottile\n\n{a_fronte}\nVent fin, vent du matin,\nvent qui souffles au bout des sapins,\nvent qui chantes, vent qui danses,\nvent, vent fin.\n"
   },
   {
-    "id": 132,
+    "id": 133,
     "titolo": "Voglio girare il mondo",
     "categoria": "Fuoco di bivacco",
-    "pagina": 93,
+    "pagina": 95,
     "url_audio": null,
     "url_spartito": null,
     "sottosezione": "Calando",
@@ -1697,10 +1709,10 @@
     "testo_accordi": "# fonte: canzoniere TUTTOSCOUT 2003, 0109.html - titolo nella fonte: Voglio girare il mondo\n# MANCANO GLI ACCORDI\n\nVoglio girare il mondo\nanche se la gente ride,\nanche se tutti quanti\nmi consigliano di restare.\n\nRit: E voglio andarmene via\nproprio perchè secondo loro\ndormire sotto le stelle,\nvuol dire solo sentir freddo.\n\nVoglio girare il mondo anche se sul mio cammino\nincontrerò la pioggia che scendendo mi bagnerà\nanche con l’acqua negli occhi\npotrò veder tutte le cose\nche in una stanza all’asciutto\nio non potrei sognare mai.\n\nRit: E voglio andarmene via\nproprio perchè secondo loro\ndormire sotto le stelle,\nvuol dire solo sentir freddo.\n"
   },
   {
-    "id": 133,
+    "id": 134,
     "titolo": "Airone",
     "categoria": "Fuoco di bivacco",
-    "pagina": 94,
+    "pagina": 96,
     "url_audio": null,
     "url_spartito": "https://www.canzonierescout.it/airone.pdf",
     "sottosezione": "Chiusura",
@@ -1710,10 +1722,10 @@
     "testo_accordi": "# fonte: testo fornito dall'utente; accordi (Fa, Do7, Sib, Rem) letti dallo spartito\n\nAirone, [Fa]dove vai airone,\ndalle ali [Do7]forti contro il vento;\n[Fa]il tuo volo è come una canzone\n[Do7]per il cielo libero e contento.\n\nLa [Fa]tua rotta [Sib]segui da [Fa]solo,\nhai [Rem]lasciato gli altri fratelli;\n[Do7]forse stanco [Sib]sei del tuo volo;\n[Fa]o ricerchi [Rem]cieli più [Do7]belli.\n\nSe divisi siam nell'avventura,\nuno stesso azzurro cielo abbiamo,\nnubi d'oro e rivi d'acqua pura\nlungo i quali stanchi riposiamo.\n\nAl di là dell'arco baleno,\nal di là dei monti e dei pini,\nnoi ancora ci ritroveremo\ne saremo ancora vicini.\n\nAirone..\n"
   },
   {
-    "id": 134,
+    "id": 135,
     "titolo": "Geordie",
     "categoria": "Fuoco di bivacco",
-    "pagina": 94,
+    "pagina": 96,
     "url_audio": null,
     "url_spartito": null,
     "sottosezione": "Chiusura",
@@ -1725,10 +1737,10 @@
     "testo_accordi": "# fonte: testo e accordi forniti dall'utente\n\n[Lam]Mentre attraversavo [Sol][Fa]London [Mi7]Bridge\n[Lam]un giorno [Do]senza [Sol]sole\n[Lam]vidi una [Do]donna [Sol]pianger [Mim]d'amore,\n[Lam]piangeva per [Mim]il suo [Lam]Geordie.\n\n[Lam]Impiccheranno [Sol]Geordie con [Fa]una corda [Mi7]d'oro,\n[Lam]è un [Do]privilegio [Sol]raro.\n[Lam]Rubò sei [Do]cervi nel [Sol]parco del [Mim]Re\n[Lam]vendendoli [Mim]per [Lam]denaro.\n\nSellate il suo cavallo dalla bianca criniera\nSellatele il suo pony\nCavalcherà fino a Londra stasera\nAd implorare per Geordie\n\nGeordie non rubò mai neppure per me\nUn frutto o un fiore raro\nRubò sei cervi nel parco del re\nVendendoli per denaro\n\nSalvate le sue labbra, salvate il suo sorriso\nNon ha vent'anni ancora\nCadrà l'inverno anche sopra il suo viso\nPotrete impiccarlo allora\n\nNé il cuore degli inglesi né lo scettro del re\nGeordie potran salvare\nAnche se piangeranno con te\nLa legge non può cambiare\n\n[Lam]Così lo [Sol]impiccheranno con [Fa]una corda [Mi7]d'oro\n[Lam]È un [Do]privilegio [Sol]raro\n[Lam]Rubò sei [Do]cervi nel [Sol]parco del [Mim]re\n[Lam]Vendendoli [Mim]per [Lam]denaro\n"
   },
   {
-    "id": 135,
+    "id": 136,
     "titolo": "Il falco",
     "categoria": "Fuoco di bivacco",
-    "pagina": 95,
+    "pagina": 97,
     "url_audio": null,
     "url_spartito": null,
     "sottosezione": "Chiusura",
@@ -1738,10 +1750,10 @@
     "testo_accordi": "# fonte: canzoniere TUTTOSCOUT 2003, 0041.html - titolo nella fonte: Il Falco\n\nUn fal[Re]co volava nel cielo[Sol] un mattino\nr[La]icordo quel tempo quando ero bambin[Re]o\nio lo seguivo nel ros[Sol]so tramonto\ndall’[La]alto di un monte vedevo il [Re]suo mondo.\n\n{c: Rit.}\nE allora [Sol]eha, eha eha ...\ne allora [Re]eha, eha\neha, eha, eha, eha, eha, [Sol]eha eh.     [Re]\n\nFiumi mari e boschi senza confine\ni chiari orizzonti e le verdi colline\ne quando partivo per un lungo sentiero\npartivo ragazzo e tornavo guerriero.\n\n{c: Rit.}\n\nLe tende rosse vicino al torrente\nla vita felice tra la mia gente\ne quando il mio arco colpiva lontano\nsentivo l’orgoglio di essere indiano.\n\n{c: Rit.}\n\nFiumi mari e boschi mossi dal vento\nluna su luna i miei capelli d’argento\ne quando era l’ora dell’ultimo sonno\npartivo dal campo per non farvi ritorno.\n\n{c: Rit.}\n\nUn falco volava nel cielo un mattino\ne verso il sole mi indicava il cammino\nun falco che un giorno era stato colpito\nma no, non è morto, era solo ferito.\n\n{c: Rit.}\n"
   },
   {
-    "id": 136,
+    "id": 137,
     "titolo": "Il testamento del capitano",
     "categoria": "Fuoco di bivacco",
-    "pagina": 96,
+    "pagina": 98,
     "url_audio": null,
     "url_spartito": "https://www.canzonierescout.it/015.pdf",
     "sottosezione": "Chiusura",
@@ -1751,10 +1763,10 @@
     "testo_accordi": "# fonte: testo fornito dall'utente; accordi (Fa, Do) letti dallo spartito (Lento)\n\nIl capitan de la [Fa]compagnia\nE l'è ferito sta per [Do]morir\nE manda a dire ai suoi alpini\n[Fa]Perché lo [Do]vengano a [Fa]ritrovar\n\nI suoi alpini ghe manda a dire\nChe non han scarpe per camminar\n(O con le scarpe, o senza scarpe\nI miei alpini li voglio qua)\n\nCosa comanda siòr Capitano\nChe noi adesso semo arriva'\n(Ed io comando che il mio corpo\nIn cinque pezzi sia taglia)\n\nIl primo pezzo alla mia patria\nSecondo pezzo al battaglion\n(Il terzo pezzo alla mia mamma\nChe si ricordi del suo figliuol)\n\nIl quarto pezzo alla mia bella\nChe si ricordi del suo primo amor\nL'ultimo pezzo alle montagne\nChé lo fioriscano di rose e fior\n\nL'ultimo pezzo alle montagne\nChé lo fioriscano di rose e fior\n"
   },
   {
-    "id": 137,
+    "id": 138,
     "titolo": "Il vascello fantasma",
     "categoria": "Fuoco di bivacco",
-    "pagina": 96,
+    "pagina": 98,
     "url_audio": null,
     "url_spartito": null,
     "sottosezione": "Chiusura",
@@ -1764,10 +1776,10 @@
     "testo_accordi": "# fonte: testo e accordi forniti dall'utente\n\n\n[Lam]Pende un uomo dal pennone,\n[Rem]tutto [Lam]nero di catrame\n[Rem]non [Lam]è certo un buon boccone,\n[Mi]per [Lam]i corvi che hanno fame.\n\n{soc}\n[Lam]Pa zum! Pa pa zum!\n[Mi]pa [Lam]pa pa pa pa zach!\n{eoc}\n\nCinque teschi tutti neri\nstan sul cassero di prua\nson dei cinque bucanieri\nche son morti alla tortura.\n\n{soc}\n[Lam]Pa zum! Pa pa zum!\n[Mi]pa [Lam]pa pa pa pa zach!\n{eoc}\n\nVenti ombre tutte nere\nvengon su dal boccaporto\nsono venti schiavi neri\nche son morti nel trasporto.\n\n{soc}\n[Lam]Pa zum! Pa pa zum!\n[Mi]pa [Lam]pa pa pa pa zach!\n{eoc}\n\nSulla tolda biancheggianti\nstan tre scheletri a ballare\nsono i resti dei briganti\ngiustiziati in alto mare.\n\n{soc}\n[Lam]Pa zum! Pa pa zum!\n[Mi]pa [Lam]pa pa pa pa zach!\n{eoc}\n\nSe una notte tutta scura\nsentirete un gran lamento\nè la voce di Tortuga\nmorto in ammutinamento.\n\n{soc}\n[Lam]Pa zum! Pa pa zum!\n[Mi]pa [Lam]pa pa pa pa zach!\n{eoc}\n\nCoricandovi stanotte\nsentirete un sordo tonfo\nè il fantasma del vascello\nche reclama il suo trionfo.\n\n{soc}\n[Lam]Pa zum! Pa pa zum!\n[Mi]pa [Lam]pa pa pa pa zach!\n{eoc}\n"
   },
   {
-    "id": 138,
+    "id": 139,
     "titolo": "La piroga",
     "categoria": "Fuoco di bivacco",
-    "pagina": 97,
+    "pagina": 99,
     "url_audio": null,
     "url_spartito": null,
     "sottosezione": "Chiusura",
@@ -1777,10 +1789,10 @@
     "testo_accordi": "# fonte: testo fornito dall'utente\n# MANCANO GLI ACCORDI\nLa notte è piena di stelle\nci fa sognare le cose più belle,\npiù belle, più belle.\n\nTu sogni, guardi lontano\nvedi un gran fiume che scorre pian piano,\npian piano, pian piano.\n\nSul fiume c’è una piroga\ne dentro questa c’è un uomo che voga,\nche voga, che voga.\n\nIntanto dietro la duna\nvedi pian piano spuntare la luna,\nla luna, la luna.\n\nL’uomo lascia il vogare\nguarda la luna e si mette a cantare,\na cantare, a cantare.\n\n\"Ti prego, o madre luna,\ndona al mio popol ricchezza e fortuna,\nfortuna, fortuna.\n\nProteggi tutte le greggi,\nfa’ che il mio popol rispetti le leggi,\nle leggi, le leggi.\n\nProteggi l’acqua del fonte,\nl’erba del piano e la pianta del monte,\ndel monte, del monte.\n"
   },
   {
-    "id": 139,
+    "id": 140,
     "titolo": "Scende la notte (esploratori)",
     "categoria": "Fuoco di bivacco",
-    "pagina": 98,
+    "pagina": 100,
     "url_audio": null,
     "url_spartito": null,
     "sottosezione": "Ultimi",
@@ -1790,10 +1802,10 @@
     "testo_accordi": "# fonte: testo e accordi forniti dall'utente\n\n[Rem]Scende [La]la [Rem]notte e [La]distende il [Rem]suo mantello [La]di vel,\n[Rem]ed il campo [Do]calmo e [Fa]silente si [Sib]raccoglie [Do]nel [Fa]mister.\n\n{soc}\n[Rem]O [Sib]Vergine [La]di luce, [Rem]stella dei nostri [La]cuor,\n[Rem]ascolta la [Sib]preghiera, [La][Rem]madre degli [La][Re]esplorator.\n{eoc}\n\nO delle stelle Signora volgi lo sguardo quaggiù,\ndove i tuoi figli sotto le tende ti ameranno sempre più.\n\n{soc}\n[Rem]O [Sib]Vergine [La]di luce, [Rem]stella dei nostri [La]cuor,\n[Rem]ascolta la [Sib]preghiera, [La][Rem]madre degli [La][Re]esplorator.\n{eoc}\n\n\nO Tu più bianca che neve nel tuo mantel verginal,\ncon la dolcezza tua lievi ci proteggi contro ogni mal\n\n{soc}\n[Rem]O [Sib]Vergine [La]di luce, [Rem]stella dei nostri [La]cuor,\n[Rem]ascolta la [Sib]preghiera, [La][Rem]madre degli [La][Re]esplorator.\n{eoc}\n\n\nCome le tende a noi care s’avvolgono sul partir,\ncosì avvolgici col tuo pregare quando saremo per morir.\n\n{soc}\n[Rem]O [Sib]Vergine [La]di luce, [Rem]stella dei nostri [La]cuor,\n[Rem]ascolta la [Sib]preghiera, [La][Rem]madre degli [La][Re]esplorator.\n{eoc}\n"
   },
   {
-    "id": 140,
+    "id": 141,
     "titolo": "Signor, fra le tende schierati",
     "categoria": "Fuoco di bivacco",
-    "pagina": 98,
+    "pagina": 100,
     "url_audio": null,
     "url_spartito": null,
     "sottosezione": "Ultimi",
@@ -1801,19 +1813,6 @@
       "EG"
     ],
     "testo_accordi": "# fonte: canzoniere TUTTOSCOUT 2003, 0075.html - titolo nella fonte: Signor fra le tende\n\n[Sol]Sign[Do]or tra le tende sch[Sol]ierati\nper s[Do]alutar[Sol] il dì che muor [Re]       [Re7]\nl[Sol]e no[Do]te di canti accorat[Sol]i\nlevia[Do]mo [Sol]a te, calde d'am[Re]or.    [Re7]\n\n[Sol]Ascolta tu [Do]l'umil preghier[Sol]a\nche d'aspro s[Do]uol s'ode innalzar [Re]\na[Sol] te cui[Mim] mancava, la sera,  [Re]\nun te[Do]tto ancor per ripos[Re]ar.\n\nC[Sol]hiedon sol tutti i nostri cu[Re]ori\na[Re7] te sempre meglio servir[Sol],\ng[Do]enufle[Sol]tton qu[Re]i nel pian [Sol]\ni tuoi esplor[Do]ator.      [Dom]\nTu dal ci[Sol]el bene[Re]dici o Signor. [Do]       [Dom]       [Sol]\n"
-  },
-  {
-    "id": 141,
-    "titolo": "Canto dell'addio",
-    "categoria": "Fuoco di bivacco",
-    "pagina": 99,
-    "url_audio": null,
-    "url_spartito": null,
-    "sottosezione": "Ultimi",
-    "branche": [
-      "EG"
-    ],
-    "testo_accordi": "E' l'ora dell'addio, fratelli, è l'ora di partir,\nil canto si fa triste, è ver, partire è un po' morir.\n\nrit. Ma noi ci rivedremo ancor, ci rivedremo un dì.\nArrivederci allor, fratelli, arrivederci, sì.\n\nFormiamo una catena con le mani nelle man,\nuniamoci l'un l'altro prima di partir lontan.\n\nMa noi ci rivedremo ancor, ...\n\nIddio che tutto vede e sa ci voglia benedir,\nse un giorno ci ha riuniti qui, ci voglia un dì riunir.\n\nMa noi ci rivedremo ancor, ...\n"
   },
   {
     "id": 142,
