@@ -174,7 +174,7 @@ def strofe_elementi(elementi):
     return strofe
 
 
-def canto_latex(c):
+def canto_latex(c, stretto=False):
     fronte = dividi_a_fronte(c["testo_accordi"])
     parti = [elementi_stampa(t) for t in (fronte[:2] if fronte else (c["testo_accordi"],))]
     con_accordi = any(a for p in parti for el in p if el[0] == "riga" for a, _ in el[1])
@@ -182,7 +182,8 @@ def canto_latex(c):
         altezza = max(altezza_stimata(p, con_accordi) for p in parti)
     else:  # nelle due colonne niente needspace: il titolo resta agganciato alle prime 3 righe
         altezza = 0
-    out = [r"\begingroup" + ("" if con_accordi else r"\senzaaccordi"),
+    # stretto: spazio fra le strofe un po' ridotto (canti che sforano di pochi pt nel piede)
+    out = [r"\begingroup" + (r"\renewcommand{\strofa}{\par\vspace{1.3mm}}" if stretto else "") + ("" if con_accordi else r"\senzaaccordi"),
            rf"\cantotesta{{{c['id']}}}{{{esc(c['titolo'])}}}{{{esc(c.get('autore', ''))}}}"
            rf"{{{tag_branche(c)}}}{{{altezza:.0f}pt}}"]
     if fronte:
@@ -218,18 +219,11 @@ def corpo_latex(elementi, aggancia=0):
             out.append(r"\end{ritornello}")
             in_ritornello = False
         if el[0] == "rit":
-            # "Rit." non resta mai solo in cima a una colonna/pagina: attaccato alle ultime due righe prima
+            # "Rit." non resta mai solo in cima a una colonna/pagina: attaccato all'ultima riga prima
             ctrl = (r"\strofa", r"\nopagebreak", r"\begin{ritornello}", r"\end{ritornello}")
             j = len(out)
             while j > 0 and out[j - 1] in ctrl:
                 j -= 1
-            k = j - 2
-            while k >= 0 and out[k] in ctrl and out[k] != r"\strofa":
-                k -= 1
-            if j >= 1 and k >= 0 and out[k] not in ctrl and not out[k].startswith(r"\commento"):
-                if r"\strofa" not in out[k + 1:j]:
-                    out.insert(k + 1, r"\nopagebreak")
-                    j += 1
             if j >= 1:
                 out.insert(j, r"\nopagebreak")
             out.append(r"\nopagebreak")
@@ -303,9 +297,9 @@ def canti_latex(canti, accordi=False):
                 out.append(rf"\sottosezione{{{esc(cat)}}}{{{esc(sub)}}}" if sub else rf"\gdef\sezionecorrente{{{esc(cat)}}}")
             sub_prec = sub
             if fronte:  # testo a fronte: esce dalle due colonne
-                out += [r"\end{multicols}", canto_latex(c), due]
+                out += [r"\end{multicols}", canto_latex(c, s in imp['stretto']), due]
             else:
-                out.append(canto_latex(c))
+                out.append(canto_latex(c, s in imp['stretto']))
             if not fronte and s in imp["tre_colonne"]:  # da solo sulla sua pagina
                 out.extend([r"\end{multicols}\clearpage", due])
         out.append(r"\end{multicols}")
@@ -318,7 +312,7 @@ IMPAGINAZIONE = ROOT / "data" / "impaginazione.json"
 def carica_impaginazione():
     """Canti (per slug del titolo) che partono da una pagina nuova o stanno da soli su una pagina a 3 colonne."""
     dati = carica_json(IMPAGINAZIONE) if IMPAGINAZIONE.exists() else {}
-    return {k: set(dati.get(k, [])) for k in ("nuova_pagina", "tre_colonne", "pagina_sinistra")}
+    return {k: set(dati.get(k, [])) for k in ("nuova_pagina", "tre_colonne", "pagina_sinistra", "stretto")}
 
 
 def chiave_ordinamento(titolo):

@@ -87,7 +87,8 @@ def main():
     shutil.copy(args.qr, cartella / "qr.png")
     shutil.copy(ROOT / "latex" / "logo-fse.png", cartella / "logo-fse.png")
     canti = sorted(carica_json(CANTI_PATH), key=lambda c: c["id"])
-    imp = {"nuova_pagina": [], "tre_colonne": [], "pagina_sinistra": []}
+    vecchio = carica_json(IMPAGINAZIONE) if IMPAGINAZIONE.exists() else {}
+    imp = {"nuova_pagina": [], "tre_colonne": [], "pagina_sinistra": [], "stretto": vecchio.get("stretto", [])}  # stretto: scelto a mano, si conserva
     provati = set()
     IMPAGINAZIONE.write_text(json.dumps(imp, indent=1) + "\n", encoding="utf-8", newline="\n")
 

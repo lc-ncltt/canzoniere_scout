@@ -6,8 +6,8 @@
   "attorno-alla-rupe",
   "fratelli-alla-candida-luna",
   "il-risveglio-della-giungla",
-  "nella-giungla-misteriosa",
-  "un-bravo-lupo",
+  "salta-o-lupo",
+  "zanna-bianca",
   "la-leggenda-del-fuoco",
   "banana-cocco-baobab",
   "l-albero-piantato",
@@ -55,7 +55,6 @@
   "mani",
   "madonna-degli-scout",
   "canto-della-promessa",
-  "zanna-bianca",
   "la-bella-la-va-al-fosso",
   "vinassa-vinassa",
   "blowin-in-the-wind",
@@ -69,5 +68,8 @@
   "canto-degli-italiani",
   "vecchio-scarpone"
  ],
- "pagina_sinistra": []
+ "pagina_sinistra": [],
+ "stretto": [
+  "ta-pum"
+ ]
 }
