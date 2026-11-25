@@ -185,77 +185,6 @@
 \vspace*{\fill}
 
 
-\titolosezione{Come usare questo canzoniere}
-\begingroup\small
-\begin{multicols}{2}
-\textbf{Struttura.} I canti sono numerati e raggruppati in sezioni, nell'ordine:
-Canti associativi, Canti cerimoniali, Canti di lupettismo, Fuoco di bivacco, Canti alpini, Canti liturgici, Canti del risveglio. Ogni sezione si apre con una pagina divisoria; il numero grande accanto
-al titolo è quello da cercare, sia qui sia nel sito. In fondo trovi l'indice alfabetico
-e l'indice per sezione.
-
-\medskip
-\textbf{Testi.} Il testo in \textbf{grassetto} è il ritornello; quando si ripete
-è scritto solo \textbf{Rit.} Gli accordi non sono
-stampati: li trovi online, canto per canto.
-
-\medskip
-\textbf{Online.} Sull'ultima pagina c'è un QR code: porta al sito, con gli accordi,
-gli spartiti in PDF (dove disponibili) e la modalità notte per il bivacco.
-
-\columnbreak
-\textbf{Branche.} A destra del titolo, le branche per cui il canto nasce o è
-più adatto:
-
-\smallskip
-\bLC\ lupetti \quad \bEG\ esploratori \quad \bRS\ rover
-
-\medskip
-\textbf{Fuoco di bivacco.} I canti sono divisi per fase, dall'apertura agli ultimi:
-la pagina all'inizio della sezione spiega come si succedono.
-
-\medskip
-Un canto senza tag è per tutti.
-\end{multicols}
-\endgroup
-
-
-\titolosezione{Cantare insieme}
-\begingroup\small
-\begin{multicols}{2}
-\textbf{1. Il tono.} Chi attacca sceglie una nota che stia comoda a tutti: meglio un po' bassa che
-troppo alta. Se la prima strofa è faticosa, si riparte da capo, più in basso.
-
-\smallskip
-\textbf{2. Un solo attacco.} Si dà il tempo con un respiro o con la mano e si parte insieme.
-Cantare a ritmi diversi è il modo più rapido per spegnere un canto.
-
-\smallskip
-\textbf{3. Ascoltare.} Si canta in modo da sentire il vicino. Se non lo senti più, stai coprendo
-la sua voce.
-
-\smallskip
-\textbf{4. Il respiro.} Si respira alla fine delle frasi, non a metà parola. Chi respira in
-momenti diversi tiene su il canto senza buchi.
-
-\columnbreak
-\textbf{5. Canoni e voci.} Nei canoni ogni gruppo tiene la propria parte e non segue quello
-accanto. Si comincia a due voci, poi si aggiungono le altre.
-
-\smallskip
-\textbf{6. Bans.} Si insegnano un pezzo alla volta: prima i gesti, poi le parole, poi tutto
-insieme. Chi guida sta davanti e li fa per primo.
-
-\smallskip
-\textbf{7. Chitarra.} Sta sotto le voci, non sopra. Un giro semplice e regolare vale più di uno
-elaborato; con il capotasto si abbassa il tono senza cambiare accordi.
-
-\smallskip
-\textbf{8. Senza strumenti.} Un canto deve reggere anche a cappella: se si perde l'intonazione,
-ci si ferma, si ritrova la nota e si riparte.
-\end{multicols}
-\endgroup
-
-
 % ---- Canti: numeri arabi senza ricominciare il conto (dopo la pagina iv viene la 5).
 % Pagina dispari = destra: il margine dei rivetti resta sul lato giusto.
 \clearpage
@@ -8564,7 +8493,8 @@ I canti sono raccolti per fase, nell'ordine in cui si cantano.
 
 \end{multicols}
 
-% ---- Indici
+% ---- Indici: dopo l'ultimo canto, pagina bianca se serve, e gli indici partono su una pagina destra
+\paginadestra
 \titolosezione{Indice alfabetico}
 \begingroup\small
 \begin{multicols}{2}
@@ -9087,29 +9017,14 @@ I canti sono raccolti per fase, nell'ordine in cui si cantano.
 \end{multicols}
 \endgroup
 
-% ---- Ultima pagina: QR code verso la web app
+% ---- Ultima pagina: solo il QR code, centrato (pagina pari: il libro ha un numero pari di pagine)
 \clearpage
+\ifodd\value{page}\null\thispagestyle{empty}\clearpage\fi
 \thispagestyle{empty}
-\noindent
-\begin{minipage}[c]{0.38\textwidth}
-  \centering
-  \includegraphics[width=44mm]{qr.pdf}
-\end{minipage}\hfill
-\begin{minipage}[c]{0.58\textwidth}
-  {\fontsize{16}{19}\selectfont\bfseries Il canzoniere sul telefono\par}
-  \vspace{3mm}
-  Inquadra il codice con la fotocamera del telefono: si apre il canzoniere
-  online, con gli accordi di ogni canto, gli spartiti in PDF (dove disponibili) e la modalit\`a notte
-  per il bivacco.\par
-  \vspace{4mm}
-  {\small\textbf{In caso di problemi con il QR\ldots}\par
-  \begin{enumerate}\itemsep=0pt\topsep=1mm
-    \item apri il browser del telefono (Chrome, Safari\ldots);
-    \item scrivi nella barra degli indirizzi:\\
-          {\small\url{https://lc-ncltt.github.io/canzoniere_scout/}}
-    \item cerca il canto per numero (quello stampato accanto al titolo);
-    \item per riaprirlo senza connessione, aggiungilo alla schermata Home.
-  \end{enumerate}}
-\end{minipage}
+\vspace*{\fill}
+\begin{center}
+  \includegraphics[width=60mm]{qr.pdf}
+\end{center}
+\vspace*{\fill}
 
 \end{document}

@@ -7,7 +7,7 @@ raggiungibile da un unico QR code sull'ultima pagina. Si lavora su due cose: l'e
 data/elenco.csv          elenco canti: titolo, sezione, branche, intensità (Excel/Fogli Google)
 testi/*.cho              testo + accordi di ogni canto (ChordPro)
 data/canti.json          GENERATO da build_canti.py (schema: canti.schema.json)
-latex/front/*.tex        pagine iniziali: dedica, come usare, fuoco di bivacco, cantare insieme
+latex/front/*.tex        pagine iniziali: dedica
 data/meta.json           titolo, dedica, anno, URL della web app
 scripts/                 Python (solo libreria standard, tranne `segno` per il QR)
 latex/template.tex       impaginazione A5 landscape
