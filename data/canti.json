@@ -2353,7 +2353,7 @@
     "url_spartito": null,
     "sottosezione": "Santo",
     "autore": "M. Frisina",
-    "testo_accordi": "Santo, Santo, Santo è il Signore\nDio dell’universo.\n\nSanto, Santo, Santo è il Signore\nDio dell’universo.\n\nI cieli e la terra sono pieni della tua gloria.\nOsanna, osanna nell’alto dei cieli.\n\nOsanna, osanna nell’alto dei cieli.\n\nBenedetto Colui che viene nel nome del Signore.\nOsanna, osanna nell’alto dei cieli.\n\nOsanna, osanna nell’alto dei cieli.\n"
+    "testo_accordi": "Santo, Santo, Santo è il Signore\nDio dell’universo.\nI cieli e la terra sono pieni della tua gloria.\n\n{soc}\nOsanna, osanna nell’alto dei cieli.\n{eoc}\n\nBenedetto Colui che viene nel nome del Signore.\n\n{c: Rit.}\n"
   },
   {
     "id": 189,
