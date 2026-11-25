@@ -158,6 +158,21 @@ def elementi_stampa(testo):
     return ritornelli(elementi)
 
 
+def strofe_elementi(elementi):
+    """Divide gli elementi di un canto in strofe (liste separate dalle righe vuote)."""
+    strofe, corrente = [], []
+    for el in elementi:
+        if el[0] == "vuota":
+            if corrente:
+                strofe.append(corrente)
+            corrente = []
+        else:
+            corrente.append(el)
+    if corrente:
+        strofe.append(corrente)
+    return strofe
+
+
 def canto_latex(c):
     fronte = dividi_a_fronte(c["testo_accordi"])
     parti = [elementi_stampa(t) for t in (fronte[:2] if fronte else (c["testo_accordi"],))]
@@ -170,8 +185,14 @@ def canto_latex(c):
            rf"\cantotesta{{{c['id']}}}{{{esc(c['titolo'])}}}{{{esc(c.get('autore', ''))}}}"
            rf"{{{tag_branche(c)}}}{{{altezza:.0f}pt}}"]
     if fronte:
-        sx, dx = ("\n".join(corpo_latex(p)) for p in parti)
-        out.append(rf"\afronte{{{sx}}}{{{esc(fronte[2])}}}{{{dx}}}")
+        # una coppia di strofe per riga: cosi' sinistra e destra restano allineate riga per riga
+        sx, dx = (strofe_elementi(p) for p in parti)
+        n = max(len(sx), len(dx))
+        sx += [[]] * (n - len(sx))
+        dx += [[]] * (n - len(dx))
+        righe = "\n".join(rf"\afrontestrofa{{{chr(10).join(corpo_latex(s))}}}{{{chr(10).join(corpo_latex(d))}}}"
+                          for s, d in zip(sx, dx))
+        out.append(rf"\afronte{{{esc(fronte[2])}}}{{{righe}}}")
     else:
         out += corpo_latex(parti[0], aggancia=3)
     out.append(rf"\par\label{{fine:{c['id']}}}\endgroup")  # fine del canto: impagina.py controlla che non giri pagina

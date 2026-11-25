@@ -116,12 +116,18 @@
 \newcommand{\strofa}{\par\vspace{2.4mm}}
 \newcommand{\commento}[1]{{\par\small\itshape\color{gray}#1\par\vspace{1mm}}}
 \newenvironment{ritornello}{\par\begingroup\bfseries\leftskip=3mm\relax}{\par\endgroup}
-% Testo a fronte: \afronte{colonna sinistra}{etichetta destra}{colonna destra}, su tutta la larghezza
-\newcommand{\afronte}[3]{\par\noindent
+% Testo a fronte: \afronte{etichetta destra}{strofe}, su tutta la larghezza; ogni \afrontestrofa{sx}{dx}
+% e' una coppia di strofe affiancate: iniziano alla stessa altezza e le righe corrispondenti sono allineate.
+% L'etichetta (es. "Traduzione italiana") sta a destra sulla riga dell'autore (si risale di una riga) e non
+% sposta il testo: la colonna destra parte alla stessa altezza della sinistra.
+\newcommand{\afronte}[2]{\par
+  \if\relax\detokenize{#1}\relax\else
+    \nobreak\vspace{-\baselineskip}\noindent\hspace*{.53\linewidth}{\small\itshape\color{gray}#1}\par\nobreak
+  \fi
+  \noindent\parbox[t]{\linewidth}{#2}\par}
+\newcommand{\afrontestrofa}[2]{\par\noindent
   \begin{minipage}[t]{.47\linewidth}#1\end{minipage}\hfill
-  \begin{minipage}[t]{.47\linewidth}%
-    \if\relax\detokenize{#2}\relax\else{\small\itshape\color{gray}#2\par}\vspace{1mm}\fi
-    #3\end{minipage}\par}
+  \begin{minipage}[t]{.47\linewidth}#2\end{minipage}\par\vspace{2.4mm}}
 % Ritornello ripetuto: solo "Rit." in grassetto (generate_latex.py lo mette al posto del testo ripetuto)
 \newcommand{\rit}{{\par\leftskip=3mm\noindent\bfseries Rit.\par}}
 
@@ -4935,17 +4941,17 @@ I canti sono raccolti per fase, nell'ordine in cui si cantano.
 
 \begingroup\senzaaccordi
 \cantotesta{131}{Vento sottile}{}{\bLC}{152pt}
-\afronte{\rigo{Vento sottile, vento del mattino}
+\afronte{}{\afrontestrofa{\rigo{Vento sottile, vento del mattino}
 \rigo{Vento che scuoti la cima del mio pino}
 \rigo{Vento che danzi, che balli la gioia tu ci porti}
 \rigo{Vento sottile}
 \rigo{Oh-oh-oh-oh}
 \rigo{Oh-oh-oh-oh}
 \rigo{La la la la la la la la la lalalala lala}
-\rigo{Vento sottile}}{}{\rigo{Vent fin, vent du matin,}
+\rigo{Vento sottile}}{\rigo{Vent fin, vent du matin,}
 \rigo{vent qui souffles au bout des sapins,}
 \rigo{vent qui chantes, vent qui danses,}
-\rigo{vent, vent fin.}}
+\rigo{vent, vent fin.}}}
 \par\label{fine:131}\endgroup
 
 \testonormale\setlength{\columnsep}{8mm}\begin{multicols}{2}\raggedcolumns
@@ -5802,43 +5808,34 @@ I canti sono raccolti per fase, nell'ordine in cui si cantano.
 
 \begingroup\senzaaccordi
 \cantotesta{156}{Stelutis alpinis}{A. Zardini}{\bRS}{269pt}
-\afronte{\rigo{Se tu vens ca su ta' cretis,}
+\afronte{Traduzione italiana}{\afrontestrofa{\rigo{Se tu vens ca su ta' cretis,}
 \rigo{là che lôr mi àn soterât,}
 \rigo{al è un splaz plen di stelutis:}
-\rigo{dal gno sanc 'l è stât bagnât.}
-\strofa
-\rigo{Par segnâl une crosute}
-\rigo{je sculpide lì tal cret:}
-\rigo{fra chês stelis nas l'arbute,}
-\rigo{sot di lôr jo duâr cuièt.}
-\strofa
-\rigo{Cjol sù, cjol une stelute:}
-\rigo{je a ricuart dal nestri ben,}
-\rigo{tu i darâs 'ne bussadute,}
-\rigo{e po platile tal sen.}
-\strofa
-\rigo{Cuant che a cjase tu sês sole}
-\rigo{e di cûr tu preis par me,}
-\rigo{il gno spirt atôr ti svole:}
-\rigo{jo e la stele o sin cun te.}}{Traduzione italiana}{\rigo{Se tu vieni quassù tra le rocce,}
+\rigo{dal gno sanc 'l è stât bagnât.}}{\rigo{Se tu vieni quassù tra le rocce,}
 \rigo{laddove mi hanno sepolto,}
 \rigo{c'è uno spiazzo pieno di stelle alpine:}
-\rigo{dal mio sangue è stato bagnato.}
-\strofa
-\rigo{Come segno una piccola croce}
+\rigo{dal mio sangue è stato bagnato.}}
+\afrontestrofa{\rigo{Par segnâl une crosute}
+\rigo{je sculpide lì tal cret:}
+\rigo{fra chês stelis nas l'arbute,}
+\rigo{sot di lôr jo duâr cuièt.}}{\rigo{Come segno una piccola croce}
 \rigo{è scolpita lì nella roccia:}
 \rigo{fra quelle stelle nasce l'erbetta,}
-\rigo{sotto di loro io dormo sereno.}
-\strofa
-\rigo{Cogli, cogli una piccola stella:}
+\rigo{sotto di loro io dormo sereno.}}
+\afrontestrofa{\rigo{Cjol sù, cjol une stelute:}
+\rigo{je a ricuart dal nestri ben,}
+\rigo{tu i darâs 'ne bussadute,}
+\rigo{e po platile tal sen.}}{\rigo{Cogli, cogli una piccola stella:}
 \rigo{a ricordo del nostro amore.}
 \rigo{Dalle un bacio,}
-\rigo{e poi nascondila in seno.}
-\strofa
-\rigo{Quando a casa tu sei sola}
+\rigo{e poi nascondila in seno.}}
+\afrontestrofa{\rigo{Cuant che a cjase tu sês sole}
+\rigo{e di cûr tu preis par me,}
+\rigo{il gno spirt atôr ti svole:}
+\rigo{jo e la stele o sin cun te.}}{\rigo{Quando a casa tu sei sola}
 \rigo{e di cuore preghi per me}
 \rigo{il mio spirito ti aleggia intorno}
-\rigo{io e la stella siamo con te.}}
+\rigo{io e la stella siamo con te.}}}
 \par\label{fine:156}\endgroup
 
 \testonormale\setlength{\columnsep}{8mm}\begin{multicols}{2}\raggedcolumns

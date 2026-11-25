@@ -116,12 +116,18 @@
 \newcommand{\strofa}{\par\vspace{2.4mm}}
 \newcommand{\commento}[1]{{\par\small\itshape\color{gray}#1\par\vspace{1mm}}}
 \newenvironment{ritornello}{\par\begingroup\bfseries\leftskip=3mm\relax}{\par\endgroup}
-% Testo a fronte: \afronte{colonna sinistra}{etichetta destra}{colonna destra}, su tutta la larghezza
-\newcommand{\afronte}[3]{\par\noindent
+% Testo a fronte: \afronte{etichetta destra}{strofe}, su tutta la larghezza; ogni \afrontestrofa{sx}{dx}
+% e' una coppia di strofe affiancate: iniziano alla stessa altezza e le righe corrispondenti sono allineate.
+% L'etichetta (es. "Traduzione italiana") sta a destra sulla riga dell'autore (si risale di una riga) e non
+% sposta il testo: la colonna destra parte alla stessa altezza della sinistra.
+\newcommand{\afronte}[2]{\par
+  \if\relax\detokenize{#1}\relax\else
+    \nobreak\vspace{-\baselineskip}\noindent\hspace*{.53\linewidth}{\small\itshape\color{gray}#1}\par\nobreak
+  \fi
+  \noindent\parbox[t]{\linewidth}{#2}\par}
+\newcommand{\afrontestrofa}[2]{\par\noindent
   \begin{minipage}[t]{.47\linewidth}#1\end{minipage}\hfill
-  \begin{minipage}[t]{.47\linewidth}%
-    \if\relax\detokenize{#2}\relax\else{\small\itshape\color{gray}#2\par}\vspace{1mm}\fi
-    #3\end{minipage}\par}
+  \begin{minipage}[t]{.47\linewidth}#2\end{minipage}\par\vspace{2.4mm}}
 % Ritornello ripetuto: solo "Rit." in grassetto (generate_latex.py lo mette al posto del testo ripetuto)
 \newcommand{\rit}{{\par\leftskip=3mm\noindent\bfseries Rit.\par}}
 
