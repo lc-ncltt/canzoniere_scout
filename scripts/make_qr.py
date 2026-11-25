@@ -17,14 +17,15 @@ except ImportError:
 
 def main():
     ap = argparse.ArgumentParser(description=__doc__)
-    ap.add_argument("--url", help="default: campo 'url' di data/meta.json")
+    ap.add_argument("--url", help="default: 'url_qr' (se c'e') o 'url' di data/meta.json")
     ap.add_argument("--error", choices=["M", "Q", "H"], default="H",
                     help="correzione errore: H (30%%, più robusto alla stampa) o M (15%%, codice meno fitto)")
     ap.add_argument("--out-dir", default=str(ROOT / "overleaf"))
     ap.add_argument("--nome", default="qr")
     args = ap.parse_args()
 
-    url = args.url or carica_meta()["url"]
+    meta = carica_meta()
+    url = args.url or meta.get("url_qr") or meta["url"]  # url_qr: link breve/redirect stampato nel QR
     if not url.startswith("https://"):
         sys.exit("URL mancante o non valido: passa --url oppure compila 'url' in data/meta.json")
 
