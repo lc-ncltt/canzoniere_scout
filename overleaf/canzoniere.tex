@@ -85,9 +85,12 @@
 \newcommand{\testonormale}{\def\corpotesto{11}\def\interlineatesto{13.6}}
 % Pagina sinistra successiva (canto lunghissimo: deve avere davanti le due pagine affiancate)
 \newcommand{\paginasinistra}{\clearpage\ifodd\value{page}\null\thispagestyle{empty}\clearpage\fi}
-% Pagina divisoria di sezione: titolo grande + testo facoltativo (latex/sezioni/<sezione>.tex)
+% Pagina destra (dispari) successiva; l'eventuale pagina bianca in mezzo resta senza numero
+\newcommand{\paginadestra}{\clearpage\ifodd\value{page}\else\null\thispagestyle{empty}\clearpage\fi}
+% Pagina divisoria di sezione, sempre a destra, e primo canto della sezione ancora a destra
+% (dietro la divisoria una pagina bianca). Titolo grande + testo facoltativo (latex/sezioni/<sezione>.tex)
 \newcommand{\sezione}[2]{%
-  \clearpage\gdef\sezionecorrente{#1}%
+  \paginadestra\gdef\sezionecorrente{#1}%
   \thispagestyle{empty}
   \vspace*{\fill}
   \begin{center}
@@ -96,7 +99,7 @@
   \end{center}
   \vspace{6mm}{\small #2\par}
   \vspace*{\fill}
-  \clearpage}
+  \paginadestra}
 % Titoletto di fase del fuoco / momento della messa, dentro la colonna
 \newcommand{\sottosezione}[1]{%
   \par\addvspace{5mm}%
@@ -249,12 +252,10 @@ ci si ferma, si ritrova la nota e si riparte.
 \endgroup
 
 
-% ---- Canti (la numerazione araba riparte da 1: pagina stampata = campo "pagina")
-% La prima pagina divisoria va su una pagina sinistra (pagina 0, senza numero), cosi' il canto 1 parte
-% a pagina 1, a destra. Pagine dispari = destra: il margine dei rivetti resta sul lato giusto.
+% ---- Canti: numeri arabi senza ricominciare il conto (dopo la pagina iv viene la 5).
+% Pagina dispari = destra: il margine dei rivetti resta sul lato giusto.
 \clearpage
-\ifodd\value{page}\null\thispagestyle{empty}\clearpage\fi
-\pagenumbering{arabic}\setcounter{page}{0}
+\renewcommand{\thepage}{\arabic{page}}
 \sezione{Canti associativi}{}
 
 \testopiccolo\setlength{\columnsep}{6mm}\begin{multicols}{3}\raggedcolumns
@@ -790,6 +791,10 @@ ci si ferma, si ritrova la nota e si riparte.
 \rigo{come Santo Francesco puoi seguire Gesù!}
 \par\label{fine:15}\endgroup
 
+\end{multicols}\clearpage
+
+\testonormale\setlength{\columnsep}{8mm}\begin{multicols}{2}\raggedcolumns
+
 \begingroup\senzaaccordi
 \cantotesta{16}{Attorno alla rupe}{}{\bLC}{0pt}
 \rigo{Attorno alla rupe orsù lupi andiam}
@@ -844,10 +849,6 @@ ci si ferma, si ritrova la nota e si riparte.
 \rigo{La miglior quale sarà che per prima arriverà}
 \rigo{a conquistare la preda di Akela.}
 \par\label{fine:17}\endgroup
-
-\end{multicols}\clearpage
-
-\testonormale\setlength{\columnsep}{8mm}\begin{multicols}{2}\raggedcolumns
 
 \begingroup\senzaaccordi
 \cantotesta{18}{Buon lupetto}{}{\bLC}{0pt}
@@ -962,10 +963,6 @@ ci si ferma, si ritrova la nota e si riparte.
 \rit
 \par\label{fine:22}\endgroup
 
-\end{multicols}\clearpage
-
-\testonormale\setlength{\columnsep}{8mm}\begin{multicols}{2}\raggedcolumns
-
 \begingroup\senzaaccordi
 \cantotesta{23}{Danza dei cani rossi}{}{\bLC}{0pt}
 \rigo{Rah, rah, rah! il cane rosso è qua.}
@@ -1041,6 +1038,10 @@ ci si ferma, si ritrova la nota e si riparte.
 \rigo{zanne rosse orrende, ed ora a bere va.}
 \par\label{fine:25}\endgroup
 
+\end{multicols}\clearpage
+
+\testonormale\setlength{\columnsep}{8mm}\begin{multicols}{2}\raggedcolumns
+
 \begingroup\senzaaccordi
 \cantotesta{26}{Fratelli alla candida luna}{}{\bLC}{0pt}
 \begin{ritornello}
@@ -1064,10 +1065,6 @@ ci si ferma, si ritrova la nota e si riparte.
 \strofa
 \rit
 \par\label{fine:26}\endgroup
-
-\end{multicols}\clearpage
-
-\testonormale\setlength{\columnsep}{8mm}\begin{multicols}{2}\raggedcolumns
 
 \begingroup\senzaaccordi
 \cantotesta{27}{Gli allegri folletti}{}{\bLC}{0pt}
@@ -1160,6 +1157,10 @@ ci si ferma, si ritrova la nota e si riparte.
 \rit
 \par\label{fine:29}\endgroup
 
+\end{multicols}\clearpage
+
+\testonormale\setlength{\columnsep}{8mm}\begin{multicols}{2}\raggedcolumns
+
 \begingroup\senzaaccordi
 \cantotesta{30}{Il risveglio della giungla}{}{\bLC}{0pt}
 \rigo{La luna è bianca e scuro è l'orizzonte}
@@ -1177,10 +1178,6 @@ ci si ferma, si ritrova la nota e si riparte.
 \rigo{a tutti quelli che rispettano la Legge;}
 \rigo{Buona caccia, Buona caccia, Buona caccia!}
 \par\label{fine:30}\endgroup
-
-\end{multicols}\clearpage
-
-\testonormale\setlength{\columnsep}{8mm}\begin{multicols}{2}\raggedcolumns
 
 \begingroup\senzaaccordi
 \cantotesta{31}{L'ultimo canto di Akela}{}{\bLC}{0pt}
@@ -1390,6 +1387,10 @@ ci si ferma, si ritrova la nota e si riparte.
 \rit
 \par\label{fine:37}\endgroup
 
+\end{multicols}\clearpage
+
+\testonormale\setlength{\columnsep}{8mm}\begin{multicols}{2}\raggedcolumns
+
 \begingroup\senzaaccordi
 \cantotesta{38}{Zampe agili e silenti}{}{\bLC}{0pt}
 \rigo{Zampe agili e silenti,}
@@ -1524,6 +1525,10 @@ I canti sono raccolti per fase, nell'ordine in cui si cantano.
 \rit
 \par\label{fine:40}\endgroup
 
+\end{multicols}\clearpage
+
+\testonormale\setlength{\columnsep}{8mm}\begin{multicols}{2}\raggedcolumns
+
 \begingroup\senzaaccordi
 \cantotesta{41}{La leggenda del fuoco}{}{\bEG}{0pt}
 \rigo{Splende il fuoco nel cerchio dell’esplorator   }
@@ -1573,10 +1578,6 @@ I canti sono raccolti per fase, nell'ordine in cui si cantano.
 \rigo{portate in cielo la nostra preghiera.}
 \nopagebreak
 \par\label{fine:42}\endgroup
-
-\end{multicols}\clearpage
-
-\testonormale\setlength{\columnsep}{8mm}\begin{multicols}{2}\raggedcolumns
 
 \sottosezione{Bans}
 
@@ -1654,6 +1655,10 @@ I canti sono raccolti per fase, nell'ordine in cui si cantano.
 \rit
 \par\label{fine:45}\endgroup
 
+\end{multicols}\clearpage
+
+\testonormale\setlength{\columnsep}{8mm}\begin{multicols}{2}\raggedcolumns
+
 \begingroup\senzaaccordi
 \cantotesta{46}{Bella però sta macchina}{}{\bLC}{0pt}
 \rigo{Bella però sta macchina}
@@ -1704,10 +1709,6 @@ I canti sono raccolti per fase, nell'ordine in cui si cantano.
 \rigo{Tu porta il cartoncin}
 \rigo{Che bella meraviglia sarà!}
 \par\label{fine:48}\endgroup
-
-\end{multicols}\clearpage
-
-\testonormale\setlength{\columnsep}{8mm}\begin{multicols}{2}\raggedcolumns
 
 \begingroup\senzaaccordi
 \cantotesta{49}{Colla dei francobolli}{}{\bLC}{0pt}
@@ -1763,6 +1764,10 @@ I canti sono raccolti per fase, nell'ordine in cui si cantano.
 \rigo{chi stava mezza via,}
 \rigo{non stava ne su e ne giù.}
 \par\label{fine:52}\endgroup
+
+\end{multicols}\clearpage
+
+\testonormale\setlength{\columnsep}{8mm}\begin{multicols}{2}\raggedcolumns
 
 \begingroup\senzaaccordi
 \cantotesta{53}{Il ranocchio ciclista}{}{\bEG}{0pt}
@@ -1880,6 +1885,10 @@ I canti sono raccolti per fase, nell'ordine in cui si cantano.
 \rigo{Pick a, pick a, pick a, pick a, pick a bale a day}
 \par\label{fine:57}\endgroup
 
+\end{multicols}\clearpage
+
+\testonormale\setlength{\columnsep}{8mm}\begin{multicols}{2}\raggedcolumns
+
 \begingroup\senzaaccordi
 \cantotesta{58}{L'albero piantato}{}{\bLC}{0pt}
 \rigo{C'è un albero piantato in mezzo al prato (bis)}
@@ -1954,10 +1963,6 @@ I canti sono raccolti per fase, nell'ordine in cui si cantano.
 \rigo{Sì!}
 \par\label{fine:61}\endgroup
 
-\end{multicols}\clearpage
-
-\testonormale\setlength{\columnsep}{8mm}\begin{multicols}{2}\raggedcolumns
-
 \begingroup\senzaaccordi
 \cantotesta{62}{La macchina del capo}{}{\bLC}{0pt}
 \rigo{La macchina del capo ha un buco nella gomma (3 volte),}
@@ -1984,6 +1989,10 @@ I canti sono raccolti per fase, nell'ordine in cui si cantano.
 \strofa
 \rigo{Ad libitum.}
 \par\label{fine:63}\endgroup
+
+\end{multicols}\clearpage
+
+\testonormale\setlength{\columnsep}{8mm}\begin{multicols}{2}\raggedcolumns
 
 \begingroup\senzaaccordi
 \cantotesta{64}{Onci onci}{}{\bEG}{0pt}
@@ -2067,10 +2076,6 @@ I canti sono raccolti per fase, nell'ordine in cui si cantano.
 \rigo{Cari amici non facciamolo svegliar... pss, pss.}
 \par\label{fine:68}\endgroup
 
-\end{multicols}\clearpage
-
-\testonormale\setlength{\columnsep}{8mm}\begin{multicols}{2}\raggedcolumns
-
 \begingroup\senzaaccordi
 \cantotesta{69}{Sul lago Tanganika}{}{\bEG}{0pt}
 \rigo{Sul lago Tanganica-ca ci sono i piranha-nha}
@@ -2108,6 +2113,10 @@ I canti sono raccolti per fase, nell'ordine in cui si cantano.
 \strofa
 \rit
 \par\label{fine:69}\endgroup
+
+\end{multicols}\clearpage
+
+\testonormale\setlength{\columnsep}{8mm}\begin{multicols}{2}\raggedcolumns
 
 \begingroup\senzaaccordi
 \cantotesta{70}{Tango}{}{\bEG}{0pt}
@@ -2166,10 +2175,6 @@ I canti sono raccolti per fase, nell'ordine in cui si cantano.
 \rigo{Soldati: "BOOM! BOOM! BOOM!"}
 \par\label{fine:73}\endgroup
 
-\end{multicols}\clearpage
-
-\testonormale\setlength{\columnsep}{8mm}\begin{multicols}{2}\raggedcolumns
-
 \sottosezione{Crescendo}
 
 \begingroup\senzaaccordi
@@ -2212,6 +2217,10 @@ I canti sono raccolti per fase, nell'ordine in cui si cantano.
 \strofa
 \rit
 \par\label{fine:74}\endgroup
+
+\end{multicols}\clearpage
+
+\testonormale\setlength{\columnsep}{8mm}\begin{multicols}{2}\raggedcolumns
 
 \begingroup\senzaaccordi
 \cantotesta{75}{Aluette}{}{\bLC}{0pt}
@@ -2263,10 +2272,6 @@ I canti sono raccolti per fase, nell'ordine in cui si cantano.
 \strofa
 \rit
 \par\label{fine:75}\endgroup
-
-\end{multicols}\clearpage
-
-\testonormale\setlength{\columnsep}{8mm}\begin{multicols}{2}\raggedcolumns
 
 \begingroup\senzaaccordi
 \cantotesta{76}{Cuciniere di squadriglia}{}{\bEG}{0pt}
@@ -4073,10 +4078,6 @@ I canti sono raccolti per fase, nell'ordine in cui si cantano.
 \rigo{Mi te vardo e me sento il cor contento, oh!}
 \par\label{fine:121}\endgroup
 
-\end{multicols}\clearpage
-
-\testonormale\setlength{\columnsep}{8mm}\begin{multicols}{2}\raggedcolumns
-
 \begingroup\senzaaccordi
 \cantotesta{122}{La guadalupa}{}{\bLC}{0pt}
 \rigo{Coro 1: zim bum, zim bum bum, zim bum, zim bum bum (ad libitum)}
@@ -4178,10 +4179,6 @@ I canti sono raccolti per fase, nell'ordine in cui si cantano.
 \strofa
 \rigo{ma sono mille papaveri rossi.}
 \par\label{fine:123}\endgroup
-
-\end{multicols}\clearpage
-
-\testonormale\setlength{\columnsep}{8mm}\begin{multicols}{2}\raggedcolumns
 
 \begingroup\senzaaccordi
 \cantotesta{124}{La montanara}{T. Ortelli}{\bRS}{0pt}
@@ -4288,10 +4285,6 @@ I canti sono raccolti per fase, nell'ordine in cui si cantano.
 \rigo{tutti insieme poi si danzerà.}
 \par\label{fine:126}\endgroup
 
-\end{multicols}\clearpage
-
-\testonormale\setlength{\columnsep}{8mm}\begin{multicols}{2}\raggedcolumns
-
 \begingroup\senzaaccordi
 \cantotesta{127}{Sul pajon}{}{\bEG}{0pt}
 \rigo{Il battaglione Aosta}
@@ -4358,10 +4351,6 @@ I canti sono raccolti per fase, nell'ordine in cui si cantano.
 \rit
 \par\label{fine:128}\endgroup
 
-\end{multicols}\clearpage
-
-\testopiccolo\setlength{\columnsep}{6mm}\begin{multicols}{3}\raggedcolumns
-
 \begingroup\senzaaccordi
 \cantotesta{129}{Vecchio scarpone}{}{\bRS}{0pt}
 \rigo{Lassù in un ripostiglio polveroso,}
@@ -4424,10 +4413,6 @@ I canti sono raccolti per fase, nell'ordine in cui si cantano.
 \rigo{Fai rivivere tu}
 \rigo{La mia gioventù.}
 \par\label{fine:129}\endgroup
-
-\end{multicols}\clearpage
-
-\testonormale\setlength{\columnsep}{8mm}\begin{multicols}{2}\raggedcolumns
 
 \begingroup\senzaaccordi
 \cantotesta{130}{Vento della sera}{}{\bEG}{0pt}
@@ -4528,10 +4513,6 @@ I canti sono raccolti per fase, nell'ordine in cui si cantano.
 \strofa
 \rigo{Airone..}
 \par\label{fine:133}\endgroup
-
-\end{multicols}\clearpage
-
-\testonormale\setlength{\columnsep}{8mm}\begin{multicols}{2}\raggedcolumns
 
 \begingroup\senzaaccordi
 \cantotesta{134}{Geordie}{tradizionale (versione di F. De André)}{\bEG}{0pt}
@@ -4650,10 +4631,6 @@ I canti sono raccolti per fase, nell'ordine in cui si cantano.
 \rigo{Ché lo fioriscano di rose e fior}
 \par\label{fine:136}\endgroup
 
-\end{multicols}\clearpage
-
-\testonormale\setlength{\columnsep}{8mm}\begin{multicols}{2}\raggedcolumns
-
 \begingroup\senzaaccordi
 \cantotesta{137}{Il vascello fantasma}{}{\bEG}{0pt}
 \rigo{Pende un uomo dal pennone,}
@@ -4770,10 +4747,6 @@ I canti sono raccolti per fase, nell'ordine in cui si cantano.
 \strofa
 \rit
 \par\label{fine:139}\endgroup
-
-\end{multicols}\clearpage
-
-\testonormale\setlength{\columnsep}{8mm}\begin{multicols}{2}\raggedcolumns
 
 \begingroup\senzaaccordi
 \cantotesta{140}{Signor, fra le tende schierati}{}{\bEG}{0pt}
@@ -4916,10 +4889,6 @@ I canti sono raccolti per fase, nell'ordine in cui si cantano.
 \rigo{è la sua mamma, che ti perdona!}
 \par\label{fine:146}\endgroup
 
-\end{multicols}\clearpage
-
-\testonormale\setlength{\columnsep}{8mm}\begin{multicols}{2}\raggedcolumns
-
 \begingroup\senzaaccordi
 \cantotesta{147}{La leggenda del Piave}{E. A. Mario}{\bRS}{0pt}
 \rigo{Il Piave mormorava calmo e placido al passaggio}
@@ -5011,10 +4980,6 @@ I canti sono raccolti per fase, nell'ordine in cui si cantano.
 \rigo{se non c'è qui la mia mamma,}
 \rigo{un bel fiore me lo porti tu.}
 \par\label{fine:148}\endgroup
-
-\end{multicols}\clearpage
-
-\testonormale\setlength{\columnsep}{8mm}\begin{multicols}{2}\raggedcolumns
 
 \begingroup\senzaaccordi
 \cantotesta{149}{La vien giù dalle montagne}{}{\bRS}{0pt}
@@ -5108,10 +5073,6 @@ I canti sono raccolti per fase, nell'ordine in cui si cantano.
 \rigo{"se ci rendiamo, saremo prigionier"}
 \par\label{fine:151}\endgroup
 
-\end{multicols}\clearpage
-
-\testonormale\setlength{\columnsep}{8mm}\begin{multicols}{2}\raggedcolumns
-
 \begingroup\senzaaccordi
 \cantotesta{152}{Monte Pasubio}{C. Geminiani, G. De Marzi}{\bRS}{0pt}
 \rigo{Su la strada del Monte Pasubio}
@@ -5176,10 +5137,6 @@ I canti sono raccolti per fase, nell'ordine in cui si cantano.
 \rigo{E per sempre piangerà}
 \par\label{fine:153}\endgroup
 
-\end{multicols}\clearpage
-
-\testonormale\setlength{\columnsep}{8mm}\begin{multicols}{2}\raggedcolumns
-
 \begingroup\senzaaccordi
 \cantotesta{154}{Se non ci conoscete}{tradizionale (canto degli Arditi)}{\bRS}{0pt}
 \rigo{Noi siamo gli arditi della Terza Armata:}
@@ -5237,10 +5194,6 @@ I canti sono raccolti per fase, nell'ordine in cui si cantano.
 \rigo{ripasseremo il Piave a costo della morte.}
 \rigo{Bombe a man...}
 \par\label{fine:154}\endgroup
-
-\end{multicols}\clearpage
-
-\testonormale\setlength{\columnsep}{8mm}\begin{multicols}{2}\raggedcolumns
 
 \begingroup\senzaaccordi
 \cantotesta{155}{Signore delle cime}{B. De Marzi}{\bRS}{0pt}
@@ -5393,10 +5346,6 @@ I canti sono raccolti per fase, nell'ordine in cui si cantano.
 \rigo{Non partirò contento}
 \rigo{Se non l'avarò sposà.}
 \par\label{fine:158}\endgroup
-
-\end{multicols}\clearpage
-
-\testonormale\setlength{\columnsep}{8mm}\begin{multicols}{2}\raggedcolumns
 
 \begingroup\senzaaccordi
 \cantotesta{159}{Sul ponte di Perati}{tradizionale}{\bRS}{0pt}
@@ -5568,10 +5517,6 @@ I canti sono raccolti per fase, nell'ordine in cui si cantano.
 \rigo{Accendi in noi il fuoco dell’eterna carità.}
 \par\label{fine:163}\endgroup
 
-\end{multicols}\clearpage
-
-\testonormale\setlength{\columnsep}{8mm}\begin{multicols}{2}\raggedcolumns
-
 \begingroup\senzaaccordi
 \cantotesta{164}{Che gioia ci hai dato}{}{}{0pt}
 \rigo{Che gioia ci hai dato, Signore del cielo,}
@@ -5690,10 +5635,6 @@ I canti sono raccolti per fase, nell'ordine in cui si cantano.
 \rigo{anche noi con il canto delle tue lodi, nella vita con Te.}
 \par\label{fine:167}\endgroup
 
-\end{multicols}\clearpage
-
-\testonormale\setlength{\columnsep}{8mm}\begin{multicols}{2}\raggedcolumns
-
 \begingroup\senzaaccordi
 \cantotesta{168}{Grandi cose}{}{}{0pt}
 \begin{ritornello}
@@ -5803,10 +5744,6 @@ I canti sono raccolti per fase, nell'ordine in cui si cantano.
 \rigo{Scoprirai allora il cielo dentro di te, una scia di luce lascerai.}
 \rigo{una scia di luce lascerai.}
 \par\label{fine:171}\endgroup
-
-\end{multicols}\clearpage
-
-\testonormale\setlength{\columnsep}{8mm}\begin{multicols}{2}\raggedcolumns
 
 \begingroup\senzaaccordi
 \cantotesta{172}{Vocazione}{P. Sequeri}{}{0pt}
@@ -5924,10 +5861,6 @@ I canti sono raccolti per fase, nell'ordine in cui si cantano.
 \strofa
 \rit
 \par\label{fine:175}\endgroup
-
-\end{multicols}\clearpage
-
-\testonormale\setlength{\columnsep}{8mm}\begin{multicols}{2}\raggedcolumns
 
 \begingroup\senzaaccordi
 \cantotesta{176}{Alleluia, la parola tua}{}{}{0pt}
@@ -6154,10 +6087,6 @@ I canti sono raccolti per fase, nell'ordine in cui si cantano.
 \rigo{Ogni mia parola.}
 \par\label{fine:184}\endgroup
 
-\end{multicols}\clearpage
-
-\testonormale\setlength{\columnsep}{8mm}\begin{multicols}{2}\raggedcolumns
-
 \begingroup\senzaaccordi
 \cantotesta{185}{Se m'accogli}{P. Sequeri}{}{0pt}
 \rigo{Tra le mani non ho niente so che Tu mi accoglierai     }
@@ -6258,14 +6187,34 @@ I canti sono raccolti per fase, nell'ordine in cui si cantano.
 \rit
 \par\label{fine:187}\endgroup
 
-\end{multicols}\clearpage
-
-\testonormale\setlength{\columnsep}{8mm}\begin{multicols}{2}\raggedcolumns
-
 \sottosezione{Santo}
 
 \begingroup\senzaaccordi
-\cantotesta{188}{Santo (Dio del cielo)}{}{}{0pt}
+\cantotesta{188}{Santo}{M. Frisina}{}{0pt}
+\begin{ritornello}
+\rigo{Santo, Santo, Santo è il Signore}
+\nopagebreak
+\rigo{Dio dell’universo.}
+\nopagebreak
+\strofa
+\end{ritornello}
+\rit
+\strofa
+\rigo{I cieli e la terra sono pieni della tua gloria.}
+\rigo{Osanna, osanna nell’alto dei cieli.}
+\strofa
+\begin{ritornello}
+\rigo{Osanna, osanna nell’alto dei cieli.}
+\strofa
+\end{ritornello}
+\rigo{Benedetto Colui che viene nel nome del Signore.}
+\rigo{Osanna, osanna nell’alto dei cieli.}
+\strofa
+\rit
+\par\label{fine:188}\endgroup
+
+\begingroup\senzaaccordi
+\cantotesta{189}{Santo (Dio del cielo)}{}{}{0pt}
 \rigo{Santo, Santo, Santo il Signore, Dio del cielo, Dio del cielo.}
 \nopagebreak
 \rigo{Santo, Santo, Santo il Signore, Dio del cielo, Dio del cielo.}
@@ -6296,12 +6245,12 @@ I canti sono raccolti per fase, nell'ordine in cui si cantano.
 \rigo{un canto imparato da Te.}
 \strofa
 \rit
-\par\label{fine:188}\endgroup
+\par\label{fine:189}\endgroup
 
 \sottosezione{Comunione}
 
 \begingroup\senzaaccordi
-\cantotesta{189}{Beati voi}{}{}{0pt}
+\cantotesta{190}{Beati voi}{}{}{0pt}
 \begin{ritornello}
 \rigo{Beati voi, beati voi,}
 \nopagebreak
@@ -6336,10 +6285,10 @@ I canti sono raccolti per fase, nell'ordine in cui si cantano.
 \rigo{sarà grande in voi la santità.}
 \strofa
 \rit
-\par\label{fine:189}\endgroup
+\par\label{fine:190}\endgroup
 
 \begingroup\senzaaccordi
-\cantotesta{190}{Benedetto Signore (cerco solo te)}{}{}{0pt}
+\cantotesta{191}{Benedetto Signore (cerco solo te)}{}{}{0pt}
 \rigo{Cerco solo Te mio Signor}
 \nopagebreak
 \rigo{Perché solo Tu dai gioia al mio cuore,}
@@ -6373,14 +6322,10 @@ I canti sono raccolti per fase, nell'ordine in cui si cantano.
 \rigo{solo in Te, solo in Te.}
 \strofa
 \rit
-\par\label{fine:190}\endgroup
-
-\end{multicols}\clearpage
-
-\testonormale\setlength{\columnsep}{8mm}\begin{multicols}{2}\raggedcolumns
+\par\label{fine:191}\endgroup
 
 \begingroup\senzaaccordi
-\cantotesta{191}{Canto di San Damiano}{}{}{0pt}
+\cantotesta{192}{Canto di San Damiano}{}{}{0pt}
 \rigo{Ogni uomo semplice porta in cuore un sogno,                    }
 \nopagebreak
 \rigo{con amore ed umiltà potrà costruirlo.}
@@ -6402,10 +6347,10 @@ I canti sono raccolti per fase, nell'ordine in cui si cantano.
 \rigo{che la calma donerà al tuo cuore puro.}
 \strofa
 \rit
-\par\label{fine:191}\endgroup
+\par\label{fine:192}\endgroup
 
 \begingroup\senzaaccordi
-\cantotesta{192}{Come fuoco vivo}{Gen Rosso - Gen Verde}{}{0pt}
+\cantotesta{193}{Come fuoco vivo}{Gen Rosso - Gen Verde}{}{0pt}
 \begin{ritornello}
 \rigo{Come fuoco vivo si accende in noi}
 \nopagebreak
@@ -6432,10 +6377,10 @@ I canti sono raccolti per fase, nell'ordine in cui si cantano.
 \rigo{pane d'eternità.}
 \strofa
 \rit
-\par\label{fine:192}\endgroup
+\par\label{fine:193}\endgroup
 
 \begingroup\senzaaccordi
-\cantotesta{193}{Come ti ama Dio}{}{}{0pt}
+\cantotesta{194}{Come ti ama Dio}{}{}{0pt}
 \rigo{Io vorrei saperti amare come Dio}
 \nopagebreak
 \rigo{che ti prende per mano, ma ti lascia anche andare}
@@ -6464,10 +6409,10 @@ I canti sono raccolti per fase, nell'ordine in cui si cantano.
 \rit
 \strofa
 \rit
-\par\label{fine:193}\endgroup
+\par\label{fine:194}\endgroup
 
 \begingroup\senzaaccordi
-\cantotesta{194}{Come tu mi vuoi}{}{}{0pt}
+\cantotesta{195}{Come tu mi vuoi}{}{}{0pt}
 \rigo{Eccomi signor, vengo a te mio Re, che si compia in me la tua volontà.}
 \nopagebreak
 \rigo{Eccomi Signor, vengo a te mio Dio, plasma il cuore mio e di te vivrò.}
@@ -6484,14 +6429,10 @@ I canti sono raccolti per fase, nell'ordine in cui si cantano.
 \rigo{Tra le tue mani mai più vacillerò e strumento tuo sarò}
 \strofa
 \rit
-\par\label{fine:194}\endgroup
-
-\end{multicols}\clearpage
-
-\testonormale\setlength{\columnsep}{8mm}\begin{multicols}{2}\raggedcolumns
+\par\label{fine:195}\endgroup
 
 \begingroup\senzaaccordi
-\cantotesta{195}{E sono solo un uomo}{P. Sequeri}{}{0pt}
+\cantotesta{196}{E sono solo un uomo}{P. Sequeri}{}{0pt}
 \rigo{Io lo so, Signore che vengo da lontano,      }
 \nopagebreak
 \rigo{prima nel pensiero e poi nella tua mano;      }
@@ -6525,10 +6466,10 @@ I canti sono raccolti per fase, nell'ordine in cui si cantano.
 \rigo{E incontro a Te verrò con mio fratello}
 \rigo{Che non si sente amato da nessuno.}
 \end{ritornello}
-\par\label{fine:195}\endgroup
+\par\label{fine:196}\endgroup
 
 \begingroup\senzaaccordi
-\cantotesta{196}{Fuoco per il mondo}{}{}{0pt}
+\cantotesta{197}{Fuoco per il mondo}{}{}{0pt}
 \rigo{Il mondo che nasce ogni giorno alla vita}
 \nopagebreak
 \rigo{Il mio sguardo non lo conterrà}
@@ -6559,10 +6500,10 @@ I canti sono raccolti per fase, nell'ordine in cui si cantano.
 \rigo{E il suo Spirito mi accenderà}
 \strofa
 \rit
-\par\label{fine:196}\endgroup
+\par\label{fine:197}\endgroup
 
 \begingroup\senzaaccordi
-\cantotesta{197}{Gesù sei qui con me}{}{}{0pt}
+\cantotesta{198}{Gesù sei qui con me}{}{}{0pt}
 \rigo{Gesù sei qui con me}
 \nopagebreak
 \rigo{Gesù sei qui con me}
@@ -6590,10 +6531,10 @@ I canti sono raccolti per fase, nell'ordine in cui si cantano.
 \rigo{all'Agnello al Salvatore}
 \rigo{allo Spirito d'Amore}
 \rigo{gloria, potenza e onore!}
-\par\label{fine:197}\endgroup
+\par\label{fine:198}\endgroup
 
 \begingroup\senzaaccordi
-\cantotesta{198}{Ho solo un pane}{}{\bEG}{0pt}
+\cantotesta{199}{Ho solo un pane}{}{\bEG}{0pt}
 \rigo{Ho solo un pane ma se spezzarlo tu vuoi con me}
 \nopagebreak
 \rigo{crescerà la letizia di marciare insieme fratel}
@@ -6610,14 +6551,10 @@ I canti sono raccolti per fase, nell'ordine in cui si cantano.
 \rigo{seguiva le ombre mobili dei passi sul sentir.}
 \rigo{C'e' ancora un sole scaldava le tue spalle}
 \rigo{quio toccai lo zaino che tu portavi per me.}
-\par\label{fine:198}\endgroup
-
-\end{multicols}\clearpage
-
-\testonormale\setlength{\columnsep}{8mm}\begin{multicols}{2}\raggedcolumns
+\par\label{fine:199}\endgroup
 
 \begingroup\senzaaccordi
-\cantotesta{199}{I.N.R.I. (io non ritorno indietro)}{}{}{0pt}
+\cantotesta{200}{I.N.R.I. (io non ritorno indietro)}{}{}{0pt}
 \rigo{Ha senso solo così, Perdonando proprio tutto}
 \nopagebreak
 \rigo{Ha senso solo così, Amando fino in fondo}
@@ -6648,10 +6585,10 @@ I canti sono raccolti per fase, nell'ordine in cui si cantano.
 \strofa
 \rigo{Io Non Ritorno Indietro }
 \rigo{Io Non Ritorno Indietro }
-\par\label{fine:199}\endgroup
+\par\label{fine:200}\endgroup
 
 \begingroup\senzaaccordi
-\cantotesta{200}{Insieme}{}{\bEG}{0pt}
+\cantotesta{201}{Insieme}{}{\bEG}{0pt}
 \rigo{Insieme abbiam marciato un dì}
 \nopagebreak
 \rigo{per strade non battute}
@@ -6678,10 +6615,10 @@ I canti sono raccolti per fase, nell'ordine in cui si cantano.
 \rigo{è il senso della vita.}
 \strofa
 \rit
-\par\label{fine:200}\endgroup
+\par\label{fine:201}\endgroup
 
 \begingroup\senzaaccordi
-\cantotesta{201}{Io sarò con te}{}{}{0pt}
+\cantotesta{202}{Io sarò con te}{}{}{0pt}
 \begin{ritornello}
 \rigo{Io sarò con te sulle strade della vita,}
 \nopagebreak
@@ -6709,14 +6646,10 @@ I canti sono raccolti per fase, nell'ordine in cui si cantano.
 \rigo{camminerò con te dovunque andrai...}
 \strofa
 \rit
-\par\label{fine:201}\endgroup
-
-\end{multicols}\clearpage
-
-\testonormale\setlength{\columnsep}{8mm}\begin{multicols}{2}\raggedcolumns
+\par\label{fine:202}\endgroup
 
 \begingroup\senzaaccordi
-\cantotesta{202}{Nel tuo volto la mia strada}{}{\bRS}{0pt}
+\cantotesta{203}{Nel tuo volto la mia strada}{}{\bRS}{0pt}
 \rigo{Ho cercato il mio volto, la mia identità}
 \nopagebreak
 \rigo{Con la bussola in mano diretta a nord}
@@ -6752,10 +6685,10 @@ I canti sono raccolti per fase, nell'ordine in cui si cantano.
 \rigo{E pienezza di vita sarà.}
 \strofa
 \rit
-\par\label{fine:202}\endgroup
+\par\label{fine:203}\endgroup
 
 \begingroup\senzaaccordi
-\cantotesta{203}{Pane del cielo}{}{}{0pt}
+\cantotesta{204}{Pane del cielo}{}{}{0pt}
 \begin{ritornello}
 \rigo{Pane del cielo}
 \nopagebreak
@@ -6791,10 +6724,10 @@ I canti sono raccolti per fase, nell'ordine in cui si cantano.
 \rigo{Dio in mezzo a noi.}
 \strofa
 \rit
-\par\label{fine:203}\endgroup
+\par\label{fine:204}\endgroup
 
 \begingroup\senzaaccordi
-\cantotesta{204}{Preghiera semplice}{}{}{0pt}
+\cantotesta{205}{Preghiera semplice}{}{}{0pt}
 \rigo{Se anche parlassi le lingue degli uomini e degli angeli,}
 \nopagebreak
 \rigo{ma non avessi la carità, sono come un bronzo che risuona,}
@@ -6809,14 +6742,10 @@ I canti sono raccolti per fase, nell'ordine in cui si cantano.
 \rigo{E se anche distribuissi tutte le mie sostanze}
 \rigo{e dessi il mio corpo per essere bruciato, ma non avessi la carità}
 \rigo{niente mi giova.}
-\par\label{fine:204}\endgroup
-
-\end{multicols}\clearpage
-
-\testonormale\setlength{\columnsep}{8mm}\begin{multicols}{2}\raggedcolumns
+\par\label{fine:205}\endgroup
 
 \begingroup\senzaaccordi
-\cantotesta{205}{Sei fuoco e vento}{}{}{0pt}
+\cantotesta{206}{Sei fuoco e vento}{}{}{0pt}
 \rigo{In un mare calmo e immobile}
 \nopagebreak
 \rigo{con un cielo senza nuvole}
@@ -6859,10 +6788,10 @@ I canti sono raccolti per fase, nell'ordine in cui si cantano.
 \begin{ritornello}
 \rigo{Rit. (3 volte)}
 \end{ritornello}
-\par\label{fine:205}\endgroup
+\par\label{fine:206}\endgroup
 
 \begingroup\senzaaccordi
-\cantotesta{206}{Su ali d'aquila}{}{}{0pt}
+\cantotesta{207}{Su ali d'aquila}{}{}{0pt}
 \rigo{Tu che abiti al riparo del Signore}
 \nopagebreak
 \rigo{e che dimori alla Sua ombra,}
@@ -6904,14 +6833,10 @@ I canti sono raccolti per fase, nell'ordine in cui si cantano.
 \rigo{come il sole, così nelle mie mani vivrai.}
 \strofa
 \rit
-\par\label{fine:206}\endgroup
-
-\end{multicols}\clearpage
-
-\testonormale\setlength{\columnsep}{8mm}\begin{multicols}{2}\raggedcolumns
+\par\label{fine:207}\endgroup
 
 \begingroup\senzaaccordi
-\cantotesta{207}{Symbolum 77}{P. Sequeri}{}{0pt}
+\cantotesta{208}{Symbolum 77}{P. Sequeri}{}{0pt}
 \rigo{Tu sei la mia vita, altro io non ho; }
 \nopagebreak
 \rigo{Tu sei la mia strada, la mia verità,    }
@@ -6941,10 +6866,10 @@ I canti sono raccolti per fase, nell'ordine in cui si cantano.
 \rigo{Tu da mille strade ci raduni in unità,}
 \rigo{e per mille strade poi dove Tu vorrai}
 \rigo{noi saremo il seme di Dio.}
-\par\label{fine:207}\endgroup
+\par\label{fine:208}\endgroup
 
 \begingroup\senzaaccordi
-\cantotesta{208}{Te al centro del mio cuore}{}{}{0pt}
+\cantotesta{209}{Te al centro del mio cuore}{}{}{0pt}
 \rigo{Ho bisogno d’incontrarti nel mio cuore,}
 \nopagebreak
 \rigo{di trovare te, di stare insieme a te:}
@@ -6971,10 +6896,10 @@ I canti sono raccolti per fase, nell'ordine in cui si cantano.
 \rigo{al centro del mio cuore ci sei solo tu.}
 \strofa
 \rit
-\par\label{fine:208}\endgroup
+\par\label{fine:209}\endgroup
 
 \begingroup\senzaaccordi
-\cantotesta{209}{Tu sei}{}{}{0pt}
+\cantotesta{210}{Tu sei}{}{}{0pt}
 \rigo{Tu sei la prima stella del mattino}
 \nopagebreak
 \rigo{Tu sei la nostra grande nostalgia}
@@ -6993,12 +6918,12 @@ I canti sono raccolti per fase, nell'ordine in cui si cantano.
 \rigo{Tu sei il vento nuovo sulle nostre ali}
 \rigo{Sulle nostre ali soffierà la vita}
 \rigo{E gonfierà le vele per questo mare}
-\par\label{fine:209}\endgroup
+\par\label{fine:210}\endgroup
 
 \sottosezione{Finale}
 
 \begingroup\senzaaccordi
-\cantotesta{210}{Abbracciami}{}{}{0pt}
+\cantotesta{211}{Abbracciami}{}{}{0pt}
 \rigo{Gesù parola viva e vera}
 \nopagebreak
 \rigo{Sorgente che disseta e cura ogni ferita}
@@ -7026,14 +6951,10 @@ I canti sono raccolti per fase, nell'ordine in cui si cantano.
 \rigo{Il tuo spirito in me in eterno ti loderà}
 \strofa
 \rit
-\par\label{fine:210}\endgroup
-
-\end{multicols}\clearpage
-
-\testonormale\setlength{\columnsep}{8mm}\begin{multicols}{2}\raggedcolumns
+\par\label{fine:211}\endgroup
 
 \begingroup\senzaaccordi
-\cantotesta{211}{Andate per le strade}{}{}{0pt}
+\cantotesta{212}{Andate per le strade}{}{}{0pt}
 \rigo{Andate per le strade in tutto il mondo}
 \nopagebreak
 \rigo{chiamate i miei amici per far festa}
@@ -7064,10 +6985,10 @@ I canti sono raccolti per fase, nell'ordine in cui si cantano.
 \rigo{né il servo è più importante del suo padrone.}
 \rigo{Se hanno odiato me, odieranno anche voi}
 \rigo{ma voi non temete io non vi lascio soli.}
-\par\label{fine:211}\endgroup
+\par\label{fine:212}\endgroup
 
 \begingroup\senzaaccordi
-\cantotesta{212}{Canto della creazione}{}{}{0pt}
+\cantotesta{213}{Canto della creazione}{}{}{0pt}
 \begin{ritornello}
 \rigo{Laudato sii, Signore mio}
 \nopagebreak
@@ -7125,14 +7046,10 @@ I canti sono raccolti per fase, nell'ordine in cui si cantano.
 \rigo{perché Tu sei il Signore.}
 \strofa
 \rit
-\par\label{fine:212}\endgroup
-
-\end{multicols}\clearpage
-
-\testonormale\setlength{\columnsep}{8mm}\begin{multicols}{2}\raggedcolumns
+\par\label{fine:213}\endgroup
 
 \begingroup\senzaaccordi
-\cantotesta{213}{Con te faremo cose grandi}{}{}{0pt}
+\cantotesta{214}{Con te faremo cose grandi}{}{}{0pt}
 \begin{ritornello}
 \rigo{Con Te faremo cose grandi}
 \nopagebreak
@@ -7166,10 +7083,10 @@ I canti sono raccolti per fase, nell'ordine in cui si cantano.
 \rigo{di Te si riempiranno sguardi}
 \rigo{la speranza che risplenderà nei volti.}
 \end{ritornello}
-\par\label{fine:213}\endgroup
+\par\label{fine:214}\endgroup
 
 \begingroup\senzaaccordi
-\cantotesta{214}{Eccomi per sempre}{}{\bLC}{0pt}
+\cantotesta{215}{Eccomi per sempre}{}{\bLC}{0pt}
 \rigo{L'avventura della vita parte con semplicità,}
 \nopagebreak
 \rigo{nel sentiero che dal prato alla montagna arriverà.}
@@ -7206,10 +7123,10 @@ I canti sono raccolti per fase, nell'ordine in cui si cantano.
 \rigo{Con la luce della Fede la tua strada troverai}
 \strofa
 \rit
-\par\label{fine:214}\endgroup
+\par\label{fine:215}\endgroup
 
 \begingroup\senzaaccordi
-\cantotesta{215}{Fratello sole e sorella luna}{}{}{0pt}
+\cantotesta{216}{Fratello sole e sorella luna}{}{}{0pt}
 \rigo{Dolce sentire come nel mio cuore }
 \nopagebreak
 \rigo{ora, umilmente, sta nascendo amore.         }
@@ -7233,14 +7150,10 @@ I canti sono raccolti per fase, nell'ordine in cui si cantano.
 \rigo{noi tutti siamo Sue creature:}
 \rigo{dono di Lui, del Suo immenso amor,}
 \rigo{beato chi Lo serve in umiltà.}
-\par\label{fine:215}\endgroup
-
-\end{multicols}\clearpage
-
-\testonormale\setlength{\columnsep}{8mm}\begin{multicols}{2}\raggedcolumns
+\par\label{fine:216}\endgroup
 
 \begingroup\senzaaccordi
-\cantotesta{216}{Mani}{}{}{0pt}
+\cantotesta{217}{Mani}{}{}{0pt}
 \rigo{Vorrei che le parole mutassero in preghiera       }
 \nopagebreak
 \rigo{e rivederti o Padre che dipingevi il cielo}
@@ -7286,10 +7199,10 @@ I canti sono raccolti per fase, nell'ordine in cui si cantano.
 \rigo{fa che siano testimoni}
 \rigo{che Tu chiami ogni uomo a far festa con Dio.      }
 \end{ritornello}
-\par\label{fine:216}\endgroup
+\par\label{fine:217}\endgroup
 
 \begingroup\senzaaccordi
-\cantotesta{217}{Popoli tutti}{}{}{0pt}
+\cantotesta{218}{Popoli tutti}{}{}{0pt}
 \rigo{Mio Dio, Signore, nulla è pari a Te.}
 \nopagebreak
 \rigo{Ora e per sempre, voglio lodare}
@@ -7307,10 +7220,10 @@ I canti sono raccolti per fase, nell'ordine in cui si cantano.
 \rigo{per sempre Signore con Te resterò,}
 \rigo{Non c’è promessa, non c’è fedeltà che in Te}
 \end{ritornello}
-\par\label{fine:217}\endgroup
+\par\label{fine:218}\endgroup
 
 \begingroup\senzaaccordi
-\cantotesta{218}{Ti ringrazio mio Signore}{}{}{0pt}
+\cantotesta{219}{Ti ringrazio mio Signore}{}{}{0pt}
 \rigo{Amatevi l'un l'altro come Lui ha amato voi}
 \nopagebreak
 \rigo{e siate per sempre Suoi amici}
@@ -7340,16 +7253,12 @@ I canti sono raccolti per fase, nell'ordine in cui si cantano.
 \rigo{l'amore confini non ne ha.}
 \strofa
 \rit
-\par\label{fine:218}\endgroup
-
-\end{multicols}\clearpage
-
-\testonormale\setlength{\columnsep}{8mm}\begin{multicols}{2}\raggedcolumns
+\par\label{fine:219}\endgroup
 
 \sottosezione{Mariani}
 
 \begingroup\senzaaccordi
-\cantotesta{219}{Alla nostra signora della strada}{}{}{0pt}
+\cantotesta{220}{Alla nostra signora della strada}{}{}{0pt}
 \rigo{Madonna degli scouts, ascolta, t’invochiam,}
 \nopagebreak
 \rigo{concedi un forte cuore a noi che ora partiam!}
@@ -7389,10 +7298,10 @@ I canti sono raccolti per fase, nell'ordine in cui si cantano.
 \rigo{alla casa del Padre, nel gaudio di Gesù.}
 \strofa
 \rit
-\par\label{fine:219}\endgroup
+\par\label{fine:220}\endgroup
 
 \begingroup\senzaaccordi
-\cantotesta{220}{Come Maria}{}{}{0pt}
+\cantotesta{221}{Come Maria}{}{}{0pt}
 \rigo{Vogliamo vivere, Signore,}
 \nopagebreak
 \rigo{offrendo a Te la nostra vita;}
@@ -7423,10 +7332,10 @@ I canti sono raccolti per fase, nell'ordine in cui si cantano.
 \rigo{la fiamma viva del tuo Amore.}
 \strofa
 \rit
-\par\label{fine:220}\endgroup
+\par\label{fine:221}\endgroup
 
 \begingroup\senzaaccordi
-\cantotesta{221}{Ecco il nostro sì}{}{}{0pt}
+\cantotesta{222}{Ecco il nostro sì}{}{}{0pt}
 \rigo{Fra tutte le donne scelta in Nazareth,}
 \nopagebreak
 \rigo{sul tuo volto risplende il coraggio di quando hai detto “Sì”.}
@@ -7454,14 +7363,10 @@ I canti sono raccolti per fase, nell'ordine in cui si cantano.
 \rigo{noi saremo Dimora, la più bella poesia dell'anima}
 \strofa
 \rit
-\par\label{fine:221}\endgroup
-
-\end{multicols}\clearpage
-
-\testonormale\setlength{\columnsep}{8mm}\begin{multicols}{2}\raggedcolumns
+\par\label{fine:222}\endgroup
 
 \begingroup\senzaaccordi
-\cantotesta{222}{Madonna degli scout}{A. Ghetti - V. Ghetti}{}{0pt}
+\cantotesta{223}{Madonna degli scout}{A. Ghetti - V. Ghetti}{}{0pt}
 \rigo{Madonna degli scouts, ascolta! T'invochiam:}
 \nopagebreak
 \rigo{concedi un forte cuore a noi, che ora partiam.}
@@ -7480,10 +7385,10 @@ I canti sono raccolti per fase, nell'ordine in cui si cantano.
 \rigo{e il pianto di chi è solo sapremo consolar.}
 \strofa
 \rit
-\par\label{fine:222}\endgroup
+\par\label{fine:223}\endgroup
 
 \begingroup\senzaaccordi
-\cantotesta{223}{Mamma del cielo}{}{\bLC}{0pt}
+\cantotesta{224}{Mamma del cielo}{}{\bLC}{0pt}
 \rigo{Mamma del Cielo, Vergine Santa}
 \nopagebreak
 \rigo{a te d’intorno il branco canta}
@@ -7501,10 +7406,10 @@ I canti sono raccolti per fase, nell'ordine in cui si cantano.
 \strofa
 \rigo{Al cuor divino stringimi tu}
 \rigo{come stringevi a te Gesù.}
-\par\label{fine:223}\endgroup
+\par\label{fine:224}\endgroup
 
 \begingroup\senzaaccordi
-\cantotesta{224}{Maria lassù}{}{}{0pt}
+\cantotesta{225}{Maria lassù}{}{}{0pt}
 \rigo{Tempo fermo nel cielo}
 \nopagebreak
 \rigo{mentre viene la sera.}
@@ -7523,12 +7428,12 @@ I canti sono raccolti per fase, nell'ordine in cui si cantano.
 \rigo{mentre viene la sera;}
 \rigo{può venire la notte,}
 \rigo{lungo sogno di Dio.}
-\par\label{fine:224}\endgroup
+\par\label{fine:225}\endgroup
 
 \sottosezione{Preghiere scout}
 
 \begingroup\senzaaccordi
-\cantotesta{225}{Preghiera del lupetto}{}{\bLC}{0pt}
+\cantotesta{226}{Preghiera del lupetto}{}{\bLC}{0pt}
 \rigo{Buon Gesù}
 \nopagebreak
 \rigo{io ti amo con tutto il mio cuore,}
@@ -7543,10 +7448,10 @@ I canti sono raccolti per fase, nell'ordine in cui si cantano.
 \rigo{quella dei miei genitori,}
 \rigo{dei miei superiori,}
 \rigo{dei miei capi. Così sia.}
-\par\label{fine:225}\endgroup
+\par\label{fine:226}\endgroup
 
 \begingroup\senzaaccordi
-\cantotesta{226}{Preghiera della sera}{}{\bLC}{0pt}
+\cantotesta{227}{Preghiera della sera}{}{\bLC}{0pt}
 \rigo{Al cader della giornata}
 \nopagebreak
 \rigo{noi leviamo i cuori a Te,}
@@ -7558,12 +7463,12 @@ I canti sono raccolti per fase, nell'ordine in cui si cantano.
 \rigo{Te nel monte Te nel mar,}
 \rigo{Te nel cuore del fratello,}
 \rigo{Te nel mio cercai d'amar.}
-\par\label{fine:226}\endgroup
+\par\label{fine:227}\endgroup
 
 \sottosezione{Preghiere a tavola}
 
 \begingroup\senzaaccordi
-\cantotesta{227}{Dalla nascita del sol}{tradizionale}{}{0pt}
+\cantotesta{228}{Dalla nascita del sol}{tradizionale}{}{0pt}
 \rigo{Dalla nascita del sol, fino al suo tramonto vorrò}
 \nopagebreak
 \rigo{Lodare il Signor, con tutto il cuor. (2 volte)}
@@ -7575,10 +7480,10 @@ I canti sono raccolti per fase, nell'ordine in cui si cantano.
 \rigo{Benedetto è il nome Suo}
 \rigo{Da ora in poi, e per l'eternità.}
 \end{ritornello}
-\par\label{fine:227}\endgroup
+\par\label{fine:228}\endgroup
 
 \begingroup\senzaaccordi
-\cantotesta{228}{E prima di mangiar}{tradizionale}{}{0pt}
+\cantotesta{229}{E prima di mangiar}{tradizionale}{}{0pt}
 \rigo{Per i sentieri da non smarrir}
 \nopagebreak
 \rigo{per il presente e l'avvenir}
@@ -7588,10 +7493,10 @@ I canti sono raccolti per fase, nell'ordine in cui si cantano.
 \strofa
 \rigo{E prima di mangiar cantiamo tutti in cor}
 \rigo{gloria gloria gloria gloria gloria al Signor!}
-\par\label{fine:228}\endgroup
+\par\label{fine:229}\endgroup
 
 \begingroup\senzaaccordi
-\cantotesta{229}{Grazie}{tradizionale}{}{0pt}
+\cantotesta{230}{Grazie}{tradizionale}{}{0pt}
 \rigo{Grazie, signore per il tuo amore testimoniato da una croce.}
 \nopagebreak
 \rigo{Grazie per il sole che ci riscalda e ci fa vivere.}
@@ -7604,10 +7509,10 @@ I canti sono raccolti per fase, nell'ordine in cui si cantano.
 \rigo{Grazie per gli amici che camminano con me.}
 \rigo{Grazie per la Chiesa, madre di tutti i viventi.}
 \rigo{Grazie per ogni uomo di buona volontà che cammina nelle tue vie.}
-\par\label{fine:229}\endgroup
+\par\label{fine:230}\endgroup
 
 \begingroup\senzaaccordi
-\cantotesta{230}{Per questo pan}{tradizionale}{}{0pt}
+\cantotesta{231}{Per questo pan}{tradizionale}{}{0pt}
 \rigo{Per questo pan, per ogni don,}
 \nopagebreak
 \rigo{noi ti lodiam Signor.}
@@ -7621,7 +7526,7 @@ I canti sono raccolti per fase, nell'ordine in cui si cantano.
 \strofa
 \rigo{For bread strength, for ev'ry gift}
 \rigo{we sing praise you Lord.}
-\par\label{fine:230}\endgroup
+\par\label{fine:231}\endgroup
 
 \end{multicols}
 
@@ -7630,7 +7535,7 @@ I canti sono raccolti per fase, nell'ordine in cui si cantano.
 \testonormale\setlength{\columnsep}{8mm}\begin{multicols}{2}\raggedcolumns
 
 \begingroup\senzaaccordi
-\cantotesta{231}{Al chiaror del mattin}{}{\bEG}{0pt}
+\cantotesta{232}{Al chiaror del mattin}{}{\bEG}{0pt}
 \rigo{Al chiaror del mattin, al chiaror del mattin}
 \nopagebreak
 \rigo{ci sveglia una canzon, ci sveglia una canzon.   }
@@ -7665,10 +7570,10 @@ I canti sono raccolti per fase, nell'ordine in cui si cantano.
 \rigo{più divertente ancor sarà.}
 \strofa
 \rit
-\par\label{fine:231}\endgroup
+\par\label{fine:232}\endgroup
 
 \begingroup\senzaaccordi
-\cantotesta{232}{Suona già il risveglio}{}{\bEG}{0pt}
+\cantotesta{233}{Suona già il risveglio}{}{\bEG}{0pt}
 \begin{ritornello}
 \rigo{Suona già il risveglio,}
 \nopagebreak
@@ -7688,7 +7593,7 @@ I canti sono raccolti per fase, nell'ordine in cui si cantano.
 \rigo{col nostro canto tornerà seren.}
 \strofa
 \rit
-\par\label{fine:232}\endgroup
+\par\label{fine:233}\endgroup
 
 \end{multicols}
 
@@ -7698,22 +7603,22 @@ I canti sono raccolti per fase, nell'ordine in cui si cantano.
 \begin{multicols}{2}
 \lettera{A}
 \voce{14}{A caccia andiamo}
-\voce{210}{Abbracciami}
+\voce{211}{Abbracciami}
 \voce{178}{Accogli i nostri doni}
 \voce{6}{Addio lupetto}
 \voce{105}{Ah io vorrei tornare}
 \voce{133}{Airone}
-\voce{231}{Al chiaror del mattin}
+\voce{232}{Al chiaror del mattin}
 \voce{74}{Al passo del guidon}
 \voce{43}{Alla fiera dell'est}
-\voce{219}{Alla nostra signora della strada}
+\voce{220}{Alla nostra signora della strada}
 \voce{173}{Alleluia la tua festa}
 \voce{174}{Alleluia! È il tempo della gioia}
 \voce{175}{Alleluia, ed oggi ancora}
 \voce{176}{Alleluia, la parola tua}
 \voce{177}{Alleluia, passeranno i cieli}
 \voce{75}{Aluette}
-\voce{211}{Andate per le strade}
+\voce{212}{Andate per le strade}
 \voce{40}{Andiamo al falò}
 \voce{15}{Antica traccia}
 \voce{179}{Antica, eterna danza}
@@ -7721,10 +7626,10 @@ I canti sono raccolti per fase, nell'ordine in cui si cantano.
 \voce{16}{Attorno alla rupe}
 \lettera{B}
 \voce{45}{Banana cocco baobab}
-\voce{189}{Beati voi}
+\voce{190}{Beati voi}
 \voce{46}{Bella però sta macchina}
 \voce{180}{Benedetto sei tu}
-\voce{190}{Benedetto Signore (cerco solo te)}
+\voce{191}{Benedetto Signore (cerco solo te)}
 \voce{181}{Benedici, o Signore}
 \voce{142}{Benia calastoria}
 \voce{143}{Bersagliere ha cento penne}
@@ -7745,7 +7650,7 @@ I canti sono raccolti per fase, nell'ordine in cui si cantano.
 \voce{108}{Canto del ricordo}
 \voce{21}{Canto del risveglio}
 \voce{141}{Canto dell'addio}
-\voce{212}{Canto della creazione}
+\voce{213}{Canto della creazione}
 \voce{8}{Canto della promessa}
 \voce{7}{Canto della promessa del lupetto}
 \voce{22}{Canto della sera}
@@ -7753,7 +7658,7 @@ I canti sono raccolti per fase, nell'ordine in cui si cantano.
 \voce{11}{Canto delle Scolte d'Assisi}
 \voce{3}{Canto di gruppo}
 \voce{110}{Canto di Montegemoli}
-\voce{191}{Canto di San Damiano}
+\voce{192}{Canto di San Damiano}
 \voce{111}{Canto Eurojam 94}
 \voce{4}{Canto Riparto TV7}
 \voce{86}{Canzone dell'amicizia}
@@ -7762,15 +7667,15 @@ I canti sono raccolti per fase, nell'ordine in cui si cantano.
 \voce{164}{Che gioia ci hai dato}
 \voce{113}{Col cappellone}
 \voce{49}{Colla dei francobolli}
-\voce{192}{Come fuoco vivo}
-\voce{220}{Come Maria}
-\voce{193}{Come ti ama Dio}
-\voce{194}{Come tu mi vuoi}
-\voce{213}{Con te faremo cose grandi}
+\voce{193}{Come fuoco vivo}
+\voce{221}{Come Maria}
+\voce{194}{Come ti ama Dio}
+\voce{195}{Come tu mi vuoi}
+\voce{214}{Con te faremo cose grandi}
 \voce{76}{Cuciniere di squadriglia}
 \lettera{D}
 \voce{165}{Dall'aurora al tramonto}
-\voce{227}{Dalla nascita del sol}
+\voce{228}{Dalla nascita del sol}
 \voce{23}{Danza dei cani rossi}
 \voce{24}{Danza del fiore rosso}
 \voce{25}{Danza della tregua dell'acqua}
@@ -7778,11 +7683,11 @@ I canti sono raccolti per fase, nell'ordine in cui si cantano.
 \voce{88}{Drizza la tenda}
 \lettera{E}
 \voce{114}{E mi la dona bionda}
-\voce{228}{E prima di mangiar}
-\voce{195}{E sono solo un uomo}
-\voce{221}{Ecco il nostro sì}
+\voce{229}{E prima di mangiar}
+\voce{196}{E sono solo un uomo}
+\voce{222}{Ecco il nostro sì}
 \voce{182}{Ecco quel che abbiamo}
-\voce{214}{Eccomi per sempre}
+\voce{215}{Eccomi per sempre}
 \voce{50}{El meon xe bon}
 \voce{77}{El pescador da Ciosa}
 \voce{89}{El tram de Opcina}
@@ -7795,23 +7700,23 @@ I canti sono raccolti per fase, nell'ordine in cui si cantano.
 \voce{116}{Fiume rosso}
 \voce{51}{Fli flai}
 \voce{26}{Fratelli alla candida luna}
-\voce{215}{Fratello sole e sorella luna}
+\voce{216}{Fratello sole e sorella luna}
 \voce{183}{Frutto della nostra terra}
-\voce{196}{Fuoco per il mondo}
+\voce{197}{Fuoco per il mondo}
 \lettera{G}
 \voce{134}{Geordie}
 \voce{146}{Gerusalemme}
-\voce{197}{Gesù sei qui con me}
+\voce{198}{Gesù sei qui con me}
 \voce{167}{Gioia che invade l'anima}
 \voce{27}{Gli allegri folletti}
 \voce{168}{Grandi cose}
-\voce{229}{Grazie}
+\voce{230}{Grazie}
 \voce{117}{Guardati intorno scout}
 \lettera{H}
-\voce{198}{Ho solo un pane}
+\voce{199}{Ho solo un pane}
 \lettera{I}
 \voce{90}{I do gobeti}
-\voce{199}{I.N.R.I. (io non ritorno indietro)}
+\voce{200}{I.N.R.I. (io non ritorno indietro)}
 \voce{28}{Il canto del cuculo}
 \voce{52}{Il duca di Barnabò}
 \voce{135}{Il falco}
@@ -7824,9 +7729,9 @@ I canti sono raccolti per fase, nell'ordine in cui si cantano.
 \voce{54}{Il tortellino}
 \voce{137}{Il vascello fantasma}
 \voce{2}{Inno FSE}
-\voce{200}{Insieme}
+\voce{201}{Insieme}
 \voce{169}{Invochiamo la tua presenza}
-\voce{201}{Io sarò con te}
+\voce{202}{Io sarò con te}
 \lettera{J}
 \voce{55}{Jack è in cucina}
 \voce{92}{John Brown}
@@ -7862,10 +7767,10 @@ I canti sono raccolti per fase, nell'ordine in cui si cantano.
 \voce{150}{Laila oh!}
 \voce{98}{Lazy boy}
 \lettera{M}
-\voce{222}{Madonna degli scout}
-\voce{223}{Mamma del cielo}
-\voce{216}{Mani}
-\voce{224}{Maria lassù}
+\voce{223}{Madonna degli scout}
+\voce{224}{Mamma del cielo}
+\voce{217}{Mani}
+\voce{225}{Maria lassù}
 \voce{80}{Masafacia'}
 \voce{99}{Me compare Giacometo}
 \voce{81}{Mi am pias côl Giôanin}
@@ -7874,7 +7779,7 @@ I canti sono raccolti per fase, nell'ordine in cui si cantano.
 \voce{152}{Monte Pasubio}
 \lettera{N}
 \voce{63}{Napuletana mia}
-\voce{202}{Nel tuo volto la mia strada}
+\voce{203}{Nel tuo volto la mia strada}
 \voce{33}{Nella giungla misteriosa}
 \voce{100}{Non si va in cielo}
 \lettera{O}
@@ -7883,13 +7788,13 @@ I canti sono raccolti per fase, nell'ordine in cui si cantano.
 \voce{64}{Onci onci}
 \voce{65}{One banana}
 \lettera{P}
-\voce{203}{Pane del cielo}
-\voce{230}{Per questo pan}
+\voce{204}{Pane del cielo}
+\voce{231}{Per questo pan}
 \voce{126}{Pim pam}
-\voce{217}{Popoli tutti}
-\voce{225}{Preghiera del lupetto}
-\voce{226}{Preghiera della sera}
-\voce{204}{Preghiera semplice}
+\voce{218}{Popoli tutti}
+\voce{226}{Preghiera del lupetto}
+\voce{227}{Preghiera della sera}
+\voce{205}{Preghiera semplice}
 \lettera{Q}
 \voce{66}{Quattro pirati}
 \voce{153}{Quel mazzolin di fiori}
@@ -7897,12 +7802,13 @@ I canti sono raccolti per fase, nell'ordine in cui si cantano.
 \voce{42}{Salite o fiamme}
 \voce{34}{Salta o lupo}
 \voce{67}{San Michele}
-\voce{188}{Santo (Dio del cielo)}
+\voce{188}{Santo}
+\voce{189}{Santo (Dio del cielo)}
 \voce{139}{Scende la notte (esploratori)}
 \voce{12}{Se incontrerò}
 \voce{185}{Se m'accogli}
 \voce{154}{Se non ci conoscete}
-\voce{205}{Sei fuoco e vento}
+\voce{206}{Sei fuoco e vento}
 \voce{13}{Servire}
 \voce{186}{Servo per amore}
 \voce{102}{Si va}
@@ -7911,7 +7817,7 @@ I canti sono raccolti per fase, nell'ordine in cui si cantano.
 \voce{140}{Signor, fra le tende schierati}
 \voce{155}{Signore delle cime}
 \voce{156}{Stelutis alpinis}
-\voce{206}{Su ali d'aquila}
+\voce{207}{Su ali d'aquila}
 \voce{157}{Sul cappello}
 \voce{103}{Sul cappello un bel fior}
 \voce{83}{Sul colle}
@@ -7919,17 +7825,17 @@ I canti sono raccolti per fase, nell'ordine in cui si cantano.
 \voce{127}{Sul pajon}
 \voce{158}{Sul ponte di Bassano}
 \voce{159}{Sul ponte di Perati}
-\voce{232}{Suona già il risveglio}
-\voce{207}{Symbolum 77}
+\voce{233}{Suona già il risveglio}
+\voce{208}{Symbolum 77}
 \lettera{T}
 \voce{160}{Ta-pum}
 \voce{70}{Tango}
-\voce{208}{Te al centro del mio cuore}
+\voce{209}{Te al centro del mio cuore}
 \voce{128}{Terra della betulla}
 \voce{187}{Terra, acqua, cielo}
-\voce{218}{Ti ringrazio mio Signore}
+\voce{219}{Ti ringrazio mio Signore}
 \voce{84}{Tinchete Ritinchete}
-\voce{209}{Tu sei}
+\voce{210}{Tu sei}
 \lettera{U}
 \voce{36}{Ula, ula, ula}
 \voce{37}{Un bravo lupo}
@@ -8159,57 +8065,58 @@ I canti sono raccolti per fase, nell'ordine in cui si cantano.
 \voce{186}{Servo per amore}
 \voce{187}{Terra, acqua, cielo}
 \sottocategoriaindice{Santo}
-\voce{188}{Santo (Dio del cielo)}
+\voce{188}{Santo}
+\voce{189}{Santo (Dio del cielo)}
 \sottocategoriaindice{Comunione}
-\voce{189}{Beati voi}
-\voce{190}{Benedetto Signore (cerco solo te)}
-\voce{191}{Canto di San Damiano}
-\voce{192}{Come fuoco vivo}
-\voce{193}{Come ti ama Dio}
-\voce{194}{Come tu mi vuoi}
-\voce{195}{E sono solo un uomo}
-\voce{196}{Fuoco per il mondo}
-\voce{197}{Gesù sei qui con me}
-\voce{198}{Ho solo un pane}
-\voce{199}{I.N.R.I. (io non ritorno indietro)}
-\voce{200}{Insieme}
-\voce{201}{Io sarò con te}
-\voce{202}{Nel tuo volto la mia strada}
-\voce{203}{Pane del cielo}
-\voce{204}{Preghiera semplice}
-\voce{205}{Sei fuoco e vento}
-\voce{206}{Su ali d'aquila}
-\voce{207}{Symbolum 77}
-\voce{208}{Te al centro del mio cuore}
-\voce{209}{Tu sei}
+\voce{190}{Beati voi}
+\voce{191}{Benedetto Signore (cerco solo te)}
+\voce{192}{Canto di San Damiano}
+\voce{193}{Come fuoco vivo}
+\voce{194}{Come ti ama Dio}
+\voce{195}{Come tu mi vuoi}
+\voce{196}{E sono solo un uomo}
+\voce{197}{Fuoco per il mondo}
+\voce{198}{Gesù sei qui con me}
+\voce{199}{Ho solo un pane}
+\voce{200}{I.N.R.I. (io non ritorno indietro)}
+\voce{201}{Insieme}
+\voce{202}{Io sarò con te}
+\voce{203}{Nel tuo volto la mia strada}
+\voce{204}{Pane del cielo}
+\voce{205}{Preghiera semplice}
+\voce{206}{Sei fuoco e vento}
+\voce{207}{Su ali d'aquila}
+\voce{208}{Symbolum 77}
+\voce{209}{Te al centro del mio cuore}
+\voce{210}{Tu sei}
 \sottocategoriaindice{Finale}
-\voce{210}{Abbracciami}
-\voce{211}{Andate per le strade}
-\voce{212}{Canto della creazione}
-\voce{213}{Con te faremo cose grandi}
-\voce{214}{Eccomi per sempre}
-\voce{215}{Fratello sole e sorella luna}
-\voce{216}{Mani}
-\voce{217}{Popoli tutti}
-\voce{218}{Ti ringrazio mio Signore}
+\voce{211}{Abbracciami}
+\voce{212}{Andate per le strade}
+\voce{213}{Canto della creazione}
+\voce{214}{Con te faremo cose grandi}
+\voce{215}{Eccomi per sempre}
+\voce{216}{Fratello sole e sorella luna}
+\voce{217}{Mani}
+\voce{218}{Popoli tutti}
+\voce{219}{Ti ringrazio mio Signore}
 \sottocategoriaindice{Mariani}
-\voce{219}{Alla nostra signora della strada}
-\voce{220}{Come Maria}
-\voce{221}{Ecco il nostro sì}
-\voce{222}{Madonna degli scout}
-\voce{223}{Mamma del cielo}
-\voce{224}{Maria lassù}
+\voce{220}{Alla nostra signora della strada}
+\voce{221}{Come Maria}
+\voce{222}{Ecco il nostro sì}
+\voce{223}{Madonna degli scout}
+\voce{224}{Mamma del cielo}
+\voce{225}{Maria lassù}
 \sottocategoriaindice{Preghiere scout}
-\voce{225}{Preghiera del lupetto}
-\voce{226}{Preghiera della sera}
+\voce{226}{Preghiera del lupetto}
+\voce{227}{Preghiera della sera}
 \sottocategoriaindice{Preghiere a tavola}
-\voce{227}{Dalla nascita del sol}
-\voce{228}{E prima di mangiar}
-\voce{229}{Grazie}
-\voce{230}{Per questo pan}
+\voce{228}{Dalla nascita del sol}
+\voce{229}{E prima di mangiar}
+\voce{230}{Grazie}
+\voce{231}{Per questo pan}
 \categoriaindice{Canti del risveglio}
-\voce{231}{Al chiaror del mattin}
-\voce{232}{Suona già il risveglio}
+\voce{232}{Al chiaror del mattin}
+\voce{233}{Suona già il risveglio}
 \end{multicols}
 \endgroup
 

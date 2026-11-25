@@ -85,9 +85,12 @@
 \newcommand{\testonormale}{\def\corpotesto{11}\def\interlineatesto{13.6}}
 % Pagina sinistra successiva (canto lunghissimo: deve avere davanti le due pagine affiancate)
 \newcommand{\paginasinistra}{\clearpage\ifodd\value{page}\null\thispagestyle{empty}\clearpage\fi}
-% Pagina divisoria di sezione: titolo grande + testo facoltativo (latex/sezioni/<sezione>.tex)
+% Pagina destra (dispari) successiva; l'eventuale pagina bianca in mezzo resta senza numero
+\newcommand{\paginadestra}{\clearpage\ifodd\value{page}\else\null\thispagestyle{empty}\clearpage\fi}
+% Pagina divisoria di sezione, sempre a destra, e primo canto della sezione ancora a destra
+% (dietro la divisoria una pagina bianca). Titolo grande + testo facoltativo (latex/sezioni/<sezione>.tex)
 \newcommand{\sezione}[2]{%
-  \clearpage\gdef\sezionecorrente{#1}%
+  \paginadestra\gdef\sezionecorrente{#1}%
   \thispagestyle{empty}
   \vspace*{\fill}
   \begin{center}
@@ -96,7 +99,7 @@
   \end{center}
   \vspace{6mm}{\small #2\par}
   \vspace*{\fill}
-  \clearpage}
+  \paginadestra}
 % Titoletto di fase del fuoco / momento della messa, dentro la colonna
 \newcommand{\sottosezione}[1]{%
   \par\addvspace{5mm}%
@@ -154,12 +157,10 @@
 \end{center}
 <<PAGINE_INIZIALI>>
 
-% ---- Canti (la numerazione araba riparte da 1: pagina stampata = campo "pagina")
-% La prima pagina divisoria va su una pagina sinistra (pagina 0, senza numero), cosi' il canto 1 parte
-% a pagina 1, a destra. Pagine dispari = destra: il margine dei rivetti resta sul lato giusto.
+% ---- Canti: numeri arabi senza ricominciare il conto (dopo la pagina iv viene la 5).
+% Pagina dispari = destra: il margine dei rivetti resta sul lato giusto.
 \clearpage
-\ifodd\value{page}\null\thispagestyle{empty}\clearpage\fi
-\pagenumbering{arabic}\setcounter{page}{0}
+\renewcommand{\thepage}{\arabic{page}}
 <<CANTI>>
 
 % ---- Indici
