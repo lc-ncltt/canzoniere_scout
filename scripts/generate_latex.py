@@ -174,7 +174,7 @@ def canto_latex(c):
         out.append(rf"\afronte{{{sx}}}{{{esc(fronte[2])}}}{{{dx}}}")
     else:
         out += corpo_latex(parti[0], aggancia=3)
-    out.append(r"\par\endgroup")
+    out.append(rf"\par\label{{fine:{c['id']}}}\endgroup")  # fine del canto: impagina.py controlla che non giri pagina
     return "\n".join(out)
 
 
@@ -227,23 +227,59 @@ def canti_latex(canti, accordi=False):
     ACCORDI = accordi
     """Per ogni sezione: pagina divisoria (con latex/sezioni/<slug>.tex se esiste), poi i canti
     di seguito su due colonne, con un titoletto a ogni cambio di sottosezione (fase / momento)."""
+    imp = carica_impaginazione()
+    # 3 colonne: canto lungo da solo sulla sua pagina, colonne piu' strette
+    due = r"\testonormale\setlength{\columnsep}{8mm}\begin{multicols}{2}\raggedcolumns"
+    tre = r"\testopiccolo\setlength{\columnsep}{6mm}\begin{multicols}{3}\raggedcolumns"
+
+    def a_capo_pagina(apri, salto=r"\clearpage"):
+        """Chiude le colonne e ricomincia da una pagina nuova (se le colonne erano appena aperte, le sostituisce)."""
+        if out[-1] == due and salto == r"\clearpage":
+            out[-1] = apri
+        else:
+            if out[-1] == due:
+                out.pop()
+                out.append(salto + apri)
+            else:
+                out.extend([r"\end{multicols}" + salto, apri])
+
     out = []
     for cat in dict.fromkeys(c["categoria"] for c in canti):
         intro = ROOT / "latex" / "sezioni" / f"{slug(cat)}.tex"
         testo_intro = intro.read_text(encoding="utf-8").strip() if intro.exists() else ""
-        out += [rf"\sezione{{{esc(cat)}}}{{{testo_intro}}}", r"\begin{multicols}{2}\raggedcolumns"]
+        out += [rf"\sezione{{{esc(cat)}}}{{{testo_intro}}}", due]
         sub_prec = None
         for c in (c for c in canti if c["categoria"] == cat):
+            s = slug(c["titolo"])
+            fronte = dividi_a_fronte(c["testo_accordi"])
+            # data/impaginazione.json (scritto da impagina.py): il canto non deve girare pagina
+            if not fronte and s in imp["tre_colonne"]:
+                a_capo_pagina(tre)
+            elif not fronte and s in imp["pagina_sinistra"]:
+                a_capo_pagina(due, r"\paginasinistra")
+            elif not fronte and s in imp["nuova_pagina"]:
+                a_capo_pagina(due)
             sub = c.get("sottosezione")
             if sub and sub != sub_prec:
                 out.append(rf"\sottosezione{{{esc(sub)}}}")
             sub_prec = sub
-            if dividi_a_fronte(c["testo_accordi"]):  # testo a fronte: esce dalle due colonne
-                out += [r"\end{multicols}", canto_latex(c), r"\begin{multicols}{2}\raggedcolumns"]
+            if fronte:  # testo a fronte: esce dalle due colonne
+                out += [r"\end{multicols}", canto_latex(c), due]
             else:
                 out.append(canto_latex(c))
+            if not fronte and s in imp["tre_colonne"]:  # da solo sulla sua pagina
+                out.extend([r"\end{multicols}\clearpage", due])
         out.append(r"\end{multicols}")
     return "\n\n".join(out)
+
+
+IMPAGINAZIONE = ROOT / "data" / "impaginazione.json"
+
+
+def carica_impaginazione():
+    """Canti (per slug del titolo) che partono da una pagina nuova o stanno da soli su una pagina a 3 colonne."""
+    dati = carica_json(IMPAGINAZIONE) if IMPAGINAZIONE.exists() else {}
+    return {k: set(dati.get(k, [])) for k in ("nuova_pagina", "tre_colonne", "pagina_sinistra")}
 
 
 def chiave_ordinamento(titolo):

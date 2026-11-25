@@ -78,8 +78,13 @@
     {\noindent\small\itshape #3\par}\nopagebreak\fi
   \vspace{1.2mm}\nopagebreak}
 % Canto senza accordi: interlinea normale (quella ampia serve solo a far stare gli accordi sopra il testo)
-\newcommand{\senzaaccordi}{\fontsize{11}{13.6}\selectfont}
-
+\newcommand{\senzaaccordi}{\fontsize{\corpotesto}{\interlineatesto}\selectfont}
+\def\corpotesto{11}\def\interlineatesto{13.6}
+% Pagina a 3 colonne (canto lungo da solo, vedi scripts/impagina.py): testo a 10 pt
+\newcommand{\testopiccolo}{\def\corpotesto{10}\def\interlineatesto{12}}
+\newcommand{\testonormale}{\def\corpotesto{11}\def\interlineatesto{13.6}}
+% Pagina sinistra successiva (canto lunghissimo: deve avere davanti le due pagine affiancate)
+\newcommand{\paginasinistra}{\clearpage\ifodd\value{page}\null\thispagestyle{empty}\clearpage\fi}
 % Pagina divisoria di sezione: titolo grande + testo facoltativo (latex/sezioni/<sezione>.tex)
 \newcommand{\sezione}[2]{%
   \clearpage\gdef\sezionecorrente{#1}%
@@ -150,8 +155,11 @@
 <<PAGINE_INIZIALI>>
 
 % ---- Canti (la numerazione araba riparte da 1: pagina stampata = campo "pagina")
-\cleardoublepage % pagina 1 su un recto: il margine dei rivetti resta sul lato giusto
-\pagenumbering{arabic}
+% La prima pagina divisoria va su una pagina sinistra (pagina 0, senza numero), cosi' il canto 1 parte
+% a pagina 1, a destra. Pagine dispari = destra: il margine dei rivetti resta sul lato giusto.
+\clearpage
+\ifodd\value{page}\null\thispagestyle{empty}\clearpage\fi
+\pagenumbering{arabic}\setcounter{page}{0}
 <<CANTI>>
 
 % ---- Indici
