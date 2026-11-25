@@ -75,7 +75,7 @@
    \setbox\z@\hbox{#1\enspace\if\relax\detokenize{#4}\relax\else#4\enspace\fi}%
    \noindent\hangindent=\wd\z@\hangafter=1 \rightskip=0pt plus 4em\relax \box\z@ \uline{#2}\par}\nopagebreak
   \if\relax\detokenize{#3}\relax\else
-    {\noindent\small\itshape #3\par}\nopagebreak\fi
+    {\vspace{1.2mm}\noindent\small\itshape #3\par}\nopagebreak\fi
   \vspace{1.2mm}\nopagebreak}
 % Canto senza accordi: interlinea normale (quella ampia serve solo a far stare gli accordi sopra il testo)
 \newcommand{\senzaaccordi}{\fontsize{\corpotesto}{\interlineatesto}\selectfont}
@@ -100,11 +100,9 @@
   \vspace{6mm}{\small #2\par}
   \vspace*{\fill}
   \paginadestra}
-% Titoletto di fase del fuoco / momento della messa, dentro la colonna
-\newcommand{\sottosezione}[1]{%
-  \par\addvspace{5mm}%
-  {\centering\color{fiamma}\rule[.6ex]{8mm}{.6pt}\ \textcolor{black}{\scshape\bfseries #1}\ \rule[.6ex]{8mm}{.6pt}\par}
-  \nopagebreak\vspace{1mm}}
+% Sezione interna (fase del fuoco / momento della messa): niente titolo nel testo, il canto parte su
+% una pagina nuova e il nome compare solo in basso: "Fuoco di bivacco - Bans"
+\newcommand{\sottosezione}[2]{\gdef\sezionecorrente{#1\ \textendash\ #2}}
 \makeatother
 \pagestyle{canz}
 

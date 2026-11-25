@@ -75,7 +75,7 @@
    \setbox\z@\hbox{#1\enspace\if\relax\detokenize{#4}\relax\else#4\enspace\fi}%
    \noindent\hangindent=\wd\z@\hangafter=1 \rightskip=0pt plus 4em\relax \box\z@ \uline{#2}\par}\nopagebreak
   \if\relax\detokenize{#3}\relax\else
-    {\noindent\small\itshape #3\par}\nopagebreak\fi
+    {\vspace{1.2mm}\noindent\small\itshape #3\par}\nopagebreak\fi
   \vspace{1.2mm}\nopagebreak}
 % Canto senza accordi: interlinea normale (quella ampia serve solo a far stare gli accordi sopra il testo)
 \newcommand{\senzaaccordi}{\fontsize{\corpotesto}{\interlineatesto}\selectfont}
@@ -100,11 +100,9 @@
   \vspace{6mm}{\small #2\par}
   \vspace*{\fill}
   \paginadestra}
-% Titoletto di fase del fuoco / momento della messa, dentro la colonna
-\newcommand{\sottosezione}[1]{%
-  \par\addvspace{5mm}%
-  {\centering\color{fiamma}\rule[.6ex]{8mm}{.6pt}\ \textcolor{black}{\scshape\bfseries #1}\ \rule[.6ex]{8mm}{.6pt}\par}
-  \nopagebreak\vspace{1mm}}
+% Sezione interna (fase del fuoco / momento della messa): niente titolo nel testo, il canto parte su
+% una pagina nuova e il nome compare solo in basso: "Fuoco di bivacco - Bans"
+\newcommand{\sottosezione}[2]{\gdef\sezionecorrente{#1\ \textendash\ #2}}
 \makeatother
 \pagestyle{canz}
 
@@ -1479,7 +1477,7 @@ I canti sono raccolti per fase, nell'ordine in cui si cantano.
 
 \testonormale\setlength{\columnsep}{8mm}\begin{multicols}{2}\raggedcolumns
 
-\sottosezione{Apertura}
+\sottosezione{Fuoco di bivacco}{Apertura}
 
 \begingroup\senzaaccordi
 \cantotesta{40}{Andiamo al falò}{}{\bEG}{0pt}
@@ -1575,7 +1573,11 @@ I canti sono raccolti per fase, nell'ordine in cui si cantano.
 \nopagebreak
 \par\label{fine:42}\endgroup
 
-\sottosezione{Bans}
+\end{multicols}\clearpage
+
+\testonormale\setlength{\columnsep}{8mm}\begin{multicols}{2}\raggedcolumns
+
+\sottosezione{Fuoco di bivacco}{Bans}
 
 \begingroup\senzaaccordi
 \cantotesta{43}{Alla fiera dell'est}{A. Branduardi, L. Zappa}{\bLC}{0pt}
@@ -1625,6 +1627,10 @@ I canti sono raccolti per fase, nell'ordine in cui si cantano.
 \rigo{Ad libitum.}
 \par\label{fine:44}\endgroup
 
+\end{multicols}\clearpage
+
+\testonormale\setlength{\columnsep}{8mm}\begin{multicols}{2}\raggedcolumns
+
 \begingroup\senzaaccordi
 \cantotesta{45}{Banana cocco baobab}{}{\bEG}{0pt}
 \rigo{Ero stanco di essere un uomo della città,}
@@ -1650,10 +1656,6 @@ I canti sono raccolti per fase, nell'ordine in cui si cantano.
 \strofa
 \rit
 \par\label{fine:45}\endgroup
-
-\end{multicols}\clearpage
-
-\testonormale\setlength{\columnsep}{8mm}\begin{multicols}{2}\raggedcolumns
 
 \begingroup\senzaaccordi
 \cantotesta{46}{Bella però sta macchina}{}{\bLC}{0pt}
@@ -1760,10 +1762,6 @@ I canti sono raccolti per fase, nell'ordine in cui si cantano.
 \rigo{chi stava mezza via,}
 \rigo{non stava ne su e ne giù.}
 \par\label{fine:52}\endgroup
-
-\end{multicols}\clearpage
-
-\testonormale\setlength{\columnsep}{8mm}\begin{multicols}{2}\raggedcolumns
 
 \begingroup\senzaaccordi
 \cantotesta{53}{Il ranocchio ciclista}{}{\bEG}{0pt}
@@ -2171,7 +2169,11 @@ I canti sono raccolti per fase, nell'ordine in cui si cantano.
 \rigo{Soldati: "BOOM! BOOM! BOOM!"}
 \par\label{fine:73}\endgroup
 
-\sottosezione{Crescendo}
+\end{multicols}\clearpage
+
+\testonormale\setlength{\columnsep}{8mm}\begin{multicols}{2}\raggedcolumns
+
+\sottosezione{Fuoco di bivacco}{Crescendo}
 
 \begingroup\senzaaccordi
 \cantotesta{74}{Al passo del guidon}{}{\bEG}{0pt}
@@ -2572,7 +2574,7 @@ I canti sono raccolti per fase, nell'ordine in cui si cantano.
 
 \testonormale\setlength{\columnsep}{8mm}\begin{multicols}{2}\raggedcolumns
 
-\sottosezione{Picco}
+\sottosezione{Fuoco di bivacco}{Picco}
 
 \begingroup\senzaaccordi
 \cantotesta{85}{Bevi bevi}{}{\bRS}{0pt}
@@ -3385,7 +3387,11 @@ I canti sono raccolti per fase, nell'ordine in cui si cantano.
 \rigo{requiem aeternam per noi alpin.}
 \par\label{fine:104}\endgroup
 
-\sottosezione{Calando}
+\end{multicols}\clearpage
+
+\testonormale\setlength{\columnsep}{8mm}\begin{multicols}{2}\raggedcolumns
+
+\sottosezione{Fuoco di bivacco}{Calando}
 
 \begingroup\senzaaccordi
 \cantotesta{105}{Ah io vorrei tornare}{}{\bRS}{0pt}
@@ -3417,10 +3423,6 @@ I canti sono raccolti per fase, nell'ordine in cui si cantano.
 \strofa
 \rit
 \par\label{fine:105}\endgroup
-
-\end{multicols}\clearpage
-
-\testonormale\setlength{\columnsep}{8mm}\begin{multicols}{2}\raggedcolumns
 
 \begingroup\senzaaccordi
 \cantotesta{106}{Blowin' in the wind}{}{\bEG}{0pt}
@@ -3457,7 +3459,7 @@ I canti sono raccolti per fase, nell'ordine in cui si cantano.
 \rit
 \par\label{fine:106}\endgroup
 
-\end{multicols}\paginasinistra
+\end{multicols}\clearpage
 
 \testonormale\setlength{\columnsep}{8mm}\begin{multicols}{2}\raggedcolumns
 
@@ -4501,7 +4503,11 @@ I canti sono raccolti per fase, nell'ordine in cui si cantano.
 \rit
 \par\label{fine:132}\endgroup
 
-\sottosezione{Chiusura}
+\end{multicols}\clearpage
+
+\testonormale\setlength{\columnsep}{8mm}\begin{multicols}{2}\raggedcolumns
+
+\sottosezione{Fuoco di bivacco}{Chiusura}
 
 \begingroup\senzaaccordi
 \cantotesta{133}{Airone}{}{\bEG}{0pt}
@@ -4529,10 +4535,6 @@ I canti sono raccolti per fase, nell'ordine in cui si cantano.
 \strofa
 \rigo{Airone..}
 \par\label{fine:133}\endgroup
-
-\end{multicols}\clearpage
-
-\testonormale\setlength{\columnsep}{8mm}\begin{multicols}{2}\raggedcolumns
 
 \begingroup\senzaaccordi
 \cantotesta{134}{Geordie}{tradizionale (versione di F. De André)}{\bEG}{0pt}
@@ -4618,6 +4620,10 @@ I canti sono raccolti per fase, nell'ordine in cui si cantano.
 \rit
 \par\label{fine:135}\endgroup
 
+\end{multicols}\clearpage
+
+\testonormale\setlength{\columnsep}{8mm}\begin{multicols}{2}\raggedcolumns
+
 \begingroup\senzaaccordi
 \cantotesta{136}{Il testamento del capitano}{}{\bRS}{0pt}
 \rigo{Il capitan de la compagnia}
@@ -4650,10 +4656,6 @@ I canti sono raccolti per fase, nell'ordine in cui si cantano.
 \rigo{L'ultimo pezzo alle montagne}
 \rigo{Ché lo fioriscano di rose e fior}
 \par\label{fine:136}\endgroup
-
-\end{multicols}\clearpage
-
-\testonormale\setlength{\columnsep}{8mm}\begin{multicols}{2}\raggedcolumns
 
 \begingroup\senzaaccordi
 \cantotesta{137}{Il vascello fantasma}{}{\bEG}{0pt}
@@ -4742,7 +4744,11 @@ I canti sono raccolti per fase, nell'ordine in cui si cantano.
 \rigo{del monte, del monte.}
 \par\label{fine:138}\endgroup
 
-\sottosezione{Ultimi}
+\end{multicols}\clearpage
+
+\testonormale\setlength{\columnsep}{8mm}\begin{multicols}{2}\raggedcolumns
+
+\sottosezione{Fuoco di bivacco}{Ultimi}
 
 \begingroup\senzaaccordi
 \cantotesta{139}{Scende la notte (esploratori)}{}{\bEG}{0pt}
@@ -4771,10 +4777,6 @@ I canti sono raccolti per fase, nell'ordine in cui si cantano.
 \strofa
 \rit
 \par\label{fine:139}\endgroup
-
-\end{multicols}\clearpage
-
-\testonormale\setlength{\columnsep}{8mm}\begin{multicols}{2}\raggedcolumns
 
 \begingroup\senzaaccordi
 \cantotesta{140}{Signor, fra le tende schierati}{}{\bEG}{0pt}
@@ -5507,7 +5509,7 @@ I canti sono raccolti per fase, nell'ordine in cui si cantano.
 
 \testonormale\setlength{\columnsep}{8mm}\begin{multicols}{2}\raggedcolumns
 
-\sottosezione{Ingresso}
+\sottosezione{Canti liturgici}{Ingresso}
 
 \begingroup\senzaaccordi
 \cantotesta{162}{Camminerò}{}{}{0pt}
@@ -5845,7 +5847,11 @@ I canti sono raccolti per fase, nell'ordine in cui si cantano.
 \rit
 \par\label{fine:172}\endgroup
 
-\sottosezione{Alleluia}
+\end{multicols}\clearpage
+
+\testonormale\setlength{\columnsep}{8mm}\begin{multicols}{2}\raggedcolumns
+
+\sottosezione{Canti liturgici}{Alleluia}
 
 \begingroup\senzaaccordi
 \cantotesta{173}{Alleluia la tua festa}{}{}{0pt}
@@ -5908,6 +5914,10 @@ I canti sono raccolti per fase, nell'ordine in cui si cantano.
 \rigo{Alleluia. Alleluia. Alleluia.}
 \par\label{fine:174}\endgroup
 
+\end{multicols}\clearpage
+
+\testonormale\setlength{\columnsep}{8mm}\begin{multicols}{2}\raggedcolumns
+
 \begingroup\senzaaccordi
 \cantotesta{175}{Alleluia, ed oggi ancora}{}{}{0pt}
 \begin{ritornello}
@@ -5925,10 +5935,6 @@ I canti sono raccolti per fase, nell'ordine in cui si cantano.
 \strofa
 \rit
 \par\label{fine:175}\endgroup
-
-\end{multicols}\clearpage
-
-\testonormale\setlength{\columnsep}{8mm}\begin{multicols}{2}\raggedcolumns
 
 \begingroup\senzaaccordi
 \cantotesta{176}{Alleluia, la parola tua}{}{}{0pt}
@@ -5967,7 +5973,11 @@ I canti sono raccolti per fase, nell'ordine in cui si cantano.
 \rit
 \par\label{fine:177}\endgroup
 
-\sottosezione{Offertorio}
+\end{multicols}\clearpage
+
+\testonormale\setlength{\columnsep}{8mm}\begin{multicols}{2}\raggedcolumns
+
+\sottosezione{Canti liturgici}{Offertorio}
 
 \begingroup\senzaaccordi
 \cantotesta{178}{Accogli i nostri doni}{}{}{0pt}
@@ -6029,6 +6039,10 @@ I canti sono raccolti per fase, nell'ordine in cui si cantano.
 \rigo{E facci tutti chiesa,}
 \rigo{una cosa in Te.}
 \par\label{fine:179}\endgroup
+
+\end{multicols}\clearpage
+
+\testonormale\setlength{\columnsep}{8mm}\begin{multicols}{2}\raggedcolumns
 
 \begingroup\senzaaccordi
 \cantotesta{180}{Benedetto sei tu}{M. Frisina}{}{0pt}
@@ -6155,10 +6169,6 @@ I canti sono raccolti per fase, nell'ordine in cui si cantano.
 \rigo{Ogni mia parola.}
 \par\label{fine:184}\endgroup
 
-\end{multicols}\clearpage
-
-\testonormale\setlength{\columnsep}{8mm}\begin{multicols}{2}\raggedcolumns
-
 \begingroup\senzaaccordi
 \cantotesta{185}{Se m'accogli}{P. Sequeri}{}{0pt}
 \rigo{Tra le mani non ho niente so che Tu mi accoglierai     }
@@ -6263,7 +6273,7 @@ I canti sono raccolti per fase, nell'ordine in cui si cantano.
 
 \testonormale\setlength{\columnsep}{8mm}\begin{multicols}{2}\raggedcolumns
 
-\sottosezione{Santo}
+\sottosezione{Canti liturgici}{Santo}
 
 \begingroup\senzaaccordi
 \cantotesta{188}{Santo}{M. Frisina}{}{0pt}
@@ -6323,7 +6333,11 @@ I canti sono raccolti per fase, nell'ordine in cui si cantano.
 \rit
 \par\label{fine:189}\endgroup
 
-\sottosezione{Comunione}
+\end{multicols}\clearpage
+
+\testonormale\setlength{\columnsep}{8mm}\begin{multicols}{2}\raggedcolumns
+
+\sottosezione{Canti liturgici}{Comunione}
 
 \begingroup\senzaaccordi
 \cantotesta{190}{Beati voi}{}{}{0pt}
@@ -7024,7 +7038,11 @@ I canti sono raccolti per fase, nell'ordine in cui si cantano.
 \rigo{E gonfierà le vele per questo mare}
 \par\label{fine:210}\endgroup
 
-\sottosezione{Finale}
+\end{multicols}\clearpage
+
+\testonormale\setlength{\columnsep}{8mm}\begin{multicols}{2}\raggedcolumns
+
+\sottosezione{Canti liturgici}{Finale}
 
 \begingroup\senzaaccordi
 \cantotesta{211}{Abbracciami}{}{}{0pt}
@@ -7056,10 +7074,6 @@ I canti sono raccolti per fase, nell'ordine in cui si cantano.
 \strofa
 \rit
 \par\label{fine:211}\endgroup
-
-\end{multicols}\clearpage
-
-\testonormale\setlength{\columnsep}{8mm}\begin{multicols}{2}\raggedcolumns
 
 \begingroup\senzaaccordi
 \cantotesta{212}{Andate per le strade}{}{}{0pt}
@@ -7094,6 +7108,10 @@ I canti sono raccolti per fase, nell'ordine in cui si cantano.
 \rigo{Se hanno odiato me, odieranno anche voi}
 \rigo{ma voi non temete io non vi lascio soli.}
 \par\label{fine:212}\endgroup
+
+\end{multicols}\clearpage
+
+\testonormale\setlength{\columnsep}{8mm}\begin{multicols}{2}\raggedcolumns
 
 \begingroup\senzaaccordi
 \cantotesta{213}{Canto della creazione}{}{}{0pt}
@@ -7156,10 +7174,6 @@ I canti sono raccolti per fase, nell'ordine in cui si cantano.
 \rit
 \par\label{fine:213}\endgroup
 
-\end{multicols}\clearpage
-
-\testonormale\setlength{\columnsep}{8mm}\begin{multicols}{2}\raggedcolumns
-
 \begingroup\senzaaccordi
 \cantotesta{214}{Con te faremo cose grandi}{}{}{0pt}
 \begin{ritornello}
@@ -7196,6 +7210,10 @@ I canti sono raccolti per fase, nell'ordine in cui si cantano.
 \rigo{la speranza che risplenderà nei volti.}
 \end{ritornello}
 \par\label{fine:214}\endgroup
+
+\end{multicols}\clearpage
+
+\testonormale\setlength{\columnsep}{8mm}\begin{multicols}{2}\raggedcolumns
 
 \begingroup\senzaaccordi
 \cantotesta{215}{Eccomi per sempre}{}{\bLC}{0pt}
@@ -7375,7 +7393,7 @@ I canti sono raccolti per fase, nell'ordine in cui si cantano.
 
 \testonormale\setlength{\columnsep}{8mm}\begin{multicols}{2}\raggedcolumns
 
-\sottosezione{Mariani}
+\sottosezione{Canti liturgici}{Mariani}
 
 \begingroup\senzaaccordi
 \cantotesta{220}{Alla nostra signora della strada}{}{}{0pt}
@@ -7554,7 +7572,11 @@ I canti sono raccolti per fase, nell'ordine in cui si cantano.
 \rigo{lungo sogno di Dio.}
 \par\label{fine:225}\endgroup
 
-\sottosezione{Preghiere scout}
+\end{multicols}\clearpage
+
+\testonormale\setlength{\columnsep}{8mm}\begin{multicols}{2}\raggedcolumns
+
+\sottosezione{Canti liturgici}{Preghiere scout}
 
 \begingroup\senzaaccordi
 \cantotesta{226}{Preghiera del lupetto}{}{\bLC}{0pt}
@@ -7589,7 +7611,11 @@ I canti sono raccolti per fase, nell'ordine in cui si cantano.
 \rigo{Te nel mio cercai d'amar.}
 \par\label{fine:227}\endgroup
 
-\sottosezione{Preghiere a tavola}
+\end{multicols}\clearpage
+
+\testonormale\setlength{\columnsep}{8mm}\begin{multicols}{2}\raggedcolumns
+
+\sottosezione{Canti liturgici}{Preghiere a tavola}
 
 \begingroup\senzaaccordi
 \cantotesta{228}{Dalla nascita del sol}{tradizionale}{}{0pt}

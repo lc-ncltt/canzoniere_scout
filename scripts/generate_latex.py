@@ -252,6 +252,9 @@ def canti_latex(canti, accordi=False):
         for c in (c for c in canti if c["categoria"] == cat):
             s = slug(c["titolo"])
             fronte = dividi_a_fronte(c["testo_accordi"])
+            sub = c.get("sottosezione")
+            if sub != sub_prec and sub_prec is not None:  # cambio di fase/momento: pagina nuova
+                a_capo_pagina(due)
             # data/impaginazione.json (scritto da impagina.py): il canto non deve girare pagina
             if not fronte and s in imp["tre_colonne"]:
                 a_capo_pagina(tre)
@@ -259,9 +262,8 @@ def canti_latex(canti, accordi=False):
                 a_capo_pagina(due, r"\paginasinistra")
             elif not fronte and s in imp["nuova_pagina"]:
                 a_capo_pagina(due)
-            sub = c.get("sottosezione")
-            if sub and sub != sub_prec:
-                out.append(rf"\sottosezione{{{esc(sub)}}}")
+            if sub != sub_prec:  # il nome della sezione interna va solo nel piede della pagina
+                out.append(rf"\sottosezione{{{esc(cat)}}}{{{esc(sub)}}}" if sub else rf"\gdef\sezionecorrente{{{esc(cat)}}}")
             sub_prec = sub
             if fronte:  # testo a fronte: esce dalle due colonne
                 out += [r"\end{multicols}", canto_latex(c), due]
