@@ -164,8 +164,8 @@ def canto_latex(c):
     con_accordi = any(a for p in parti for el in p if el[0] == "riga" for a, _ in el[1])
     if fronte:  # tutta la larghezza, non spezzabile: serve lo spazio della colonna piu' lunga
         altezza = max(altezza_stimata(p, con_accordi) for p in parti)
-    else:  # basta che ci stiano titolo e 3 righe: il canto puo' iniziare a meta' colonna e continuare dopo
-        altezza = min(altezza_stimata(parti[0], con_accordi), 85)
+    else:  # nelle due colonne niente needspace: il titolo resta agganciato alle prime 3 righe
+        altezza = 0
     out = [r"\begingroup" + ("" if con_accordi else r"\senzaaccordi"),
            rf"\cantotesta{{{c['id']}}}{{{esc(c['titolo'])}}}{{{esc(c.get('autore', ''))}}}"
            rf"{{{tag_branche(c)}}}{{{altezza:.0f}pt}}"]
@@ -173,13 +173,16 @@ def canto_latex(c):
         sx, dx = ("\n".join(corpo_latex(p)) for p in parti)
         out.append(rf"\afronte{{{sx}}}{{{esc(fronte[2])}}}{{{dx}}}")
     else:
-        out += corpo_latex(parti[0])
+        out += corpo_latex(parti[0], aggancia=3)
     out.append(r"\par\endgroup")
     return "\n".join(out)
 
 
-def corpo_latex(elementi):
+def corpo_latex(elementi, aggancia=0):
+    """aggancia=n: le prime n righe restano attaccate al titolo (nopagebreak), cosi' il titolo
+    non resta da solo in fondo alla colonna (needspace dentro multicols forza invece un salto di colonna)."""
     out = []
+    righe = 0
     in_ritornello = False
     ultima_vuota = True
     for el in elementi:
@@ -205,6 +208,9 @@ def corpo_latex(elementi):
             out.append(r"\end{ritornello}")
         in_ritornello = ritornello
         out.append(riga_latex(segmenti))
+        righe += 1
+        if righe < aggancia:
+            out.append(r"\nopagebreak")
     if in_ritornello:
         out.append(r"\end{ritornello}")
     return out

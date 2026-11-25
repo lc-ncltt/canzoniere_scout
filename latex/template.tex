@@ -25,6 +25,8 @@
 \setlength{\parindent}{0pt}
 \setlength{\parskip}{0pt}
 \setlength{\columnsep}{8mm}
+% dopo un testo a fronte le colonne ripartono solo se c'e' posto per titolo + prime righe del canto seguente
+\setlength{\premulticols}{100pt}
 \raggedbottom
 \sloppy
 \hyphenpenalty=1000
@@ -60,15 +62,16 @@
 \newcommand{\bRS}{\tagbranca{brRS}}
 
 % I canti scorrono di seguito su due colonne. \cantotesta{id}{titolo}{autore}{tag branche}{spazio minimo}:
-% il canto inizia dove capita; se nella colonna non resta lo spazio minimo (titolo + qualche riga,
-% calcolato da generate_latex.py) passa alla colonna successiva, per non lasciare il titolo da solo.
+% il canto inizia dove capita; il titolo e' agganciato (\nopagebreak) alle prime righe, cosi' non resta da solo
+% in fondo alla colonna. Lo spazio minimo (\needspace) si usa solo per il testo a fronte, fuori dalle colonne:
+% dentro multicols \needspace forza un salto di colonna anche quando lo spazio c'e'.
 \newcommand{\cantotesta}[5]{%
   \par\addvspace{4.5mm}%
-  \needspace{#5}%
+  \ifdim#5>\z@\needspace{#5}\fi % solo per il testo a fronte (fuori dalle colonne)
   \def\@currentlabel{#1}\label{canto:#1}%
   % numero - quadratino/i di branca - titolo, a 14 pt grassetto; solo il titolo sottolineato
   % (\uline puo' andare a capo: il titolo lungo continua allineato sotto il titolo)
-  {\fontsize{14}{17}\selectfont\bfseries
+  {\fontsize{14}{17}\selectfont\bfseries\interlinepenalty\@M % il titolo su due righe non si spezza
    \setbox\z@\hbox{#1\enspace\if\relax\detokenize{#4}\relax\else#4\enspace\fi}%
    \noindent\hangindent=\wd\z@\hangafter=1 \rightskip=0pt plus 4em\relax \box\z@ \uline{#2}\par}\nopagebreak
   \if\relax\detokenize{#3}\relax\else
@@ -91,7 +94,7 @@
   \clearpage}
 % Titoletto di fase del fuoco / momento della messa, dentro la colonna
 \newcommand{\sottosezione}[1]{%
-  \par\addvspace{5mm}\needspace{.25\textheight}%
+  \par\addvspace{5mm}%
   {\centering\color{fiamma}\rule[.6ex]{8mm}{.6pt}\ \textcolor{black}{\scshape\bfseries #1}\ \rule[.6ex]{8mm}{.6pt}\par}
   \nopagebreak\vspace{1mm}}
 \makeatother
@@ -103,7 +106,7 @@
   \kern.45ex
   \hbox{#2}}}
 % Riga del canto: se e' troppo lunga va a capo rientrata, allineata a sinistra (niente spazi allargati)
-\newcommand{\rigo}[1]{{\hangindent=3mm\hangafter=1\rightskip=0pt plus 4em\relax\noindent #1\par}}
+\newcommand{\rigo}[1]{{\hangindent=3mm\hangafter=1\rightskip=0pt plus 4em\interlinepenalty=10000\relax\noindent #1\par}}
 \newcommand{\strofa}{\par\vspace{2.4mm}}
 \newcommand{\commento}[1]{{\par\small\itshape\color{gray}#1\par\vspace{1mm}}}
 \newenvironment{ritornello}{\par\begingroup\bfseries\leftskip=3mm\relax}{\par\endgroup}
