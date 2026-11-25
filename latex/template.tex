@@ -146,8 +146,19 @@
 
 \begin{document}
 
-% ---- Frontespizio (numerazione romana, nessun numero stampato)
+% ---- Copertina: solo il logo FSE (giglio e croce) in bianco e nero, centrato; poi una pagina bianca
 \pagenumbering{roman}
+\thispagestyle{empty}
+\vspace*{\fill}
+\begin{center}
+  \includegraphics[height=80mm]{logo-fse.png}
+\end{center}
+\vspace*{\fill}
+\clearpage
+\null\thispagestyle{empty}
+\clearpage
+
+% ---- Frontespizio (pagina destra, nessun numero stampato)
 \thispagestyle{empty}
 \begin{center}
   \vspace*{\fill}
@@ -182,5 +193,9 @@
 \vspace*{\fill}
 % numero di copia, da scrivere a penna: in basso a destra, senza spostare il QR centrato
 \nointerlineskip\vbox to 0pt{\vss\hbox to \textwidth{\hfill/20}}
+
+% ---- Pagina bianca finale (retro del QR)
+\clearpage
+\null\thispagestyle{empty}
 
 \end{document}

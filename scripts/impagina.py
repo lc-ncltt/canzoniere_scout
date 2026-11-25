@@ -85,6 +85,7 @@ def main():
     cartella = Path(args.cartella)
     cartella.mkdir(parents=True, exist_ok=True)
     shutil.copy(args.qr, cartella / "qr.png")
+    shutil.copy(ROOT / "latex" / "logo-fse.png", cartella / "logo-fse.png")
     canti = sorted(carica_json(CANTI_PATH), key=lambda c: c["id"])
     imp = {"nuova_pagina": [], "tre_colonne": [], "pagina_sinistra": []}
     provati = set()

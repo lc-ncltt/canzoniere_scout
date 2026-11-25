@@ -6,6 +6,7 @@ Ogni sezione ha una pagina divisoria; i canti scorrono di seguito su due colonne
 """
 import argparse
 import re
+import shutil
 import sys
 import unicodedata
 from pathlib import Path
@@ -410,6 +411,9 @@ def main():
     out.parent.mkdir(parents=True, exist_ok=True)
     out.write_text(testo, encoding="utf-8", newline="\n")
     print(f"Scritto {out} ({len(canti)} canti)")
+    logo = ROOT / "latex" / "logo-fse.png"  # copertina: copiato accanto al .tex
+    if logo.exists():
+        shutil.copy(logo, out.parent / "logo-fse.png")
     if not (out.parent / args.qr).exists():
         print(f"AVVISO: {out.parent / args.qr} non esiste: esegui scripts/make_qr.py prima di compilare")
 
