@@ -196,6 +196,21 @@ def corpo_latex(elementi, aggancia=0):
             out.append(r"\end{ritornello}")
             in_ritornello = False
         if el[0] == "rit":
+            # "Rit." non resta mai solo in cima a una colonna/pagina: attaccato alle ultime due righe prima
+            ctrl = (r"\strofa", r"\nopagebreak", r"\begin{ritornello}", r"\end{ritornello}")
+            j = len(out)
+            while j > 0 and out[j - 1] in ctrl:
+                j -= 1
+            k = j - 2
+            while k >= 0 and out[k] in ctrl and out[k] != r"\strofa":
+                k -= 1
+            if j >= 1 and k >= 0 and out[k] not in ctrl and not out[k].startswith(r"\commento"):
+                if r"\strofa" not in out[k + 1:j]:
+                    out.insert(k + 1, r"\nopagebreak")
+                    j += 1
+            if j >= 1:
+                out.insert(j, r"\nopagebreak")
+            out.append(r"\nopagebreak")
             out.append(r"\rit")
             continue
         if el[0] == "commento":
